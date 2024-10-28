@@ -46,15 +46,13 @@ jobs:
 
       - name: Commit and Push to GitHub
         run: |
+          ls -al sdks
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add sdks/*
           git diff && echo "No changes in SDKs" && exit 0  # Exit if no changes
           git commit -m "Automated SDK update for latest OpenAPI release"
           git push
-
-      # - name: Install GitHub CLI
-      #   run: sudo apt-get install -y gh
 
       - name: Create GitHub Release
         if: success()
