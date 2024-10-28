@@ -31,7 +31,7 @@ jobs:
 
             # Run OpenAPI Generator
             docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v6.6.0 generate \
-              -i /local/${{ env.openapi_file}}.yaml \
+              -i /local/${{ env.openapi_file}} \
               -g "${lang}" \
               -o "/local/sdks/${lang}"
           done
