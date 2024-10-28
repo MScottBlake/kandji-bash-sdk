@@ -21,6 +21,12 @@ jobs:
           curl -L -H "Authorization: token ${{ secrets.KANDJI_POSTMAN_TO_OPENAPI_TOKEN }}" "${url}" -o kandji_openapi.yaml
           echo "openapi_file=kandji_openapi.yaml" >> ${GITHUB_ENV}
 
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: openapi_file
+          path: ${{ env.openapi_file }}
+
       - name: Set up OpenAPI Generator
         run: |
           # Define languages to generate SDKs for
@@ -30,7 +36,7 @@ jobs:
             mkdir -p "sdks/${lang}"
 
             # Run OpenAPI Generator
-            docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v6.6.0 generate \
+            docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest generate \
               -i /local/${{ env.openapi_file}} \
               -g "${lang}" \
               -o "/local/sdks/${lang}"
