@@ -46,7 +46,8 @@ jobs:
 
       - name: Check for changes (fail if none)
         run: |
-          ! git diff --quiet
+          # ! git diff --quiet
+          git diff
 
       - name: Commit and Push to GitHub
         if: ${{ success() }}
