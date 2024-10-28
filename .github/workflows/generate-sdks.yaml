@@ -20,6 +20,7 @@ jobs:
             | jq -r '.assets[] | select(.name == "kandji_openapi.yaml") | .browser_download_url')"
           echo "URL: ${url}"
           curl -L -H "Authorization: token ${{ secrets.KANDJI_POSTMAN_TO_OPENAPI_TOKEN }}" "${url}" -o kandji_openapi.yaml
+          cat kandji_openapi.yaml
           echo "openapi_file=kandji_openapi.yaml" >> ${GITHUB_ENV}
 
       - name: Upload Artifacts
