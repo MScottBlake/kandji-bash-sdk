@@ -15,12 +15,10 @@ jobs:
 
       - name: Download kandji_openapi.yaml from latest release
         run: |
-          url="$(curl -s -H "Authorization: token ${{ secrets.KANDJI_POSTMAN_TO_OPENAPI_TOKEN }}" \
-            https://api.github.com/repos/MScottBlake/kandji-postman-to-openapi/releases/latest \
-            | jq -r '.assets[] | select(.name == "kandji_openapi.yaml") | .browser_download_url')"
-          echo "URL: ${url}"
-          curl -L "${url}" -o kandji_openapi.yaml
-          cat kandji_openapi.yaml
+          gh release download \
+            --repo "MScottBlake/kandji-postman-to-openapi" \
+            --pattern "kandji_openapi.yaml" \
+            --output "kandji_openapi.yaml"
           echo "openapi_file=kandji_openapi.yaml" >> ${GITHUB_ENV}
 
       - name: Upload Artifacts
