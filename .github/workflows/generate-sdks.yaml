@@ -42,6 +42,7 @@ jobs:
               -i /local/${{ env.openapi_file}} \
               -g "${lang}" \
               -o "sdks/${lang}"
+            ls -al sdks
           done
 
       - name: Commit and Push to GitHub
