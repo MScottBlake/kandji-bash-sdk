@@ -41,7 +41,7 @@ jobs:
             docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest generate \
               -i /local/${{ env.openapi_file}} \
               -g "${lang}" \
-              -o "/local/sdks/${lang}"
+              -o "sdks/${lang}"
           done
 
       - name: Commit and Push to GitHub
@@ -62,7 +62,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           tag="sdk-update-$(date +'%Y%m%d%H%M%S')"
-          gh release create "${tag}" \
+          gh release create "${tag}" sdks/**/* \
             --title "Automated SDK Update $(date +'%Y-%m-%d %H:%M:%S')" \
             --generate-notes \
             --latest
