@@ -1,0 +1,56 @@
+name: Generate SDKs
+
+on:
+  repository_dispatch:
+    types: [generate-sdks]
+
+jobs:
+  generate_sdks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download kandji_openapi.yaml from latest release
+        run: |
+          url="$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/MScottBlake/kandji-postman-to-openapi/releases/latest \
+            | jq -r '.assets[] | select(.name == "kandji_openapi.yaml") | .url')"
+          curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${url}" -o kandji_openapi.yaml
+          echo "openapi_file=kandji_openapi.yaml" >> ${GITHUB_ENV}
+
+      - name: Set up OpenAPI Generator
+        run: |
+          # Define languages to generate SDKs for
+          languages=("bash" "go" "javascript" "python" "python-pydantic-v1"  "ruby" "rust" "swift5" "swift6" "typescript-node")
+          for lang in "${languages[@]}"; do
+            # Create output directory for each language
+            mkdir -p "sdks/${lang}"
+
+            # Run OpenAPI Generator
+            docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v6.6.0 generate \
+              -i /local/${{ env.openapi_file}}.yaml \
+              -g "${lang}" \
+              -o "/local/sdks/${lang}"
+          done
+
+      - name: Commit and Push to GitHub
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add sdks
+          git diff --quiet && echo "No changes in SDKs" && exit 0  # Exit if no changes
+          git commit -m "Automated SDK update for latest OpenAPI release"
+          git push
+
+      - name: Create GitHub Release
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="sdk-update-$(date +'%Y%m%d%H%M%S')"
+          gh release create "${tag}" \
+            --title "Automated SDK Update $(date +'%Y-%m-%d %H:%M:%S')" \
+            --generate-notes \
+            --latest
