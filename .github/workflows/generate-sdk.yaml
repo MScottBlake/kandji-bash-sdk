@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download OpenAPI file from latest release
+        env:
+          GH_TOKEN: ${{ secrets.KANDJI_POSTMAN_TO_OPENAPI_TOKEN }}
         run: |
           gh release download \
             --repo "MScottBlake/kandji-postman-to-openapi" \
