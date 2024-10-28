@@ -16,8 +16,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download OpenAPI file from latest release
-        env:
-          GH_TOKEN: ${{ secrets.KANDJI_POSTMAN_TO_OPENAPI_TOKEN }}
         run: |
           gh release download \
             --repo "MScottBlake/kandji-postman-to-openapi" \
@@ -33,12 +31,10 @@ jobs:
 
       - name: Set up OpenAPI Generator
         run: |
-          lang=bash
-          # Run OpenAPI Generator
           docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest generate \
             -i /local/${{ env.openapi_file}} \
             -g "${{ env.LANGUAGE }}" \
-            -o "/local/${{ env.LANGUAGE }}"
+            -o "/local"
 
       - name: Delete OpenAPI file
         run: |
