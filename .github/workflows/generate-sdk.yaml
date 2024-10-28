@@ -1,4 +1,4 @@
-name: Generate SDKs
+name: Generate SDK
 
 on:
   workflow_dispatch: # Allows manual triggering
