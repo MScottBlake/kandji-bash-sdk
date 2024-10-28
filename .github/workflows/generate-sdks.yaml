@@ -15,10 +15,10 @@ jobs:
 
       - name: Download kandji_openapi.yaml from latest release
         run: |
-          url="$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          url="$(curl -s -H "Authorization: token ${{ github.token }}" \
             https://api.github.com/repos/MScottBlake/kandji-postman-to-openapi/releases/latest \
             | jq -r '.assets[] | select(.name == "kandji_openapi.yaml") | .url')"
-          curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "${url}" -o kandji_openapi.yaml
+          curl -L -H "Authorization: token ${{ github.token }}" "${url}" -o kandji_openapi.yaml
           echo "openapi_file=kandji_openapi.yaml" >> ${GITHUB_ENV}
 
       - name: Set up OpenAPI Generator
