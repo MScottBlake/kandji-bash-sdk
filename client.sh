@@ -858,7 +858,139 @@ print_about() {
     echo ""
 read -r -d '' appdescription <<EOF
 
-<html><head></head><body><h1 id=\"welcome-to-the-kandji-api-documentation\">Welcome to the Kandji API Documentation</h1>\\n<p>You can find your API URL in Settings &gt; Access. The API URL will follow the below formats.</p>\\n<ul>\\n<li><p>US - <code>https://SubDomain.api.kandji.io</code></p>\\n</li>\\n<li><p>EU - <code>https://SubDomain.api.eu.kandji.io</code></p>\\n</li>\\n</ul>\\n<p>For information on how to obtain an API token, please refer to the following support article.</p>\\n<p><a href=\"https://support.kandji.io/api\">https://support.kandji.io/api</a></p>\\n<h4 id=\"rate-limit\">Rate Limit</h4>\\n<p>The Kandji API currently has an API rate limit of 10,000 requests per hour per customer.</p>\\n<h4 id=\"request-methods\">Request Methods</h4>\\n<p>HTTP request methods supported by the Kandji API.</p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Method</th>\\n<th>Definition</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>GET</td>\\n<td>The <code>GET</code> method requests a representation of the specified resource.</td>\\n</tr>\\n<tr>\\n<td>POST</td>\\n<td>The <code>POST</code> method submits an entity to the specified resource.</td>\\n</tr>\\n<tr>\\n<td>PATCH</td>\\n<td>The <code>PATCH</code> method applies partial modifications to a resource.</td>\\n</tr>\\n<tr>\\n<td>DELETE</td>\\n<td>The <code>DELETE</code> method deletes the specified resource.</td>\\n</tr>\\n</tbody>\\n</table>\\n</div><h4 id=\"response-codes\">Response codes</h4>\\n<p>Not all response codes apply to every endpoint.</p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Code</th>\\n<th>Response</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>200</td>\\n<td>OK</td>\\n</tr>\\n<tr>\\n<td>201</td>\\n<td>Created</td>\\n</tr>\\n<tr>\\n<td>204</td>\\n<td>No content</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>Typical response when sending the DELETE method.</td>\\n</tr>\\n<tr>\\n<td>400</td>\\n<td>Bad Request</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Command already running\" - The command may already be running in a <em>Pending</em> state waiting on the device.</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Command is not allowed for current device\" - The command may not be compatible with the target device.</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"JSON parse error - Expecting ',' delimiter: line 3 column 2 (char 65)\"</td>\\n</tr>\\n<tr>\\n<td>401</td>\\n<td>Unauthorized</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>This error can occur if the token is incorrect, was revoked, or the token has expired.</td>\\n</tr>\\n<tr>\\n<td>403</td>\\n<td>Forbidden</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>The request was understood but cannot be authorized.</td>\\n</tr>\\n<tr>\\n<td>404</td>\\n<td>Not found</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>Unable to locate the resource in the Kandji tenant.</td>\\n</tr>\\n<tr>\\n<td>415</td>\\n<td>Unsupported Media Type</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>The request contains a media type which the server or resource does not support.</td>\\n</tr>\\n<tr>\\n<td>500</td>\\n<td>Internal server error</td>\\n</tr>\\n<tr>\\n<td>503</td>\\n<td>Service unavailable</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>This error can occur if a file upload is still being processed via the custom apps API.</td>\\n</tr>\\n</tbody>\\n</table>\\n</div><h4 id=\"data-structure\">Data structure</h4>\\n<p>The API returns all structured responses in JSON schema format.</p>\\n<h4 id=\"examples\">Examples</h4>\\n<p>Code examples using the API can be found in the Kandji support <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools\">GitHub</a>.</p>\\n</body></html>
+<html><head></head><body><h1 id=\"welcome-to-the-kandji-api-documentation\">Welcome to the Kandji API Documentation</h1>
+<p>You can find your API URL in Settings &gt; Access. The API URL will follow the below formats.</p>
+<ul>
+<li><p>US - <code>https://SubDomain.api.kandji.io</code></p>
+</li>
+<li><p>EU - <code>https://SubDomain.api.eu.kandji.io</code></p>
+</li>
+</ul>
+<p>For information on how to obtain an API token, please refer to the following support article.</p>
+<p><a href=\"https://support.kandji.io/api\">https://support.kandji.io/api</a></p>
+<h4 id=\"rate-limit\">Rate Limit</h4>
+<p>The Kandji API currently has an API rate limit of 10,000 requests per hour per customer.</p>
+<h4 id=\"request-methods\">Request Methods</h4>
+<p>HTTP request methods supported by the Kandji API.</p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>The <code>GET</code> method requests a representation of the specified resource.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>The <code>POST</code> method submits an entity to the specified resource.</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>The <code>PATCH</code> method applies partial modifications to a resource.</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>The <code>DELETE</code> method deletes the specified resource.</td>
+</tr>
+</tbody>
+</table>
+</div><h4 id=\"response-codes\">Response codes</h4>
+<p>Not all response codes apply to every endpoint.</p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No content</td>
+</tr>
+<tr>
+<td></td>
+<td>Typical response when sending the DELETE method.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Command already running\" - The command may already be running in a <em>Pending</em> state waiting on the device.</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Command is not allowed for current device\" - The command may not be compatible with the target device.</td>
+</tr>
+<tr>
+<td></td>
+<td>\"JSON parse error - Expecting ',' delimiter: line 3 column 2 (char 65)\"</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+</tr>
+<tr>
+<td></td>
+<td>This error can occur if the token is incorrect, was revoked, or the token has expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td></td>
+<td>The request was understood but cannot be authorized.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not found</td>
+</tr>
+<tr>
+<td></td>
+<td>Unable to locate the resource in the Kandji tenant.</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type</td>
+</tr>
+<tr>
+<td></td>
+<td>The request contains a media type which the server or resource does not support.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service unavailable</td>
+</tr>
+<tr>
+<td></td>
+<td>This error can occur if a file upload is still being processed via the custom apps API.</td>
+</tr>
+</tbody>
+</table>
+</div><h4 id=\"data-structure\">Data structure</h4>
+<p>The API returns all structured responses in JSON schema format.</p>
+<h4 id=\"examples\">Examples</h4>
+<p>Code examples using the API can be found in the Kandji support <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools\">GitHub</a>.</p>
+</body></html>
 EOF
 echo "$appdescription" | paste -sd' ' | fold -sw 80
 }
@@ -884,7 +1016,51 @@ print_apiV1BlueprintsBlueprintIdAssignLibraryItemPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsBlueprintIdAssignLibraryItemPost - Assign Library Item${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint allows assigning a library item to a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n<h3 id=\"request-body\">Request Body</h3>\\n<ul>\\n<li><p><code>library_item_id</code> (string, required)</p>\\n</li>\\n<li><p><code>assignment_node_id</code> (string, required for maps)</p>\\n<ul>\\n<li>Note: To find the assignment_node_id, view the map in a browser. Then, on your keyboard, press and hold the Option ⌥ key. Each node ID remains fixed for the lifespan of the node on the map.</li>\\n</ul>\\n</li>\\n</ul>\\n<h3 id=\"error-responses\">Error responses</h3>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Code</strong></th>\\n<th><strong>Body</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>400 - Bad Request</td>\\n<td>Bad Request</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item already exists on Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item already exists in Assignment Node\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint allows assigning a library item to a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
+<h3 id=\"request-body\">Request Body</h3>
+<ul>
+<li><p><code>library_item_id</code> (string, required)</p>
+</li>
+<li><p><code>assignment_node_id</code> (string, required for maps)</p>
+<ul>
+<li>Note: To find the assignment_node_id, view the map in a browser. Then, on your keyboard, press and hold the Option ⌥ key. Each node ID remains fixed for the lifespan of the node on the map.</li>
+</ul>
+</li>
+</ul>
+<h3 id=\"error-responses\">Error responses</h3>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Body</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 - Bad Request</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item already exists on Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item already exists in Assignment Node\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'blueprint_id' ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -902,7 +1078,11 @@ print_apiV1BlueprintsBlueprintIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsBlueprintIdDelete - Delete Blueprint${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<h1 id=\"warning\"><strong>WARNING!</strong></h1>\\n<p>This is a HIGHLY destructive action.</p>\\n<p>Deleting a Blueprint will un-manage ALL devices assigned to the Blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<h1 id=\"warning\"><strong>WARNING!</strong></h1>
+<p>This is a HIGHLY destructive action.</p>
+<p>Deleting a Blueprint will un-manage ALL devices assigned to the Blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'blueprint_id' ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -920,7 +1100,9 @@ print_apiV1BlueprintsBlueprintIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsBlueprintIdGet - Get Blueprint${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns information about a specific blueprint based on blueprint ID.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns information about a specific blueprint based on blueprint ID.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'blueprint_id' ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -938,7 +1120,26 @@ print_apiV1BlueprintsBlueprintIdListLibraryItemsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsBlueprintIdListLibraryItemsGet - List Library Items${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This API endpoint retrieves a list of library items associated with a specific blueprint. (classic and maps). Requires that the blueprint ID is passed as a path parameter in the URL.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n<h3 id=\"response-fields\">Response fields</h3>\\n<ul>\\n<li><p><code>count</code> (int): The total count of library items.</p>\\n</li>\\n<li><p><code>next</code> (str): The URL for the next page of results, if available. If not available will value will be <code>null</code>.</p>\\n</li>\\n<li><p><code>previous</code> (str): The URL for the previous page of results, if available. If not available will value will be <code>null</code>.</p>\\n</li>\\n<li><p><code>results</code> (object): An array containing objects with the following fields:</p>\\n<ul>\\n<li><p><code>id</code> (str): The ID of the library item.</p>\\n</li>\\n<li><p><code>name</code> (str): The name of the library item.</p>\\n</li>\\n</ul>\\n</li>\\n</ul>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This API endpoint retrieves a list of library items associated with a specific blueprint. (classic and maps). Requires that the blueprint ID is passed as a path parameter in the URL.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
+<h3 id=\"response-fields\">Response fields</h3>
+<ul>
+<li><p><code>count</code> (int): The total count of library items.</p>
+</li>
+<li><p><code>next</code> (str): The URL for the next page of results, if available. If not available will value will be <code>null</code>.</p>
+</li>
+<li><p><code>previous</code> (str): The URL for the previous page of results, if available. If not available will value will be <code>null</code>.</p>
+</li>
+<li><p><code>results</code> (object): An array containing objects with the following fields:</p>
+<ul>
+<li><p><code>id</code> (str): The ID of the library item.</p>
+</li>
+<li><p><code>name</code> (str): The name of the library item.</p>
+</li>
+</ul>
+</li>
+</ul>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'blueprint_id' ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -956,7 +1157,18 @@ print_apiV1BlueprintsBlueprintIdOtaEnrollmentProfileGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsBlueprintIdOtaEnrollmentProfileGet - Get Manual Enrollment Profile${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the manual enrollment profile (.mobileconfig file) for a specified Blueprint.</p>\\n<p>This request will return the enrollment profile even if \"Require Authentication\" is configured for the Blueprint in Manual Enrollment.</p>\\n<p>The enrollment profile will be returned in raw form with response headers:</p>\\n<ul>\\n<li><p><code>Content-Type</code> = <code>application/x-apple-aspen-config</code></p>\\n</li>\\n<li><p><code>Content-Disposition</code> = <code>attachment;filename=kandji-enroll.mobileconfig</code></p>\\n</li>\\n</ul>\\n<p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the manual enrollment profile (.mobileconfig file) for a specified Blueprint.</p>
+<p>This request will return the enrollment profile even if \"Require Authentication\" is configured for the Blueprint in Manual Enrollment.</p>
+<p>The enrollment profile will be returned in raw form with response headers:</p>
+<ul>
+<li><p><code>Content-Type</code> = <code>application/x-apple-aspen-config</code></p>
+</li>
+<li><p><code>Content-Disposition</code> = <code>attachment;filename=kandji-enroll.mobileconfig</code></p>
+</li>
+</ul>
+<p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'blueprint_id' ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -974,7 +1186,9 @@ print_apiV1BlueprintsBlueprintIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsBlueprintIdPatch - Update Blueprint${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'blueprint_id' ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -992,7 +1206,48 @@ print_apiV1BlueprintsBlueprintIdRemoveLibraryItemPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsBlueprintIdRemoveLibraryItemPost - Remove Library Item${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint allows removing a library item from a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n<h3 id=\"request-body\">Request Body</h3>\\n<ul>\\n<li><p><code>library_item_id</code> (string, required)</p>\\n</li>\\n<li><p><code>assignment_node_id</code> (string, required for maps)</p>\\n</li>\\n</ul>\\n<h3 id=\"error-responses\">Error responses</h3>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Code</strong></th>\\n<th><strong>Body</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>400 - Bad Request</td>\\n<td>Bad Request</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item does not exist on Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item does not exist in Assignment Node\"</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint allows removing a library item from a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
+<h3 id=\"request-body\">Request Body</h3>
+<ul>
+<li><p><code>library_item_id</code> (string, required)</p>
+</li>
+<li><p><code>assignment_node_id</code> (string, required for maps)</p>
+</li>
+</ul>
+<h3 id=\"error-responses\">Error responses</h3>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Body</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 - Bad Request</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td></td>
+<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item does not exist on Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item does not exist in Assignment Node\"</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'blueprint_id' ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1010,7 +1265,7 @@ print_apiV1BlueprintsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsGet - List Blueprints${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns a list of a blueprint records in the Kandji tenant. Optional query parameters can be specified to filter the results.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns a list of a blueprint records in the Kandji tenant. Optional query parameters can be specified to filter the results.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1026,7 +1281,9 @@ print_apiV1BlueprintsPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1BlueprintsPost - Create Blueprint${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>\\n<p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>\\n<p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>
+<p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>
+<p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1058,7 +1315,8 @@ print_apiV1DevicesDeviceIdActionBlankpushPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionBlankpushPost - Send Blankpush${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to initiate a blank push.</p>\\n<p><a href=\"https://support.kandji.io/what-is-a-blank-push\">Using the Blank Push command</a></p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to initiate a blank push.</p>
+<p><a href=\"https://support.kandji.io/what-is-a-blank-push\">Using the Blank Push command</a></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1076,7 +1334,7 @@ print_apiV1DevicesDeviceIdActionClearpasscodePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionClearpasscodePost - Clear Passcode${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to clear a device passcode. Available for iPhone and iPad.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to clear a device passcode. Available for iPhone and iPad.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1094,7 +1352,12 @@ print_apiV1DevicesDeviceIdActionDeleteuserPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionDeleteuserPost - Delete User${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to delete a local user account on macOS and Shared iPad (Device Supervision via Automated Device Enrollment is required).</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>DeleteAllUsers</code> - <code>boolean</code></p>\\n<p><code>ForceDeletion</code> - <code>boolean</code></p>\\n<p><code>UserName</code> - <code>string</code></p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to delete a local user account on macOS and Shared iPad (Device Supervision via Automated Device Enrollment is required).</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>DeleteAllUsers</code> - <code>boolean</code></p>
+<p><code>ForceDeletion</code> - <code>boolean</code></p>
+<p><code>UserName</code> - <code>string</code></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1112,7 +1375,8 @@ print_apiV1DevicesDeviceIdActionDisablelostmodePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionDisablelostmodePost - Disable Lost Mode${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This command will send a request to turn off lost mode on iOS and iPadOS.</p>\\n<p>If the command is already pending, the message \"<em>Disable lost mode is already pending for this device.</em>\" will be in the response.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This command will send a request to turn off lost mode on iOS and iPadOS.</p>
+<p>If the command is already pending, the message \"<em>Disable lost mode is already pending for this device.</em>\" will be in the response.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1130,7 +1394,8 @@ print_apiV1DevicesDeviceIdActionEnablelostmodePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionEnablelostmodePost - Enable Lost Mode${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to remotely turn on lost mode on iOS and iPadOS.</p>\\n<p>Optionally, a JSON payload can be sent in the request to set a lock message, phone number, and footnote on the target device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to remotely turn on lost mode on iOS and iPadOS.</p>
+<p>Optionally, a JSON payload can be sent in the request to set a lock message, phone number, and footnote on the target device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1148,7 +1413,51 @@ print_apiV1DevicesDeviceIdActionErasePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionErasePost - Erase Device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to erase the device.</p>\\n<p>iOS 4.0+, iPadOS 4.0+, macOS 10.7+, tvOS 10.2+</p>\\n<p><strong>Request Body Parameters: application/json</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Key</th>\\n<th>Type</th>\\n<th>Description</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td><code>PIN</code></td>\\n<td><code>string</code></td>\\n<td>The six-character PIN for Find My. This value is available in macOS 10.8 and later.</td>\\n</tr>\\n<tr>\\n<td><code>PreserveDataPlan</code></td>\\n<td><code>boolean</code></td>\\n<td>If true, preserve the data plan on an iPhone or iPad with eSIM functionality, if one exists. This value is available in iOS 11 and later.  <br />  <br />Default: true</td>\\n</tr>\\n<tr>\\n<td><code>DisallowProximitySetup</code></td>\\n<td><code>boolean</code></td>\\n<td>If true, disable Proximity Setup on the next reboot and skip the pane in Setup Assistant. This value is available in iOS 11 and later. Prior to iOS 14, don’t use this option with any other option.  <br />  <br />Default: false</td>\\n</tr>\\n<tr>\\n<td><code>ReturnToService</code></td>\\n<td><code>object</code></td>\\n<td>(iOS 17 and later and iPadOS 17 and later and with Shared iPad ) When sending the erase device command to mobile devices, use this key to enable Return to Service. Include an optional Wi-Fi payload ProfileId to allow the device to connect to a Wi-Fi network automatically after being erased. If a Wi-Fi ProfileId is not provided and the mobile device is not tethered to a Mac to share the network connection, the end-user will be required to select a Wi-Fi network to complete the setup.  <br />  <br />If sent to any macOS computer or to mobile devices on iOS 16 or iPadOS 16 and below, the RTS keys will be ignored, and only the erase device command will be issued to the device.</td>\\n</tr>\\n<tr>\\n<td>- <code>Enabled</code></td>\\n<td><code>boolean</code></td>\\n<td>(Required) If true, the device tries to re-enroll itself automatically after erasure. The user needs to deactivate all activation locks for this feature to work correctly.</td>\\n</tr>\\n<tr>\\n<td>- <code>ProfileId</code></td>\\n<td><code>string</code></td>\\n<td>Profile ID value associated with a Wi-Fi profile payload. This is required when the device doesn’t have ethernet access.</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to erase the device.</p>
+<p>iOS 4.0+, iPadOS 4.0+, macOS 10.7+, tvOS 10.2+</p>
+<p><strong>Request Body Parameters: application/json</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PIN</code></td>
+<td><code>string</code></td>
+<td>The six-character PIN for Find My. This value is available in macOS 10.8 and later.</td>
+</tr>
+<tr>
+<td><code>PreserveDataPlan</code></td>
+<td><code>boolean</code></td>
+<td>If true, preserve the data plan on an iPhone or iPad with eSIM functionality, if one exists. This value is available in iOS 11 and later.  <br />  <br />Default: true</td>
+</tr>
+<tr>
+<td><code>DisallowProximitySetup</code></td>
+<td><code>boolean</code></td>
+<td>If true, disable Proximity Setup on the next reboot and skip the pane in Setup Assistant. This value is available in iOS 11 and later. Prior to iOS 14, don’t use this option with any other option.  <br />  <br />Default: false</td>
+</tr>
+<tr>
+<td><code>ReturnToService</code></td>
+<td><code>object</code></td>
+<td>(iOS 17 and later and iPadOS 17 and later and with Shared iPad ) When sending the erase device command to mobile devices, use this key to enable Return to Service. Include an optional Wi-Fi payload ProfileId to allow the device to connect to a Wi-Fi network automatically after being erased. If a Wi-Fi ProfileId is not provided and the mobile device is not tethered to a Mac to share the network connection, the end-user will be required to select a Wi-Fi network to complete the setup.  <br />  <br />If sent to any macOS computer or to mobile devices on iOS 16 or iPadOS 16 and below, the RTS keys will be ignored, and only the erase device command will be issued to the device.</td>
+</tr>
+<tr>
+<td>- <code>Enabled</code></td>
+<td><code>boolean</code></td>
+<td>(Required) If true, the device tries to re-enroll itself automatically after erasure. The user needs to deactivate all activation locks for this feature to work correctly.</td>
+</tr>
+<tr>
+<td>- <code>ProfileId</code></td>
+<td><code>string</code></td>
+<td>Profile ID value associated with a Wi-Fi profile payload. This is required when the device doesn’t have ethernet access.</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1166,7 +1475,31 @@ print_apiV1DevicesDeviceIdActionLockPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionLockPost - Lock Device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to remotely lock a device.</p>\\n<p>For macOS clients, an unlock PIN will be created, and returned in the response.</p>\\n<blockquote>\\n<p><strong>Caution !!!</strong><br /><em>For a Mac with Apple silicon running a version of macOS before 11.5 will deactivate the Mac. To reactivate, the Mac requires a network connection and authentication by a Secure Token enabled local administrator.</em></p>\\n</blockquote>\\n<p>Optionally, a JSON payload can be sent in the request to set a lock message and phone number on the target device.</p>\\n<p><strong>Note:</strong> For macOS, although the lock message is displayed on all types of Mac computers, the phone number is displayed only on a Mac with Apple silicon.</p>\\n<h4 id=\"response-properties\">Response properties</h4>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Property</th>\\n<th>Description</th>\\n<th>Type</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>PIN</td>\\n<td>Six digit pin code used to unlock a Mac.</td>\\n<td>String</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to remotely lock a device.</p>
+<p>For macOS clients, an unlock PIN will be created, and returned in the response.</p>
+<blockquote>
+<p><strong>Caution !!!</strong><br /><em>For a Mac with Apple silicon running a version of macOS before 11.5 will deactivate the Mac. To reactivate, the Mac requires a network connection and authentication by a Secure Token enabled local administrator.</em></p>
+</blockquote>
+<p>Optionally, a JSON payload can be sent in the request to set a lock message and phone number on the target device.</p>
+<p><strong>Note:</strong> For macOS, although the lock message is displayed on all types of Mac computers, the phone number is displayed only on a Mac with Apple silicon.</p>
+<h4 id=\"response-properties\">Response properties</h4>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIN</td>
+<td>Six digit pin code used to unlock a Mac.</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1184,7 +1517,8 @@ print_apiV1DevicesDeviceIdActionPlaylostmodesoundPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionPlaylostmodesoundPost - Play Lost Mode Sound${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This command will tell the target iOS or iPadOS device to play the lost mode sound.</p>\\n<p><strong>Note</strong>: The Lost Mode sound will play for 2 minutes, even if the device is in silent mode. Anyone finding the device can silence the sound by pressing any of its side buttons.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This command will tell the target iOS or iPadOS device to play the lost mode sound.</p>
+<p><strong>Note</strong>: The Lost Mode sound will play for 2 minutes, even if the device is in silent mode. Anyone finding the device can silence the sound by pressing any of its side buttons.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1202,7 +1536,7 @@ print_apiV1DevicesDeviceIdActionReinstallagentPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionReinstallagentPost - Reinstall Agent${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command reinstall the Kandji Agent. Available for macOS devices.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command reinstall the Kandji Agent. Available for macOS devices.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1220,7 +1554,10 @@ print_apiV1DevicesDeviceIdActionRemotedesktopPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionRemotedesktopPost - Remote Desktop${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to control the Remote Management status on a Mac. This MDM command turns on (or turns off) Remote Management with <em>Observe</em> and <em>Control</em> permissions given to all users*.*</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>EnableRemoteDesktop</code> - <code>boolean</code></p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to control the Remote Management status on a Mac. This MDM command turns on (or turns off) Remote Management with <em>Observe</em> and <em>Control</em> permissions given to all users*.*</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>EnableRemoteDesktop</code> - <code>boolean</code></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1238,7 +1575,7 @@ print_apiV1DevicesDeviceIdActionRenewmdmprofilePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionRenewmdmprofilePost - Renew MDM Profile${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to re-install the existing root MDM profile for a given device ID. This command will not impact any existing configurations, apps, or profiles.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to re-install the existing root MDM profile for a given device ID. This command will not impact any existing configurations, apps, or profiles.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1256,7 +1593,13 @@ print_apiV1DevicesDeviceIdActionRestartPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionRestartPost - Restart Device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to remotely restart a device.</p>\\n<ul>\\n<li><p><code>RebuildKernelCache</code> - If <code>true</code>, the system rebuilds the kernel cache during a device restart. If <code>BootstrapTokenAllowedForAuthentication</code> is <code>true</code> inSecurityInfoResponse.SecurityInfo, the device requests the bootstrap token from MDM before executing this command. This value is available in macOS 11 and later. Default: false</p>\\n</li>\\n<li><p><code>NotifyUser</code> - If <code>true</code>, notifies the user to restart the device at their convenience. Forced restart if the device is at <code>loginwindow</code> with no logged-in users. The user can dismiss the notification and ignore the request. No further notifications display unless you resend the command. This value is available in macOS 11.3 and later. Default: false</p>\\n</li>\\n</ul>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to remotely restart a device.</p>
+<ul>
+<li><p><code>RebuildKernelCache</code> - If <code>true</code>, the system rebuilds the kernel cache during a device restart. If <code>BootstrapTokenAllowedForAuthentication</code> is <code>true</code> inSecurityInfoResponse.SecurityInfo, the device requests the bootstrap token from MDM before executing this command. This value is available in macOS 11 and later. Default: false</p>
+</li>
+<li><p><code>NotifyUser</code> - If <code>true</code>, notifies the user to restart the device at their convenience. Forced restart if the device is at <code>loginwindow</code> with no logged-in users. The user can dismiss the notification and ignore the request. No further notifications display unless you resend the command. This value is available in macOS 11.3 and later. Default: false</p>
+</li>
+</ul>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1274,7 +1617,10 @@ print_apiV1DevicesDeviceIdActionSetnamePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionSetnamePost - Set Name${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to set the device name.</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>DeviceName</code> - <code>string</code></p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to set the device name.</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>DeviceName</code> - <code>string</code></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1292,7 +1638,7 @@ print_apiV1DevicesDeviceIdActionShutdownPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionShutdownPost - Shutdown${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to shutdown a device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to shutdown a device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1310,7 +1656,10 @@ print_apiV1DevicesDeviceIdActionUnlockaccountPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionUnlockaccountPost - Unlock Account${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to unlock a user account that locked by the system because of too many failed password attempts. Available for macOS.</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>UserName</code> - <code>string</code></p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to unlock a user account that locked by the system because of too many failed password attempts. Available for macOS.</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>UserName</code> - <code>string</code></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1328,7 +1677,7 @@ print_apiV1DevicesDeviceIdActionUpdateinventoryPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionUpdateinventoryPost - Update Inventory${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to start a check-in for a device, initiating the daily MDM commands and MDM logic.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to start a check-in for a device, initiating the daily MDM commands and MDM logic.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1346,7 +1695,7 @@ print_apiV1DevicesDeviceIdActionUpdatelocationPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActionUpdatelocationPost - Update Location${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to update the location data on iOS and iPadOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to update the location data on iOS and iPadOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1364,7 +1713,7 @@ print_apiV1DevicesDeviceIdActivitylimit300Get_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdActivitylimit300Get - Get Device Activity${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the device activity for a specified Device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the device activity for a specified Device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1382,7 +1731,8 @@ print_apiV1DevicesDeviceIdAppsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdAppsGet - Get Device Apps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns a list of all installed apps for a specified Device ID.</p>\\n<p>For iPhone and iPad, the preinstalled Apple apps are not reported.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns a list of all installed apps for a specified Device ID.</p>
+<p>For iPhone and iPad, the preinstalled Apple apps are not reported.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1400,7 +1750,15 @@ print_apiV1DevicesDeviceIdCommandslimit300Get_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdCommandslimit300Get - Get Device Commands${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends a request to get information about the commands sent to a given device ID.</p>\\n<h3 id=\"mdm-status-codes\">MDM Status Codes</h3>\\n<ul>\\n<li>1 : Command is Pending</li>\\n<li>2 : Command is running</li>\\n<li>3 : Command completed</li>\\n<li>4 : Command failed</li>\\n<li>5 : Command received \"Not Now\" response</li>\\n</ul>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends a request to get information about the commands sent to a given device ID.</p>
+<h3 id=\"mdm-status-codes\">MDM Status Codes</h3>
+<ul>
+<li>1 : Command is Pending</li>
+<li>2 : Command is running</li>
+<li>3 : Command completed</li>
+<li>4 : Command failed</li>
+<li>5 : Command received \"Not Now\" response</li>
+</ul>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1418,7 +1776,7 @@ print_apiV1DevicesDeviceIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdDelete - Delete Device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to delete a device. This will remove the device record from Kandji and send a Remove Management command. For macOS devices, it will also send an uninstall command to the Kandji Agent at the next agent checkin.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint sends an MDM command to delete a device. This will remove the device record from Kandji and send a Remove Management command. For macOS devices, it will also send an uninstall command to the Kandji Agent at the next agent checkin.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1436,7 +1794,7 @@ print_apiV1DevicesDeviceIdDetailsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdDetailsGet - Get Device Details${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the device details for a specified Device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the device details for a specified Device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1454,7 +1812,7 @@ print_apiV1DevicesDeviceIdDetailsLostmodeDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdDetailsLostmodeDelete - Cancel Lost Mode${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint can be used to send a cancelation request if Lost Mode is in an error state for a given iOS or iPadOS device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint can be used to send a cancelation request if Lost Mode is in an error state for a given iOS or iPadOS device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1472,7 +1830,8 @@ print_apiV1DevicesDeviceIdDetailsLostmodeGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdDetailsLostmodeGet - Get Device Lost Mode details${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the device lost mode details for a specified Device ID.</p>\\n<p><strong>Note</strong>: Lost Mode is is only available for iOS and iPadOS. For more information, please see this <a href=\"https://support.kandji.io/a/solutions/articles/72000573873\">Kandji support artilcle</a>.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the device lost mode details for a specified Device ID.</p>
+<p><strong>Note</strong>: Lost Mode is is only available for iOS and iPadOS. For more information, please see this <a href=\"https://support.kandji.io/a/solutions/articles/72000573873\">Kandji support artilcle</a>.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1490,7 +1849,7 @@ print_apiV1DevicesDeviceIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdGet - Get Device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the high-level information for a specified Device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the high-level information for a specified Device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1508,7 +1867,85 @@ print_apiV1DevicesDeviceIdLibraryItemsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdLibraryItemsGet - Get Device Library Items${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request gets all library items and their statuses for a specified Device ID</p>\\n<h4 id=\"possible-library-item-status-values\">Possible library item status values</h4>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>AVAILABLE</td>\\n<td>string</td>\\n<td>Library item available in Self Service</td>\\n</tr>\\n<tr>\\n<td>CACHED</td>\\n<td>string</td>\\n<td>Library item downloaded for install but not yet installed</td>\\n</tr>\\n<tr>\\n<td>CHANGE_PENDING</td>\\n<td>string</td>\\n<td>Recovery Password library item has changes that have not yet been applied</td>\\n</tr>\\n<tr>\\n<td>DOWNLOADING</td>\\n<td>string</td>\\n<td>Library item downloading</td>\\n</tr>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>EXCLUDED</td>\\n<td>string</td>\\n<td>Not in scope for assignment rule</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>INSTALLING</td>\\n<td>string</td>\\n<td>Library item installing</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device, not yet installed (All library items except for config profiles)</td>\\n</tr>\\n<tr>\\n<td>failed</td>\\n<td>string</td>\\n<td>Configuration profile failed to install</td>\\n</tr>\\n<tr>\\n<td>pending</td>\\n<td>string</td>\\n<td>Waiting on device, Configuration profile not yet installed</td>\\n</tr>\\n<tr>\\n<td>success</td>\\n<td>string</td>\\n<td>Configuration profile installed</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request gets all library items and their statuses for a specified Device ID</p>
+<h4 id=\"possible-library-item-status-values\">Possible library item status values</h4>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAILABLE</td>
+<td>string</td>
+<td>Library item available in Self Service</td>
+</tr>
+<tr>
+<td>CACHED</td>
+<td>string</td>
+<td>Library item downloaded for install but not yet installed</td>
+</tr>
+<tr>
+<td>CHANGE_PENDING</td>
+<td>string</td>
+<td>Recovery Password library item has changes that have not yet been applied</td>
+</tr>
+<tr>
+<td>DOWNLOADING</td>
+<td>string</td>
+<td>Library item downloading</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>EXCLUDED</td>
+<td>string</td>
+<td>Not in scope for assignment rule</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>INSTALLING</td>
+<td>string</td>
+<td>Library item installing</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+</tr>
+<tr>
+<td>failed</td>
+<td>string</td>
+<td>Configuration profile failed to install</td>
+</tr>
+<tr>
+<td>pending</td>
+<td>string</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
+</tr>
+<tr>
+<td>success</td>
+<td>string</td>
+<td>Configuration profile installed</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1526,7 +1963,7 @@ print_apiV1DevicesDeviceIdNotesGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdNotesGet - Get Device Notes${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request gets all notes for the specified Device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request gets all notes for the specified Device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1544,7 +1981,7 @@ print_apiV1DevicesDeviceIdNotesNoteIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdNotesNoteIdDelete - Delete Device Note${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request deletes a specified note (Note ID) for the specified Device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request deletes a specified note (Note ID) for the specified Device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1563,7 +2000,7 @@ print_apiV1DevicesDeviceIdNotesNoteIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdNotesNoteIdGet - Retrieve Device Note${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request retrieves a specified note (Note ID) for the specified Device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request retrieves a specified note (Note ID) for the specified Device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1582,7 +2019,7 @@ print_apiV1DevicesDeviceIdNotesNoteIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdNotesNoteIdPatch - Update Device Note${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request patches a specified note (Note ID) for the specified Device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request patches a specified note (Note ID) for the specified Device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}Authorization${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: Authorization:value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1603,7 +2040,7 @@ print_apiV1DevicesDeviceIdNotesPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdNotesPost - Create Device Note${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request creates a note for the specified device ID.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request creates a note for the specified device ID.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1621,7 +2058,52 @@ print_apiV1DevicesDeviceIdParametersGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdParametersGet - Get Device Parameters${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the parameters and their statuses for a specified Device ID</p>\\n<p>This endpoint is only applicable to macOS clients.</p>\\n<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>\\n<p><strong>Possible parameter status values</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device. Not yet run.</td>\\n</tr>\\n<tr>\\n<td>REMEDIATED</td>\\n<td>string</td>\\n<td>Parameter remediated</td>\\n</tr>\\n<tr>\\n<td>WARNING</td>\\n<td>string</td>\\n<td>Muted alert</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the parameters and their statuses for a specified Device ID</p>
+<p>This endpoint is only applicable to macOS clients.</p>
+<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
+<p><strong>Possible parameter status values</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device. Not yet run.</td>
+</tr>
+<tr>
+<td>REMEDIATED</td>
+<td>string</td>
+<td>Parameter remediated</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>string</td>
+<td>Muted alert</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1639,7 +2121,37 @@ print_apiV1DevicesDeviceIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdPatch - Update Device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to update device information, such as the assigned blueprint, user, Asset Tag, and Tags. It is not required to use all attributes in a given request. For example if you only want to update the assigned blueprint, you only need to pass the <code>blueprint_id</code> in the request payload.</p>\\n<p><strong>NOTE</strong>: With the introduction of a UUID value for user ID in the <a href=\"https://api-docs.kandji.io/#b107eb0a-b586-414f-bc4c-3d2b304cfd5f\">Users API</a>, the Device PATCH endpoint will support both the depricated user ID integer value and the new user ID UUID value when updating the user assignment for a device. The ability to update user assignment via the integer ID value will be removed starting January 2025.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n<h3 id=\"additional-information\">Additional information</h3>\\n<p>User ID can be found using the <code>list users</code> API</p>\\n<p>A Blueprint ID can be found using the <code>list blueprints</code> API or in the URL path while on a Blueprint overview page.</p>\\n<p>For example, for this URL <a href=\"https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4\">https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4</a></p>\\n<p>The Blueprint ID would be <code>6391086e-85a1-4820-813c-f9c75025fff4</code></p>\\n<p>An example script that leverages this API can be found in the <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/update-device-record\">Kandji Support GitHub</a></p>\\n<h4 id=\"clearing-the-device-asset-tag\">Clearing the device asset tag</h4>\\n<p>To clear a device asset tag, set the <code>asset_tag</code> value to <code>null</code> in the JSON payload.</p>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{\\n    \"asset_tag\": null\\n}\\n\\n</code></pre>\\n<h4 id=\"clearing-the-assigned-user-attribute\">Clearing the assigned user attribute</h4>\\n<p>To clear the assigned user for a given device, set the <code>user</code> value to <code>null</code> in the JSON payload.</p>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{\\n    \"user\": null\\n}\\n\\n</code></pre>\\n<h4 id=\"clearing-all-tags\">Clearing all tags</h4>\\n<p>To clear the assigned tags for a given device, set the <code>tags</code> value to an empty list <code>[]</code> in the JSON payload.</p>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{\\n    \"tags\": []\\n}\\n\\n</code></pre>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to update device information, such as the assigned blueprint, user, Asset Tag, and Tags. It is not required to use all attributes in a given request. For example if you only want to update the assigned blueprint, you only need to pass the <code>blueprint_id</code> in the request payload.</p>
+<p><strong>NOTE</strong>: With the introduction of a UUID value for user ID in the <a href=\"https://api-docs.kandji.io/#b107eb0a-b586-414f-bc4c-3d2b304cfd5f\">Users API</a>, the Device PATCH endpoint will support both the depricated user ID integer value and the new user ID UUID value when updating the user assignment for a device. The ability to update user assignment via the integer ID value will be removed starting January 2025.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
+<h3 id=\"additional-information\">Additional information</h3>
+<p>User ID can be found using the <code>list users</code> API</p>
+<p>A Blueprint ID can be found using the <code>list blueprints</code> API or in the URL path while on a Blueprint overview page.</p>
+<p>For example, for this URL <a href=\"https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4\">https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4</a></p>
+<p>The Blueprint ID would be <code>6391086e-85a1-4820-813c-f9c75025fff4</code></p>
+<p>An example script that leverages this API can be found in the <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/update-device-record\">Kandji Support GitHub</a></p>
+<h4 id=\"clearing-the-device-asset-tag\">Clearing the device asset tag</h4>
+<p>To clear a device asset tag, set the <code>asset_tag</code> value to <code>null</code> in the JSON payload.</p>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{
+    \"asset_tag\": null
+}
+
+</code></pre>
+<h4 id=\"clearing-the-assigned-user-attribute\">Clearing the assigned user attribute</h4>
+<p>To clear the assigned user for a given device, set the <code>user</code> value to <code>null</code> in the JSON payload.</p>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{
+    \"user\": null
+}
+
+</code></pre>
+<h4 id=\"clearing-all-tags\">Clearing all tags</h4>
+<p>To clear the assigned tags for a given device, set the <code>tags</code> value to an empty list <code>[]</code> in the JSON payload.</p>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{
+    \"tags\": []
+}
+
+</code></pre>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1657,7 +2169,11 @@ print_apiV1DevicesDeviceIdSecretsBypasscodeGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdSecretsBypasscodeGet - Get Activation Lock Bypass Code${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to retrieve the Activation Lock Bypass code.</p>\\n<p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>\\n<p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to retrieve the Activation Lock Bypass code.</p>
+<p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>
+<p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1675,7 +2191,9 @@ print_apiV1DevicesDeviceIdSecretsFilevaultkeyGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdSecretsFilevaultkeyGet - Get FileVault Recovery Key${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to retrieve the FileVault Recovery key for a macOS device.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to retrieve the FileVault Recovery key for a macOS device.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1693,7 +2211,10 @@ print_apiV1DevicesDeviceIdSecretsRecoverypasswordGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdSecretsRecoverypasswordGet - Get Recovery Lock Password${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the Recovery Lock password for a Mac with an Apple Silicon processor and the legacy EFI firmware password for a Mac with an Intel processor.</p>\\n<p>For more details on setting and managing Recovery passwords, see this <a href=\"https://support.kandji.io/support/solutions/articles/72000560472-configure-the-recovery-password-library-item\">Kandji support article</a>.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the Recovery Lock password for a Mac with an Apple Silicon processor and the legacy EFI firmware password for a Mac with an Intel processor.</p>
+<p>For more details on setting and managing Recovery passwords, see this <a href=\"https://support.kandji.io/support/solutions/articles/72000560472-configure-the-recovery-password-library-item\">Kandji support article</a>.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1711,7 +2232,9 @@ print_apiV1DevicesDeviceIdSecretsUnlockpinGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdSecretsUnlockpinGet - Get Unlock Pin${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to retrieve the device unlock pin for a macOS device.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to retrieve the device unlock pin for a macOS device.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1729,7 +2252,109 @@ print_apiV1DevicesDeviceIdStatusGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1DevicesDeviceIdStatusGet - Get Device Status${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the full status (parameters and library items) for a specified Device ID.</p>\\n<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>\\n<h4 id=\"possible-status-values\">Possible status values</h4>\\n<p><strong>Library items</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>AVAILABLE</td>\\n<td>string</td>\\n<td>Library item available in Self Service</td>\\n</tr>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>EXCLUDED</td>\\n<td>string</td>\\n<td>Not in scope for assignment rule</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device, not yet installed (All library items except for config profiles)</td>\\n</tr>\\n<tr>\\n<td>failed</td>\\n<td>string</td>\\n<td>Configuration profile failed to install</td>\\n</tr>\\n<tr>\\n<td>pending</td>\\n<td>string</td>\\n<td>Waiting on device, Configuration profile not yet installed</td>\\n</tr>\\n<tr>\\n<td>success</td>\\n<td>string</td>\\n<td>Configuration profile installed</td>\\n</tr>\\n</tbody>\\n</table>\\n</div><p><strong>Parameters</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device. Not yet run.</td>\\n</tr>\\n<tr>\\n<td>REMEDIATED</td>\\n<td>string</td>\\n<td>Parameter remediated</td>\\n</tr>\\n<tr>\\n<td>WARNING</td>\\n<td>string</td>\\n<td>Muted alert</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the full status (parameters and library items) for a specified Device ID.</p>
+<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
+<h4 id=\"possible-status-values\">Possible status values</h4>
+<p><strong>Library items</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAILABLE</td>
+<td>string</td>
+<td>Library item available in Self Service</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>EXCLUDED</td>
+<td>string</td>
+<td>Not in scope for assignment rule</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+</tr>
+<tr>
+<td>failed</td>
+<td>string</td>
+<td>Configuration profile failed to install</td>
+</tr>
+<tr>
+<td>pending</td>
+<td>string</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
+</tr>
+<tr>
+<td>success</td>
+<td>string</td>
+<td>Configuration profile installed</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>Parameters</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device. Not yet run.</td>
+</tr>
+<tr>
+<td>REMEDIATED</td>
+<td>string</td>
+<td>Parameter remediated</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>string</td>
+<td>Muted alert</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1747,7 +2372,8 @@ print_apiV1Deviceslimit300Get_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1Deviceslimit300Get - List Devices${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns a list of devices in a Kandji tenant. Optionally. query parameters can be used to filter results.</p>\\n<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Kandji support <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/code-examples\">GitHub</a>.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns a list of devices in a Kandji tenant. Optionally. query parameters can be used to filter results.</p>
+<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Kandji support <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/code-examples\">GitHub</a>.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1763,7 +2389,10 @@ print_apiV1IntegrationsAppleAdeAdeTokenIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeAdeTokenIdDelete - Delete ADE integration${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<h1 id=\"warning\"><strong>WARNING!</strong></h1>\\n<p>This is a HIGHLY destructive action.</p>\\n<p>Deleting an ADE token will unassign the associated device records from Kandji. For currently enrolled devices that were assigned to Kandji via the delete ADE integration will not be impacted until they are wiped and reprovisioned. This action is essentially the same as removing an ADE token from MDM and then adding it back.</p>\\n<p>If applicable, be sure to reassign the device records in ABM.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<h1 id=\"warning\"><strong>WARNING!</strong></h1>
+<p>This is a HIGHLY destructive action.</p>
+<p>Deleting an ADE token will unassign the associated device records from Kandji. For currently enrolled devices that were assigned to Kandji via the delete ADE integration will not be impacted until they are wiped and reprovisioned. This action is essentially the same as removing an ADE token from MDM and then adding it back.</p>
+<p>If applicable, be sure to reassign the device records in ABM.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}ade_token_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'ade_token_id' ${YELLOW}Specify as: ade_token_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1781,7 +2410,9 @@ print_apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet - List devices associated to ADE token${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>\\n<p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>\\n<p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>
+<p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>
+<p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}ade_token_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'ade_token_id' ${YELLOW}Specify as: ade_token_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1799,7 +2430,7 @@ print_apiV1IntegrationsAppleAdeAdeTokenIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeAdeTokenIdGet - Get ADE integration${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns a specific ADE integration based on the <code>ade_token_id</code> passed.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns a specific ADE integration based on the <code>ade_token_id</code> passed.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}ade_token_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'ade_token_id' ${YELLOW}Specify as: ade_token_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1817,7 +2448,8 @@ print_apiV1IntegrationsAppleAdeAdeTokenIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeAdeTokenIdPatch - Update ADE integration${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request will update the default blueprint, phone number, and email address in an existing ADE integration.</p>\\n<p>The default <code>blueprint_id</code>, <code>phone</code> number, and <code>email</code> address must be sent in the request.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request will update the default blueprint, phone number, and email address in an existing ADE integration.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, and <code>email</code> address must be sent in the request.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}ade_token_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'ade_token_id' ${YELLOW}Specify as: ade_token_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1835,7 +2467,8 @@ print_apiV1IntegrationsAppleAdeAdeTokenIdRenewPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeAdeTokenIdRenewPost - Renew ADE integration${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request will renew an existing ADE integration.</p>\\n<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request will renew an existing ADE integration.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}ade_token_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'ade_token_id' ${YELLOW}Specify as: ade_token_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1853,7 +2486,7 @@ print_apiV1IntegrationsAppleAdeDevicesDeviceIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeDevicesDeviceIdGet - Get ADE device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get information about a specific Automated Device Enrollment device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get information about a specific Automated Device Enrollment device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1871,7 +2504,9 @@ print_apiV1IntegrationsAppleAdeDevicesDeviceIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeDevicesDeviceIdPatch - Update ADE device${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Update a specific Automated Device Enrollment device's blueprint assignment, user assignment, and asset tag.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Update a specific Automated Device Enrollment device's blueprint assignment, user assignment, and asset tag.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'device_id' ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1889,7 +2524,7 @@ print_apiV1IntegrationsAppleAdeDevicesGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeDevicesGet - List ADE devices${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get a list of Automated Device Enrollment devices.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get a list of Automated Device Enrollment devices.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1905,7 +2540,7 @@ print_apiV1IntegrationsAppleAdeGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdeGet - List ADE integrations${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns a list of configured ADE integrations.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns a list of configured ADE integrations.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1921,7 +2556,8 @@ print_apiV1IntegrationsAppleAdePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdePost - Create ADE integration${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request will create a new ADE integration.</p>\\n<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> downloaded from ABM are required and must be sent in the request.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request will create a new ADE integration.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> downloaded from ABM are required and must be sent in the request.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1937,7 +2573,8 @@ print_apiV1IntegrationsAppleAdePublicKeyGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1IntegrationsAppleAdePublicKeyGet - Download ADE public key${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the public key used to create an MDM server connection in Apple Business Manager.</p>\\n<p>The encoded information needs to be saved to a file with the <code>.pem</code> format and then uploaded to ABM.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request returns the public key used to create an MDM server connection in Apple Business Manager.</p>
+<p>The encoded information needs to be saved to a file with the <code>.pem</code> format and then uploaded to ABM.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1953,7 +2590,7 @@ print_apiV1LibraryCustomAppsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomAppsGet - List Custom Apps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint makes a request to retrieve a list of custom apps from the Kandji library.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint makes a request to retrieve a list of custom apps from the Kandji library.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1969,7 +2606,10 @@ print_apiV1LibraryCustomAppsLibraryItemIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomAppsLibraryItemIdDelete - Delete Custom App${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>NOTICE: This is permanent so be careful.</p>\\n<p>This endpoint sends a request to delete a specific custom app from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>NOTICE: This is permanent so be careful.</p>
+<p>This endpoint sends a request to delete a specific custom app from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1987,7 +2627,9 @@ print_apiV1LibraryCustomAppsLibraryItemIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomAppsLibraryItemIdGet - Get Custom App${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2005,7 +2647,10 @@ print_apiV1LibraryCustomAppsLibraryItemIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomAppsLibraryItemIdPatch - Update Custom App${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to update a custom app in the Kandji library.</p>\\n<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to update a custom app in the Kandji library.</p>
+<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2023,7 +2668,8 @@ print_apiV1LibraryCustomAppsPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomAppsPost - Create Custom App${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to create a custom app in the Kandji library.</p>\\n<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to create a custom app in the Kandji library.</p>
+<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2039,7 +2685,10 @@ print_apiV1LibraryCustomAppsUploadPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomAppsUploadPost - Upload Custom App${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request retrieves the S3 upload details need for uploading the app to Amazon S3.</p>\\n<p>Creates a pre-signed <code>post_url</code> to upload a new Custom App to S3.</p>\\n<p>The provided <code>name</code> will be used to calculate a unique <code>file_key</code> in S3.</p>\\n<p>A separate request will have to be made to the <code>Upload to S3</code> endpoint to upload the file to S3 directly using the <code>post_url</code> and <code>post_data</code> from the <code>Upload Custom App</code> response.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request retrieves the S3 upload details need for uploading the app to Amazon S3.</p>
+<p>Creates a pre-signed <code>post_url</code> to upload a new Custom App to S3.</p>
+<p>The provided <code>name</code> will be used to calculate a unique <code>file_key</code> in S3.</p>
+<p>A separate request will have to be made to the <code>Upload to S3</code> endpoint to upload the file to S3 directly using the <code>post_url</code> and <code>post_data</code> from the <code>Upload Custom App</code> response.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2055,7 +2704,7 @@ print_apiV1LibraryCustomProfilesGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomProfilesGet - List Custom Profiles${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint makes a request to retrieve a list of custom profiles from the Kandji library.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint makes a request to retrieve a list of custom profiles from the Kandji library.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2071,7 +2720,10 @@ print_apiV1LibraryCustomProfilesLibraryItemIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomProfilesLibraryItemIdDelete - Delete Custom Profile${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>NOTICE: This is permanent so be careful.</p>\\n<p>This endpoint sends a request to delete a specific custom profile from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>NOTICE: This is permanent so be careful.</p>
+<p>This endpoint sends a request to delete a specific custom profile from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2089,7 +2741,9 @@ print_apiV1LibraryCustomProfilesLibraryItemIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomProfilesLibraryItemIdGet - Get Custom Profile${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2107,7 +2761,9 @@ print_apiV1LibraryCustomProfilesLibraryItemIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomProfilesLibraryItemIdPatch - Update Custom Profile${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to update a custom profile in the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to update a custom profile in the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2125,7 +2781,7 @@ print_apiV1LibraryCustomProfilesPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomProfilesPost - Create Custom Profile${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to create a custom profile in the Kandji library.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to create a custom profile in the Kandji library.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2141,7 +2797,7 @@ print_apiV1LibraryCustomScriptsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomScriptsGet - List Custom Scripts${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint makes a request to retrieve a list of custom scripts from the Kandji library.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint makes a request to retrieve a list of custom scripts from the Kandji library.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2157,7 +2813,10 @@ print_apiV1LibraryCustomScriptsLibraryItemIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomScriptsLibraryItemIdDelete - Delete Custom Script${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>NOTICE: This is permanent so be careful.</p>\\n<p>This endpoint sends a request to delete a specific custom scripts from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>NOTICE: This is permanent so be careful.</p>
+<p>This endpoint sends a request to delete a specific custom scripts from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2175,7 +2834,9 @@ print_apiV1LibraryCustomScriptsLibraryItemIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomScriptsLibraryItemIdGet - Get Custom Script${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint retrieves details about a specific custom script from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint retrieves details about a specific custom script from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2193,7 +2854,7 @@ print_apiV1LibraryCustomScriptsLibraryItemIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomScriptsLibraryItemIdPatch - Update Custom Script${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to update a custom script in the Kandji library.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to update a custom script in the Kandji library.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2211,7 +2872,7 @@ print_apiV1LibraryCustomScriptsPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryCustomScriptsPost - Create Custom Script${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to create a custom script in the Kandji library.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This request allows you to create a custom script in the Kandji library.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2227,7 +2888,10 @@ print_apiV1LibraryLibraryItemsLibraryItemIdActivityGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryLibraryItemsLibraryItemIdActivityGet - Get Library Item Activity${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint retrieves the activity related to a specific library item. Activity is listed from newest to oldest.</p>\\n<p>To see a delta of the activity events between now and the last request, you can store the newest entry from the previous request and then look for that entry in the next request. Any entry post that will be the delta.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint retrieves the activity related to a specific library item. Activity is listed from newest to oldest.</p>
+<p>To see a delta of the activity events between now and the last request, you can store the newest entry from the previous request and then look for that entry in the next request. Any entry post that will be the delta.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2245,7 +2909,9 @@ print_apiV1LibraryLibraryItemsLibraryItemIdStatusGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1LibraryLibraryItemsLibraryItemIdStatusGet - Get Library Item Statuses${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint retrieves the statuses related to a specific library item.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint retrieves the statuses related to a specific library item.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'library_item_id' ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2263,7 +2929,7 @@ print_apiV1PrismActivationLockGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismActivationLockGet - Activation lock${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get activation lock attributes for devices.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get activation lock attributes for devices.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2279,7 +2945,7 @@ print_apiV1PrismApplicationFirewallGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismApplicationFirewallGet - Application firewall${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Application Firewall details for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Application Firewall details for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2295,7 +2961,7 @@ print_apiV1PrismAppsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismAppsGet - Applications${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2311,7 +2977,7 @@ print_apiV1PrismCertificatesGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismCertificatesGet - Certificates${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get certificate details.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get certificate details.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2327,7 +2993,9 @@ print_apiV1PrismCountcategoryappsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismCountcategoryappsGet - Count${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get the total record count for the specified Prism category.</p>\\n<p>If a category contains spaces substitute the spaces for underscores (\"_\") when using the API query.</p>\\n<p>Example: <code>Device information</code> becomes <code>device_information</code>.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get the total record count for the specified Prism category.</p>
+<p>If a category contains spaces substitute the spaces for underscores (\"_\") when using the API query.</p>
+<p>Example: <code>Device information</code> becomes <code>device_information</code>.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2343,7 +3011,7 @@ print_apiV1PrismDesktopAndScreensaverGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismDesktopAndScreensaverGet - Desktop and Screensaver${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Desktop and Screensaver details for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Desktop and Screensaver details for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2359,7 +3027,7 @@ print_apiV1PrismDeviceInformationGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismDeviceInformationGet - Device information${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get attributes about devices.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get attributes about devices.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2375,7 +3043,9 @@ print_apiV1PrismExportExportIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismExportExportIdGet - Get category export${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get an export request's status. To download the export, use the <code>signed_url</code>. This will download a CSV file containing the exported category information.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p>export_id (path parameter): The unique identifier of the the export job.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get an export request's status. To download the export, use the <code>signed_url</code>. This will download a CSV file containing the exported category information.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p>export_id (path parameter): The unique identifier of the the export job.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}export_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'export_id' ${YELLOW}Specify as: export_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2393,7 +3063,51 @@ print_apiV1PrismExportPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismExportPost - Request category export${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Request export of a category. The <code>id</code> key is used when checking the export status using the <em>Request category export</em> endpoint.</p>\\n<p><strong>Request Body Parameters: application/json</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Key</th>\\n<th>Type</th>\\n<th>Possible value(s)</th>\\n<th>Description</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td><code>blueprint_ids</code></td>\\n<td><code>array</code></td>\\n<td><code>[\"string\", \"string\", \"string\"]</code></td>\\n<td>List of one or more comma separate blueprint IDs.</td>\\n</tr>\\n<tr>\\n<td><code>category</code></td>\\n<td><code>string</code></td>\\n<td><code>apps</code> ,  <br /><code>activation_lock</code> ,  <br /><code>desktop_and_screensaver</code> ,  <br /><code>device_information</code> ,  <br /><code>gatekeeper_and_xprotect</code> ,  <br /><code>installed_profiles</code> ,  <br /><code>kernel_extensions</code> ,  <br /><code>local_users</code> ,  <br /><code>launch_agents_and_daemons</code> ,  <br /><code>system_extensions</code> ,  <br /><code>startup_settings</code> ,  <br /><code>transparency_database</code></td>\\n<td>Only one category per export reqest.</td>\\n</tr>\\n<tr>\\n<td><code>device_families</code></td>\\n<td><code>array</code></td>\\n<td><code>[\"Mac\", \"iPhone\", \"iPad\", \"tvOS\"]</code></td>\\n<td>List of one or more comma separted string values for device families.</td>\\n</tr>\\n<tr>\\n<td><code>filter</code></td>\\n<td><code>object</code></td>\\n<td><code>{\"apple_silicon\": {\"eq\": true}, \"device__name\": {\"like\": [\"this\", \"or_this\"]}}</code></td>\\n<td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>\\n</tr>\\n<tr>\\n<td><code>sort_by</code></td>\\n<td><code>string</code></td>\\n<td></td>\\n<td>Sort results by the name of a given response body key in either ascending (default behavior) or descending('-') order.</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Request export of a category. The <code>id</code> key is used when checking the export status using the <em>Request category export</em> endpoint.</p>
+<p><strong>Request Body Parameters: application/json</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Possible value(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blueprint_ids</code></td>
+<td><code>array</code></td>
+<td><code>[\"string\", \"string\", \"string\"]</code></td>
+<td>List of one or more comma separate blueprint IDs.</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td><code>string</code></td>
+<td><code>apps</code> ,  <br /><code>activation_lock</code> ,  <br /><code>desktop_and_screensaver</code> ,  <br /><code>device_information</code> ,  <br /><code>gatekeeper_and_xprotect</code> ,  <br /><code>installed_profiles</code> ,  <br /><code>kernel_extensions</code> ,  <br /><code>local_users</code> ,  <br /><code>launch_agents_and_daemons</code> ,  <br /><code>system_extensions</code> ,  <br /><code>startup_settings</code> ,  <br /><code>transparency_database</code></td>
+<td>Only one category per export reqest.</td>
+</tr>
+<tr>
+<td><code>device_families</code></td>
+<td><code>array</code></td>
+<td><code>[\"Mac\", \"iPhone\", \"iPad\", \"tvOS\"]</code></td>
+<td>List of one or more comma separted string values for device families.</td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td><code>object</code></td>
+<td><code>{\"apple_silicon\": {\"eq\": true}, \"device__name\": {\"like\": [\"this\", \"or_this\"]}}</code></td>
+<td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
+</tr>
+<tr>
+<td><code>sort_by</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>Sort results by the name of a given response body key in either ascending (default behavior) or descending('-') order.</td>
+</tr>
+</tbody>
+</table>
+</div>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2409,7 +3123,7 @@ print_apiV1PrismFilevaultGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismFilevaultGet - FileVault${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get FileVault information for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get FileVault information for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2425,7 +3139,7 @@ print_apiV1PrismGatekeeperAndXprotectGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismGatekeeperAndXprotectGet - Gatekeeper and XProtect${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Gatekeeper and XProtect attributes for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Gatekeeper and XProtect attributes for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2441,7 +3155,7 @@ print_apiV1PrismInstalledProfilesGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismInstalledProfilesGet - Installed profiles${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2457,7 +3171,7 @@ print_apiV1PrismKernelExtensionsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismKernelExtensionsGet - Kernel Extensions${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Kernel Extension attributes for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Kernel Extension attributes for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2473,7 +3187,7 @@ print_apiV1PrismLaunchAgentsAndDaemonsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismLaunchAgentsAndDaemonsGet - Launch Agents and Daemons${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Launch Agents and Daemons installed on macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Launch Agents and Daemons installed on macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2489,7 +3203,7 @@ print_apiV1PrismLocalUsersGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismLocalUsersGet - Local users${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Local Users detials for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Local Users detials for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2505,7 +3219,7 @@ print_apiV1PrismStartupSettingsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismStartupSettingsGet - Startup settings${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Startup settings for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Startup settings for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2521,7 +3235,7 @@ print_apiV1PrismSystemExtensionsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismSystemExtensionsGet - System Extensions${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get System Extension attributes for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get System Extension attributes for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2537,7 +3251,7 @@ print_apiV1PrismTransparencyDatabaseGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1PrismTransparencyDatabaseGet - Transparency database${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get Transparency Database (TCC) attributes for macOS.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get Transparency Database (TCC) attributes for macOS.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2553,7 +3267,8 @@ print_apiV1SelfServiceCategoriesGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1SelfServiceCategoriesGet - List Self Service Categories${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint retrieves a list of self-service categories and their associated IDs.</p>\\n<p>If you are planning to make a Library item available in Self Service under a specific category, you can call this endpoint to get the category ID and then use that ID when creating or updating the library item via the Kandji API.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint retrieves a list of self-service categories and their associated IDs.</p>
+<p>If you are planning to make a Library item available in Self Service under a specific category, you can call this endpoint to get the category ID and then use that ID when creating or updating the library item via the Kandji API.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2569,7 +3284,7 @@ print_apiV1SettingsLicensingGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1SettingsLicensingGet - Licensing${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Returns Kandji tenant licensing and utilization information.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Returns Kandji tenant licensing and utilization information.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2585,7 +3300,7 @@ print_apiV1TagsPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1TagsPost - Create Tag${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Create a tag. Can only create one tag per request.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Create a tag. Can only create one tag per request.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2601,7 +3316,9 @@ print_apiV1TagsTagIdDelete_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1TagsTagIdDelete - Delete Tag${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Delete a tag.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Delete a tag.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}tag_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'tag_id' ${YELLOW}Specify as: tag_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2619,7 +3336,9 @@ print_apiV1TagsTagIdPatch_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1TagsTagIdPatch - Update Tag${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Update tag name.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Update tag name.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}tag_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'tag_id' ${YELLOW}Specify as: tag_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2637,7 +3356,7 @@ print_apiV1TagssearchaccuhiveGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1TagssearchaccuhiveGet - Get Tags${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Return configured tags.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Return configured tags.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2653,7 +3372,7 @@ print_apiV1ThreatDetailsGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1ThreatDetailsGet - Get Threat Details${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Get threat details.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Get threat details.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2669,7 +3388,8 @@ print_apiV1UsersGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1UsersGet - List Users${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint makes a request to retrieve a list of users from user directory integrations.</p>\\n<p>A maximum of 300 records are returned per request, and pagination can be performed leveraging the URLs provided in the <code>next</code> and <code>previous</code> keys in the response. If there are no more results available, the respective key will be <code>null</code>.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint makes a request to retrieve a list of users from user directory integrations.</p>
+<p>A maximum of 300 records are returned per request, and pagination can be performed leveraging the URLs provided in the <code>next</code> and <code>previous</code> keys in the response. If there are no more results available, the respective key will be <code>null</code>.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2685,7 +3405,9 @@ print_apiV1UsersUserIdGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}apiV1UsersUserIdGet - Get User${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint makes a request to retrieve a specified user directory integration user by id.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p>user_id (path parameter): The unique identifier of the user directory integration user.</p>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>This endpoint makes a request to retrieve a specified user directory integration user by id.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p>user_id (path parameter): The unique identifier of the user directory integration user.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'user_id' ${YELLOW}Specify as: user_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2703,7 +3425,23 @@ print_postUrlPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}postUrlPost - Upload to S3${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>Example showing separate post request to upload the file to Amazon S3.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>post_url</code> (path parameter): The <code>post_url</code> value from the <code>Upload custom app</code> response.</p>\\n<h3 id=\"request-body\">Request Body</h3>\\n<p>For the request body, use the contents of the <code>post_data</code> object in the <code>Upload Custom App</code> endpoint response (example response below) and supply the path to the custom app file in the <code>file</code> request parameter.</p>\\n<h4 id=\"example-post_data-object\">Example post_data object</h4>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">\"post_data\": {\\n   \"key\": \"(field to post along with file to S3 -- the key for the uploaded file)\",\\n   \"x-amz-algorithm\": \"(field to post along with file to S3)\",\\n   \"x-amz-credential\": \"(field to post along with file to S3)\",\\n   \"x-amz-date\": \"(field to post along with file to S3)\",\\n   \"x-amz-security-token\": \"(field to post along with file to S3)\",\\n   \"policy\": \"(field to post along with file to S3)\",\\n   \"x-amz-signature\": \"(field to post along with file to S3)\",\\n}\\n\\n</code></pre>\\n" | paste -sd' ' | fold -sw 80
+    echo -e "<p>Example showing separate post request to upload the file to Amazon S3.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>post_url</code> (path parameter): The <code>post_url</code> value from the <code>Upload custom app</code> response.</p>
+<h3 id=\"request-body\">Request Body</h3>
+<p>For the request body, use the contents of the <code>post_data</code> object in the <code>Upload Custom App</code> endpoint response (example response below) and supply the path to the custom app file in the <code>file</code> request parameter.</p>
+<h4 id=\"example-post_data-object\">Example post_data object</h4>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">\"post_data\": {
+   \"key\": \"(field to post along with file to S3 -- the key for the uploaded file)\",
+   \"x-amz-algorithm\": \"(field to post along with file to S3)\",
+   \"x-amz-credential\": \"(field to post along with file to S3)\",
+   \"x-amz-date\": \"(field to post along with file to S3)\",
+   \"x-amz-security-token\": \"(field to post along with file to S3)\",
+   \"policy\": \"(field to post along with file to S3)\",
+   \"x-amz-signature\": \"(field to post along with file to S3)\",
+}
+
+</code></pre>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}post_url${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Path parameter 'post_url' ${YELLOW}Specify as: post_url=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'

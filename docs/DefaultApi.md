@@ -117,7 +117,51 @@ Method | HTTP request | Description
 
 Assign Library Item
 
-<p>This endpoint allows assigning a library item to a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n<h3 id=\"request-body\">Request Body</h3>\\n<ul>\\n<li><p><code>library_item_id</code> (string, required)</p>\\n</li>\\n<li><p><code>assignment_node_id</code> (string, required for maps)</p>\\n<ul>\\n<li>Note: To find the assignment_node_id, view the map in a browser. Then, on your keyboard, press and hold the Option ⌥ key. Each node ID remains fixed for the lifespan of the node on the map.</li>\\n</ul>\\n</li>\\n</ul>\\n<h3 id=\"error-responses\">Error responses</h3>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Code</strong></th>\\n<th><strong>Body</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>400 - Bad Request</td>\\n<td>Bad Request</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item already exists on Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item already exists in Assignment Node\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>This endpoint allows assigning a library item to a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
+<h3 id=\"request-body\">Request Body</h3>
+<ul>
+<li><p><code>library_item_id</code> (string, required)</p>
+</li>
+<li><p><code>assignment_node_id</code> (string, required for maps)</p>
+<ul>
+<li>Note: To find the assignment_node_id, view the map in a browser. Then, on your keyboard, press and hold the Option ⌥ key. Each node ID remains fixed for the lifespan of the node on the map.</li>
+</ul>
+</li>
+</ul>
+<h3 id=\"error-responses\">Error responses</h3>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Body</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 - Bad Request</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item already exists on Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item already exists in Assignment Node\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -152,7 +196,11 @@ No authorization required
 
 Delete Blueprint
 
-<h1 id=\"warning\"><strong>WARNING!</strong></h1>\\n<p>This is a HIGHLY destructive action.</p>\\n<p>Deleting a Blueprint will un-manage ALL devices assigned to the Blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n
+<h1 id=\"warning\"><strong>WARNING!</strong></h1>
+<p>This is a HIGHLY destructive action.</p>
+<p>Deleting a Blueprint will un-manage ALL devices assigned to the Blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
 
 ### Example
 
@@ -187,7 +235,9 @@ No authorization required
 
 Get Blueprint
 
-<p>This request returns information about a specific blueprint based on blueprint ID.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n
+<p>This request returns information about a specific blueprint based on blueprint ID.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
 
 ### Example
 
@@ -222,7 +272,26 @@ No authorization required
 
 List Library Items
 
-<p>This API endpoint retrieves a list of library items associated with a specific blueprint. (classic and maps). Requires that the blueprint ID is passed as a path parameter in the URL.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n<h3 id=\"response-fields\">Response fields</h3>\\n<ul>\\n<li><p><code>count</code> (int): The total count of library items.</p>\\n</li>\\n<li><p><code>next</code> (str): The URL for the next page of results, if available. If not available will value will be <code>null</code>.</p>\\n</li>\\n<li><p><code>previous</code> (str): The URL for the previous page of results, if available. If not available will value will be <code>null</code>.</p>\\n</li>\\n<li><p><code>results</code> (object): An array containing objects with the following fields:</p>\\n<ul>\\n<li><p><code>id</code> (str): The ID of the library item.</p>\\n</li>\\n<li><p><code>name</code> (str): The name of the library item.</p>\\n</li>\\n</ul>\\n</li>\\n</ul>\\n
+<p>This API endpoint retrieves a list of library items associated with a specific blueprint. (classic and maps). Requires that the blueprint ID is passed as a path parameter in the URL.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
+<h3 id=\"response-fields\">Response fields</h3>
+<ul>
+<li><p><code>count</code> (int): The total count of library items.</p>
+</li>
+<li><p><code>next</code> (str): The URL for the next page of results, if available. If not available will value will be <code>null</code>.</p>
+</li>
+<li><p><code>previous</code> (str): The URL for the previous page of results, if available. If not available will value will be <code>null</code>.</p>
+</li>
+<li><p><code>results</code> (object): An array containing objects with the following fields:</p>
+<ul>
+<li><p><code>id</code> (str): The ID of the library item.</p>
+</li>
+<li><p><code>name</code> (str): The name of the library item.</p>
+</li>
+</ul>
+</li>
+</ul>
 
 ### Example
 
@@ -257,7 +326,18 @@ No authorization required
 
 Get Manual Enrollment Profile
 
-<p>This request returns the manual enrollment profile (.mobileconfig file) for a specified Blueprint.</p>\\n<p>This request will return the enrollment profile even if \"Require Authentication\" is configured for the Blueprint in Manual Enrollment.</p>\\n<p>The enrollment profile will be returned in raw form with response headers:</p>\\n<ul>\\n<li><p><code>Content-Type</code> = <code>application/x-apple-aspen-config</code></p>\\n</li>\\n<li><p><code>Content-Disposition</code> = <code>attachment;filename=kandji-enroll.mobileconfig</code></p>\\n</li>\\n</ul>\\n<p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n
+<p>This request returns the manual enrollment profile (.mobileconfig file) for a specified Blueprint.</p>
+<p>This request will return the enrollment profile even if \"Require Authentication\" is configured for the Blueprint in Manual Enrollment.</p>
+<p>The enrollment profile will be returned in raw form with response headers:</p>
+<ul>
+<li><p><code>Content-Type</code> = <code>application/x-apple-aspen-config</code></p>
+</li>
+<li><p><code>Content-Disposition</code> = <code>attachment;filename=kandji-enroll.mobileconfig</code></p>
+</li>
+</ul>
+<p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
 
 ### Example
 
@@ -292,7 +372,9 @@ No authorization required
 
 Update Blueprint
 
-<p>This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n
+<p>This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
 
 ### Example
 
@@ -327,7 +409,48 @@ No authorization required
 
 Remove Library Item
 
-<p>This endpoint allows removing a library item from a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>\\n<h3 id=\"request-body\">Request Body</h3>\\n<ul>\\n<li><p><code>library_item_id</code> (string, required)</p>\\n</li>\\n<li><p><code>assignment_node_id</code> (string, required for maps)</p>\\n</li>\\n</ul>\\n<h3 id=\"error-responses\">Error responses</h3>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Code</strong></th>\\n<th><strong>Body</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>400 - Bad Request</td>\\n<td>Bad Request</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item does not exist on Blueprint\"</td>\\n</tr>\\n<tr>\\n<td></td>\\n<td>\"Library Item does not exist in Assignment Node\"</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>This endpoint allows removing a library item from a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
+<h3 id=\"request-body\">Request Body</h3>
+<ul>
+<li><p><code>library_item_id</code> (string, required)</p>
+</li>
+<li><p><code>assignment_node_id</code> (string, required for maps)</p>
+</li>
+</ul>
+<h3 id=\"error-responses\">Error responses</h3>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Body</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 - Bad Request</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td></td>
+<td>\"assignment_node_id cannot be provided for Classic Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Must provide assignment_node_id for Assignment Map Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item does not exist on Blueprint\"</td>
+</tr>
+<tr>
+<td></td>
+<td>\"Library Item does not exist in Assignment Node\"</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -362,7 +485,7 @@ No authorization required
 
 List Blueprints
 
-<p>This request returns a list of a blueprint records in the Kandji tenant. Optional query parameters can be specified to filter the results.</p>\\n
+<p>This request returns a list of a blueprint records in the Kandji tenant. Optional query parameters can be specified to filter the results.</p>
 
 ### Example
 
@@ -394,7 +517,9 @@ No authorization required
 
 Create Blueprint
 
-<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>\\n<p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>\\n<p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>\\n
+<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>
+<p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>
+<p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>
 
 ### Example
 
@@ -458,7 +583,8 @@ No authorization required
 
 Send Blankpush
 
-<p>This endpoint sends an MDM command to initiate a blank push.</p>\\n<p><a href=\"https://support.kandji.io/what-is-a-blank-push\">Using the Blank Push command</a></p>\\n
+<p>This endpoint sends an MDM command to initiate a blank push.</p>
+<p><a href=\"https://support.kandji.io/what-is-a-blank-push\">Using the Blank Push command</a></p>
 
 ### Example
 
@@ -493,7 +619,7 @@ No authorization required
 
 Clear Passcode
 
-<p>This endpoint sends an MDM command to clear a device passcode. Available for iPhone and iPad.</p>\\n
+<p>This endpoint sends an MDM command to clear a device passcode. Available for iPhone and iPad.</p>
 
 ### Example
 
@@ -528,7 +654,12 @@ No authorization required
 
 Delete User
 
-<p>This endpoint sends an MDM command to delete a local user account on macOS and Shared iPad (Device Supervision via Automated Device Enrollment is required).</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>DeleteAllUsers</code> - <code>boolean</code></p>\\n<p><code>ForceDeletion</code> - <code>boolean</code></p>\\n<p><code>UserName</code> - <code>string</code></p>\\n
+<p>This endpoint sends an MDM command to delete a local user account on macOS and Shared iPad (Device Supervision via Automated Device Enrollment is required).</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>DeleteAllUsers</code> - <code>boolean</code></p>
+<p><code>ForceDeletion</code> - <code>boolean</code></p>
+<p><code>UserName</code> - <code>string</code></p>
 
 ### Example
 
@@ -563,7 +694,8 @@ No authorization required
 
 Disable Lost Mode
 
-<p>This command will send a request to turn off lost mode on iOS and iPadOS.</p>\\n<p>If the command is already pending, the message \"<em>Disable lost mode is already pending for this device.</em>\" will be in the response.</p>\\n
+<p>This command will send a request to turn off lost mode on iOS and iPadOS.</p>
+<p>If the command is already pending, the message \"<em>Disable lost mode is already pending for this device.</em>\" will be in the response.</p>
 
 ### Example
 
@@ -598,7 +730,8 @@ No authorization required
 
 Enable Lost Mode
 
-<p>This endpoint sends an MDM command to remotely turn on lost mode on iOS and iPadOS.</p>\\n<p>Optionally, a JSON payload can be sent in the request to set a lock message, phone number, and footnote on the target device.</p>\\n
+<p>This endpoint sends an MDM command to remotely turn on lost mode on iOS and iPadOS.</p>
+<p>Optionally, a JSON payload can be sent in the request to set a lock message, phone number, and footnote on the target device.</p>
 
 ### Example
 
@@ -633,7 +766,51 @@ No authorization required
 
 Erase Device
 
-<p>This endpoint sends an MDM command to erase the device.</p>\\n<p>iOS 4.0+, iPadOS 4.0+, macOS 10.7+, tvOS 10.2+</p>\\n<p><strong>Request Body Parameters: application/json</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Key</th>\\n<th>Type</th>\\n<th>Description</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td><code>PIN</code></td>\\n<td><code>string</code></td>\\n<td>The six-character PIN for Find My. This value is available in macOS 10.8 and later.</td>\\n</tr>\\n<tr>\\n<td><code>PreserveDataPlan</code></td>\\n<td><code>boolean</code></td>\\n<td>If true, preserve the data plan on an iPhone or iPad with eSIM functionality, if one exists. This value is available in iOS 11 and later.  <br />  <br />Default: true</td>\\n</tr>\\n<tr>\\n<td><code>DisallowProximitySetup</code></td>\\n<td><code>boolean</code></td>\\n<td>If true, disable Proximity Setup on the next reboot and skip the pane in Setup Assistant. This value is available in iOS 11 and later. Prior to iOS 14, don’t use this option with any other option.  <br />  <br />Default: false</td>\\n</tr>\\n<tr>\\n<td><code>ReturnToService</code></td>\\n<td><code>object</code></td>\\n<td>(iOS 17 and later and iPadOS 17 and later and with Shared iPad ) When sending the erase device command to mobile devices, use this key to enable Return to Service. Include an optional Wi-Fi payload ProfileId to allow the device to connect to a Wi-Fi network automatically after being erased. If a Wi-Fi ProfileId is not provided and the mobile device is not tethered to a Mac to share the network connection, the end-user will be required to select a Wi-Fi network to complete the setup.  <br />  <br />If sent to any macOS computer or to mobile devices on iOS 16 or iPadOS 16 and below, the RTS keys will be ignored, and only the erase device command will be issued to the device.</td>\\n</tr>\\n<tr>\\n<td>- <code>Enabled</code></td>\\n<td><code>boolean</code></td>\\n<td>(Required) If true, the device tries to re-enroll itself automatically after erasure. The user needs to deactivate all activation locks for this feature to work correctly.</td>\\n</tr>\\n<tr>\\n<td>- <code>ProfileId</code></td>\\n<td><code>string</code></td>\\n<td>Profile ID value associated with a Wi-Fi profile payload. This is required when the device doesn’t have ethernet access.</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>This endpoint sends an MDM command to erase the device.</p>
+<p>iOS 4.0+, iPadOS 4.0+, macOS 10.7+, tvOS 10.2+</p>
+<p><strong>Request Body Parameters: application/json</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PIN</code></td>
+<td><code>string</code></td>
+<td>The six-character PIN for Find My. This value is available in macOS 10.8 and later.</td>
+</tr>
+<tr>
+<td><code>PreserveDataPlan</code></td>
+<td><code>boolean</code></td>
+<td>If true, preserve the data plan on an iPhone or iPad with eSIM functionality, if one exists. This value is available in iOS 11 and later.  <br />  <br />Default: true</td>
+</tr>
+<tr>
+<td><code>DisallowProximitySetup</code></td>
+<td><code>boolean</code></td>
+<td>If true, disable Proximity Setup on the next reboot and skip the pane in Setup Assistant. This value is available in iOS 11 and later. Prior to iOS 14, don’t use this option with any other option.  <br />  <br />Default: false</td>
+</tr>
+<tr>
+<td><code>ReturnToService</code></td>
+<td><code>object</code></td>
+<td>(iOS 17 and later and iPadOS 17 and later and with Shared iPad ) When sending the erase device command to mobile devices, use this key to enable Return to Service. Include an optional Wi-Fi payload ProfileId to allow the device to connect to a Wi-Fi network automatically after being erased. If a Wi-Fi ProfileId is not provided and the mobile device is not tethered to a Mac to share the network connection, the end-user will be required to select a Wi-Fi network to complete the setup.  <br />  <br />If sent to any macOS computer or to mobile devices on iOS 16 or iPadOS 16 and below, the RTS keys will be ignored, and only the erase device command will be issued to the device.</td>
+</tr>
+<tr>
+<td>- <code>Enabled</code></td>
+<td><code>boolean</code></td>
+<td>(Required) If true, the device tries to re-enroll itself automatically after erasure. The user needs to deactivate all activation locks for this feature to work correctly.</td>
+</tr>
+<tr>
+<td>- <code>ProfileId</code></td>
+<td><code>string</code></td>
+<td>Profile ID value associated with a Wi-Fi profile payload. This is required when the device doesn’t have ethernet access.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -668,7 +845,31 @@ No authorization required
 
 Lock Device
 
-<p>This endpoint sends an MDM command to remotely lock a device.</p>\\n<p>For macOS clients, an unlock PIN will be created, and returned in the response.</p>\\n<blockquote>\\n<p><strong>Caution !!!</strong><br /><em>For a Mac with Apple silicon running a version of macOS before 11.5 will deactivate the Mac. To reactivate, the Mac requires a network connection and authentication by a Secure Token enabled local administrator.</em></p>\\n</blockquote>\\n<p>Optionally, a JSON payload can be sent in the request to set a lock message and phone number on the target device.</p>\\n<p><strong>Note:</strong> For macOS, although the lock message is displayed on all types of Mac computers, the phone number is displayed only on a Mac with Apple silicon.</p>\\n<h4 id=\"response-properties\">Response properties</h4>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Property</th>\\n<th>Description</th>\\n<th>Type</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>PIN</td>\\n<td>Six digit pin code used to unlock a Mac.</td>\\n<td>String</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>This endpoint sends an MDM command to remotely lock a device.</p>
+<p>For macOS clients, an unlock PIN will be created, and returned in the response.</p>
+<blockquote>
+<p><strong>Caution !!!</strong><br /><em>For a Mac with Apple silicon running a version of macOS before 11.5 will deactivate the Mac. To reactivate, the Mac requires a network connection and authentication by a Secure Token enabled local administrator.</em></p>
+</blockquote>
+<p>Optionally, a JSON payload can be sent in the request to set a lock message and phone number on the target device.</p>
+<p><strong>Note:</strong> For macOS, although the lock message is displayed on all types of Mac computers, the phone number is displayed only on a Mac with Apple silicon.</p>
+<h4 id=\"response-properties\">Response properties</h4>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIN</td>
+<td>Six digit pin code used to unlock a Mac.</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -703,7 +904,8 @@ No authorization required
 
 Play Lost Mode Sound
 
-<p>This command will tell the target iOS or iPadOS device to play the lost mode sound.</p>\\n<p><strong>Note</strong>: The Lost Mode sound will play for 2 minutes, even if the device is in silent mode. Anyone finding the device can silence the sound by pressing any of its side buttons.</p>\\n
+<p>This command will tell the target iOS or iPadOS device to play the lost mode sound.</p>
+<p><strong>Note</strong>: The Lost Mode sound will play for 2 minutes, even if the device is in silent mode. Anyone finding the device can silence the sound by pressing any of its side buttons.</p>
 
 ### Example
 
@@ -738,7 +940,7 @@ No authorization required
 
 Reinstall Agent
 
-<p>This endpoint sends an MDM command reinstall the Kandji Agent. Available for macOS devices.</p>\\n
+<p>This endpoint sends an MDM command reinstall the Kandji Agent. Available for macOS devices.</p>
 
 ### Example
 
@@ -773,7 +975,10 @@ No authorization required
 
 Remote Desktop
 
-<p>This endpoint sends an MDM command to control the Remote Management status on a Mac. This MDM command turns on (or turns off) Remote Management with <em>Observe</em> and <em>Control</em> permissions given to all users*.*</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>EnableRemoteDesktop</code> - <code>boolean</code></p>\\n
+<p>This endpoint sends an MDM command to control the Remote Management status on a Mac. This MDM command turns on (or turns off) Remote Management with <em>Observe</em> and <em>Control</em> permissions given to all users*.*</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>EnableRemoteDesktop</code> - <code>boolean</code></p>
 
 ### Example
 
@@ -808,7 +1013,7 @@ No authorization required
 
 Renew MDM Profile
 
-<p>This endpoint sends an MDM command to re-install the existing root MDM profile for a given device ID. This command will not impact any existing configurations, apps, or profiles.</p>\\n
+<p>This endpoint sends an MDM command to re-install the existing root MDM profile for a given device ID. This command will not impact any existing configurations, apps, or profiles.</p>
 
 ### Example
 
@@ -843,7 +1048,13 @@ No authorization required
 
 Restart Device
 
-<p>This endpoint sends an MDM command to remotely restart a device.</p>\\n<ul>\\n<li><p><code>RebuildKernelCache</code> - If <code>true</code>, the system rebuilds the kernel cache during a device restart. If <code>BootstrapTokenAllowedForAuthentication</code> is <code>true</code> inSecurityInfoResponse.SecurityInfo, the device requests the bootstrap token from MDM before executing this command. This value is available in macOS 11 and later. Default: false</p>\\n</li>\\n<li><p><code>NotifyUser</code> - If <code>true</code>, notifies the user to restart the device at their convenience. Forced restart if the device is at <code>loginwindow</code> with no logged-in users. The user can dismiss the notification and ignore the request. No further notifications display unless you resend the command. This value is available in macOS 11.3 and later. Default: false</p>\\n</li>\\n</ul>\\n
+<p>This endpoint sends an MDM command to remotely restart a device.</p>
+<ul>
+<li><p><code>RebuildKernelCache</code> - If <code>true</code>, the system rebuilds the kernel cache during a device restart. If <code>BootstrapTokenAllowedForAuthentication</code> is <code>true</code> inSecurityInfoResponse.SecurityInfo, the device requests the bootstrap token from MDM before executing this command. This value is available in macOS 11 and later. Default: false</p>
+</li>
+<li><p><code>NotifyUser</code> - If <code>true</code>, notifies the user to restart the device at their convenience. Forced restart if the device is at <code>loginwindow</code> with no logged-in users. The user can dismiss the notification and ignore the request. No further notifications display unless you resend the command. This value is available in macOS 11.3 and later. Default: false</p>
+</li>
+</ul>
 
 ### Example
 
@@ -878,7 +1089,10 @@ No authorization required
 
 Set Name
 
-<p>This endpoint sends an MDM command to set the device name.</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>DeviceName</code> - <code>string</code></p>\\n
+<p>This endpoint sends an MDM command to set the device name.</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>DeviceName</code> - <code>string</code></p>
 
 ### Example
 
@@ -913,7 +1127,7 @@ No authorization required
 
 Shutdown
 
-<p>This endpoint sends an MDM command to shutdown a device.</p>\\n
+<p>This endpoint sends an MDM command to shutdown a device.</p>
 
 ### Example
 
@@ -948,7 +1162,10 @@ No authorization required
 
 Unlock Account
 
-<p>This endpoint sends an MDM command to unlock a user account that locked by the system because of too many failed password attempts. Available for macOS.</p>\\n<p><strong>Request Body Parameters</strong>: application/json</p>\\n<hr />\\n<p><code>UserName</code> - <code>string</code></p>\\n
+<p>This endpoint sends an MDM command to unlock a user account that locked by the system because of too many failed password attempts. Available for macOS.</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
+<hr />
+<p><code>UserName</code> - <code>string</code></p>
 
 ### Example
 
@@ -983,7 +1200,7 @@ No authorization required
 
 Update Inventory
 
-<p>This endpoint sends an MDM command to start a check-in for a device, initiating the daily MDM commands and MDM logic.</p>\\n
+<p>This endpoint sends an MDM command to start a check-in for a device, initiating the daily MDM commands and MDM logic.</p>
 
 ### Example
 
@@ -1018,7 +1235,7 @@ No authorization required
 
 Update Location
 
-<p>This endpoint sends an MDM command to update the location data on iOS and iPadOS.</p>\\n
+<p>This endpoint sends an MDM command to update the location data on iOS and iPadOS.</p>
 
 ### Example
 
@@ -1053,7 +1270,7 @@ No authorization required
 
 Get Device Activity
 
-<p>This request returns the device activity for a specified Device ID.</p>\\n
+<p>This request returns the device activity for a specified Device ID.</p>
 
 ### Example
 
@@ -1088,7 +1305,8 @@ No authorization required
 
 Get Device Apps
 
-<p>This request returns a list of all installed apps for a specified Device ID.</p>\\n<p>For iPhone and iPad, the preinstalled Apple apps are not reported.</p>\\n
+<p>This request returns a list of all installed apps for a specified Device ID.</p>
+<p>For iPhone and iPad, the preinstalled Apple apps are not reported.</p>
 
 ### Example
 
@@ -1123,7 +1341,15 @@ No authorization required
 
 Get Device Commands
 
-<p>This endpoint sends a request to get information about the commands sent to a given device ID.</p>\\n<h3 id=\"mdm-status-codes\">MDM Status Codes</h3>\\n<ul>\\n<li>1 : Command is Pending</li>\\n<li>2 : Command is running</li>\\n<li>3 : Command completed</li>\\n<li>4 : Command failed</li>\\n<li>5 : Command received \"Not Now\" response</li>\\n</ul>\\n
+<p>This endpoint sends a request to get information about the commands sent to a given device ID.</p>
+<h3 id=\"mdm-status-codes\">MDM Status Codes</h3>
+<ul>
+<li>1 : Command is Pending</li>
+<li>2 : Command is running</li>
+<li>3 : Command completed</li>
+<li>4 : Command failed</li>
+<li>5 : Command received \"Not Now\" response</li>
+</ul>
 
 ### Example
 
@@ -1158,7 +1384,7 @@ No authorization required
 
 Delete Device
 
-<p>This endpoint sends an MDM command to delete a device. This will remove the device record from Kandji and send a Remove Management command. For macOS devices, it will also send an uninstall command to the Kandji Agent at the next agent checkin.</p>\\n
+<p>This endpoint sends an MDM command to delete a device. This will remove the device record from Kandji and send a Remove Management command. For macOS devices, it will also send an uninstall command to the Kandji Agent at the next agent checkin.</p>
 
 ### Example
 
@@ -1193,7 +1419,7 @@ No authorization required
 
 Get Device Details
 
-<p>This request returns the device details for a specified Device ID.</p>\\n
+<p>This request returns the device details for a specified Device ID.</p>
 
 ### Example
 
@@ -1228,7 +1454,7 @@ No authorization required
 
 Cancel Lost Mode
 
-<p>This endpoint can be used to send a cancelation request if Lost Mode is in an error state for a given iOS or iPadOS device.</p>\\n
+<p>This endpoint can be used to send a cancelation request if Lost Mode is in an error state for a given iOS or iPadOS device.</p>
 
 ### Example
 
@@ -1263,7 +1489,8 @@ No authorization required
 
 Get Device Lost Mode details
 
-<p>This request returns the device lost mode details for a specified Device ID.</p>\\n<p><strong>Note</strong>: Lost Mode is is only available for iOS and iPadOS. For more information, please see this <a href=\"https://support.kandji.io/a/solutions/articles/72000573873\">Kandji support artilcle</a>.</p>\\n
+<p>This request returns the device lost mode details for a specified Device ID.</p>
+<p><strong>Note</strong>: Lost Mode is is only available for iOS and iPadOS. For more information, please see this <a href=\"https://support.kandji.io/a/solutions/articles/72000573873\">Kandji support artilcle</a>.</p>
 
 ### Example
 
@@ -1298,7 +1525,7 @@ No authorization required
 
 Get Device
 
-<p>This request returns the high-level information for a specified Device ID.</p>\\n
+<p>This request returns the high-level information for a specified Device ID.</p>
 
 ### Example
 
@@ -1333,7 +1560,85 @@ No authorization required
 
 Get Device Library Items
 
-<p>This request gets all library items and their statuses for a specified Device ID</p>\\n<h4 id=\"possible-library-item-status-values\">Possible library item status values</h4>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>AVAILABLE</td>\\n<td>string</td>\\n<td>Library item available in Self Service</td>\\n</tr>\\n<tr>\\n<td>CACHED</td>\\n<td>string</td>\\n<td>Library item downloaded for install but not yet installed</td>\\n</tr>\\n<tr>\\n<td>CHANGE_PENDING</td>\\n<td>string</td>\\n<td>Recovery Password library item has changes that have not yet been applied</td>\\n</tr>\\n<tr>\\n<td>DOWNLOADING</td>\\n<td>string</td>\\n<td>Library item downloading</td>\\n</tr>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>EXCLUDED</td>\\n<td>string</td>\\n<td>Not in scope for assignment rule</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>INSTALLING</td>\\n<td>string</td>\\n<td>Library item installing</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device, not yet installed (All library items except for config profiles)</td>\\n</tr>\\n<tr>\\n<td>failed</td>\\n<td>string</td>\\n<td>Configuration profile failed to install</td>\\n</tr>\\n<tr>\\n<td>pending</td>\\n<td>string</td>\\n<td>Waiting on device, Configuration profile not yet installed</td>\\n</tr>\\n<tr>\\n<td>success</td>\\n<td>string</td>\\n<td>Configuration profile installed</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>This request gets all library items and their statuses for a specified Device ID</p>
+<h4 id=\"possible-library-item-status-values\">Possible library item status values</h4>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAILABLE</td>
+<td>string</td>
+<td>Library item available in Self Service</td>
+</tr>
+<tr>
+<td>CACHED</td>
+<td>string</td>
+<td>Library item downloaded for install but not yet installed</td>
+</tr>
+<tr>
+<td>CHANGE_PENDING</td>
+<td>string</td>
+<td>Recovery Password library item has changes that have not yet been applied</td>
+</tr>
+<tr>
+<td>DOWNLOADING</td>
+<td>string</td>
+<td>Library item downloading</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>EXCLUDED</td>
+<td>string</td>
+<td>Not in scope for assignment rule</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>INSTALLING</td>
+<td>string</td>
+<td>Library item installing</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+</tr>
+<tr>
+<td>failed</td>
+<td>string</td>
+<td>Configuration profile failed to install</td>
+</tr>
+<tr>
+<td>pending</td>
+<td>string</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
+</tr>
+<tr>
+<td>success</td>
+<td>string</td>
+<td>Configuration profile installed</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -1368,7 +1673,7 @@ No authorization required
 
 Get Device Notes
 
-<p>This request gets all notes for the specified Device ID.</p>\\n
+<p>This request gets all notes for the specified Device ID.</p>
 
 ### Example
 
@@ -1403,7 +1708,7 @@ No authorization required
 
 Delete Device Note
 
-<p>This request deletes a specified note (Note ID) for the specified Device ID.</p>\\n
+<p>This request deletes a specified note (Note ID) for the specified Device ID.</p>
 
 ### Example
 
@@ -1439,7 +1744,7 @@ No authorization required
 
 Retrieve Device Note
 
-<p>This request retrieves a specified note (Note ID) for the specified Device ID.</p>\\n
+<p>This request retrieves a specified note (Note ID) for the specified Device ID.</p>
 
 ### Example
 
@@ -1475,7 +1780,7 @@ No authorization required
 
 Update Device Note
 
-<p>This request patches a specified note (Note ID) for the specified Device ID.</p>\\n
+<p>This request patches a specified note (Note ID) for the specified Device ID.</p>
 
 ### Example
 
@@ -1513,7 +1818,7 @@ No authorization required
 
 Create Device Note
 
-<p>This request creates a note for the specified device ID.</p>\\n
+<p>This request creates a note for the specified device ID.</p>
 
 ### Example
 
@@ -1548,7 +1853,52 @@ No authorization required
 
 Get Device Parameters
 
-<p>This request returns the parameters and their statuses for a specified Device ID</p>\\n<p>This endpoint is only applicable to macOS clients.</p>\\n<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>\\n<p><strong>Possible parameter status values</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device. Not yet run.</td>\\n</tr>\\n<tr>\\n<td>REMEDIATED</td>\\n<td>string</td>\\n<td>Parameter remediated</td>\\n</tr>\\n<tr>\\n<td>WARNING</td>\\n<td>string</td>\\n<td>Muted alert</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>This request returns the parameters and their statuses for a specified Device ID</p>
+<p>This endpoint is only applicable to macOS clients.</p>
+<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
+<p><strong>Possible parameter status values</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device. Not yet run.</td>
+</tr>
+<tr>
+<td>REMEDIATED</td>
+<td>string</td>
+<td>Parameter remediated</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>string</td>
+<td>Muted alert</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -1583,7 +1933,37 @@ No authorization required
 
 Update Device
 
-<p>This request allows you to update device information, such as the assigned blueprint, user, Asset Tag, and Tags. It is not required to use all attributes in a given request. For example if you only want to update the assigned blueprint, you only need to pass the <code>blueprint_id</code> in the request payload.</p>\\n<p><strong>NOTE</strong>: With the introduction of a UUID value for user ID in the <a href=\"https://api-docs.kandji.io/#b107eb0a-b586-414f-bc4c-3d2b304cfd5f\">Users API</a>, the Device PATCH endpoint will support both the depricated user ID integer value and the new user ID UUID value when updating the user assignment for a device. The ability to update user assignment via the integer ID value will be removed starting January 2025.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n<h3 id=\"additional-information\">Additional information</h3>\\n<p>User ID can be found using the <code>list users</code> API</p>\\n<p>A Blueprint ID can be found using the <code>list blueprints</code> API or in the URL path while on a Blueprint overview page.</p>\\n<p>For example, for this URL <a href=\"https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4\">https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4</a></p>\\n<p>The Blueprint ID would be <code>6391086e-85a1-4820-813c-f9c75025fff4</code></p>\\n<p>An example script that leverages this API can be found in the <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/update-device-record\">Kandji Support GitHub</a></p>\\n<h4 id=\"clearing-the-device-asset-tag\">Clearing the device asset tag</h4>\\n<p>To clear a device asset tag, set the <code>asset_tag</code> value to <code>null</code> in the JSON payload.</p>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{\\n    \"asset_tag\": null\\n}\\n\\n</code></pre>\\n<h4 id=\"clearing-the-assigned-user-attribute\">Clearing the assigned user attribute</h4>\\n<p>To clear the assigned user for a given device, set the <code>user</code> value to <code>null</code> in the JSON payload.</p>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{\\n    \"user\": null\\n}\\n\\n</code></pre>\\n<h4 id=\"clearing-all-tags\">Clearing all tags</h4>\\n<p>To clear the assigned tags for a given device, set the <code>tags</code> value to an empty list <code>[]</code> in the JSON payload.</p>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{\\n    \"tags\": []\\n}\\n\\n</code></pre>\\n
+<p>This request allows you to update device information, such as the assigned blueprint, user, Asset Tag, and Tags. It is not required to use all attributes in a given request. For example if you only want to update the assigned blueprint, you only need to pass the <code>blueprint_id</code> in the request payload.</p>
+<p><strong>NOTE</strong>: With the introduction of a UUID value for user ID in the <a href=\"https://api-docs.kandji.io/#b107eb0a-b586-414f-bc4c-3d2b304cfd5f\">Users API</a>, the Device PATCH endpoint will support both the depricated user ID integer value and the new user ID UUID value when updating the user assignment for a device. The ability to update user assignment via the integer ID value will be removed starting January 2025.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
+<h3 id=\"additional-information\">Additional information</h3>
+<p>User ID can be found using the <code>list users</code> API</p>
+<p>A Blueprint ID can be found using the <code>list blueprints</code> API or in the URL path while on a Blueprint overview page.</p>
+<p>For example, for this URL <a href=\"https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4\">https://subdomain.kandji.io/blueprints/6391086e-85a1-4820-813c-f9c75025fff4</a></p>
+<p>The Blueprint ID would be <code>6391086e-85a1-4820-813c-f9c75025fff4</code></p>
+<p>An example script that leverages this API can be found in the <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/update-device-record\">Kandji Support GitHub</a></p>
+<h4 id=\"clearing-the-device-asset-tag\">Clearing the device asset tag</h4>
+<p>To clear a device asset tag, set the <code>asset_tag</code> value to <code>null</code> in the JSON payload.</p>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{
+    \"asset_tag\": null
+}
+
+</code></pre>
+<h4 id=\"clearing-the-assigned-user-attribute\">Clearing the assigned user attribute</h4>
+<p>To clear the assigned user for a given device, set the <code>user</code> value to <code>null</code> in the JSON payload.</p>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{
+    \"user\": null
+}
+
+</code></pre>
+<h4 id=\"clearing-all-tags\">Clearing all tags</h4>
+<p>To clear the assigned tags for a given device, set the <code>tags</code> value to an empty list <code>[]</code> in the JSON payload.</p>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">{
+    \"tags\": []
+}
+
+</code></pre>
 
 ### Example
 
@@ -1618,7 +1998,11 @@ No authorization required
 
 Get Activation Lock Bypass Code
 
-<p>This request allows you to retrieve the Activation Lock Bypass code.</p>\\n<p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>\\n<p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n
+<p>This request allows you to retrieve the Activation Lock Bypass code.</p>
+<p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>
+<p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
 ### Example
 
@@ -1653,7 +2037,9 @@ No authorization required
 
 Get FileVault Recovery Key
 
-<p>This request allows you to retrieve the FileVault Recovery key for a macOS device.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n
+<p>This request allows you to retrieve the FileVault Recovery key for a macOS device.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
 ### Example
 
@@ -1688,7 +2074,10 @@ No authorization required
 
 Get Recovery Lock Password
 
-<p>This request returns the Recovery Lock password for a Mac with an Apple Silicon processor and the legacy EFI firmware password for a Mac with an Intel processor.</p>\\n<p>For more details on setting and managing Recovery passwords, see this <a href=\"https://support.kandji.io/support/solutions/articles/72000560472-configure-the-recovery-password-library-item\">Kandji support article</a>.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n
+<p>This request returns the Recovery Lock password for a Mac with an Apple Silicon processor and the legacy EFI firmware password for a Mac with an Intel processor.</p>
+<p>For more details on setting and managing Recovery passwords, see this <a href=\"https://support.kandji.io/support/solutions/articles/72000560472-configure-the-recovery-password-library-item\">Kandji support article</a>.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
 ### Example
 
@@ -1723,7 +2112,9 @@ No authorization required
 
 Get Unlock Pin
 
-<p>This request allows you to retrieve the device unlock pin for a macOS device.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n
+<p>This request allows you to retrieve the device unlock pin for a macOS device.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
 ### Example
 
@@ -1758,7 +2149,109 @@ No authorization required
 
 Get Device Status
 
-<p>This request returns the full status (parameters and library items) for a specified Device ID.</p>\\n<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>\\n<h4 id=\"possible-status-values\">Possible status values</h4>\\n<p><strong>Library items</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>AVAILABLE</td>\\n<td>string</td>\\n<td>Library item available in Self Service</td>\\n</tr>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>EXCLUDED</td>\\n<td>string</td>\\n<td>Not in scope for assignment rule</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device, not yet installed (All library items except for config profiles)</td>\\n</tr>\\n<tr>\\n<td>failed</td>\\n<td>string</td>\\n<td>Configuration profile failed to install</td>\\n</tr>\\n<tr>\\n<td>pending</td>\\n<td>string</td>\\n<td>Waiting on device, Configuration profile not yet installed</td>\\n</tr>\\n<tr>\\n<td>success</td>\\n<td>string</td>\\n<td>Configuration profile installed</td>\\n</tr>\\n</tbody>\\n</table>\\n</div><p><strong>Parameters</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th><strong>Value</strong></th>\\n<th><strong>Type</strong></th>\\n<th><strong>Additional Info</strong></th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>ERROR</td>\\n<td>string</td>\\n<td>Audit failure</td>\\n</tr>\\n<tr>\\n<td>INCOMPATIBLE</td>\\n<td>string</td>\\n<td>Not compatible with device or OS version</td>\\n</tr>\\n<tr>\\n<td>PASS</td>\\n<td>string</td>\\n<td>Device meets requirements</td>\\n</tr>\\n<tr>\\n<td>PENDING</td>\\n<td>string</td>\\n<td>Waiting on device. Not yet run.</td>\\n</tr>\\n<tr>\\n<td>REMEDIATED</td>\\n<td>string</td>\\n<td>Parameter remediated</td>\\n</tr>\\n<tr>\\n<td>WARNING</td>\\n<td>string</td>\\n<td>Muted alert</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>This request returns the full status (parameters and library items) for a specified Device ID.</p>
+<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=\"https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations\">https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
+<h4 id=\"possible-status-values\">Possible status values</h4>
+<p><strong>Library items</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAILABLE</td>
+<td>string</td>
+<td>Library item available in Self Service</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>EXCLUDED</td>
+<td>string</td>
+<td>Not in scope for assignment rule</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+</tr>
+<tr>
+<td>failed</td>
+<td>string</td>
+<td>Configuration profile failed to install</td>
+</tr>
+<tr>
+<td>pending</td>
+<td>string</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
+</tr>
+<tr>
+<td>success</td>
+<td>string</td>
+<td>Configuration profile installed</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>Parameters</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Additional Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERROR</td>
+<td>string</td>
+<td>Audit failure</td>
+</tr>
+<tr>
+<td>INCOMPATIBLE</td>
+<td>string</td>
+<td>Not compatible with device or OS version</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>string</td>
+<td>Device meets requirements</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>string</td>
+<td>Waiting on device. Not yet run.</td>
+</tr>
+<tr>
+<td>REMEDIATED</td>
+<td>string</td>
+<td>Parameter remediated</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>string</td>
+<td>Muted alert</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -1793,7 +2286,8 @@ No authorization required
 
 List Devices
 
-<p>This request returns a list of devices in a Kandji tenant. Optionally. query parameters can be used to filter results.</p>\\n<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Kandji support <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/code-examples\">GitHub</a>.</p>\\n
+<p>This request returns a list of devices in a Kandji tenant. Optionally. query parameters can be used to filter results.</p>
+<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Kandji support <a href=\"https://github.com/kandji-inc/support/tree/main/api-tools/code-examples\">GitHub</a>.</p>
 
 ### Example
 
@@ -1825,7 +2319,10 @@ No authorization required
 
 Delete ADE integration
 
-<h1 id=\"warning\"><strong>WARNING!</strong></h1>\\n<p>This is a HIGHLY destructive action.</p>\\n<p>Deleting an ADE token will unassign the associated device records from Kandji. For currently enrolled devices that were assigned to Kandji via the delete ADE integration will not be impacted until they are wiped and reprovisioned. This action is essentially the same as removing an ADE token from MDM and then adding it back.</p>\\n<p>If applicable, be sure to reassign the device records in ABM.</p>\\n
+<h1 id=\"warning\"><strong>WARNING!</strong></h1>
+<p>This is a HIGHLY destructive action.</p>
+<p>Deleting an ADE token will unassign the associated device records from Kandji. For currently enrolled devices that were assigned to Kandji via the delete ADE integration will not be impacted until they are wiped and reprovisioned. This action is essentially the same as removing an ADE token from MDM and then adding it back.</p>
+<p>If applicable, be sure to reassign the device records in ABM.</p>
 
 ### Example
 
@@ -1860,7 +2357,9 @@ No authorization required
 
 List devices associated to ADE token
 
-<p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>\\n<p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>\\n<p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>\\n
+<p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>
+<p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>
+<p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>
 
 ### Example
 
@@ -1895,7 +2394,7 @@ No authorization required
 
 Get ADE integration
 
-<p>This request returns a specific ADE integration based on the <code>ade_token_id</code> passed.</p>\\n
+<p>This request returns a specific ADE integration based on the <code>ade_token_id</code> passed.</p>
 
 ### Example
 
@@ -1930,7 +2429,8 @@ No authorization required
 
 Update ADE integration
 
-<p>This request will update the default blueprint, phone number, and email address in an existing ADE integration.</p>\\n<p>The default <code>blueprint_id</code>, <code>phone</code> number, and <code>email</code> address must be sent in the request.</p>\\n
+<p>This request will update the default blueprint, phone number, and email address in an existing ADE integration.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, and <code>email</code> address must be sent in the request.</p>
 
 ### Example
 
@@ -1965,7 +2465,8 @@ No authorization required
 
 Renew ADE integration
 
-<p>This request will renew an existing ADE integration.</p>\\n<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>\\n
+<p>This request will renew an existing ADE integration.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>
 
 ### Example
 
@@ -2000,7 +2501,7 @@ No authorization required
 
 Get ADE device
 
-<p>Get information about a specific Automated Device Enrollment device.</p>\\n
+<p>Get information about a specific Automated Device Enrollment device.</p>
 
 ### Example
 
@@ -2035,7 +2536,9 @@ No authorization required
 
 Update ADE device
 
-<p>Update a specific Automated Device Enrollment device's blueprint assignment, user assignment, and asset tag.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>\\n
+<p>Update a specific Automated Device Enrollment device's blueprint assignment, user assignment, and asset tag.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
 ### Example
 
@@ -2070,7 +2573,7 @@ No authorization required
 
 List ADE devices
 
-<p>Get a list of Automated Device Enrollment devices.</p>\\n
+<p>Get a list of Automated Device Enrollment devices.</p>
 
 ### Example
 
@@ -2102,7 +2605,7 @@ No authorization required
 
 List ADE integrations
 
-<p>This request returns a list of configured ADE integrations.</p>\\n
+<p>This request returns a list of configured ADE integrations.</p>
 
 ### Example
 
@@ -2134,7 +2637,8 @@ No authorization required
 
 Create ADE integration
 
-<p>This request will create a new ADE integration.</p>\\n<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> downloaded from ABM are required and must be sent in the request.</p>\\n
+<p>This request will create a new ADE integration.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> downloaded from ABM are required and must be sent in the request.</p>
 
 ### Example
 
@@ -2166,7 +2670,8 @@ No authorization required
 
 Download ADE public key
 
-<p>This request returns the public key used to create an MDM server connection in Apple Business Manager.</p>\\n<p>The encoded information needs to be saved to a file with the <code>.pem</code> format and then uploaded to ABM.</p>\\n
+<p>This request returns the public key used to create an MDM server connection in Apple Business Manager.</p>
+<p>The encoded information needs to be saved to a file with the <code>.pem</code> format and then uploaded to ABM.</p>
 
 ### Example
 
@@ -2198,7 +2703,7 @@ No authorization required
 
 List Custom Apps
 
-<p>This endpoint makes a request to retrieve a list of custom apps from the Kandji library.</p>\\n
+<p>This endpoint makes a request to retrieve a list of custom apps from the Kandji library.</p>
 
 ### Example
 
@@ -2230,7 +2735,10 @@ No authorization required
 
 Delete Custom App
 
-<p>NOTICE: This is permanent so be careful.</p>\\n<p>This endpoint sends a request to delete a specific custom app from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>NOTICE: This is permanent so be careful.</p>
+<p>This endpoint sends a request to delete a specific custom app from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2265,7 +2773,9 @@ No authorization required
 
 Get Custom App
 
-<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2300,7 +2810,10 @@ No authorization required
 
 Update Custom App
 
-<p>This request allows you to update a custom app in the Kandji library.</p>\\n<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>This request allows you to update a custom app in the Kandji library.</p>
+<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2335,7 +2848,8 @@ No authorization required
 
 Create Custom App
 
-<p>This request allows you to create a custom app in the Kandji library.</p>\\n<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>\\n
+<p>This request allows you to create a custom app in the Kandji library.</p>
+<p>Must have already generated a <code>file_key</code> via <code>Create custom app</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload to S3</code> example.</p>
 
 ### Example
 
@@ -2367,7 +2881,10 @@ No authorization required
 
 Upload Custom App
 
-<p>This request retrieves the S3 upload details need for uploading the app to Amazon S3.</p>\\n<p>Creates a pre-signed <code>post_url</code> to upload a new Custom App to S3.</p>\\n<p>The provided <code>name</code> will be used to calculate a unique <code>file_key</code> in S3.</p>\\n<p>A separate request will have to be made to the <code>Upload to S3</code> endpoint to upload the file to S3 directly using the <code>post_url</code> and <code>post_data</code> from the <code>Upload Custom App</code> response.</p>\\n
+<p>This request retrieves the S3 upload details need for uploading the app to Amazon S3.</p>
+<p>Creates a pre-signed <code>post_url</code> to upload a new Custom App to S3.</p>
+<p>The provided <code>name</code> will be used to calculate a unique <code>file_key</code> in S3.</p>
+<p>A separate request will have to be made to the <code>Upload to S3</code> endpoint to upload the file to S3 directly using the <code>post_url</code> and <code>post_data</code> from the <code>Upload Custom App</code> response.</p>
 
 ### Example
 
@@ -2399,7 +2916,7 @@ No authorization required
 
 List Custom Profiles
 
-<p>This endpoint makes a request to retrieve a list of custom profiles from the Kandji library.</p>\\n
+<p>This endpoint makes a request to retrieve a list of custom profiles from the Kandji library.</p>
 
 ### Example
 
@@ -2431,7 +2948,10 @@ No authorization required
 
 Delete Custom Profile
 
-<p>NOTICE: This is permanent so be careful.</p>\\n<p>This endpoint sends a request to delete a specific custom profile from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>NOTICE: This is permanent so be careful.</p>
+<p>This endpoint sends a request to delete a specific custom profile from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2466,7 +2986,9 @@ No authorization required
 
 Get Custom Profile
 
-<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2501,7 +3023,9 @@ No authorization required
 
 Update Custom Profile
 
-<p>This request allows you to update a custom profile in the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>This request allows you to update a custom profile in the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2536,7 +3060,7 @@ No authorization required
 
 Create Custom Profile
 
-<p>This request allows you to create a custom profile in the Kandji library.</p>\\n
+<p>This request allows you to create a custom profile in the Kandji library.</p>
 
 ### Example
 
@@ -2568,7 +3092,7 @@ No authorization required
 
 List Custom Scripts
 
-<p>This endpoint makes a request to retrieve a list of custom scripts from the Kandji library.</p>\\n
+<p>This endpoint makes a request to retrieve a list of custom scripts from the Kandji library.</p>
 
 ### Example
 
@@ -2600,7 +3124,10 @@ No authorization required
 
 Delete Custom Script
 
-<p>NOTICE: This is permanent so be careful.</p>\\n<p>This endpoint sends a request to delete a specific custom scripts from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>NOTICE: This is permanent so be careful.</p>
+<p>This endpoint sends a request to delete a specific custom scripts from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2635,7 +3162,9 @@ No authorization required
 
 Get Custom Script
 
-<p>This endpoint retrieves details about a specific custom script from the Kandji library.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>This endpoint retrieves details about a specific custom script from the Kandji library.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2670,7 +3199,7 @@ No authorization required
 
 Update Custom Script
 
-<p>This request allows you to update a custom script in the Kandji library.</p>\\n
+<p>This request allows you to update a custom script in the Kandji library.</p>
 
 ### Example
 
@@ -2705,7 +3234,7 @@ No authorization required
 
 Create Custom Script
 
-<p>This request allows you to create a custom script in the Kandji library.</p>\\n
+<p>This request allows you to create a custom script in the Kandji library.</p>
 
 ### Example
 
@@ -2737,7 +3266,10 @@ No authorization required
 
 Get Library Item Activity
 
-<p>This endpoint retrieves the activity related to a specific library item. Activity is listed from newest to oldest.</p>\\n<p>To see a delta of the activity events between now and the last request, you can store the newest entry from the previous request and then look for that entry in the next request. Any entry post that will be the delta.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>This endpoint retrieves the activity related to a specific library item. Activity is listed from newest to oldest.</p>
+<p>To see a delta of the activity events between now and the last request, you can store the newest entry from the previous request and then look for that entry in the next request. Any entry post that will be the delta.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2772,7 +3304,9 @@ No authorization required
 
 Get Library Item Statuses
 
-<p>This endpoint retrieves the statuses related to a specific library item.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>\\n
+<p>This endpoint retrieves the statuses related to a specific library item.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
@@ -2807,7 +3341,7 @@ No authorization required
 
 Activation lock
 
-<p>Get activation lock attributes for devices.</p>\\n
+<p>Get activation lock attributes for devices.</p>
 
 ### Example
 
@@ -2839,7 +3373,7 @@ No authorization required
 
 Application firewall
 
-<p>Get Application Firewall details for macOS.</p>\\n
+<p>Get Application Firewall details for macOS.</p>
 
 ### Example
 
@@ -2871,7 +3405,7 @@ No authorization required
 
 Applications
 
-<p>Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.</p>\\n
+<p>Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.</p>
 
 ### Example
 
@@ -2903,7 +3437,7 @@ No authorization required
 
 Certificates
 
-<p>Get certificate details.</p>\\n
+<p>Get certificate details.</p>
 
 ### Example
 
@@ -2935,7 +3469,9 @@ No authorization required
 
 Count
 
-<p>Get the total record count for the specified Prism category.</p>\\n<p>If a category contains spaces substitute the spaces for underscores (\"_\") when using the API query.</p>\\n<p>Example: <code>Device information</code> becomes <code>device_information</code>.</p>\\n
+<p>Get the total record count for the specified Prism category.</p>
+<p>If a category contains spaces substitute the spaces for underscores (\"_\") when using the API query.</p>
+<p>Example: <code>Device information</code> becomes <code>device_information</code>.</p>
 
 ### Example
 
@@ -2967,7 +3503,7 @@ No authorization required
 
 Desktop and Screensaver
 
-<p>Get Desktop and Screensaver details for macOS.</p>\\n
+<p>Get Desktop and Screensaver details for macOS.</p>
 
 ### Example
 
@@ -2999,7 +3535,7 @@ No authorization required
 
 Device information
 
-<p>Get attributes about devices.</p>\\n
+<p>Get attributes about devices.</p>
 
 ### Example
 
@@ -3031,7 +3567,9 @@ No authorization required
 
 Get category export
 
-<p>Get an export request's status. To download the export, use the <code>signed_url</code>. This will download a CSV file containing the exported category information.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p>export_id (path parameter): The unique identifier of the the export job.</p>\\n
+<p>Get an export request's status. To download the export, use the <code>signed_url</code>. This will download a CSV file containing the exported category information.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p>export_id (path parameter): The unique identifier of the the export job.</p>
 
 ### Example
 
@@ -3066,7 +3604,51 @@ No authorization required
 
 Request category export
 
-<p>Request export of a category. The <code>id</code> key is used when checking the export status using the <em>Request category export</em> endpoint.</p>\\n<p><strong>Request Body Parameters: application/json</strong></p>\\n<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>\\n<thead>\\n<tr>\\n<th>Key</th>\\n<th>Type</th>\\n<th>Possible value(s)</th>\\n<th>Description</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td><code>blueprint_ids</code></td>\\n<td><code>array</code></td>\\n<td><code>[\"string\", \"string\", \"string\"]</code></td>\\n<td>List of one or more comma separate blueprint IDs.</td>\\n</tr>\\n<tr>\\n<td><code>category</code></td>\\n<td><code>string</code></td>\\n<td><code>apps</code> ,  <br /><code>activation_lock</code> ,  <br /><code>desktop_and_screensaver</code> ,  <br /><code>device_information</code> ,  <br /><code>gatekeeper_and_xprotect</code> ,  <br /><code>installed_profiles</code> ,  <br /><code>kernel_extensions</code> ,  <br /><code>local_users</code> ,  <br /><code>launch_agents_and_daemons</code> ,  <br /><code>system_extensions</code> ,  <br /><code>startup_settings</code> ,  <br /><code>transparency_database</code></td>\\n<td>Only one category per export reqest.</td>\\n</tr>\\n<tr>\\n<td><code>device_families</code></td>\\n<td><code>array</code></td>\\n<td><code>[\"Mac\", \"iPhone\", \"iPad\", \"tvOS\"]</code></td>\\n<td>List of one or more comma separted string values for device families.</td>\\n</tr>\\n<tr>\\n<td><code>filter</code></td>\\n<td><code>object</code></td>\\n<td><code>{\"apple_silicon\": {\"eq\": true}, \"device__name\": {\"like\": [\"this\", \"or_this\"]}}</code></td>\\n<td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>\\n</tr>\\n<tr>\\n<td><code>sort_by</code></td>\\n<td><code>string</code></td>\\n<td></td>\\n<td>Sort results by the name of a given response body key in either ascending (default behavior) or descending('-') order.</td>\\n</tr>\\n</tbody>\\n</table>\\n</div>
+<p>Request export of a category. The <code>id</code> key is used when checking the export status using the <em>Request category export</em> endpoint.</p>
+<p><strong>Request Body Parameters: application/json</strong></p>
+<div class=\"click-to-expand-wrapper is-table-wrapper\"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Possible value(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blueprint_ids</code></td>
+<td><code>array</code></td>
+<td><code>[\"string\", \"string\", \"string\"]</code></td>
+<td>List of one or more comma separate blueprint IDs.</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td><code>string</code></td>
+<td><code>apps</code> ,  <br /><code>activation_lock</code> ,  <br /><code>desktop_and_screensaver</code> ,  <br /><code>device_information</code> ,  <br /><code>gatekeeper_and_xprotect</code> ,  <br /><code>installed_profiles</code> ,  <br /><code>kernel_extensions</code> ,  <br /><code>local_users</code> ,  <br /><code>launch_agents_and_daemons</code> ,  <br /><code>system_extensions</code> ,  <br /><code>startup_settings</code> ,  <br /><code>transparency_database</code></td>
+<td>Only one category per export reqest.</td>
+</tr>
+<tr>
+<td><code>device_families</code></td>
+<td><code>array</code></td>
+<td><code>[\"Mac\", \"iPhone\", \"iPad\", \"tvOS\"]</code></td>
+<td>List of one or more comma separted string values for device families.</td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td><code>object</code></td>
+<td><code>{\"apple_silicon\": {\"eq\": true}, \"device__name\": {\"like\": [\"this\", \"or_this\"]}}</code></td>
+<td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
+</tr>
+<tr>
+<td><code>sort_by</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>Sort results by the name of a given response body key in either ascending (default behavior) or descending('-') order.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Example
 
@@ -3098,7 +3680,7 @@ No authorization required
 
 FileVault
 
-<p>Get FileVault information for macOS.</p>\\n
+<p>Get FileVault information for macOS.</p>
 
 ### Example
 
@@ -3130,7 +3712,7 @@ No authorization required
 
 Gatekeeper and XProtect
 
-<p>Get Gatekeeper and XProtect attributes for macOS.</p>\\n
+<p>Get Gatekeeper and XProtect attributes for macOS.</p>
 
 ### Example
 
@@ -3162,7 +3744,7 @@ No authorization required
 
 Installed profiles
 
-<p>Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.</p>\\n
+<p>Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.</p>
 
 ### Example
 
@@ -3194,7 +3776,7 @@ No authorization required
 
 Kernel Extensions
 
-<p>Get Kernel Extension attributes for macOS.</p>\\n
+<p>Get Kernel Extension attributes for macOS.</p>
 
 ### Example
 
@@ -3226,7 +3808,7 @@ No authorization required
 
 Launch Agents and Daemons
 
-<p>Get Launch Agents and Daemons installed on macOS.</p>\\n
+<p>Get Launch Agents and Daemons installed on macOS.</p>
 
 ### Example
 
@@ -3258,7 +3840,7 @@ No authorization required
 
 Local users
 
-<p>Get Local Users detials for macOS.</p>\\n
+<p>Get Local Users detials for macOS.</p>
 
 ### Example
 
@@ -3290,7 +3872,7 @@ No authorization required
 
 Startup settings
 
-<p>Get Startup settings for macOS.</p>\\n
+<p>Get Startup settings for macOS.</p>
 
 ### Example
 
@@ -3322,7 +3904,7 @@ No authorization required
 
 System Extensions
 
-<p>Get System Extension attributes for macOS.</p>\\n
+<p>Get System Extension attributes for macOS.</p>
 
 ### Example
 
@@ -3354,7 +3936,7 @@ No authorization required
 
 Transparency database
 
-<p>Get Transparency Database (TCC) attributes for macOS.</p>\\n
+<p>Get Transparency Database (TCC) attributes for macOS.</p>
 
 ### Example
 
@@ -3386,7 +3968,8 @@ No authorization required
 
 List Self Service Categories
 
-<p>This endpoint retrieves a list of self-service categories and their associated IDs.</p>\\n<p>If you are planning to make a Library item available in Self Service under a specific category, you can call this endpoint to get the category ID and then use that ID when creating or updating the library item via the Kandji API.</p>\\n
+<p>This endpoint retrieves a list of self-service categories and their associated IDs.</p>
+<p>If you are planning to make a Library item available in Self Service under a specific category, you can call this endpoint to get the category ID and then use that ID when creating or updating the library item via the Kandji API.</p>
 
 ### Example
 
@@ -3418,7 +4001,7 @@ No authorization required
 
 Licensing
 
-<p>Returns Kandji tenant licensing and utilization information.</p>\\n
+<p>Returns Kandji tenant licensing and utilization information.</p>
 
 ### Example
 
@@ -3450,7 +4033,7 @@ No authorization required
 
 Create Tag
 
-<p>Create a tag. Can only create one tag per request.</p>\\n
+<p>Create a tag. Can only create one tag per request.</p>
 
 ### Example
 
@@ -3482,7 +4065,9 @@ No authorization required
 
 Delete Tag
 
-<p>Delete a tag.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>\\n
+<p>Delete a tag.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>
 
 ### Example
 
@@ -3517,7 +4102,9 @@ No authorization required
 
 Update Tag
 
-<p>Update tag name.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>\\n
+<p>Update tag name.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>tag_id</code> (path parameter): The unique identifier of the tag.</p>
 
 ### Example
 
@@ -3552,7 +4139,7 @@ No authorization required
 
 Get Tags
 
-<p>Return configured tags.</p>\\n
+<p>Return configured tags.</p>
 
 ### Example
 
@@ -3584,7 +4171,7 @@ No authorization required
 
 Get Threat Details
 
-<p>Get threat details.</p>\\n
+<p>Get threat details.</p>
 
 ### Example
 
@@ -3616,7 +4203,8 @@ No authorization required
 
 List Users
 
-<p>This endpoint makes a request to retrieve a list of users from user directory integrations.</p>\\n<p>A maximum of 300 records are returned per request, and pagination can be performed leveraging the URLs provided in the <code>next</code> and <code>previous</code> keys in the response. If there are no more results available, the respective key will be <code>null</code>.</p>\\n
+<p>This endpoint makes a request to retrieve a list of users from user directory integrations.</p>
+<p>A maximum of 300 records are returned per request, and pagination can be performed leveraging the URLs provided in the <code>next</code> and <code>previous</code> keys in the response. If there are no more results available, the respective key will be <code>null</code>.</p>
 
 ### Example
 
@@ -3648,7 +4236,9 @@ No authorization required
 
 Get User
 
-<p>This endpoint makes a request to retrieve a specified user directory integration user by id.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p>user_id (path parameter): The unique identifier of the user directory integration user.</p>\\n
+<p>This endpoint makes a request to retrieve a specified user directory integration user by id.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p>user_id (path parameter): The unique identifier of the user directory integration user.</p>
 
 ### Example
 
@@ -3683,7 +4273,23 @@ No authorization required
 
 Upload to S3
 
-<p>Example showing separate post request to upload the file to Amazon S3.</p>\\n<h3 id=\"request-parameters\">Request Parameters</h3>\\n<p><code>post_url</code> (path parameter): The <code>post_url</code> value from the <code>Upload custom app</code> response.</p>\\n<h3 id=\"request-body\">Request Body</h3>\\n<p>For the request body, use the contents of the <code>post_data</code> object in the <code>Upload Custom App</code> endpoint response (example response below) and supply the path to the custom app file in the <code>file</code> request parameter.</p>\\n<h4 id=\"example-post_data-object\">Example post_data object</h4>\\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">\"post_data\": {\\n   \"key\": \"(field to post along with file to S3 -- the key for the uploaded file)\",\\n   \"x-amz-algorithm\": \"(field to post along with file to S3)\",\\n   \"x-amz-credential\": \"(field to post along with file to S3)\",\\n   \"x-amz-date\": \"(field to post along with file to S3)\",\\n   \"x-amz-security-token\": \"(field to post along with file to S3)\",\\n   \"policy\": \"(field to post along with file to S3)\",\\n   \"x-amz-signature\": \"(field to post along with file to S3)\",\\n}\\n\\n</code></pre>\\n
+<p>Example showing separate post request to upload the file to Amazon S3.</p>
+<h3 id=\"request-parameters\">Request Parameters</h3>
+<p><code>post_url</code> (path parameter): The <code>post_url</code> value from the <code>Upload custom app</code> response.</p>
+<h3 id=\"request-body\">Request Body</h3>
+<p>For the request body, use the contents of the <code>post_data</code> object in the <code>Upload Custom App</code> endpoint response (example response below) and supply the path to the custom app file in the <code>file</code> request parameter.</p>
+<h4 id=\"example-post_data-object\">Example post_data object</h4>
+<pre class=\"click-to-expand-wrapper is-snippet-wrapper\"><code class=\"language-json\">\"post_data\": {
+   \"key\": \"(field to post along with file to S3 -- the key for the uploaded file)\",
+   \"x-amz-algorithm\": \"(field to post along with file to S3)\",
+   \"x-amz-credential\": \"(field to post along with file to S3)\",
+   \"x-amz-date\": \"(field to post along with file to S3)\",
+   \"x-amz-security-token\": \"(field to post along with file to S3)\",
+   \"policy\": \"(field to post along with file to S3)\",
+   \"x-amz-signature\": \"(field to post along with file to S3)\",
+}
+
+</code></pre>
 
 ### Example
 
