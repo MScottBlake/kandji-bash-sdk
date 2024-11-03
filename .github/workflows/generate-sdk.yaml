@@ -31,11 +31,19 @@ jobs:
           name: openapi_file
           path: ${{ env.openapi_file }}
 
+
+      # - name: Generate Angular Client
+      #   uses: openapi-generators/openapitools-generator-action@v1
+      #   with:
+      #     generator: typescript-angular
+      #     config-file: angular-generator-config.yml
+
+
       - name: Set up OpenAPI Generator
         run: |
           docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest generate \
             -i /local/${{ env.openapi_file}} \
-            -g "{{ env.LANGUAGE }}"$ \
+            -g "${{ env.LANGUAGE }}"$ \
             -o "/local" \
             --package-name "kandji_${{ env.openapi_file}}_sdk" \
             --projectName "kandji_${{ env.openapi_file}}_sdk"
