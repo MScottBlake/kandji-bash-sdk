@@ -96,9 +96,9 @@ _()
     operations["apiV1DevicesDeviceIdActionUnlockaccountPost"]=1
     operations["apiV1DevicesDeviceIdActionUpdateinventoryPost"]=1
     operations["apiV1DevicesDeviceIdActionUpdatelocationPost"]=1
-    operations["apiV1DevicesDeviceIdActivitylimit300Get"]=1
+    operations["apiV1DevicesDeviceIdActivityGet"]=1
     operations["apiV1DevicesDeviceIdAppsGet"]=1
-    operations["apiV1DevicesDeviceIdCommandslimit300Get"]=1
+    operations["apiV1DevicesDeviceIdCommandsGet"]=1
     operations["apiV1DevicesDeviceIdDelete"]=1
     operations["apiV1DevicesDeviceIdDetailsGet"]=1
     operations["apiV1DevicesDeviceIdDetailsLostmodeDelete"]=1
@@ -117,7 +117,7 @@ _()
     operations["apiV1DevicesDeviceIdSecretsRecoverypasswordGet"]=1
     operations["apiV1DevicesDeviceIdSecretsUnlockpinGet"]=1
     operations["apiV1DevicesDeviceIdStatusGet"]=1
-    operations["apiV1Deviceslimit300Get"]=1
+    operations["apiV1DevicesGet"]=1
     operations["apiV1IntegrationsAppleAdeAdeTokenIdDelete"]=1
     operations["apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet"]=1
     operations["apiV1IntegrationsAppleAdeAdeTokenIdGet"]=1
@@ -151,7 +151,7 @@ _()
     operations["apiV1PrismApplicationFirewallGet"]=1
     operations["apiV1PrismAppsGet"]=1
     operations["apiV1PrismCertificatesGet"]=1
-    operations["apiV1PrismCountcategoryappsGet"]=1
+    operations["apiV1PrismCountGet"]=1
     operations["apiV1PrismDesktopAndScreensaverGet"]=1
     operations["apiV1PrismDeviceInformationGet"]=1
     operations["apiV1PrismExportExportIdGet"]=1
@@ -167,14 +167,14 @@ _()
     operations["apiV1PrismTransparencyDatabaseGet"]=1
     operations["apiV1SelfServiceCategoriesGet"]=1
     operations["apiV1SettingsLicensingGet"]=1
+    operations["apiV1TagsGet"]=1
     operations["apiV1TagsPost"]=1
     operations["apiV1TagsTagIdDelete"]=1
     operations["apiV1TagsTagIdPatch"]=1
-    operations["apiV1TagssearchaccuhiveGet"]=1
     operations["apiV1ThreatDetailsGet"]=1
     operations["apiV1UsersGet"]=1
     operations["apiV1UsersUserIdGet"]=1
-    operations["postUrlPost"]=1
+    operations["rootPost"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
@@ -183,12 +183,12 @@ _()
     operation_parameters["apiV1BlueprintsBlueprintIdDelete"]="blueprint_id= "
     operation_parameters["apiV1BlueprintsBlueprintIdGet"]="blueprint_id= "
     operation_parameters["apiV1BlueprintsBlueprintIdListLibraryItemsGet"]="blueprint_id= "
-    operation_parameters["apiV1BlueprintsBlueprintIdOtaEnrollmentProfileGet"]="blueprint_id= "
+    operation_parameters["apiV1BlueprintsBlueprintIdOtaEnrollmentProfileGet"]="blueprint_id= sso= "
     operation_parameters["apiV1BlueprintsBlueprintIdPatch"]="blueprint_id= "
     operation_parameters["apiV1BlueprintsBlueprintIdRemoveLibraryItemPost"]="blueprint_id= "
-    operation_parameters["apiV1BlueprintsGet"]=""
+    operation_parameters["apiV1BlueprintsGet"]="id= id__in= name= limit= offset= "
     operation_parameters["apiV1BlueprintsPost"]=""
-    operation_parameters["apiV1BlueprintsTemplatesGet"]=""
+    operation_parameters["apiV1BlueprintsTemplatesGet"]="limit= offset= "
     operation_parameters["apiV1DevicesDeviceIdActionBlankpushPost"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdActionClearpasscodePost"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdActionDeleteuserPost"]="device_id= "
@@ -206,9 +206,9 @@ _()
     operation_parameters["apiV1DevicesDeviceIdActionUnlockaccountPost"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdActionUpdateinventoryPost"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdActionUpdatelocationPost"]="device_id= "
-    operation_parameters["apiV1DevicesDeviceIdActivitylimit300Get"]="device_id= "
+    operation_parameters["apiV1DevicesDeviceIdActivityGet"]="device_id= limit= offset= "
     operation_parameters["apiV1DevicesDeviceIdAppsGet"]="device_id= "
-    operation_parameters["apiV1DevicesDeviceIdCommandslimit300Get"]="device_id= "
+    operation_parameters["apiV1DevicesDeviceIdCommandsGet"]="device_id= limit= offset= "
     operation_parameters["apiV1DevicesDeviceIdDelete"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdDetailsGet"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdDetailsLostmodeDelete"]="device_id= "
@@ -227,64 +227,64 @@ _()
     operation_parameters["apiV1DevicesDeviceIdSecretsRecoverypasswordGet"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdSecretsUnlockpinGet"]="device_id= "
     operation_parameters["apiV1DevicesDeviceIdStatusGet"]="device_id= "
-    operation_parameters["apiV1Deviceslimit300Get"]=""
+    operation_parameters["apiV1DevicesGet"]="asset_tag= blueprint_id= device_id= device_name= filevault_enabled= mac_address= model= ordering= os_version= platform= serial_number= tag_name= tag_name_in= tag_id= tag_id_in= user= user_email= user_id= user_name= limit= offset= "
     operation_parameters["apiV1IntegrationsAppleAdeAdeTokenIdDelete"]="ade_token_id= "
-    operation_parameters["apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet"]="ade_token_id= "
+    operation_parameters["apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet"]="ade_token_id= page= "
     operation_parameters["apiV1IntegrationsAppleAdeAdeTokenIdGet"]="ade_token_id= "
     operation_parameters["apiV1IntegrationsAppleAdeAdeTokenIdPatch"]="ade_token_id= "
     operation_parameters["apiV1IntegrationsAppleAdeAdeTokenIdRenewPost"]="ade_token_id= "
     operation_parameters["apiV1IntegrationsAppleAdeDevicesDeviceIdGet"]="device_id= "
     operation_parameters["apiV1IntegrationsAppleAdeDevicesDeviceIdPatch"]="device_id= "
-    operation_parameters["apiV1IntegrationsAppleAdeDevicesGet"]=""
+    operation_parameters["apiV1IntegrationsAppleAdeDevicesGet"]="blueprint_id= user_id= dep_account= device_family= model= os= profile_status= serial_number= page= "
     operation_parameters["apiV1IntegrationsAppleAdeGet"]=""
     operation_parameters["apiV1IntegrationsAppleAdePost"]=""
     operation_parameters["apiV1IntegrationsAppleAdePublicKeyGet"]=""
-    operation_parameters["apiV1LibraryCustomAppsGet"]=""
+    operation_parameters["apiV1LibraryCustomAppsGet"]="page= "
     operation_parameters["apiV1LibraryCustomAppsLibraryItemIdDelete"]="library_item_id= "
     operation_parameters["apiV1LibraryCustomAppsLibraryItemIdGet"]="library_item_id= "
     operation_parameters["apiV1LibraryCustomAppsLibraryItemIdPatch"]="library_item_id= "
     operation_parameters["apiV1LibraryCustomAppsPost"]=""
     operation_parameters["apiV1LibraryCustomAppsUploadPost"]=""
-    operation_parameters["apiV1LibraryCustomProfilesGet"]=""
+    operation_parameters["apiV1LibraryCustomProfilesGet"]="page= "
     operation_parameters["apiV1LibraryCustomProfilesLibraryItemIdDelete"]="library_item_id= "
     operation_parameters["apiV1LibraryCustomProfilesLibraryItemIdGet"]="library_item_id= "
-    operation_parameters["apiV1LibraryCustomProfilesLibraryItemIdPatch"]="library_item_id= "
-    operation_parameters["apiV1LibraryCustomProfilesPost"]=""
-    operation_parameters["apiV1LibraryCustomScriptsGet"]=""
+    operation_parameters["apiV1LibraryCustomProfilesLibraryItemIdPatch"]="library_item_id= runs_on_mac= runs_on_iphone= runs_on_ipad= runs_on_tv= "
+    operation_parameters["apiV1LibraryCustomProfilesPost"]="runs_on_mac= runs_on_iphone= runs_on_ipad= runs_on_tv= "
+    operation_parameters["apiV1LibraryCustomScriptsGet"]="page= "
     operation_parameters["apiV1LibraryCustomScriptsLibraryItemIdDelete"]="library_item_id= "
     operation_parameters["apiV1LibraryCustomScriptsLibraryItemIdGet"]="library_item_id= "
     operation_parameters["apiV1LibraryCustomScriptsLibraryItemIdPatch"]="library_item_id= "
     operation_parameters["apiV1LibraryCustomScriptsPost"]=""
-    operation_parameters["apiV1LibraryLibraryItemsLibraryItemIdActivityGet"]="library_item_id= "
-    operation_parameters["apiV1LibraryLibraryItemsLibraryItemIdStatusGet"]="library_item_id= "
-    operation_parameters["apiV1PrismActivationLockGet"]=""
-    operation_parameters["apiV1PrismApplicationFirewallGet"]=""
-    operation_parameters["apiV1PrismAppsGet"]=""
-    operation_parameters["apiV1PrismCertificatesGet"]=""
-    operation_parameters["apiV1PrismCountcategoryappsGet"]=""
-    operation_parameters["apiV1PrismDesktopAndScreensaverGet"]=""
-    operation_parameters["apiV1PrismDeviceInformationGet"]=""
+    operation_parameters["apiV1LibraryLibraryItemsLibraryItemIdActivityGet"]="library_item_id= activity_type= user_id= user_email= limit= offset= "
+    operation_parameters["apiV1LibraryLibraryItemsLibraryItemIdStatusGet"]="library_item_id= computer_id= limit= offset= "
+    operation_parameters["apiV1PrismActivationLockGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismApplicationFirewallGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismAppsGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismCertificatesGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismCountGet"]="category= "
+    operation_parameters["apiV1PrismDesktopAndScreensaverGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismDeviceInformationGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["apiV1PrismExportExportIdGet"]="export_id= "
     operation_parameters["apiV1PrismExportPost"]=""
-    operation_parameters["apiV1PrismFilevaultGet"]=""
-    operation_parameters["apiV1PrismGatekeeperAndXprotectGet"]=""
-    operation_parameters["apiV1PrismInstalledProfilesGet"]=""
-    operation_parameters["apiV1PrismKernelExtensionsGet"]=""
-    operation_parameters["apiV1PrismLaunchAgentsAndDaemonsGet"]=""
-    operation_parameters["apiV1PrismLocalUsersGet"]=""
-    operation_parameters["apiV1PrismStartupSettingsGet"]=""
-    operation_parameters["apiV1PrismSystemExtensionsGet"]=""
-    operation_parameters["apiV1PrismTransparencyDatabaseGet"]=""
+    operation_parameters["apiV1PrismFilevaultGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismGatekeeperAndXprotectGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismInstalledProfilesGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismKernelExtensionsGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismLaunchAgentsAndDaemonsGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismLocalUsersGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismStartupSettingsGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismSystemExtensionsGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["apiV1PrismTransparencyDatabaseGet"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["apiV1SelfServiceCategoriesGet"]=""
     operation_parameters["apiV1SettingsLicensingGet"]=""
+    operation_parameters["apiV1TagsGet"]="search= "
     operation_parameters["apiV1TagsPost"]=""
     operation_parameters["apiV1TagsTagIdDelete"]="tag_id= "
     operation_parameters["apiV1TagsTagIdPatch"]="tag_id= "
-    operation_parameters["apiV1TagssearchaccuhiveGet"]=""
-    operation_parameters["apiV1ThreatDetailsGet"]=""
-    operation_parameters["apiV1UsersGet"]=""
+    operation_parameters["apiV1ThreatDetailsGet"]="classification= date_range= device_id= status= sort_by= term= limit= offset= "
+    operation_parameters["apiV1UsersGet"]="email= id= integration_id= archived= "
     operation_parameters["apiV1UsersUserIdGet"]="user_id= "
-    operation_parameters["postUrlPost"]="post_url= "
+    operation_parameters["rootPost"]=""
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values

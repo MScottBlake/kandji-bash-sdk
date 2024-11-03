@@ -31,9 +31,9 @@ Method | HTTP request | Description
 [**apiV1DevicesDeviceIdActionUnlockaccountPost**](DefaultApi.md#apiV1DevicesDeviceIdActionUnlockaccountPost) | **POST** /api/v1/devices/{device_id}/action/unlockaccount | Unlock Account
 [**apiV1DevicesDeviceIdActionUpdateinventoryPost**](DefaultApi.md#apiV1DevicesDeviceIdActionUpdateinventoryPost) | **POST** /api/v1/devices/{device_id}/action/updateinventory | Update Inventory
 [**apiV1DevicesDeviceIdActionUpdatelocationPost**](DefaultApi.md#apiV1DevicesDeviceIdActionUpdatelocationPost) | **POST** /api/v1/devices/{device_id}/action/updatelocation | Update Location
-[**apiV1DevicesDeviceIdActivitylimit300Get**](DefaultApi.md#apiV1DevicesDeviceIdActivitylimit300Get) | **GET** /api/v1/devices/{device_id}/activity?limit&#x3D;300 | Get Device Activity
+[**apiV1DevicesDeviceIdActivityGet**](DefaultApi.md#apiV1DevicesDeviceIdActivityGet) | **GET** /api/v1/devices/{device_id}/activity | Get Device Activity
 [**apiV1DevicesDeviceIdAppsGet**](DefaultApi.md#apiV1DevicesDeviceIdAppsGet) | **GET** /api/v1/devices/{device_id}/apps | Get Device Apps
-[**apiV1DevicesDeviceIdCommandslimit300Get**](DefaultApi.md#apiV1DevicesDeviceIdCommandslimit300Get) | **GET** /api/v1/devices/{device_id}/commands?limit&#x3D;300 | Get Device Commands
+[**apiV1DevicesDeviceIdCommandsGet**](DefaultApi.md#apiV1DevicesDeviceIdCommandsGet) | **GET** /api/v1/devices/{device_id}/commands | Get Device Commands
 [**apiV1DevicesDeviceIdDelete**](DefaultApi.md#apiV1DevicesDeviceIdDelete) | **DELETE** /api/v1/devices/{device_id} | Delete Device
 [**apiV1DevicesDeviceIdDetailsGet**](DefaultApi.md#apiV1DevicesDeviceIdDetailsGet) | **GET** /api/v1/devices/{device_id}/details | Get Device Details
 [**apiV1DevicesDeviceIdDetailsLostmodeDelete**](DefaultApi.md#apiV1DevicesDeviceIdDetailsLostmodeDelete) | **DELETE** /api/v1/devices/{device_id}/details/lostmode | Cancel Lost Mode
@@ -52,7 +52,7 @@ Method | HTTP request | Description
 [**apiV1DevicesDeviceIdSecretsRecoverypasswordGet**](DefaultApi.md#apiV1DevicesDeviceIdSecretsRecoverypasswordGet) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
 [**apiV1DevicesDeviceIdSecretsUnlockpinGet**](DefaultApi.md#apiV1DevicesDeviceIdSecretsUnlockpinGet) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
 [**apiV1DevicesDeviceIdStatusGet**](DefaultApi.md#apiV1DevicesDeviceIdStatusGet) | **GET** /api/v1/devices/{device_id}/status | Get Device Status
-[**apiV1Deviceslimit300Get**](DefaultApi.md#apiV1Deviceslimit300Get) | **GET** /api/v1/devices?limit&#x3D;300 | List Devices
+[**apiV1DevicesGet**](DefaultApi.md#apiV1DevicesGet) | **GET** /api/v1/devices | List Devices
 [**apiV1IntegrationsAppleAdeAdeTokenIdDelete**](DefaultApi.md#apiV1IntegrationsAppleAdeAdeTokenIdDelete) | **DELETE** /api/v1/integrations/apple/ade/{ade_token_id} | Delete ADE integration
 [**apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet**](DefaultApi.md#apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet) | **GET** /api/v1/integrations/apple/ade/{ade_token_id}/devices | List devices associated to ADE token
 [**apiV1IntegrationsAppleAdeAdeTokenIdGet**](DefaultApi.md#apiV1IntegrationsAppleAdeAdeTokenIdGet) | **GET** /api/v1/integrations/apple/ade/{ade_token_id} | Get ADE integration
@@ -86,7 +86,7 @@ Method | HTTP request | Description
 [**apiV1PrismApplicationFirewallGet**](DefaultApi.md#apiV1PrismApplicationFirewallGet) | **GET** /api/v1/prism/application_firewall | Application firewall
 [**apiV1PrismAppsGet**](DefaultApi.md#apiV1PrismAppsGet) | **GET** /api/v1/prism/apps | Applications
 [**apiV1PrismCertificatesGet**](DefaultApi.md#apiV1PrismCertificatesGet) | **GET** /api/v1/prism/certificates | Certificates
-[**apiV1PrismCountcategoryappsGet**](DefaultApi.md#apiV1PrismCountcategoryappsGet) | **GET** /api/v1/prism/count?category&#x3D;apps | Count
+[**apiV1PrismCountGet**](DefaultApi.md#apiV1PrismCountGet) | **GET** /api/v1/prism/count | Count
 [**apiV1PrismDesktopAndScreensaverGet**](DefaultApi.md#apiV1PrismDesktopAndScreensaverGet) | **GET** /api/v1/prism/desktop_and_screensaver | Desktop and Screensaver
 [**apiV1PrismDeviceInformationGet**](DefaultApi.md#apiV1PrismDeviceInformationGet) | **GET** /api/v1/prism/device_information | Device information
 [**apiV1PrismExportExportIdGet**](DefaultApi.md#apiV1PrismExportExportIdGet) | **GET** /api/v1/prism/export/{export_id} | Get category export
@@ -102,14 +102,14 @@ Method | HTTP request | Description
 [**apiV1PrismTransparencyDatabaseGet**](DefaultApi.md#apiV1PrismTransparencyDatabaseGet) | **GET** /api/v1/prism/transparency_database | Transparency database
 [**apiV1SelfServiceCategoriesGet**](DefaultApi.md#apiV1SelfServiceCategoriesGet) | **GET** /api/v1/self-service/categories | List Self Service Categories
 [**apiV1SettingsLicensingGet**](DefaultApi.md#apiV1SettingsLicensingGet) | **GET** /api/v1/settings/licensing | Licensing
+[**apiV1TagsGet**](DefaultApi.md#apiV1TagsGet) | **GET** /api/v1/tags | Get Tags
 [**apiV1TagsPost**](DefaultApi.md#apiV1TagsPost) | **POST** /api/v1/tags | Create Tag
 [**apiV1TagsTagIdDelete**](DefaultApi.md#apiV1TagsTagIdDelete) | **DELETE** /api/v1/tags/{tag_id} | Delete Tag
 [**apiV1TagsTagIdPatch**](DefaultApi.md#apiV1TagsTagIdPatch) | **PATCH** /api/v1/tags/{tag_id} | Update Tag
-[**apiV1TagssearchaccuhiveGet**](DefaultApi.md#apiV1TagssearchaccuhiveGet) | **GET** /api/v1/tags?search&#x3D;accuhive | Get Tags
 [**apiV1ThreatDetailsGet**](DefaultApi.md#apiV1ThreatDetailsGet) | **GET** /api/v1/threat-details | Get Threat Details
 [**apiV1UsersGet**](DefaultApi.md#apiV1UsersGet) | **GET** /api/v1/users | List Users
 [**apiV1UsersUserIdGet**](DefaultApi.md#apiV1UsersUserIdGet) | **GET** /api/v1/users/{user_id} | Get User
-[**postUrlPost**](DefaultApi.md#postUrlPost) | **POST** /{post_url} | Upload to S3
+[**rootPost**](DefaultApi.md#rootPost) | **POST** / | Upload to S3
 
 
 
@@ -174,7 +174,8 @@ Assign Library Item
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blueprintId** | **string** | Path parameter 'blueprint_id' | [default to null]
+ **blueprintId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -182,11 +183,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -213,20 +214,20 @@ Delete Blueprint
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blueprintId** | **string** | Path parameter 'blueprint_id' | [default to null]
+ **blueprintId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -250,20 +251,20 @@ Get Blueprint
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blueprintId** | **string** | Path parameter 'blueprint_id' | [default to null]
+ **blueprintId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -304,7 +305,7 @@ List Library Items
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blueprintId** | **string** | Path parameter 'blueprint_id' | [default to null]
+ **blueprintId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -312,12 +313,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -342,7 +343,7 @@ Get Manual Enrollment Profile
 ### Example
 
 ```bash
- apiV1BlueprintsBlueprintIdOtaEnrollmentProfileGet blueprint_id=value
+ apiV1BlueprintsBlueprintIdOtaEnrollmentProfileGet blueprint_id=value  sso=value
 ```
 
 ### Parameters
@@ -350,20 +351,21 @@ Get Manual Enrollment Profile
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blueprintId** | **string** | Path parameter 'blueprint_id' | [default to null]
+ **blueprintId** | **string** |  | [default to null]
+ **sso** | **string** | <p>Use the <code>sso</code> query parameter, set to <code>true</code>, to return a URL instead of the manual enrollment profile. This parameter should only be used for blueprints in which \"Require Authentication\" is configured for Manual Enrollment. The returned URL must be used to authenticate via SSO to receive an enrollment profile. </p> | [optional] [default to null]
 
 ### Return type
 
-**map**
+**string**
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/x-apple-aspen-config
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -387,7 +389,11 @@ Update Blueprint
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blueprintId** | **string** | Path parameter 'blueprint_id' | [default to null]
+ **blueprintId** | **string** |  | [default to null]
+ **name** | **string** | <p>Update the name of the Blueprint</p> | [default to null]
+ **description** | **string** | <p>Update the description of the Blueprint </p> | [default to null]
+ **enrollmentCodePeriodcode** | **string** | <p>Update the enrollment code of the Blueprint </p> | [default to null]
+ **enrollmentCodePeriodisActive** | **string** | <p>Disable the Blueprint for manual device enrollment from the enrollment portal.</p> | [default to null]
 
 ### Return type
 
@@ -395,11 +401,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/x-www-form-urlencoded
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -463,7 +469,8 @@ Remove Library Item
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blueprintId** | **string** | Path parameter 'blueprint_id' | [default to null]
+ **blueprintId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -471,11 +478,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -490,12 +497,19 @@ List Blueprints
 ### Example
 
 ```bash
- apiV1BlueprintsGet
+ apiV1BlueprintsGet  id=value  id__in=value  name=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string** | <p>Look up a specific Blueprint by its ID</p> | [optional] [default to null]
+ **idIn** | **string** | <p>Specify a list of Blueprint IDs to limit the results to.  Multiple values may be separated by commas. There is a double underscore (<code>__</code>) between id and in</p> | [optional] [default to null]
+ **name** | **string** | <p>Return Blueprint names \"containing\" the specified search string.</p> | [optional] [default to null]
+ **limit** | **string** | <p>Number of results to return per page.</p> | [optional] [default to null]
+ **offset** | **string** | <p>The initial index from which to return the results.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -503,7 +517,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -529,7 +543,15 @@ Create Blueprint
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string** | <p>(required) Set the name of the Blueprint. The name provided must be unique.</p> | [default to null]
+ **enrollmentCodePeriodisActive** | **string** | <p>(required) Enable or Disable the Blueprint for manual device enrollment from the enrollment portal</p> | [default to null]
+ **enrollmentCodePeriodcode** | **string** | <p>Optionally, set the enrollment code of the Blueprint. This key is not required. If an enrollment code is not supplied in the payload body, it will be randomly generated. The enrollment code will be returned in the response and visible in the Web app.</p> | [default to null]
+ **sourcePeriodtype** | **string** | <p>Set the source to create the blueprint from. Possible options: <code>template</code> and <code>blueprint</code>.</p> | [default to null]
+ **sourcePeriodid** | **string** | <p>Set either the source template ID, or the source Blueprint ID to clone an existing template or blueprint.</p> | [default to null]
+ **type** | **string** | <p>Choose the type of blueprint to create. Options: <code>classic</code> or <code>map</code></p> | [default to null]
 
 ### Return type
 
@@ -537,11 +559,11 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/x-www-form-urlencoded
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -556,25 +578,29 @@ Get Blueprint Templates
 ### Example
 
 ```bash
- apiV1BlueprintsTemplatesGet
+ apiV1BlueprintsTemplatesGet  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **string** | <p>Number of results to return per page.</p> | [optional] [default to null]
+ **offset** | **string** | <p>The initial index from which to return the results.</p> | [optional] [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -597,20 +623,20 @@ Send Blankpush
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -632,20 +658,20 @@ Clear Passcode
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -672,20 +698,21 @@ Delete User
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -708,20 +735,20 @@ Disable Lost Mode
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -744,20 +771,21 @@ Enable Lost Mode
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -823,19 +851,20 @@ Erase Device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -882,7 +911,8 @@ Lock Device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -890,11 +920,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -918,20 +948,20 @@ Play Lost Mode Sound
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -953,20 +983,20 @@ Reinstall Agent
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -991,20 +1021,21 @@ Remote Desktop
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1026,20 +1057,20 @@ Renew MDM Profile
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1067,20 +1098,21 @@ Restart Device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1105,20 +1137,21 @@ Set Name
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1140,20 +1173,20 @@ Shutdown
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1178,20 +1211,21 @@ Unlock Account
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1213,20 +1247,20 @@ Update Inventory
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1248,25 +1282,25 @@ Update Location
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## apiV1DevicesDeviceIdActivitylimit300Get
+## apiV1DevicesDeviceIdActivityGet
 
 Get Device Activity
 
@@ -1275,7 +1309,7 @@ Get Device Activity
 ### Example
 
 ```bash
- apiV1DevicesDeviceIdActivitylimit300Get device_id=value
+ apiV1DevicesDeviceIdActivityGet device_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -1283,7 +1317,9 @@ Get Device Activity
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -1291,7 +1327,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1319,7 +1355,7 @@ Get Device Apps
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1327,7 +1363,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1337,7 +1373,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## apiV1DevicesDeviceIdCommandslimit300Get
+## apiV1DevicesDeviceIdCommandsGet
 
 Get Device Commands
 
@@ -1354,7 +1390,7 @@ Get Device Commands
 ### Example
 
 ```bash
- apiV1DevicesDeviceIdCommandslimit300Get device_id=value
+ apiV1DevicesDeviceIdCommandsGet device_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -1362,20 +1398,22 @@ Get Device Commands
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1397,20 +1435,20 @@ Delete Device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1432,7 +1470,7 @@ Get Device Details
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1440,7 +1478,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1467,7 +1505,7 @@ Cancel Lost Mode
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1475,7 +1513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1503,7 +1541,7 @@ Get Device Lost Mode details
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1511,7 +1549,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1538,7 +1576,7 @@ Get Device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1546,7 +1584,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1651,7 +1689,7 @@ Get Device Library Items
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1659,7 +1697,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1686,7 +1724,7 @@ Get Device Notes
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1694,7 +1732,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1721,8 +1759,8 @@ Delete Device Note
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
- **noteId** | **string** | Path parameter 'note_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **noteId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1730,7 +1768,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1757,8 +1795,8 @@ Retrieve Device Note
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
- **noteId** | **string** | Path parameter 'note_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **noteId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1766,7 +1804,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1785,7 +1823,7 @@ Update Device Note
 ### Example
 
 ```bash
- apiV1DevicesDeviceIdNotesNoteIdPatch Authorization:value Content-Type:value device_id=value note_id=value
+ apiV1DevicesDeviceIdNotesNoteIdPatch device_id=value note_id=value Authorization:value Content-Type:value
 ```
 
 ### Parameters
@@ -1793,10 +1831,11 @@ Update Device Note
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **deviceId** | **string** |  | [default to null]
+ **noteId** | **string** |  | [default to null]
  **authorization** | **string** |  | [default to null]
  **contentType** | **string** |  | [default to null]
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
- **noteId** | **string** | Path parameter 'note_id' | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -1804,11 +1843,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1831,7 +1870,8 @@ Create Device Note
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -1839,11 +1879,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1911,7 +1951,7 @@ Get Device Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -1919,7 +1959,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -1976,7 +2016,8 @@ Update Device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -1984,11 +2025,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2015,7 +2056,7 @@ Get Activation Lock Bypass Code
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -2023,7 +2064,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2052,7 +2093,7 @@ Get FileVault Recovery Key
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -2060,7 +2101,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2090,7 +2131,7 @@ Get Recovery Lock Password
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -2098,7 +2139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2127,7 +2168,7 @@ Get Unlock Pin
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -2135,7 +2176,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2264,7 +2305,7 @@ Get Device Status
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -2272,7 +2313,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2282,7 +2323,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## apiV1Deviceslimit300Get
+## apiV1DevicesGet
 
 List Devices
 
@@ -2292,12 +2333,52 @@ List Devices
 ### Example
 
 ```bash
- apiV1Deviceslimit300Get
+ apiV1DevicesGet  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [default to null]
+ **assetTag** | **string** |  | [optional] [default to null]
+ **blueprintId** | **string** | <p>Return results \"containing\" the specified blueprint id</p> | [optional] [default to null]
+ **deviceId** | **string** |  | [optional] [default to null]
+ **deviceName** | **string** |  | [optional] [default to null]
+ **filevaultEnabled** | **string** | <p>Query for devices that either have FileVault on (true) or off (false). This parameter only applies to macOS. </p>
+<p>An empty list <code>[]</code> will be returned if no devices are found with the given parameter value.</p> | [optional] [default to null]
+ **macAddress** | **string** | <p>Search for a specific device by MAC address </p> | [optional] [default to null]
+ **model** | **string** | <p>Return model results \"containing\" the specified model string.</p> | [optional] [default to null]
+ **ordering** | **string** | <p>The <code>ordering</code> parameter can be used to define how the device records are ordered in the response. Prepending a dash (-) to the parameter value will reverse the order of the returned results.</p>
+<p><code>?ordering=-serial_number</code> will order the response by serial_number in descending order.</p>
+<p><strong>Possible values</strong></p>
+<ul>
+<li><code>asset_tag</code></li>
+<li><code>blueprint_id</code></li>
+<li><code>device_id</code></li>
+<li><code>device_name</code></li>
+<li><code>last_check_in</code> - agent checkin</li>
+<li><code>model</code></li>
+<li><code>platform</code></li>
+<li><code>os_version</code></li>
+<li><code>serial_number</code></li>
+<li><code>user</code></li>
+</ul>
+<p>Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.</p>
+<p><code>?ordering=serial_number,platform</code></p> | [optional] [default to null]
+ **osVersion** | **string** | <p>Return all device records with the specified OS version</p> | [optional] [default to null]
+ **platform** | **string** | <p>Return all records matching a specific platform. Possible values:<code>Mac</code>, <code>iPad</code>, <code>iPhone</code>, <code>AppleTV</code></p> | [optional] [default to null]
+ **serialNumber** | **string** | <p>Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned.</p> | [optional] [default to null]
+ **tagName** | **string** | <p>Return results for given tag name. Case sensitive.</p> | [optional] [default to null]
+ **tagNameIn** | **string** | <p>Return results for given tag names separate by commas. Case sensitive.</p> | [optional] [default to null]
+ **tagId** | **string** | <p>Search for a tag by its ID. Case sensitive.</p> | [optional] [default to null]
+ **tagIdIn** | **string** | <p>Return results for given tag IDs separated by commas. Case sensitive.</p> | [optional] [default to null]
+ **user** | **string** | <p>Return results \"containing\" the user name</p> | [optional] [default to null]
+ **userEmail** | **string** | <p>Return results \"containing\" search on email address</p> | [optional] [default to null]
+ **userId** | **string** | <p>\"exact\" match on kandji user ID number</p> | [optional] [default to null]
+ **userName** | **string** | <p>Return results \"containing\" the assigned user Display Name</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -2305,7 +2386,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2335,20 +2416,20 @@ Delete ADE integration
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adeTokenId** | **string** | Path parameter 'ade_token_id' | [default to null]
+ **adeTokenId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2364,7 +2445,7 @@ List devices associated to ADE token
 ### Example
 
 ```bash
- apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet ade_token_id=value
+ apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet ade_token_id=value  page=value
 ```
 
 ### Parameters
@@ -2372,7 +2453,8 @@ List devices associated to ADE token
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adeTokenId** | **string** | Path parameter 'ade_token_id' | [default to null]
+ **adeTokenId** | **string** |  | [default to null]
+ **page** | **string** | <p>Use the <code>page</code> parameter to page through results or to request a specific page. By default, if a page is not specified, page 1 is returned. Note: 300 device records are returned per page of results. Alternatively, the <code>next</code> and <code>previous</code> key attributes in the response can be used to request the next page of results or return to the previous page.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -2380,7 +2462,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2407,20 +2489,20 @@ Get ADE integration
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adeTokenId** | **string** | Path parameter 'ade_token_id' | [default to null]
+ **adeTokenId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2443,20 +2525,21 @@ Update ADE integration
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adeTokenId** | **string** | Path parameter 'ade_token_id' | [default to null]
+ **adeTokenId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2479,20 +2562,24 @@ Renew ADE integration
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adeTokenId** | **string** | Path parameter 'ade_token_id' | [default to null]
+ **adeTokenId** | **string** |  | [default to null]
+ **blueprintId** | **string** |  | [default to null]
+ **phone** | **string** |  | [default to null]
+ **email** | **string** |  | [default to null]
+ **file** | **binary** | <p>This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API.</p> | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2514,7 +2601,7 @@ Get ADE device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -2522,7 +2609,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2551,7 +2638,8 @@ Update ADE device
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deviceId** | **string** | Path parameter 'device_id' | [default to null]
+ **deviceId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -2559,11 +2647,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2578,12 +2666,23 @@ List ADE devices
 ### Example
 
 ```bash
- apiV1IntegrationsAppleAdeDevicesGet
+ apiV1IntegrationsAppleAdeDevicesGet  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintId** | **string** | <p>Return results \"containing\" the specified blueprint id</p> | [optional] [default to null]
+ **userId** | **string** | <p>\"exact\" match on kandji user ID number</p> | [optional] [default to null]
+ **depAccount** | **string** | <p>The ADE token UUID</p> | [optional] [default to null]
+ **deviceFamily** | **string** | <p>Mac, iPhone, iPad, AppleTV, iPod</p> | [optional] [default to null]
+ **model** | **string** | <p>Return model results \"containing\" the specified model string. - \"iPad (8th Generation)\", \"MacBook Air\"</p> | [optional] [default to null]
+ **os** | **string** | <p>OSX, iOS, tvOS</p> | [optional] [default to null]
+ **profileStatus** | **string** | <p>The automated device enrollment profile assignment status - assigned, empty, pushed, removed</p> | [optional] [default to null]
+ **serialNumber** | **string** | <p>Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned.</p> | [optional] [default to null]
+ **page** | **string** | <p>Use the <code>page</code> parameter to page through results or to request a specific page. By default, if a page is not specified, page 1 is returned. Note: 300 device records are returned per page of results. Alternatively, the <code>next</code> and <code>previous</code> key attributes in the response can be used to request the next page of results or return to the previous page.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -2591,7 +2690,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -2619,16 +2718,16 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2648,7 +2747,13 @@ Create ADE integration
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintId** | **string** |  | [default to null]
+ **phone** | **string** |  | [default to null]
+ **email** | **string** |  | [default to null]
+ **file** | **binary** | <p>This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API.</p> | [default to null]
 
 ### Return type
 
@@ -2656,11 +2761,11 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: multipart/form-data
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2685,16 +2790,16 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**map**
+**string**
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/x-x509-ca-cert
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2708,12 +2813,15 @@ List Custom Apps
 ### Example
 
 ```bash
- apiV1LibraryCustomAppsGet
+ apiV1LibraryCustomAppsGet  page=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **string** | <p>Optional page number. Used when results exceed pagination threshold. A hard upper <code>limit</code> is set at 300 device records returned per request.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -2721,12 +2829,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2751,20 +2859,20 @@ Delete Custom App
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: text/html; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2788,7 +2896,7 @@ Get Custom App
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -2796,12 +2904,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2826,7 +2934,9 @@ Update Custom App
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
+ **name** | **string** | <p>Renaming a Custom App</p> | [default to null]
+ **active** | **string** | <p>(Optional, default=true) Whether this Custom App is active and installable</p> | [default to null]
 
 ### Return type
 
@@ -2834,12 +2944,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/x-www-form-urlencoded
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2859,7 +2969,16 @@ Create Custom App
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string** | <p>(Required) The name for this Custom App</p> | [default to null]
+ **fileKey** | **string** | <p>(Required) The S3 key from the <code>Upload Custom App</code> endpont used to upload the custom app file.</p> | [default to null]
+ **installType** | **string** | <p>(Required) Options are package, zip, image</p> | [default to null]
+ **installEnforcement** | **string** | <p>(Required) Options are install_once, continuously_enforce, no_enforcement</p> | [default to null]
+ **showInSelfService** | **string** | <p>(Optional, default=false) Displays this app in Self Service</p> | [default to null]
+ **selfServiceCategoryId** | **string** | <p>(Required for show_in_self_service=true) Self Service Category (by ID) to display app in</p> | [default to null]
+ **selfServiceRecommended** | **string** | <p>(Optional, default=false) Adds recommended flag to app in Self Service</p> | [default to null]
 
 ### Return type
 
@@ -2867,12 +2986,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/x-www-form-urlencoded
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2894,20 +3013,23 @@ Upload Custom App
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **string** |  | [optional]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2921,12 +3043,15 @@ List Custom Profiles
 ### Example
 
 ```bash
- apiV1LibraryCustomProfilesGet
+ apiV1LibraryCustomProfilesGet  page=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **string** | <p>Optional page number (when results exceed pagination threshold)</p> | [optional] [default to null]
 
 ### Return type
 
@@ -2934,12 +3059,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2964,20 +3089,20 @@ Delete Custom Profile
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: text/html; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2986,7 +3111,7 @@ No authorization required
 
 Get Custom Profile
 
-<p>This endpoint retrieves details about a specific custom app from the Kandji library.</p>
+<p>This endpoint retrieves details about a specific custom profile from the Kandji library.</p>
 <h3 id=\"request-parameters\">Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
@@ -3001,7 +3126,7 @@ Get Custom Profile
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -3009,12 +3134,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3030,7 +3155,7 @@ Update Custom Profile
 ### Example
 
 ```bash
- apiV1LibraryCustomProfilesLibraryItemIdPatch library_item_id=value
+ apiV1LibraryCustomProfilesLibraryItemIdPatch library_item_id=value  runs_on_mac=value  runs_on_iphone=value  runs_on_ipad=value  runs_on_tv=value
 ```
 
 ### Parameters
@@ -3038,7 +3163,11 @@ Update Custom Profile
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
+ **runsOnMac** | **string** |  | [optional] [default to null]
+ **runsOnIphone** | **string** |  | [optional] [default to null]
+ **runsOnIpad** | **string** |  | [optional] [default to null]
+ **runsOnTv** | **string** |  | [optional] [default to null]
 
 ### Return type
 
@@ -3046,12 +3175,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3065,12 +3194,21 @@ Create Custom Profile
 ### Example
 
 ```bash
- apiV1LibraryCustomProfilesPost
+ apiV1LibraryCustomProfilesPost  runs_on_mac=value  runs_on_iphone=value  runs_on_ipad=value  runs_on_tv=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string** | <p>(Required) The profile name</p> | [default to null]
+ **file** | **binary** | <p>(Required) The path to the profile's .mobileconfig file</p> | [default to null]
+ **active** | **string** | <p>(Optional, default=true) Whether this library item is active</p> | [default to null]
+ **runsOnMac** | **string** |  | [optional] [default to null]
+ **runsOnIphone** | **string** |  | [optional] [default to null]
+ **runsOnIpad** | **string** |  | [optional] [default to null]
+ **runsOnTv** | **string** |  | [optional] [default to null]
 
 ### Return type
 
@@ -3078,12 +3216,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3097,12 +3235,15 @@ List Custom Scripts
 ### Example
 
 ```bash
- apiV1LibraryCustomScriptsGet
+ apiV1LibraryCustomScriptsGet  page=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **string** | <p>Optional page number (when results exceed pagination threshold)</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3110,12 +3251,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3140,20 +3281,20 @@ Delete Custom Script
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: text/html; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3177,7 +3318,7 @@ Get Custom Script
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -3185,12 +3326,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3212,7 +3353,8 @@ Update Custom Script
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -3220,12 +3362,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3244,7 +3386,10 @@ Create Custom Script
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -3252,12 +3397,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3274,7 +3419,7 @@ Get Library Item Activity
 ### Example
 
 ```bash
- apiV1LibraryLibraryItemsLibraryItemIdActivityGet library_item_id=value
+ apiV1LibraryLibraryItemsLibraryItemIdActivityGet library_item_id=value  activity_type=value  user_id=value  user_email=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -3282,7 +3427,12 @@ Get Library Item Activity
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
+ **activityType** | **string** | <p>Filter actions by this activity type. Choices are: library_item_created, library_item_edited, library_item_deleted, library_item_duplicated, library_item_assignment_changed</p> | [optional] [default to null]
+ **userId** | **string** | <p>Filter actions by this user (id)</p> | [optional] [default to null]
+ **userEmail** | **string** | <p>Filter actions by this user (email)</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3290,12 +3440,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3311,7 +3461,7 @@ Get Library Item Statuses
 ### Example
 
 ```bash
- apiV1LibraryLibraryItemsLibraryItemIdStatusGet library_item_id=value
+ apiV1LibraryLibraryItemsLibraryItemIdStatusGet library_item_id=value  computer_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -3319,7 +3469,10 @@ Get Library Item Statuses
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryItemId** | **string** | Path parameter 'library_item_id' | [default to null]
+ **libraryItemId** | **string** |  | [default to null]
+ **computerId** | **string** | <p>Query for the status of one device.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3327,12 +3480,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3346,25 +3499,33 @@ Activation lock
 ### Example
 
 ```bash
- apiV1PrismActivationLockGet
+ apiV1PrismActivationLockGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** |  | [optional] [default to null]
+ **deviceFamilies** | **string** |  | [optional] [default to null]
+ **filter** | **string** |  | [optional] [default to null]
+ **sortBy** | **string** |  | [optional] [default to null]
+ **limit** | **string** |  | [optional] [default to null]
+ **offset** | **string** |  | [optional] [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3378,12 +3539,21 @@ Application firewall
 ### Example
 
 ```bash
- apiV1PrismApplicationFirewallGet
+ apiV1PrismApplicationFirewallGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3391,7 +3561,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3410,12 +3580,21 @@ Applications
 ### Example
 
 ```bash
- apiV1PrismAppsGet
+ apiV1PrismAppsGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3423,7 +3602,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3442,12 +3621,21 @@ Certificates
 ### Example
 
 ```bash
- apiV1PrismCertificatesGet
+ apiV1PrismCertificatesGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3455,7 +3643,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3465,7 +3653,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## apiV1PrismCountcategoryappsGet
+## apiV1PrismCountGet
 
 Count
 
@@ -3476,12 +3664,21 @@ Count
 ### Example
 
 ```bash
- apiV1PrismCountcategoryappsGet
+ apiV1PrismCountGet  category=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category** | **string** | <p>Return the count of records for the specified category. 
+If a category contains spaces substitute the spaces for underscores (\"_\") when using the API query.</p>
+<p>Examples:
+apps
+device_information
+kernel_extensions
+system_extensions</p> | [default to null]
 
 ### Return type
 
@@ -3489,7 +3686,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3508,12 +3705,21 @@ Desktop and Screensaver
 ### Example
 
 ```bash
- apiV1PrismDesktopAndScreensaverGet
+ apiV1PrismDesktopAndScreensaverGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3521,7 +3727,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3540,12 +3746,22 @@ Device information
 ### Example
 
 ```bash
- apiV1PrismDeviceInformationGet
+ apiV1PrismDeviceInformationGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.</p>
+<p>Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -3553,11 +3769,11 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3582,7 +3798,7 @@ Get category export
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exportId** | **string** | Path parameter 'export_id' | [default to null]
+ **exportId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -3590,7 +3806,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3658,7 +3874,10 @@ Request category export
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -3666,11 +3885,11 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3685,12 +3904,21 @@ FileVault
 ### Example
 
 ```bash
- apiV1PrismFilevaultGet
+ apiV1PrismFilevaultGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3698,7 +3926,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3717,12 +3945,21 @@ Gatekeeper and XProtect
 ### Example
 
 ```bash
- apiV1PrismGatekeeperAndXprotectGet
+ apiV1PrismGatekeeperAndXprotectGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Results are limited to Mac only as Gatekeeper and XProtect are not applicable for other platfroms.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3730,7 +3967,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3749,12 +3986,21 @@ Installed profiles
 ### Example
 
 ```bash
- apiV1PrismInstalledProfilesGet
+ apiV1PrismInstalledProfilesGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3762,7 +4008,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3781,12 +4027,21 @@ Kernel Extensions
 ### Example
 
 ```bash
- apiV1PrismKernelExtensionsGet
+ apiV1PrismKernelExtensionsGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>SON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3794,7 +4049,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3813,12 +4068,21 @@ Launch Agents and Daemons
 ### Example
 
 ```bash
- apiV1PrismLaunchAgentsAndDaemonsGet
+ apiV1PrismLaunchAgentsAndDaemonsGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3826,7 +4090,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3845,12 +4109,21 @@ Local users
 ### Example
 
 ```bash
- apiV1PrismLocalUsersGet
+ apiV1PrismLocalUsersGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3858,7 +4131,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3877,12 +4150,21 @@ Startup settings
 ### Example
 
 ```bash
- apiV1PrismStartupSettingsGet
+ apiV1PrismStartupSettingsGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3890,7 +4172,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3909,12 +4191,21 @@ System Extensions
 ### Example
 
 ```bash
- apiV1PrismSystemExtensionsGet
+ apiV1PrismSystemExtensionsGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3922,7 +4213,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3941,12 +4232,21 @@ Transparency database
 ### Example
 
 ```bash
- apiV1PrismTransparencyDatabaseGet
+ apiV1PrismTransparencyDatabaseGet  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | <p>Filter results by one or more blueprint IDs separated by commas.</p> | [optional] [default to null]
+ **deviceFamilies** | **string** | <p>Filter results by one or more device families separate by commas.</p> | [optional] [default to null]
+ **filter** | **string** | <p>JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return.</p> | [optional] [default to null]
 
 ### Return type
 
@@ -3954,7 +4254,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -3987,12 +4287,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4019,7 +4319,42 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## apiV1TagsGet
+
+Get Tags
+
+<p>Return configured tags.</p>
+
+### Example
+
+```bash
+ apiV1TagsGet  search=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **search** | **string** | <p>Return resultes containing a given tag search string.</p> | [default to null]
+
+### Return type
+
+**map**
+
+### Authorization
+
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -4043,7 +4378,10 @@ Create Tag
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -4051,11 +4389,11 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4080,20 +4418,20 @@ Delete Tag
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tagId** | **string** | Path parameter 'tag_id' | [default to null]
+ **tagId** | **string** |  | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4117,7 +4455,8 @@ Update Tag
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tagId** | **string** | Path parameter 'tag_id' | [default to null]
+ **tagId** | **string** |  | [default to null]
+ **body** | **string** |  | [optional]
 
 ### Return type
 
@@ -4125,43 +4464,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## apiV1TagssearchaccuhiveGet
-
-Get Tags
-
-<p>Return configured tags.</p>
-
-### Example
-
-```bash
- apiV1TagssearchaccuhiveGet
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**map**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4176,12 +4483,36 @@ Get Threat Details
 ### Example
 
 ```bash
- apiV1ThreatDetailsGet
+ apiV1ThreatDetailsGet  classification=value  date_range=value  device_id=value  status=value  sort_by=value  term=value  limit=value  offset=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **classification** | **string** | <p>Return all records matching a specified classification. The following classification options are available: <code>malware</code> and <code>pup</code>. Leave this parameter empty to return all classification types.</p> | [optional] [default to null]
+ **dateRange** | **string** | <p>Return all records within a specified number of days. Any positive number of days may be specified. Examples: <code>7</code>, <code>30</code>, <code>60</code>, <code>90</code>, <code>180</code>, or <code>365</code>.</p> | [optional] [default to null]
+ **deviceId** | **string** |  | [optional] [default to null]
+ **status** | **string** | <p>Return all records matching a specified status. The following status options are available: <code>quarantined</code>, <code>not_quarantined</code>, or <code>released</code>. Leave this parameter empty to return all status types.</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Results can be sorted with the following options: </p>
+<ul>
+<li>threat_name</li>
+<li>classification</li>
+<li>device_name</li>
+<li>process_name</li>
+<li>process_owner</li>
+<li>detection_date</li>
+<li>status</li>
+</ul>
+<p>Prepending a dash (-) to the parameter value will reverse the order of the returned results.</p>
+<p><code>?sort_by=-device_name</code> will order the response by device_name in descending order.</p> | [optional] [default to null]
+ **term** | **string** | <p>Search term to filter threat results.</p>
+<p>The response will include anything matching the following fields: <code>device_name</code>, <code>file_hash</code>, and <code>file_path</code>.</p>
+<p>So if you search for <code>bad file</code>, the results will include anywhere <code>bad file</code> exists in the three fields above.</p> | [optional] [default to null]
+ **limit** | **string** | <p>A hard upper <code>limit</code> is set at 1000 records returned per request. If more records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. </p>
+<p>Additionally, parameter queries can be added to a request to limit the results.</p> | [optional] [default to null]
+ **offset** | **string** | <p>Specify the starting record to return</p> | [optional] [default to null]
 
 ### Return type
 
@@ -4189,7 +4520,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -4209,12 +4540,18 @@ List Users
 ### Example
 
 ```bash
- apiV1UsersGet
+ apiV1UsersGet  email=value  id=value  integration_id=value  archived=value
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string** | <p>Returns users with email addresses containing the provided string.</p> | [optional] [default to null]
+ **id** | **string** | <p>Search for a user matching the provided UUID value.</p> | [optional] [default to null]
+ **integrationId** | **string** | <p>Search for a integration matching the provided UUID value.</p> | [optional] [default to null]
+ **archived** | **string** | <p>Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab. </p> | [optional] [default to null]
 
 ### Return type
 
@@ -4222,7 +4559,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -4251,7 +4588,7 @@ Get User
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string** | Path parameter 'user_id' | [default to null]
+ **userId** | **string** |  | [default to null]
 
 ### Return type
 
@@ -4259,7 +4596,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
@@ -4269,7 +4606,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## postUrlPost
+## rootPost
 
 Upload to S3
 
@@ -4294,7 +4631,7 @@ Upload to S3
 ### Example
 
 ```bash
- postUrlPost post_url=value
+ rootPost
 ```
 
 ### Parameters
@@ -4302,20 +4639,27 @@ Upload to S3
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postUrl** | **string** | Path parameter 'post_url' | [default to null]
+ **key** | **string** | <p>Value provided by \\\"Upload Custom App\\\"</p> | [default to null]
+ **xAmzAlgorithm** | **string** | <p>Value provided by \\\"Upload Custom App\\\"</p> | [default to null]
+ **xAmzCredential** | **string** | <p>Value provided by \\\"Upload Custom App\\\"</p> | [default to null]
+ **xAmzDate** | **string** | <p>Value provided by \\\"Upload Custom App\\\"</p> | [default to null]
+ **xAmzSecurityToken** | **string** | <p>Value provided by \\\"Upload Custom App\\\"</p> | [default to null]
+ **policy** | **string** | <p>Value provided by \\\"Upload Custom App\\\"</p> | [default to null]
+ **xAmzSignature** | **string** | <p>Value provided by \\\"Upload Custom App\\\"</p> | [default to null]
+ **file** | **binary** | <p>(Required) Your file to upload</p> | [default to null]
 
 ### Return type
 
-**map**
+(empty response body)
 
 ### Authorization
 
-No authorization required
+[bearer](../README.md#bearer)
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

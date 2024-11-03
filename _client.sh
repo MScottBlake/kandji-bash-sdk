@@ -324,9 +324,9 @@ case $state in
             "apiV1DevicesDeviceIdActionUnlockaccountPost[Unlock Account]" \
             "apiV1DevicesDeviceIdActionUpdateinventoryPost[Update Inventory]" \
             "apiV1DevicesDeviceIdActionUpdatelocationPost[Update Location]" \
-            "apiV1DevicesDeviceIdActivitylimit300Get[Get Device Activity]" \
+            "apiV1DevicesDeviceIdActivityGet[Get Device Activity]" \
             "apiV1DevicesDeviceIdAppsGet[Get Device Apps]" \
-            "apiV1DevicesDeviceIdCommandslimit300Get[Get Device Commands]" \
+            "apiV1DevicesDeviceIdCommandsGet[Get Device Commands]" \
             "apiV1DevicesDeviceIdDelete[Delete Device]" \
             "apiV1DevicesDeviceIdDetailsGet[Get Device Details]" \
             "apiV1DevicesDeviceIdDetailsLostmodeDelete[Cancel Lost Mode]" \
@@ -345,7 +345,7 @@ case $state in
             "apiV1DevicesDeviceIdSecretsRecoverypasswordGet[Get Recovery Lock Password]" \
             "apiV1DevicesDeviceIdSecretsUnlockpinGet[Get Unlock Pin]" \
             "apiV1DevicesDeviceIdStatusGet[Get Device Status]" \
-            "apiV1Deviceslimit300Get[List Devices]" \
+            "apiV1DevicesGet[List Devices]" \
             "apiV1IntegrationsAppleAdeAdeTokenIdDelete[Delete ADE integration]" \
             "apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet[List devices associated to ADE token]" \
             "apiV1IntegrationsAppleAdeAdeTokenIdGet[Get ADE integration]" \
@@ -379,7 +379,7 @@ case $state in
             "apiV1PrismApplicationFirewallGet[Application firewall]" \
             "apiV1PrismAppsGet[Applications]" \
             "apiV1PrismCertificatesGet[Certificates]" \
-            "apiV1PrismCountcategoryappsGet[Count]" \
+            "apiV1PrismCountGet[Count]" \
             "apiV1PrismDesktopAndScreensaverGet[Desktop and Screensaver]" \
             "apiV1PrismDeviceInformationGet[Device information]" \
             "apiV1PrismExportExportIdGet[Get category export]" \
@@ -395,14 +395,14 @@ case $state in
             "apiV1PrismTransparencyDatabaseGet[Transparency database]" \
             "apiV1SelfServiceCategoriesGet[List Self Service Categories]" \
             "apiV1SettingsLicensingGet[Licensing]" \
+            "apiV1TagsGet[Get Tags]" \
             "apiV1TagsPost[Create Tag]" \
             "apiV1TagsTagIdDelete[Delete Tag]" \
             "apiV1TagsTagIdPatch[Update Tag]" \
-            "apiV1TagssearchaccuhiveGet[Get Tags]" \
             "apiV1ThreatDetailsGet[Get Threat Details]" \
             "apiV1UsersGet[List Users]" \
             "apiV1UsersUserIdGet[Get User]" \
-            "postUrlPost[Upload to S3]" \
+            "rootPost[Upload to S3]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -413,56 +413,62 @@ case $state in
       apiV1BlueprintsBlueprintIdAssignLibraryItemPost)
         local -a _op_arguments
         _op_arguments=(
-          "blueprint_id=:[PATH] Path parameter &#39;blueprint_id&#39;"
+          "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsBlueprintIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "blueprint_id=:[PATH] Path parameter &#39;blueprint_id&#39;"
+          "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsBlueprintIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "blueprint_id=:[PATH] Path parameter &#39;blueprint_id&#39;"
+          "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsBlueprintIdListLibraryItemsGet)
         local -a _op_arguments
         _op_arguments=(
-          "blueprint_id=:[PATH] Path parameter &#39;blueprint_id&#39;"
+          "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsBlueprintIdOtaEnrollmentProfileGet)
         local -a _op_arguments
         _op_arguments=(
-          "blueprint_id=:[PATH] Path parameter &#39;blueprint_id&#39;"
-                    )
+          "blueprint_id=:[PATH] "
+          "sso=:[QUERY] &lt;p&gt;Use the &lt;code&gt;sso&lt;/code&gt; query parameter, set to &lt;code&gt;true&lt;/code&gt;, to return a URL instead of the manual enrollment profile. This parameter should only be used for blueprints in which \&quot;Require Authentication\&quot; is configured for Manual Enrollment. The returned URL must be used to authenticate via SSO to receive an enrollment profile. &lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsBlueprintIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "blueprint_id=:[PATH] Path parameter &#39;blueprint_id&#39;"
+          "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsBlueprintIdRemoveLibraryItemPost)
         local -a _op_arguments
         _op_arguments=(
-          "blueprint_id=:[PATH] Path parameter &#39;blueprint_id&#39;"
+          "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "id=:[QUERY] &lt;p&gt;Look up a specific Blueprint by its ID&lt;/p&gt;"
+"id__in=:[QUERY] &lt;p&gt;Specify a list of Blueprint IDs to limit the results to.  Multiple values may be separated by commas. There is a double underscore (&lt;code&gt;__&lt;/code&gt;) between id and in&lt;/p&gt;"
+"name=:[QUERY] &lt;p&gt;Return Blueprint names \&quot;containing\&quot; the specified search string.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;Number of results to return per page.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;The initial index from which to return the results.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1BlueprintsPost)
@@ -474,219 +480,225 @@ case $state in
       apiV1BlueprintsTemplatesGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "limit=:[QUERY] &lt;p&gt;Number of results to return per page.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;The initial index from which to return the results.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionBlankpushPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionClearpasscodePost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionDeleteuserPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionDisablelostmodePost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionEnablelostmodePost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionErasePost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionLockPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionPlaylostmodesoundPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionReinstallagentPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionRemotedesktopPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionRenewmdmprofilePost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionRestartPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionSetnamePost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionShutdownPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionUnlockaccountPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionUpdateinventoryPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdActionUpdatelocationPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      apiV1DevicesDeviceIdActivitylimit300Get)
+      apiV1DevicesDeviceIdActivityGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
-                    )
+          "device_id=:[PATH] "
+          "limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdAppsGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      apiV1DevicesDeviceIdCommandslimit300Get)
+      apiV1DevicesDeviceIdCommandsGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
-                    )
+          "device_id=:[PATH] "
+          "limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdDetailsGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdDetailsLostmodeDelete)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdDetailsLostmodeGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdLibraryItemsGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdNotesGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdNotesNoteIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
-"note_id=:[PATH] Path parameter &#39;note_id&#39;"
+          "device_id=:[PATH] "
+"note_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdNotesNoteIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
-"note_id=:[PATH] Path parameter &#39;note_id&#39;"
+          "device_id=:[PATH] "
+"note_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdNotesNoteIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
-"note_id=:[PATH] Path parameter &#39;note_id&#39;"
+          "device_id=:[PATH] "
+"note_id=:[PATH] "
                     "Authorization\::[HEADER] "
 "Content-Type\::[HEADER] "
 )
@@ -695,118 +707,166 @@ case $state in
       apiV1DevicesDeviceIdNotesPost)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdParametersGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdSecretsBypasscodeGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdSecretsFilevaultkeyGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdSecretsRecoverypasswordGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdSecretsUnlockpinGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1DevicesDeviceIdStatusGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      apiV1Deviceslimit300Get)
+      apiV1DevicesGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "asset_tag=:[QUERY] "
+"blueprint_id=:[QUERY] &lt;p&gt;Return results \&quot;containing\&quot; the specified blueprint id&lt;/p&gt;"
+"device_id=:[QUERY] "
+"device_name=:[QUERY] "
+"filevault_enabled=:[QUERY] &lt;p&gt;Query for devices that either have FileVault on (true) or off (false). This parameter only applies to macOS. &lt;/p&gt;
+&lt;p&gt;An empty list &lt;code&gt;[]&lt;/code&gt; will be returned if no devices are found with the given parameter value.&lt;/p&gt;"
+"mac_address=:[QUERY] &lt;p&gt;Search for a specific device by MAC address &lt;/p&gt;"
+"model=:[QUERY] &lt;p&gt;Return model results \&quot;containing\&quot; the specified model string.&lt;/p&gt;"
+"ordering=:[QUERY] &lt;p&gt;The &lt;code&gt;ordering&lt;/code&gt; parameter can be used to define how the device records are ordered in the response. Prepending a dash (-) to the parameter value will reverse the order of the returned results.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?ordering&#x3D;-serial_number&lt;/code&gt; will order the response by serial_number in descending order.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Possible values&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;asset_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;blueprint_id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device_id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;last_check_in&lt;/code&gt; - agent checkin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;model&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;platform&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;os_version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;serial_number&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;user&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?ordering&#x3D;serial_number,platform&lt;/code&gt;&lt;/p&gt;"
+"os_version=:[QUERY] &lt;p&gt;Return all device records with the specified OS version&lt;/p&gt;"
+"platform=:[QUERY] &lt;p&gt;Return all records matching a specific platform. Possible values:&lt;code&gt;Mac&lt;/code&gt;, &lt;code&gt;iPad&lt;/code&gt;, &lt;code&gt;iPhone&lt;/code&gt;, &lt;code&gt;AppleTV&lt;/code&gt;&lt;/p&gt;"
+"serial_number=:[QUERY] &lt;p&gt;Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned.&lt;/p&gt;"
+"tag_name=:[QUERY] &lt;p&gt;Return results for given tag name. Case sensitive.&lt;/p&gt;"
+"tag_name_in=:[QUERY] &lt;p&gt;Return results for given tag names separate by commas. Case sensitive.&lt;/p&gt;"
+"tag_id=:[QUERY] &lt;p&gt;Search for a tag by its ID. Case sensitive.&lt;/p&gt;"
+"tag_id_in=:[QUERY] &lt;p&gt;Return results for given tag IDs separated by commas. Case sensitive.&lt;/p&gt;"
+"user=:[QUERY] &lt;p&gt;Return results \&quot;containing\&quot; the user name&lt;/p&gt;"
+"user_email=:[QUERY] &lt;p&gt;Return results \&quot;containing\&quot; search on email address&lt;/p&gt;"
+"user_id=:[QUERY] &lt;p&gt;\&quot;exact\&quot; match on kandji user ID number&lt;/p&gt;"
+"user_name=:[QUERY] &lt;p&gt;Return results \&quot;containing\&quot; the assigned user Display Name&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeAdeTokenIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "ade_token_id=:[PATH] Path parameter &#39;ade_token_id&#39;"
+          "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet)
         local -a _op_arguments
         _op_arguments=(
-          "ade_token_id=:[PATH] Path parameter &#39;ade_token_id&#39;"
-                    )
+          "ade_token_id=:[PATH] "
+          "page=:[QUERY] &lt;p&gt;Use the &lt;code&gt;page&lt;/code&gt; parameter to page through results or to request a specific page. By default, if a page is not specified, page 1 is returned. Note: 300 device records are returned per page of results. Alternatively, the &lt;code&gt;next&lt;/code&gt; and &lt;code&gt;previous&lt;/code&gt; key attributes in the response can be used to request the next page of results or return to the previous page.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeAdeTokenIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "ade_token_id=:[PATH] Path parameter &#39;ade_token_id&#39;"
+          "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeAdeTokenIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "ade_token_id=:[PATH] Path parameter &#39;ade_token_id&#39;"
+          "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeAdeTokenIdRenewPost)
         local -a _op_arguments
         _op_arguments=(
-          "ade_token_id=:[PATH] Path parameter &#39;ade_token_id&#39;"
+          "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeDevicesDeviceIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeDevicesDeviceIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "device_id=:[PATH] Path parameter &#39;device_id&#39;"
+          "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeDevicesGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_id=:[QUERY] &lt;p&gt;Return results \&quot;containing\&quot; the specified blueprint id&lt;/p&gt;"
+"user_id=:[QUERY] &lt;p&gt;\&quot;exact\&quot; match on kandji user ID number&lt;/p&gt;"
+"dep_account=:[QUERY] &lt;p&gt;The ADE token UUID&lt;/p&gt;"
+"device_family=:[QUERY] &lt;p&gt;Mac, iPhone, iPad, AppleTV, iPod&lt;/p&gt;"
+"model=:[QUERY] &lt;p&gt;Return model results \&quot;containing\&quot; the specified model string. - \&quot;iPad (8th Generation)\&quot;, \&quot;MacBook Air\&quot;&lt;/p&gt;"
+"os=:[QUERY] &lt;p&gt;OSX, iOS, tvOS&lt;/p&gt;"
+"profile_status=:[QUERY] &lt;p&gt;The automated device enrollment profile assignment status - assigned, empty, pushed, removed&lt;/p&gt;"
+"serial_number=:[QUERY] &lt;p&gt;Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned.&lt;/p&gt;"
+"page=:[QUERY] &lt;p&gt;Use the &lt;code&gt;page&lt;/code&gt; parameter to page through results or to request a specific page. By default, if a page is not specified, page 1 is returned. Note: 300 device records are returned per page of results. Alternatively, the &lt;code&gt;next&lt;/code&gt; and &lt;code&gt;previous&lt;/code&gt; key attributes in the response can be used to request the next page of results or return to the previous page.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1IntegrationsAppleAdeGet)
@@ -830,27 +890,28 @@ case $state in
       apiV1LibraryCustomAppsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "page=:[QUERY] &lt;p&gt;Optional page number. Used when results exceed pagination threshold. A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomAppsLibraryItemIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomAppsLibraryItemIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomAppsLibraryItemIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -869,60 +930,70 @@ case $state in
       apiV1LibraryCustomProfilesGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "page=:[QUERY] &lt;p&gt;Optional page number (when results exceed pagination threshold)&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomProfilesLibraryItemIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomProfilesLibraryItemIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomProfilesLibraryItemIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
-                    )
+          "library_item_id=:[PATH] "
+          "runs_on_mac=:[QUERY] "
+"runs_on_iphone=:[QUERY] "
+"runs_on_ipad=:[QUERY] "
+"runs_on_tv=:[QUERY] "
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomProfilesPost)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "runs_on_mac=:[QUERY] "
+"runs_on_iphone=:[QUERY] "
+"runs_on_ipad=:[QUERY] "
+"runs_on_tv=:[QUERY] "
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomScriptsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "page=:[QUERY] &lt;p&gt;Optional page number (when results exceed pagination threshold)&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomScriptsLibraryItemIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomScriptsLibraryItemIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryCustomScriptsLibraryItemIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
+          "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -935,63 +1006,119 @@ case $state in
       apiV1LibraryLibraryItemsLibraryItemIdActivityGet)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
-                    )
+          "library_item_id=:[PATH] "
+          "activity_type=:[QUERY] &lt;p&gt;Filter actions by this activity type. Choices are: library_item_created, library_item_edited, library_item_deleted, library_item_duplicated, library_item_assignment_changed&lt;/p&gt;"
+"user_id=:[QUERY] &lt;p&gt;Filter actions by this user (id)&lt;/p&gt;"
+"user_email=:[QUERY] &lt;p&gt;Filter actions by this user (email)&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1LibraryLibraryItemsLibraryItemIdStatusGet)
         local -a _op_arguments
         _op_arguments=(
-          "library_item_id=:[PATH] Path parameter &#39;library_item_id&#39;"
-                    )
+          "library_item_id=:[PATH] "
+          "computer_id=:[QUERY] &lt;p&gt;Query for the status of one device.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismActivationLockGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] "
+"device_families=:[QUERY] "
+"filter=:[QUERY] "
+"sort_by=:[QUERY] "
+"limit=:[QUERY] "
+"offset=:[QUERY] "
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismApplicationFirewallGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismAppsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismCertificatesGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      apiV1PrismCountcategoryappsGet)
+      apiV1PrismCountGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "category=:[QUERY] &lt;p&gt;Return the count of records for the specified category. 
+If a category contains spaces substitute the spaces for underscores (\&quot;_\&quot;) when using the API query.&lt;/p&gt;
+&lt;p&gt;Examples:
+apps
+device_information
+kernel_extensions
+system_extensions&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismDesktopAndScreensaverGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismDeviceInformationGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.&lt;/p&gt;
+&lt;p&gt;Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismExportExportIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "export_id=:[PATH] Path parameter &#39;export_id&#39;"
+          "export_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1004,55 +1131,118 @@ case $state in
       apiV1PrismFilevaultGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismGatekeeperAndXprotectGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Results are limited to Mac only as Gatekeeper and XProtect are not applicable for other platfroms.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismInstalledProfilesGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismKernelExtensionsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;SON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismLaunchAgentsAndDaemonsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismLocalUsersGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismStartupSettingsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismSystemExtensionsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1PrismTransparencyDatabaseGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "blueprint_ids=:[QUERY] &lt;p&gt;Filter results by one or more blueprint IDs separated by commas.&lt;/p&gt;"
+"device_families=:[QUERY] &lt;p&gt;Filter results by one or more device families separate by commas.&lt;/p&gt;"
+"filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return.&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1SelfServiceCategoriesGet)
@@ -1067,6 +1257,13 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      apiV1TagsGet)
+        local -a _op_arguments
+        _op_arguments=(
+                    "search=:[QUERY] &lt;p&gt;Return resultes containing a given tag search string.&lt;/p&gt;"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       apiV1TagsPost)
         local -a _op_arguments
         _op_arguments=(
@@ -1076,47 +1273,66 @@ case $state in
       apiV1TagsTagIdDelete)
         local -a _op_arguments
         _op_arguments=(
-          "tag_id=:[PATH] Path parameter &#39;tag_id&#39;"
+          "tag_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1TagsTagIdPatch)
         local -a _op_arguments
         _op_arguments=(
-          "tag_id=:[PATH] Path parameter &#39;tag_id&#39;"
+          "tag_id=:[PATH] "
                     )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      apiV1TagssearchaccuhiveGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1ThreatDetailsGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "classification=:[QUERY] &lt;p&gt;Return all records matching a specified classification. The following classification options are available: &lt;code&gt;malware&lt;/code&gt; and &lt;code&gt;pup&lt;/code&gt;. Leave this parameter empty to return all classification types.&lt;/p&gt;"
+"date_range=:[QUERY] &lt;p&gt;Return all records within a specified number of days. Any positive number of days may be specified. Examples: &lt;code&gt;7&lt;/code&gt;, &lt;code&gt;30&lt;/code&gt;, &lt;code&gt;60&lt;/code&gt;, &lt;code&gt;90&lt;/code&gt;, &lt;code&gt;180&lt;/code&gt;, or &lt;code&gt;365&lt;/code&gt;.&lt;/p&gt;"
+"device_id=:[QUERY] "
+"status=:[QUERY] &lt;p&gt;Return all records matching a specified status. The following status options are available: &lt;code&gt;quarantined&lt;/code&gt;, &lt;code&gt;not_quarantined&lt;/code&gt;, or &lt;code&gt;released&lt;/code&gt;. Leave this parameter empty to return all status types.&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Results can be sorted with the following options: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;threat_name&lt;/li&gt;
+&lt;li&gt;classification&lt;/li&gt;
+&lt;li&gt;device_name&lt;/li&gt;
+&lt;li&gt;process_name&lt;/li&gt;
+&lt;li&gt;process_owner&lt;/li&gt;
+&lt;li&gt;detection_date&lt;/li&gt;
+&lt;li&gt;status&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Prepending a dash (-) to the parameter value will reverse the order of the returned results.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?sort_by&#x3D;-device_name&lt;/code&gt; will order the response by device_name in descending order.&lt;/p&gt;"
+"term=:[QUERY] &lt;p&gt;Search term to filter threat results.&lt;/p&gt;
+&lt;p&gt;The response will include anything matching the following fields: &lt;code&gt;device_name&lt;/code&gt;, &lt;code&gt;file_hash&lt;/code&gt;, and &lt;code&gt;file_path&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So if you search for &lt;code&gt;bad file&lt;/code&gt;, the results will include anywhere &lt;code&gt;bad file&lt;/code&gt; exists in the three fields above.&lt;/p&gt;"
+"limit=:[QUERY] &lt;p&gt;A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 1000 records returned per request. If more records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. &lt;/p&gt;
+&lt;p&gt;Additionally, parameter queries can be added to a request to limit the results.&lt;/p&gt;"
+"offset=:[QUERY] &lt;p&gt;Specify the starting record to return&lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1UsersGet)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "email=:[QUERY] &lt;p&gt;Returns users with email addresses containing the provided string.&lt;/p&gt;"
+"id=:[QUERY] &lt;p&gt;Search for a user matching the provided UUID value.&lt;/p&gt;"
+"integration_id=:[QUERY] &lt;p&gt;Search for a integration matching the provided UUID value.&lt;/p&gt;"
+"archived=:[QUERY] &lt;p&gt;Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab. &lt;/p&gt;"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       apiV1UsersUserIdGet)
         local -a _op_arguments
         _op_arguments=(
-          "user_id=:[PATH] Path parameter &#39;user_id&#39;"
+          "user_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      postUrlPost)
+      rootPost)
         local -a _op_arguments
         _op_arguments=(
-          "post_url=:[PATH] Path parameter &#39;post_url&#39;"
-                    )
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
     esac

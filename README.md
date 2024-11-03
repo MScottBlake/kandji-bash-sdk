@@ -130,9 +130,9 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**apiV1DevicesDeviceIdActionUnlockaccountPost**](docs/DefaultApi.md#apiv1devicesdeviceidactionunlockaccountpost) | **POST** /api/v1/devices/{device_id}/action/unlockaccount | Unlock Account
 *DefaultApi* | [**apiV1DevicesDeviceIdActionUpdateinventoryPost**](docs/DefaultApi.md#apiv1devicesdeviceidactionupdateinventorypost) | **POST** /api/v1/devices/{device_id}/action/updateinventory | Update Inventory
 *DefaultApi* | [**apiV1DevicesDeviceIdActionUpdatelocationPost**](docs/DefaultApi.md#apiv1devicesdeviceidactionupdatelocationpost) | **POST** /api/v1/devices/{device_id}/action/updatelocation | Update Location
-*DefaultApi* | [**apiV1DevicesDeviceIdActivitylimit300Get**](docs/DefaultApi.md#apiv1devicesdeviceidactivitylimit300get) | **GET** /api/v1/devices/{device_id}/activity?limit&#x3D;300 | Get Device Activity
+*DefaultApi* | [**apiV1DevicesDeviceIdActivityGet**](docs/DefaultApi.md#apiv1devicesdeviceidactivityget) | **GET** /api/v1/devices/{device_id}/activity | Get Device Activity
 *DefaultApi* | [**apiV1DevicesDeviceIdAppsGet**](docs/DefaultApi.md#apiv1devicesdeviceidappsget) | **GET** /api/v1/devices/{device_id}/apps | Get Device Apps
-*DefaultApi* | [**apiV1DevicesDeviceIdCommandslimit300Get**](docs/DefaultApi.md#apiv1devicesdeviceidcommandslimit300get) | **GET** /api/v1/devices/{device_id}/commands?limit&#x3D;300 | Get Device Commands
+*DefaultApi* | [**apiV1DevicesDeviceIdCommandsGet**](docs/DefaultApi.md#apiv1devicesdeviceidcommandsget) | **GET** /api/v1/devices/{device_id}/commands | Get Device Commands
 *DefaultApi* | [**apiV1DevicesDeviceIdDelete**](docs/DefaultApi.md#apiv1devicesdeviceiddelete) | **DELETE** /api/v1/devices/{device_id} | Delete Device
 *DefaultApi* | [**apiV1DevicesDeviceIdDetailsGet**](docs/DefaultApi.md#apiv1devicesdeviceiddetailsget) | **GET** /api/v1/devices/{device_id}/details | Get Device Details
 *DefaultApi* | [**apiV1DevicesDeviceIdDetailsLostmodeDelete**](docs/DefaultApi.md#apiv1devicesdeviceiddetailslostmodedelete) | **DELETE** /api/v1/devices/{device_id}/details/lostmode | Cancel Lost Mode
@@ -151,7 +151,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**apiV1DevicesDeviceIdSecretsRecoverypasswordGet**](docs/DefaultApi.md#apiv1devicesdeviceidsecretsrecoverypasswordget) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
 *DefaultApi* | [**apiV1DevicesDeviceIdSecretsUnlockpinGet**](docs/DefaultApi.md#apiv1devicesdeviceidsecretsunlockpinget) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
 *DefaultApi* | [**apiV1DevicesDeviceIdStatusGet**](docs/DefaultApi.md#apiv1devicesdeviceidstatusget) | **GET** /api/v1/devices/{device_id}/status | Get Device Status
-*DefaultApi* | [**apiV1Deviceslimit300Get**](docs/DefaultApi.md#apiv1deviceslimit300get) | **GET** /api/v1/devices?limit&#x3D;300 | List Devices
+*DefaultApi* | [**apiV1DevicesGet**](docs/DefaultApi.md#apiv1devicesget) | **GET** /api/v1/devices | List Devices
 *DefaultApi* | [**apiV1IntegrationsAppleAdeAdeTokenIdDelete**](docs/DefaultApi.md#apiv1integrationsappleadeadetokeniddelete) | **DELETE** /api/v1/integrations/apple/ade/{ade_token_id} | Delete ADE integration
 *DefaultApi* | [**apiV1IntegrationsAppleAdeAdeTokenIdDevicesGet**](docs/DefaultApi.md#apiv1integrationsappleadeadetokeniddevicesget) | **GET** /api/v1/integrations/apple/ade/{ade_token_id}/devices | List devices associated to ADE token
 *DefaultApi* | [**apiV1IntegrationsAppleAdeAdeTokenIdGet**](docs/DefaultApi.md#apiv1integrationsappleadeadetokenidget) | **GET** /api/v1/integrations/apple/ade/{ade_token_id} | Get ADE integration
@@ -185,7 +185,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**apiV1PrismApplicationFirewallGet**](docs/DefaultApi.md#apiv1prismapplicationfirewallget) | **GET** /api/v1/prism/application_firewall | Application firewall
 *DefaultApi* | [**apiV1PrismAppsGet**](docs/DefaultApi.md#apiv1prismappsget) | **GET** /api/v1/prism/apps | Applications
 *DefaultApi* | [**apiV1PrismCertificatesGet**](docs/DefaultApi.md#apiv1prismcertificatesget) | **GET** /api/v1/prism/certificates | Certificates
-*DefaultApi* | [**apiV1PrismCountcategoryappsGet**](docs/DefaultApi.md#apiv1prismcountcategoryappsget) | **GET** /api/v1/prism/count?category&#x3D;apps | Count
+*DefaultApi* | [**apiV1PrismCountGet**](docs/DefaultApi.md#apiv1prismcountget) | **GET** /api/v1/prism/count | Count
 *DefaultApi* | [**apiV1PrismDesktopAndScreensaverGet**](docs/DefaultApi.md#apiv1prismdesktopandscreensaverget) | **GET** /api/v1/prism/desktop_and_screensaver | Desktop and Screensaver
 *DefaultApi* | [**apiV1PrismDeviceInformationGet**](docs/DefaultApi.md#apiv1prismdeviceinformationget) | **GET** /api/v1/prism/device_information | Device information
 *DefaultApi* | [**apiV1PrismExportExportIdGet**](docs/DefaultApi.md#apiv1prismexportexportidget) | **GET** /api/v1/prism/export/{export_id} | Get category export
@@ -201,14 +201,14 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**apiV1PrismTransparencyDatabaseGet**](docs/DefaultApi.md#apiv1prismtransparencydatabaseget) | **GET** /api/v1/prism/transparency_database | Transparency database
 *DefaultApi* | [**apiV1SelfServiceCategoriesGet**](docs/DefaultApi.md#apiv1selfservicecategoriesget) | **GET** /api/v1/self-service/categories | List Self Service Categories
 *DefaultApi* | [**apiV1SettingsLicensingGet**](docs/DefaultApi.md#apiv1settingslicensingget) | **GET** /api/v1/settings/licensing | Licensing
+*DefaultApi* | [**apiV1TagsGet**](docs/DefaultApi.md#apiv1tagsget) | **GET** /api/v1/tags | Get Tags
 *DefaultApi* | [**apiV1TagsPost**](docs/DefaultApi.md#apiv1tagspost) | **POST** /api/v1/tags | Create Tag
 *DefaultApi* | [**apiV1TagsTagIdDelete**](docs/DefaultApi.md#apiv1tagstagiddelete) | **DELETE** /api/v1/tags/{tag_id} | Delete Tag
 *DefaultApi* | [**apiV1TagsTagIdPatch**](docs/DefaultApi.md#apiv1tagstagidpatch) | **PATCH** /api/v1/tags/{tag_id} | Update Tag
-*DefaultApi* | [**apiV1TagssearchaccuhiveGet**](docs/DefaultApi.md#apiv1tagssearchaccuhiveget) | **GET** /api/v1/tags?search&#x3D;accuhive | Get Tags
 *DefaultApi* | [**apiV1ThreatDetailsGet**](docs/DefaultApi.md#apiv1threatdetailsget) | **GET** /api/v1/threat-details | Get Threat Details
 *DefaultApi* | [**apiV1UsersGet**](docs/DefaultApi.md#apiv1usersget) | **GET** /api/v1/users | List Users
 *DefaultApi* | [**apiV1UsersUserIdGet**](docs/DefaultApi.md#apiv1usersuseridget) | **GET** /api/v1/users/{user_id} | Get User
-*DefaultApi* | [**postUrlPost**](docs/DefaultApi.md#posturlpost) | **POST** /{post_url} | Upload to S3
+*DefaultApi* | [**rootPost**](docs/DefaultApi.md#rootpost) | **POST** / | Upload to S3
 
 
 ## Documentation For Models
@@ -217,5 +217,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## bearer
+
+
+- **Type**: HTTP Bearer Token authentication (API Token)
 
