@@ -37,7 +37,8 @@ jobs:
             -i /local/${{ env.openapi_file}} \
             -g "{{ env.LANGUAGE }}"$ \
             -o "/local" \
-            --package-name "kandji_${{ env.openapi_file}}_sdk"
+            --package-name "kandji_${{ env.openapi_file}}_sdk" \
+            --projectName "kandji_${{ env.openapi_file}}_sdk"
 
       - name: Delete OpenAPI file
         run: |
