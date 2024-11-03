@@ -6,7 +6,7 @@ on:
     types: [generate-sdk]
 
 jobs:
-  generate_sdks:
+  generate_sdk:
     runs-on: ubuntu-latest
     env:
       LANGUAGE: bash
@@ -35,8 +35,9 @@ jobs:
         run: |
           docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest generate \
             -i /local/${{ env.openapi_file}} \
-            -g "${{ env.LANGUAGE }}" \
-            -o "/local"
+            -g "{{ env.LANGUAGE }}"$ \
+            -o "/local" \
+            --package-name "kandji_${{ env.openapi_file}}_sdk"
 
       - name: Delete OpenAPI file
         run: |
