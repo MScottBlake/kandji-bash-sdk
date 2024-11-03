@@ -43,7 +43,7 @@ jobs:
         run: |
           docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest generate \
             -i /local/${{ env.openapi_file}} \
-            -g "${{ env.LANGUAGE }}"$ \
+            -g "${{ env.LANGUAGE }}" \
             -o "/local" \
             --package-name "kandji_${{ env.openapi_file}}_sdk" \
             --projectName "kandji_${{ env.openapi_file}}_sdk"
