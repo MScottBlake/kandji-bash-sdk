@@ -52,6 +52,11 @@ jobs:
           generator-tag: latest-release
           openapi-file: ${{ env.openapi_file }}
 
+      - name: Move the output client to repo root
+        run: |
+          mv ${{ env.language }}-client/{*,.*} ${{ env.language }}-client/../ 2>/dev/null
+          rmdir ${{ env.language }}-client
+
       - name: Delete Kandji OpenAPI file
         run: |
           rm -rf "${{ env.openapi_file }}"
