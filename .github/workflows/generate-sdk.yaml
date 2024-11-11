@@ -50,6 +50,7 @@ jobs:
           config-file: kandji-generator-config.yaml
           generator: ${{ env.language }}
           generator-tag: latest-release
+          openapi-file: ${{ env.openapi_file }}
 
       - name: Delete Kandji OpenAPI file
         run: |
