@@ -47,7 +47,7 @@ jobs:
       - name: Generate Client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
-          config-file: kandji-generator-config.yml
+          config-file: kandji-generator-config.yaml
           generator: ${{ env.language }}
           generator-tag: latest-release
 
