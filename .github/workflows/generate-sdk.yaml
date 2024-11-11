@@ -22,6 +22,7 @@ jobs:
         run: |
           if [[ -f .openapi-generator/FILES ]]; then
             xargs -a .openapi-generator/FILES -d '\n' rm -rf
+          fi
 
       - name: Download Kandji OpenAPI file
         env:
