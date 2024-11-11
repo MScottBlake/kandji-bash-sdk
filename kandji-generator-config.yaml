@@ -1,6 +1,4 @@
-generatorName: bash
-inputSpec: kandji_openapi.yaml
-outputDir: ./tmp
+outputDir: .
 verbose: False
 skipOverwrite: True
 useTags: True
