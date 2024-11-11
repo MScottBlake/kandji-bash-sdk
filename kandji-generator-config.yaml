@@ -1,0 +1,13 @@
+generatorName: bash
+inputSpec: kandji_openapi.yaml
+outputDir: ./tmp
+verbose: False
+skipOverwrite: True
+useTags: True
+enablePostProcessFile: True
+packageName: kandji_bash_sdk
+# apiNamePrefix: ''
+# apiNameSuffix: Api
+gitHost: github.com
+gitRepoId: kandji-bash-sdk
+gitUserId: MScottBlake
