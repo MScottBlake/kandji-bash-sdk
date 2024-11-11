@@ -1,7 +1,7 @@
-name: Generate SDK
+name: 1 Generate SDK
 
 on:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
   repository_dispatch:
     types: [generate-sdk]
 
@@ -9,21 +9,34 @@ jobs:
   generate_sdk:
     runs-on: ubuntu-latest
     env:
-      LANGUAGE: bash
+      language: bash
+      openapi_file: kandji_openapi.yaml
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.KANDJI_OPENAPI_TOKEN }}
 
-      - name: Download OpenAPI file from latest release
+      - name: Delete Generated Files
+        run: |
+          rm -rf .openapi-generator \
+            docs \
+            _client.sh \
+            .openapi-generator-ignore \
+            client.sh \
+            client.sh.bash_completion \
+            Dockerfile \
+            README.md
+
+      - name: Download Kandji OpenAPI file
         env:
-          GH_TOKEN: ${{ secrets.KANDJI_POSTMAN_TO_OPENAPI_TOKEN }}
+          GH_TOKEN: ${{ secrets.KANDJI_OPENAPI_TOKEN }}
         run: |
           gh release download \
-            --repo "MScottBlake/kandji-postman-to-openapi" \
+            --repo "MScottBlake/kandji-openapi-spec" \
             --pattern "kandji_openapi\.yaml" \
-            --output "kandji_openapi.yaml"
-          echo "openapi_file=kandji_openapi.yaml" >> ${GITHUB_ENV}
+            --output "${{ env.openapi_file }}"
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
@@ -31,42 +44,35 @@ jobs:
           name: openapi_file
           path: ${{ env.openapi_file }}
 
+      - name: Generate Client
+        uses: openapi-generators/openapitools-generator-action@v1
+        with:
+          config-file: kandji-generator-config.yml
+          generator: ${{ env.language }}
+          generator-tag: latest-release
 
-      # - name: Generate Angular Client
-      #   uses: openapi-generators/openapitools-generator-action@v1
-      #   with:
-      #     generator: typescript-angular
-      #     config-file: angular-generator-config.yml
-
-
-      - name: Set up OpenAPI Generator
-        run: |
-          docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:latest generate \
-            -i /local/${{ env.openapi_file}} \
-            -g "${{ env.LANGUAGE }}" \
-            -o "/local" \
-            --package-name "kandji_${{ env.openapi_file}}_sdk" \
-            --projectName "kandji_${{ env.openapi_file}}_sdk"
-
-      - name: Delete OpenAPI file
+      - name: Delete Kandji OpenAPI file
         run: |
           rm -rf "${{ env.openapi_file }}"
 
-      - name: Commit and Push to GitHub
+      - name: Check for Changes
+        id: check_changes
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Automated SDK update for latest OpenAPI release"
-          git push
+          if [[ -z $(git status --porcelain) ]]; then
+            echo "No changes to commit."
+            echo "continue=false" >> $GITHUB_ENV
+          else
+            echo "Changes detected."
+            echo "continue=true" >> $GITHUB_ENV
+          fi
 
-      - name: Create GitHub Release
-        if: success()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          tag="sdk-update-$(date +'%Y%m%d%H%M%S')"
-          gh release create "${tag}" \
-            --title "Automated SDK Update $(date +'%Y-%m-%d %H:%M:%S')" \
-            --generate-notes \
-            --latest
+      - name: Create Pull Request
+        if: env.continue == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          sign-commits: true
+          commit-message: "[auto] Updated Kandji SDK"
+          branch: update-sdk
+          base: main
+          delete-branch: true
+          title: "[auto] Updated Kandji SDK"
