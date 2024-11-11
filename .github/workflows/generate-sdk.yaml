@@ -20,14 +20,8 @@ jobs:
 
       - name: Delete Generated Files
         run: |
-          rm -rf .openapi-generator \
-            docs \
-            _client.sh \
-            .openapi-generator-ignore \
-            client.sh \
-            client.sh.bash_completion \
-            Dockerfile \
-            README.md
+          if [[ -f .openapi-generator/FILES ]]; then
+            xargs -a .openapi-generator/FILES -d '\n' rm -rf
 
       - name: Download Kandji OpenAPI file
         env:
