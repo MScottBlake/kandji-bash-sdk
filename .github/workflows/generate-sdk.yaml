@@ -47,10 +47,20 @@ jobs:
           generator-tag: latest-release
           openapi-file: ${{ env.openapi_file }}
 
-      - name: Move the output client to repo root
+      - name: Move and remove directory contents if it exists
         run: |
-          mv ${{ env.language }}-client/{*,.*} ${{ env.language }}-client/../ 2>/dev/null
-          rmdir ${{ env.language }}-client
+          if [[ -d "${{ env.language }}-client" ]]; then
+            shopt -s dotglob  # Include hidden files
+            for item in "${{ env.language }}-client"/*; do
+                # Use rsync to merge and move directories, which handles nested structures well
+                rsync -av "$item" "${{ env.language }}-client"/../
+            done
+
+            # Remove the original directory and all its contents
+            rm -rf "${{ env.language }}-client"
+          else
+              echo "Directory ${{ env.language }}-client does not exist, skipping."
+          fi
 
       - name: Delete Kandji OpenAPI file
         run: |
