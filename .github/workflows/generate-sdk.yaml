@@ -81,6 +81,7 @@ jobs:
         if: env.continue == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ github.token }}
           sign-commits: true
           commit-message: "[auto] Updated Kandji SDK"
           branch: update-sdk
