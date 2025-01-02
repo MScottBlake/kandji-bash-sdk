@@ -34,7 +34,7 @@ Get activation lock attributes for devices.
 ### Example
 
 ```bash
- activationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk activationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -75,7 +75,7 @@ Get Application Firewall details for macOS.
 ### Example
 
 ```bash
- applicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk applicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -116,7 +116,7 @@ Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.
 ### Example
 
 ```bash
- applications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk applications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -157,7 +157,7 @@ Get certificate details.
 ### Example
 
 ```bash
- certificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk certificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -194,13 +194,13 @@ Name | Type | Description  | Notes
 Count
 
 <p>Get the total record count for the specified Prism category.</p>
- <p>If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
+<p>If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
 <p>Example: <code>Device information</code> becomes <code>device_information</code>.</p>
 
 ### Example
 
 ```bash
- count  category=value
+kandji_sdk count  category=value
 ```
 
 ### Parameters
@@ -209,7 +209,7 @@ Count
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category** | **string** | <p>Return the count of records for the specified category. 
- If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
+If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
 <p>Examples:
 apps
 device_information
@@ -241,7 +241,7 @@ Get Desktop and Screensaver details for macOS.
 ### Example
 
 ```bash
- desktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk desktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -282,7 +282,7 @@ Get attributes about devices.
 ### Example
 
 ```bash
- deviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk deviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | <p>JSON schema object containing one or more key value pairs.</p>
- <p>Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+<p>Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -324,7 +324,7 @@ Get FileVault information for macOS.
 ### Example
 
 ```bash
- filevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk filevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -365,7 +365,7 @@ Get Gatekeeper and XProtect attributes for macOS.
 ### Example
 
 ```bash
- gatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk gatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Results are limited to Mac only as Gatekeeper and XProtect are not applicable for other platfroms. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -408,7 +408,7 @@ Get category export
 ### Example
 
 ```bash
- getCategoryExport export_id=value
+kandji_sdk getCategoryExport export_id=value
 ```
 
 ### Parameters
@@ -443,7 +443,7 @@ Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.
 ### Example
 
 ```bash
- installedProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk installedProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -484,7 +484,7 @@ Get Kernel Extension attributes for macOS.
 ### Example
 
 ```bash
- kernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk kernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | SON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -525,7 +525,7 @@ Get Launch Agents and Daemons installed on macOS.
 ### Example
 
 ```bash
- launchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk launchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -566,7 +566,7 @@ Get Local Users detials for macOS.
 ### Example
 
 ```bash
- localUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk localUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -604,44 +604,44 @@ Request category export
 
 <p>Request export of a category. The <code>id</code> key is used when checking the export status using the <em>Request category export</em> endpoint.</p>
 <p><strong>Request Body Parameters: application/json</strong></p>
- <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
- <thead>
+<div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
+<thead>
 <tr>
 <th>Key</th>
 <th>Type</th>
 <th>Possible value(s)</th>
 <th>Description</th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
 <td><code>blueprint_ids</code></td>
 <td><code>array</code></td>
- <td><code>[&quot;string&quot;, &quot;string&quot;, &quot;string&quot;]</code></td>
- <td>List of one or more comma separate blueprint IDs.</td>
+<td><code>[&quot;string&quot;, &quot;string&quot;, &quot;string&quot;]</code></td>
+<td>List of one or more comma separate blueprint IDs.</td>
 </tr>
 <tr>
- <td><code>category</code></td>
+<td><code>category</code></td>
 <td><code>string</code></td>
 <td><code>apps</code> ,  <br /><code>activation_lock</code> ,  <br /><code>desktop_and_screensaver</code> ,  <br /><code>device_information</code> ,  <br /><code>gatekeeper_and_xprotect</code> ,  <br /><code>installed_profiles</code> ,  <br /><code>kernel_extensions</code> ,  <br /><code>local_users</code> ,  <br /><code>launch_agents_and_daemons</code> ,  <br /><code>system_extensions</code> ,  <br /><code>startup_settings</code> ,  <br /><code>transparency_database</code></td>
 <td>Only one category per export reqest.</td>
 </tr>
 <tr>
 <td><code>device_families</code></td>
- <td><code>array</code></td>
+<td><code>array</code></td>
 <td><code>[&quot;Mac&quot;, &quot;iPhone&quot;, &quot;iPad&quot;, &quot;tvOS&quot;]</code></td>
 <td>List of one or more comma separted string values for device families.</td>
 </tr>
 <tr>
 <td><code>filter</code></td>
- <td><code>object</code></td>
+<td><code>object</code></td>
 <td><code>{&quot;apple_silicon&quot;: {&quot;eq&quot;: true}, &quot;device__name&quot;: {&quot;like&quot;: [&quot;this&quot;, &quot;or_this&quot;]}}</code></td>
- <td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
- </tr>
+<td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
+</tr>
 <tr>
 <td><code>sort_by</code></td>
 <td><code>string</code></td>
- <td></td>
+<td></td>
 <td>Sort results by the name of a given response body key in either ascending (default behavior) or descending('-') order.</td>
 </tr>
 </tbody>
@@ -651,7 +651,7 @@ Request category export
 ### Example
 
 ```bash
- requestCategoryExport
+kandji_sdk requestCategoryExport
 ```
 
 ### Parameters
@@ -686,7 +686,7 @@ Get Startup settings for macOS.
 ### Example
 
 ```bash
- startupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk startupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -697,7 +697,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -727,7 +727,7 @@ Get System Extension attributes for macOS.
 ### Example
 
 ```bash
- systemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk systemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -768,7 +768,7 @@ Get Transparency Database (TCC) attributes for macOS.
 ### Example
 
 ```bash
- transparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk transparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -779,7 +779,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]

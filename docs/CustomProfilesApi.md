@@ -21,7 +21,7 @@ This request allows you to create a custom profile in the Kandji library.
 ### Example
 
 ```bash
- createCustomProfile
+kandji_sdk createCustomProfile
 ```
 
 ### Parameters
@@ -29,9 +29,9 @@ This request allows you to create a custom profile in the Kandji library.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **active** | **string** | (Optional, default=true) Whether this library item is active | [default to null]
- **file** | **binary** | (Required) The path to the profile's .mobileconfig file | [default to null]
  **name** | **string** | (Required) The profile name | [default to null]
+ **file** | **binary** | (Required) The path to the profile's .mobileconfig file | [default to null]
+ **active** | **string** | (Optional, default=true) Whether this library item is active | [default to null]
 
 ### Return type
 
@@ -55,13 +55,13 @@ Delete Custom Profile
 
 <p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom profile from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
 ```bash
- deleteCustomProfile library_item_id=value
+kandji_sdk deleteCustomProfile library_item_id=value
 ```
 
 ### Parameters
@@ -98,7 +98,7 @@ Get Custom Profile
 ### Example
 
 ```bash
- getCustomProfile library_item_id=value
+kandji_sdk getCustomProfile library_item_id=value
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ This endpoint makes a request to retrieve a list of custom profiles from the Kan
 ### Example
 
 ```bash
- listCustomProfiles  page=value
+kandji_sdk listCustomProfiles  page=value
 ```
 
 ### Parameters
@@ -141,7 +141,7 @@ This endpoint makes a request to retrieve a list of custom profiles from the Kan
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **string** | Optional page number (when results exceed pagination threshold) | [optional] [default to null]
+ **page** | **string** | Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request. | [optional] [default to null]
 
 ### Return type
 
@@ -165,12 +165,12 @@ Update Custom Profile
 
 <p>This request allows you to update a custom profile in the Kandji library.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
 ```bash
- updateCustomProfile library_item_id=value
+kandji_sdk updateCustomProfile library_item_id=value
 ```
 
 ### Parameters

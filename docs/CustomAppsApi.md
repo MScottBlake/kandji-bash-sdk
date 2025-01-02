@@ -23,7 +23,7 @@ Create Custom App
 ### Example
 
 ```bash
- createCustomApp
+kandji_sdk createCustomApp
 ```
 
 ### Parameters
@@ -31,13 +31,13 @@ Create Custom App
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileKey** | **string** | (Required) The S3 key from the <code>Upload Custom App</code> endpont used to upload the custom app file. | [default to null]
- **installEnforcement** | **string** | (Required) Options are install_once, continuously_enforce, no_enforcement | [default to null]
- **installType** | **string** | (Required) Options are package, zip, image | [default to null]
  **name** | **string** | (Required) The name for this Custom App | [default to null]
+ **fileKey** | **string** | (Required) The S3 key from the <code>Upload Custom App</code> endpont used to upload the custom app file. | [default to null]
+ **installType** | **string** | (Required) Options are package, zip, image | [default to null]
+ **installEnforcement** | **string** | (Required) Options are install_once, continuously_enforce, no_enforcement | [default to null]
+ **showInSelfService** | **string** | (Optional, default=false) Displays this app in Self Service | [default to null]
  **selfServiceCategoryId** | **string** | (Required for show_in_self_service=true) Self Service Category (by ID) to display app in | [default to null]
  **selfServiceRecommended** | **string** | (Optional, default=false) Adds recommended flag to app in Self Service | [default to null]
- **showInSelfService** | **string** | (Optional, default=false) Displays this app in Self Service | [default to null]
 
 ### Return type
 
@@ -61,13 +61,13 @@ Delete Custom App
 
 <p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom app from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
 ```bash
- deleteCustomApp library_item_id=value
+kandji_sdk deleteCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -104,7 +104,7 @@ Get Custom App
 ### Example
 
 ```bash
- getCustomApp library_item_id=value
+kandji_sdk getCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -139,7 +139,7 @@ This endpoint makes a request to retrieve a list of custom apps from the Kandji 
 ### Example
 
 ```bash
- listCustomApps  page=value
+kandji_sdk listCustomApps  page=value
 ```
 
 ### Parameters
@@ -177,7 +177,7 @@ Update Custom App
 ### Example
 
 ```bash
- updateCustomApp library_item_id=value
+kandji_sdk updateCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -186,8 +186,8 @@ Update Custom App
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **libraryItemId** | **string** |  | [default to null]
- **active** | **string** | (Optional, default=true) Whether this Custom App is active and installable | [default to null]
  **name** | **string** | Renaming a Custom App | [default to null]
+ **active** | **string** | (Optional, default=true) Whether this Custom App is active and installable | [default to null]
 
 ### Return type
 
@@ -217,7 +217,7 @@ Upload Custom App
 ### Example
 
 ```bash
- uploadCustomApp
+kandji_sdk uploadCustomApp
 ```
 
 ### Parameters

@@ -1,9 +1,6 @@
-.openapi-generator-ignore
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_kandji_sdk
 docs/AutomatedDeviceEnrollmentIntegrationsApi.md
 docs/BlueprintsApi.md
 docs/CustomAppsApi.md
@@ -12,6 +9,7 @@ docs/CustomScriptsApi.md
 docs/DeviceActionsApi.md
 docs/DeviceInformationApi.md
 docs/DeviceSecretsApi.md
+docs/InHouseAppsApi.md
 docs/LibraryItemsApi.md
 docs/LostModeApi.md
 docs/NotesApi.md
@@ -21,3 +19,5 @@ docs/SettingsApi.md
 docs/TagsApi.md
 docs/ThreatsApi.md
 docs/UsersApi.md
+kandji_sdk
+kandji_sdk.bash-completion

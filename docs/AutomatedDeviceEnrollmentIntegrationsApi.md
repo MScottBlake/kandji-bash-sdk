@@ -28,7 +28,7 @@ Create ADE integration
 ### Example
 
 ```bash
- createAdeIntegration
+kandji_sdk createAdeIntegration
 ```
 
 ### Parameters
@@ -37,9 +37,9 @@ Create ADE integration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blueprintId** | **string** |  | [default to null]
+ **phone** | **string** |  | [default to null]
  **email** | **string** |  | [default to null]
  **file** | **binary** | This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API. | [default to null]
- **phone** | **string** |  | [default to null]
 
 ### Return type
 
@@ -69,7 +69,7 @@ Delete ADE integration
 ### Example
 
 ```bash
- deleteAdeIntegration ade_token_id=value
+kandji_sdk deleteAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -105,7 +105,7 @@ Download ADE public key
 ### Example
 
 ```bash
- downloadAdePublicKey
+kandji_sdk downloadAdePublicKey
 ```
 
 ### Parameters
@@ -137,7 +137,7 @@ Get information about a specific Automated Device Enrollment device.
 ### Example
 
 ```bash
- getAdeDevice device_id=value
+kandji_sdk getAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -172,7 +172,7 @@ This request returns a specific ADE integration based on the <code>ade_token_id<
 ### Example
 
 ```bash
- getAdeIntegration ade_token_id=value
+kandji_sdk getAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -207,7 +207,7 @@ Get a list of Automated Device Enrollment devices.
 ### Example
 
 ```bash
- listAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
+kandji_sdk listAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
 ```
 
 ### Parameters
@@ -250,7 +250,7 @@ This request returns a list of configured ADE integrations.
 ### Example
 
 ```bash
- listAdeIntegrations
+kandji_sdk listAdeIntegrations
 ```
 
 ### Parameters
@@ -279,12 +279,12 @@ List devices associated to ADE token
 
 <p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>
 <p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>
- <p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>
+<p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>
 
 ### Example
 
 ```bash
- listDevicesAssociatedToAdeToken ade_token_id=value  page=value
+kandji_sdk listDevicesAssociatedToAdeToken ade_token_id=value  page=value
 ```
 
 ### Parameters
@@ -316,12 +316,12 @@ Name | Type | Description  | Notes
 Renew ADE integration
 
 <p>This request will renew an existing ADE integration.</p>
- <p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>
 
 ### Example
 
 ```bash
- renewAdeIntegration ade_token_id=value
+kandji_sdk renewAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -331,9 +331,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **adeTokenId** | **string** |  | [default to null]
  **blueprintId** | **string** |  | [default to null]
+ **phone** | **string** |  | [default to null]
  **email** | **string** |  | [default to null]
  **file** | **binary** | This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API. | [default to null]
- **phone** | **string** |  | [default to null]
 
 ### Return type
 
@@ -362,7 +362,7 @@ Update ADE device
 ### Example
 
 ```bash
- updateAdeDevice device_id=value
+kandji_sdk updateAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -399,7 +399,7 @@ Update ADE integration
 ### Example
 
 ```bash
- updateAdeIntegration ade_token_id=value
+kandji_sdk updateAdeIntegration ade_token_id=value
 ```
 
 ### Parameters

@@ -21,7 +21,7 @@ This request allows you to create a custom script in the Kandji library.
 ### Example
 
 ```bash
- createCustomScript
+kandji_sdk createCustomScript
 ```
 
 ### Parameters
@@ -53,13 +53,13 @@ Delete Custom Script
 
 <p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom scripts from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 
 ```bash
- deleteCustomScript library_item_id=value
+kandji_sdk deleteCustomScript library_item_id=value
 ```
 
 ### Parameters
@@ -96,7 +96,7 @@ Get Custom Script
 ### Example
 
 ```bash
- getCustomScript library_item_id=value
+kandji_sdk getCustomScript library_item_id=value
 ```
 
 ### Parameters
@@ -131,7 +131,7 @@ This endpoint makes a request to retrieve a list of custom scripts from the Kand
 ### Example
 
 ```bash
- listCustomScripts  page=value
+kandji_sdk listCustomScripts  page=value
 ```
 
 ### Parameters
@@ -139,7 +139,7 @@ This endpoint makes a request to retrieve a list of custom scripts from the Kand
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **string** | Optional page number (when results exceed pagination threshold) | [optional] [default to null]
+ **page** | **string** | Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request. | [optional] [default to null]
 
 ### Return type
 
@@ -166,7 +166,7 @@ This request allows you to update a custom script in the Kandji library.
 ### Example
 
 ```bash
- updateCustomScript library_item_id=value
+kandji_sdk updateCustomScript library_item_id=value
 ```
 
 ### Parameters
