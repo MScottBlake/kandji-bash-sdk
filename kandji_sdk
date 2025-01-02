@@ -19,7 +19,7 @@
 # 
 #
 # CONTACT:
-# 
+# mitchelsblake@gmail.com
 #
 # MORE INFORMATION:
 # https://api-docs.kandji.io
@@ -1591,7 +1591,7 @@ print_about() {
     echo -e "${BOLD}${WHITE}Kandji API command line client (API version 1.0.0)${OFF}"
     echo ""
     echo -e "License: MIT License"
-    echo -e "Contact: "
+    echo -e "Contact: mitchelsblake@gmail.com"
     echo ""
 read -r -d '' appdescription <<EOF
 
