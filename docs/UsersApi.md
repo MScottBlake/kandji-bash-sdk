@@ -4,23 +4,64 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getUser**](UsersApi.md#getUser) | **GET** /api/v1/users/{user_id} | Get User
-[**listUsers**](UsersApi.md#listUsers) | **GET** /api/v1/users | List Users
+[**usersDeleteUser**](UsersApi.md#usersDeleteUser) | **DELETE** /api/v1/users/{user_id} | Delete User
+[**usersGetUser**](UsersApi.md#usersGetUser) | **GET** /api/v1/users/{user_id} | Get User
+[**usersListUsers**](UsersApi.md#usersListUsers) | **GET** /api/v1/users | List Users
 
 
 
-## getUser
+## usersDeleteUser
 
-Get User
+Delete User
 
-<p>This endpoint makes a request to retrieve a specified user directory integration user by id.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p>user_id (path parameter): The unique identifier of the user directory integration user.</p>
+<p>This endpoint makes a request to delete a specified user directory integration user by id (uuid).</p>
+<h3 id=&quot;user-still-assigned-to-device&quot;>User still assigned to device</h3>
+<p>You will see the following response (400 bad request), if a user is still assigned to one or more devices in Kandji. The user will need to be unassigned from the device either manually through the Kandji tenant or programatically using the Update device API endpoint.</p>
+<pre class=&quot;click-to-expand-wrapper is-snippet-wrapper&quot;><code class=&quot;language-json&quot;>{
+    &quot;detail&quot;: &quot;User still assigned to one or more devices.&quot;
+}
+
+</code></pre>
 
 ### Example
 
 ```bash
-kandji_sdk getUser user_id=value
+kandji_sdk usersDeleteUser user_id=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **string** |  | [default to null]
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## usersGetUser
+
+Get User
+
+This endpoint makes a request to retrieve a specified user directory integration user by id.
+
+### Example
+
+```bash
+kandji_sdk usersGetUser user_id=value
 ```
 
 ### Parameters
@@ -46,7 +87,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listUsers
+## usersListUsers
 
 List Users
 
@@ -56,7 +97,7 @@ List Users
 ### Example
 
 ```bash
-kandji_sdk listUsers  email=value  id=value  integration_id=value  archived=value
+kandji_sdk usersListUsers  email=value  id=value  integration_id=value  archived=value
 ```
 
 ### Parameters

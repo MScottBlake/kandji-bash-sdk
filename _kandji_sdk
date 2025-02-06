@@ -297,99 +297,100 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "createAdeIntegration[Create ADE integration]" \
-            "deleteAdeIntegration[Delete ADE integration]" \
-            "downloadAdePublicKey[Download ADE public key]" \
-            "getAdeDevice[Get ADE device]" \
-            "getAdeIntegration[Get ADE integration]" \
-            "listAdeDevices[List ADE devices]" \
-            "listAdeIntegrations[List ADE integrations]" \
-            "listDevicesAssociatedToAdeToken[List devices associated to ADE token]" \
-            "renewAdeIntegration[Renew ADE integration]" \
-            "updateAdeDevice[Update ADE device]" \
-            "updateAdeIntegration[Update ADE integration]"             "assignLibraryItem[Assign Library Item]" \
-            "createBlueprint[Create Blueprint]" \
-            "deleteBlueprint[Delete Blueprint]" \
-            "getBlueprint[Get Blueprint]" \
-            "getBlueprintTemplates[Get Blueprint Templates]" \
-            "getManualEnrollmentProfile[Get Manual Enrollment Profile]" \
-            "listBlueprints[List Blueprints]" \
-            "listLibraryItems[List Library Items]" \
-            "removeLibraryItem[Remove Library Item]" \
-            "updateBlueprint[Update Blueprint]"             "createCustomApp[Create Custom App]" \
-            "deleteCustomApp[Delete Custom App]" \
-            "getCustomApp[Get Custom App]" \
-            "listCustomApps[List Custom Apps]" \
-            "updateCustomApp[Update Custom App]" \
-            "uploadCustomApp[Upload Custom App]"             "createCustomProfile[Create Custom Profile]" \
-            "deleteCustomProfile[Delete Custom Profile]" \
-            "getCustomProfile[Get Custom Profile]" \
-            "listCustomProfiles[List Custom Profiles]" \
-            "updateCustomProfile[Update Custom Profile]"             "createCustomScript[Create Custom Script]" \
-            "deleteCustomScript[Delete Custom Script]" \
-            "getCustomScript[Get Custom Script]" \
-            "listCustomScripts[List Custom Scripts]" \
-            "updateCustomScript[Update Custom Script]"             "clearPasscode[Clear Passcode]" \
-            "deleteDevice[Delete Device]" \
-            "deleteUser[Delete User]" \
-            "eraseDevice[Erase Device]" \
-            "getDeviceCommands[Get Device Commands]" \
-            "lockDevice[Lock Device]" \
-            "reinstallAgent[Reinstall Agent]" \
-            "remoteDesktop[Remote Desktop]" \
-            "renewMdmProfile[Renew MDM Profile]" \
-            "restartDevice[Restart Device]" \
-            "sendBlankpush[Send Blankpush]" \
-            "setName[Set Name]" \
-            "shutdown[Shutdown]" \
-            "unlockAccount[Unlock Account]" \
-            "updateInventory[Update Inventory]"             "cancelLostMode[Cancel Lost Mode]" \
-            "getDeviceActivity[Get Device Activity]" \
-            "getDeviceApps[Get Device Apps]" \
-            "getDeviceDetails[Get Device Details]" \
-            "getDeviceLibraryItems[Get Device Library Items]" \
-            "getDeviceLostModeDetails[Get Device Lost Mode details]" \
-            "getDeviceParameters[Get Device Parameters]" \
-            "getDeviceStatus[Get Device Status]" \
-            "listDevices[List Devices]"             "getActivationLockBypassCode[Get Activation Lock Bypass Code]" \
-            "getFilevaultRecoveryKey[Get FileVault Recovery Key]" \
-            "getRecoveryLockPassword[Get Recovery Lock Password]" \
-            "getUnlockPin[Get Unlock Pin]"             "createInhouseApp[Create In-House App]" \
-            "deleteInhouseApp[Delete In-House App]" \
-            "getInhouseApp[Get In-House App]" \
-            "listInhouseApps[List In-House Apps]" \
-            "updateInhouseApp[Update In-House App]" \
-            "uploadInhouseApp[Upload In-House App]" \
-            "uploadInhouseAppStatus[Upload In-House App Status]"             "getLibraryItemActivity[Get Library Item Activity]" \
-            "getLibraryItemStatuses[Get Library Item Statuses]"             "disableLostMode[Disable Lost Mode]" \
-            "enableLostMode[Enable Lost Mode]" \
-            "playLostModeSound[Play Lost Mode Sound]" \
-            "updateLocation[Update Location]"             "createDeviceNote[Create Device Note]" \
-            "deleteDeviceNote[Delete Device Note]" \
-            "getDeviceNotes[Get Device Notes]" \
-            "retrieveDeviceNote[Retrieve Device Note]" \
-            "updateDeviceNote[Update Device Note]"             "activationLock[Activation lock]" \
-            "applicationFirewall[Application firewall]" \
-            "applications[Applications]" \
-            "certificates[Certificates]" \
-            "count[Count]" \
-            "desktopAndScreensaver[Desktop and Screensaver]" \
-            "deviceInformation[Device information]" \
-            "filevault[FileVault]" \
-            "gatekeeperAndXprotect[Gatekeeper and XProtect]" \
-            "getCategoryExport[Get category export]" \
-            "installedProfiles[Installed profiles]" \
-            "kernelExtensions[Kernel Extensions]" \
-            "launchAgentsAndDaemons[Launch Agents and Daemons]" \
-            "localUsers[Local users]" \
-            "requestCategoryExport[Request category export]" \
-            "startupSettings[Startup settings]" \
-            "systemExtensions[System Extensions]" \
-            "transparencyDatabase[Transparency database]"             "listSelfServiceCategories[List Self Service Categories]"             "licensing[Licensing]"             "createTag[Create Tag]" \
-            "deleteTag[Delete Tag]" \
-            "getTags[Get Tags]" \
-            "updateTag[Update Tag]"             "getThreatDetails[Get Threat Details]"             "getUser[Get User]" \
-            "listUsers[List Users]" \
+            "automatedDeviceEnrollmentIntegrationsCreateAdeIntegration[Create ADE integration]" \
+            "automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration[Delete ADE integration]" \
+            "automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey[Download ADE public key]" \
+            "automatedDeviceEnrollmentIntegrationsGetAdeDevice[Get ADE device]" \
+            "automatedDeviceEnrollmentIntegrationsGetAdeIntegration[Get ADE integration]" \
+            "automatedDeviceEnrollmentIntegrationsListAdeDevices[List ADE devices]" \
+            "automatedDeviceEnrollmentIntegrationsListAdeIntegrations[List ADE integrations]" \
+            "automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken[List devices associated to ADE token]" \
+            "automatedDeviceEnrollmentIntegrationsRenewAdeIntegration[Renew ADE integration]" \
+            "automatedDeviceEnrollmentIntegrationsUpdateAdeDevice[Update ADE device]" \
+            "automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration[Update ADE integration]"             "blueprintsAssignLibraryItem[Assign Library Item]" \
+            "blueprintsCreateBlueprint[Create Blueprint]" \
+            "blueprintsDeleteBlueprint[Delete Blueprint]" \
+            "blueprintsGetBlueprint[Get Blueprint]" \
+            "blueprintsGetBlueprintTemplates[Get Blueprint Templates]" \
+            "blueprintsGetManualEnrollmentProfile[Get Manual Enrollment Profile]" \
+            "blueprintsListBlueprints[List Blueprints]" \
+            "blueprintsListLibraryItems[List Library Items]" \
+            "blueprintsRemoveLibraryItem[Remove Library Item]" \
+            "blueprintsUpdateBlueprint[Update Blueprint]"             "customAppsCreateCustomApp[Create Custom App]" \
+            "customAppsDeleteCustomApp[Delete Custom App]" \
+            "customAppsGetCustomApp[Get Custom App]" \
+            "customAppsListCustomApps[List Custom Apps]" \
+            "customAppsUpdateCustomApp[Update Custom App]" \
+            "customAppsUploadCustomApp[Upload Custom App]"             "customProfilesCreateCustomProfile[Create Custom Profile]" \
+            "customProfilesDeleteCustomProfile[Delete Custom Profile]" \
+            "customProfilesGetCustomProfile[Get Custom Profile]" \
+            "customProfilesListCustomProfiles[List Custom Profiles]" \
+            "customProfilesUpdateCustomProfile[Update Custom Profile]"             "customScriptsCreateCustomScript[Create Custom Script]" \
+            "customScriptsDeleteCustomScript[Delete Custom Script]" \
+            "customScriptsGetCustomScript[Get Custom Script]" \
+            "customScriptsListCustomScripts[List Custom Scripts]" \
+            "customScriptsUpdateCustomScript[Update Custom Script]"             "deviceActionsClearPasscode[Clear Passcode]" \
+            "deviceActionsDeleteDevice[Delete Device]" \
+            "deviceActionsDeleteUser[Delete User]" \
+            "deviceActionsEraseDevice[Erase Device]" \
+            "deviceActionsGetDeviceCommands[Get Device Commands]" \
+            "deviceActionsLockDevice[Lock Device]" \
+            "deviceActionsReinstallAgent[Reinstall Agent]" \
+            "deviceActionsRemoteDesktop[Remote Desktop]" \
+            "deviceActionsRenewMdmProfile[Renew MDM Profile]" \
+            "deviceActionsRestartDevice[Restart Device]" \
+            "deviceActionsSendBlankpush[Send Blankpush]" \
+            "deviceActionsSetName[Set Name]" \
+            "deviceActionsShutdown[Shutdown]" \
+            "deviceActionsUnlockAccount[Unlock Account]" \
+            "deviceActionsUpdateInventory[Update Inventory]"             "deviceInformationCancelLostMode[Cancel Lost Mode]" \
+            "deviceInformationGetDeviceActivity[Get Device Activity]" \
+            "deviceInformationGetDeviceApps[Get Device Apps]" \
+            "deviceInformationGetDeviceDetails[Get Device Details]" \
+            "deviceInformationGetDeviceLibraryItems[Get Device Library Items]" \
+            "deviceInformationGetDeviceLostModeDetails[Get Device Lost Mode details]" \
+            "deviceInformationGetDeviceParameters[Get Device Parameters]" \
+            "deviceInformationGetDeviceStatus[Get Device Status]" \
+            "deviceInformationListDevices[List Devices]"             "deviceSecretsGetActivationLockBypassCode[Get Activation Lock Bypass Code]" \
+            "deviceSecretsGetFilevaultRecoveryKey[Get FileVault Recovery Key]" \
+            "deviceSecretsGetRecoveryLockPassword[Get Recovery Lock Password]" \
+            "deviceSecretsGetUnlockPin[Get Unlock Pin]"             "inhouseAppsCreateInhouseApp[Create In-House App]" \
+            "inhouseAppsDeleteInhouseApp[Delete In-House App]" \
+            "inhouseAppsGetInhouseApp[Get In-House App]" \
+            "inhouseAppsListInhouseApps[List In-House Apps]" \
+            "inhouseAppsUpdateInhouseApp[Update In-House App]" \
+            "inhouseAppsUploadInhouseApp[Upload In-House App]" \
+            "inhouseAppsUploadInhouseAppStatus[Upload In-House App Status]"             "libraryItemsGetLibraryItemActivity[Get Library Item Activity]" \
+            "libraryItemsGetLibraryItemStatuses[Get Library Item Statuses]"             "lostModeDisableLostMode[Disable Lost Mode]" \
+            "lostModeEnableLostMode[Enable Lost Mode]" \
+            "lostModePlayLostModeSound[Play Lost Mode Sound]" \
+            "lostModeUpdateLocation[Update Location]"             "notesCreateDeviceNote[Create Device Note]" \
+            "notesDeleteDeviceNote[Delete Device Note]" \
+            "notesGetDeviceNotes[Get Device Notes]" \
+            "notesRetrieveDeviceNote[Retrieve Device Note]" \
+            "notesUpdateDeviceNote[Update Device Note]"             "prismActivationLock[Activation lock]" \
+            "prismApplicationFirewall[Application firewall]" \
+            "prismApplications[Applications]" \
+            "prismCertificates[Certificates]" \
+            "prismCount[Count]" \
+            "prismDesktopAndScreensaver[Desktop and Screensaver]" \
+            "prismDeviceInformation[Device information]" \
+            "prismFilevault[FileVault]" \
+            "prismGatekeeperAndXprotect[Gatekeeper and XProtect]" \
+            "prismGetCategoryExport[Get category export]" \
+            "prismInstalledProfiles[Installed profiles]" \
+            "prismKernelExtensions[Kernel Extensions]" \
+            "prismLaunchAgentsAndDaemons[Launch Agents and Daemons]" \
+            "prismLocalUsers[Local users]" \
+            "prismRequestCategoryExport[Request category export]" \
+            "prismStartupSettings[Startup settings]" \
+            "prismSystemExtensions[System Extensions]" \
+            "prismTransparencyDatabase[Transparency database]"             "selfServiceListSelfServiceCategories[List Self Service Categories]"             "settingsLicensing[Licensing]"             "tagsCreateTag[Create Tag]" \
+            "tagsDeleteTag[Delete Tag]" \
+            "tagsGetTags[Get Tags]" \
+            "tagsUpdateTag[Update Tag]"             "threatsGetThreatDetails[Get Threat Details]"             "usersDeleteUser[Delete User]" \
+            "usersGetUser[Get User]" \
+            "usersListUsers[List Users]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -397,40 +398,40 @@ case $state in
     ;;
   args)
     case $line[1] in
-      createAdeIntegration)
+      automatedDeviceEnrollmentIntegrationsCreateAdeIntegration)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteAdeIntegration)
+      automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration)
         local -a _op_arguments
         _op_arguments=(
           "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      downloadAdePublicKey)
+      automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getAdeDevice)
+      automatedDeviceEnrollmentIntegrationsGetAdeDevice)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getAdeIntegration)
+      automatedDeviceEnrollmentIntegrationsGetAdeIntegration)
         local -a _op_arguments
         _op_arguments=(
           "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listAdeDevices)
+      automatedDeviceEnrollmentIntegrationsListAdeDevices)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_id=:[QUERY] Return results &amp;quot;containing&amp;quot; the specified blueprint id"
@@ -445,13 +446,13 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listAdeIntegrations)
+      automatedDeviceEnrollmentIntegrationsListAdeIntegrations)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listDevicesAssociatedToAdeToken)
+      automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken)
         local -a _op_arguments
         _op_arguments=(
           "ade_token_id=:[PATH] "
@@ -459,55 +460,55 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      renewAdeIntegration)
+      automatedDeviceEnrollmentIntegrationsRenewAdeIntegration)
         local -a _op_arguments
         _op_arguments=(
           "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateAdeDevice)
+      automatedDeviceEnrollmentIntegrationsUpdateAdeDevice)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateAdeIntegration)
+      automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration)
         local -a _op_arguments
         _op_arguments=(
           "ade_token_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      assignLibraryItem)
+      blueprintsAssignLibraryItem)
         local -a _op_arguments
         _op_arguments=(
           "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createBlueprint)
+      blueprintsCreateBlueprint)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteBlueprint)
+      blueprintsDeleteBlueprint)
         local -a _op_arguments
         _op_arguments=(
           "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getBlueprint)
+      blueprintsGetBlueprint)
         local -a _op_arguments
         _op_arguments=(
           "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getBlueprintTemplates)
+      blueprintsGetBlueprintTemplates)
         local -a _op_arguments
         _op_arguments=(
                     "limit=:[QUERY] Number of results to return per page."
@@ -515,7 +516,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getManualEnrollmentProfile)
+      blueprintsGetManualEnrollmentProfile)
         local -a _op_arguments
         _op_arguments=(
           "blueprint_id=:[PATH] "
@@ -523,7 +524,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listBlueprints)
+      blueprintsListBlueprints)
         local -a _op_arguments
         _op_arguments=(
                     "id=:[QUERY] Look up a specific Blueprint by its ID"
@@ -534,164 +535,164 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listLibraryItems)
+      blueprintsListLibraryItems)
         local -a _op_arguments
         _op_arguments=(
           "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      removeLibraryItem)
+      blueprintsRemoveLibraryItem)
         local -a _op_arguments
         _op_arguments=(
           "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateBlueprint)
+      blueprintsUpdateBlueprint)
         local -a _op_arguments
         _op_arguments=(
           "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createCustomApp)
+      customAppsCreateCustomApp)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteCustomApp)
+      customAppsDeleteCustomApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getCustomApp)
+      customAppsGetCustomApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listCustomApps)
+      customAppsListCustomApps)
         local -a _op_arguments
         _op_arguments=(
                     "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateCustomApp)
+      customAppsUpdateCustomApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uploadCustomApp)
+      customAppsUploadCustomApp)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createCustomProfile)
+      customProfilesCreateCustomProfile)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteCustomProfile)
+      customProfilesDeleteCustomProfile)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getCustomProfile)
+      customProfilesGetCustomProfile)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listCustomProfiles)
+      customProfilesListCustomProfiles)
         local -a _op_arguments
         _op_arguments=(
                     "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateCustomProfile)
+      customProfilesUpdateCustomProfile)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createCustomScript)
+      customScriptsCreateCustomScript)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteCustomScript)
+      customScriptsDeleteCustomScript)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getCustomScript)
+      customScriptsGetCustomScript)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listCustomScripts)
+      customScriptsListCustomScripts)
         local -a _op_arguments
         _op_arguments=(
                     "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateCustomScript)
+      customScriptsUpdateCustomScript)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      clearPasscode)
+      deviceActionsClearPasscode)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteDevice)
+      deviceActionsDeleteDevice)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteUser)
+      deviceActionsDeleteUser)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      eraseDevice)
+      deviceActionsEraseDevice)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceCommands)
+      deviceActionsGetDeviceCommands)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
@@ -700,84 +701,84 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      lockDevice)
+      deviceActionsLockDevice)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      reinstallAgent)
+      deviceActionsReinstallAgent)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      remoteDesktop)
+      deviceActionsRemoteDesktop)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      renewMdmProfile)
+      deviceActionsRenewMdmProfile)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      restartDevice)
+      deviceActionsRestartDevice)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sendBlankpush)
+      deviceActionsSendBlankpush)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      setName)
+      deviceActionsSetName)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      shutdown)
+      deviceActionsShutdown)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      unlockAccount)
+      deviceActionsUnlockAccount)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateInventory)
+      deviceActionsUpdateInventory)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      cancelLostMode)
+      deviceInformationCancelLostMode)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceActivity)
+      deviceInformationGetDeviceActivity)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
@@ -786,49 +787,49 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceApps)
+      deviceInformationGetDeviceApps)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceDetails)
+      deviceInformationGetDeviceDetails)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceLibraryItems)
+      deviceInformationGetDeviceLibraryItems)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceLostModeDetails)
+      deviceInformationGetDeviceLostModeDetails)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceParameters)
+      deviceInformationGetDeviceParameters)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getDeviceStatus)
+      deviceInformationGetDeviceStatus)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listDevices)
+      deviceInformationListDevices)
         local -a _op_arguments
         _op_arguments=(
                     "asset_tag=:[QUERY] "
@@ -872,63 +873,63 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getActivationLockBypassCode)
+      deviceSecretsGetActivationLockBypassCode)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getFilevaultRecoveryKey)
+      deviceSecretsGetFilevaultRecoveryKey)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getRecoveryLockPassword)
+      deviceSecretsGetRecoveryLockPassword)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getUnlockPin)
+      deviceSecretsGetUnlockPin)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createInhouseApp)
+      inhouseAppsCreateInhouseApp)
         local -a _op_arguments
         _op_arguments=(
                               "Content-Type\::[HEADER] "
 )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteInhouseApp)
+      inhouseAppsDeleteInhouseApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getInhouseApp)
+      inhouseAppsGetInhouseApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listInhouseApps)
+      inhouseAppsListInhouseApps)
         local -a _op_arguments
         _op_arguments=(
                     "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 app records returned per request."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateInhouseApp)
+      inhouseAppsUpdateInhouseApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
@@ -936,21 +937,21 @@ case $state in
 )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uploadInhouseApp)
+      inhouseAppsUploadInhouseApp)
         local -a _op_arguments
         _op_arguments=(
                               "Content-Type\::[HEADER] "
 )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uploadInhouseAppStatus)
+      inhouseAppsUploadInhouseAppStatus)
         local -a _op_arguments
         _op_arguments=(
           "pending_upload_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getLibraryItemActivity)
+      libraryItemsGetLibraryItemActivity)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
@@ -962,7 +963,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getLibraryItemStatuses)
+      libraryItemsGetLibraryItemStatuses)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
@@ -972,57 +973,42 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      disableLostMode)
+      lostModeDisableLostMode)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      enableLostMode)
+      lostModeEnableLostMode)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      playLostModeSound)
+      lostModePlayLostModeSound)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateLocation)
+      lostModeUpdateLocation)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createDeviceNote)
+      notesCreateDeviceNote)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteDeviceNote)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-"note_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getDeviceNotes)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      retrieveDeviceNote)
+      notesDeleteDeviceNote)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
@@ -1030,7 +1016,14 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateDeviceNote)
+      notesGetDeviceNotes)
+        local -a _op_arguments
+        _op_arguments=(
+          "device_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      notesRetrieveDeviceNote)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
@@ -1038,7 +1031,15 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      activationLock)
+      notesUpdateDeviceNote)
+        local -a _op_arguments
+        _op_arguments=(
+          "device_id=:[PATH] "
+"note_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      prismActivationLock)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1051,7 +1052,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      applicationFirewall)
+      prismApplicationFirewall)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1064,7 +1065,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      applications)
+      prismApplications)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1077,7 +1078,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      certificates)
+      prismCertificates)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1090,7 +1091,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      count)
+      prismCount)
         local -a _op_arguments
         _op_arguments=(
                     "category=:[QUERY] &lt;p&gt;Return the count of records for the specified category. 
@@ -1103,7 +1104,7 @@ system_extensions&lt;/p&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      desktopAndScreensaver)
+      prismDesktopAndScreensaver)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1116,7 +1117,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deviceInformation)
+      prismDeviceInformation)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1129,7 +1130,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      filevault)
+      prismFilevault)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1142,7 +1143,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      gatekeeperAndXprotect)
+      prismGatekeeperAndXprotect)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1155,14 +1156,14 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getCategoryExport)
+      prismGetCategoryExport)
         local -a _op_arguments
         _op_arguments=(
           "export_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      installedProfiles)
+      prismInstalledProfiles)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1175,7 +1176,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      kernelExtensions)
+      prismKernelExtensions)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1188,7 +1189,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      launchAgentsAndDaemons)
+      prismLaunchAgentsAndDaemons)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1201,7 +1202,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      localUsers)
+      prismLocalUsers)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1214,13 +1215,13 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      requestCategoryExport)
+      prismRequestCategoryExport)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      startupSettings)
+      prismStartupSettings)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1233,7 +1234,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      systemExtensions)
+      prismSystemExtensions)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1246,7 +1247,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      transparencyDatabase)
+      prismTransparencyDatabase)
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
@@ -1259,46 +1260,46 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listSelfServiceCategories)
+      selfServiceListSelfServiceCategories)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      licensing)
+      settingsLicensing)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createTag)
+      tagsCreateTag)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteTag)
+      tagsDeleteTag)
         local -a _op_arguments
         _op_arguments=(
           "tag_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getTags)
+      tagsGetTags)
         local -a _op_arguments
         _op_arguments=(
                     "search=:[QUERY] Return resultes containing a given tag search string."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updateTag)
+      tagsUpdateTag)
         local -a _op_arguments
         _op_arguments=(
           "tag_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getThreatDetails)
+      threatsGetThreatDetails)
         local -a _op_arguments
         _op_arguments=(
                     "classification=:[QUERY] Return all records matching a specified classification. The following classification options are available: &lt;code&gt;malware&lt;/code&gt; and &lt;code&gt;pup&lt;/code&gt;. Leave this parameter empty to return all classification types."
@@ -1326,14 +1327,21 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getUser)
+      usersDeleteUser)
         local -a _op_arguments
         _op_arguments=(
           "user_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listUsers)
+      usersGetUser)
+        local -a _op_arguments
+        _op_arguments=(
+          "user_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      usersListUsers)
         local -a _op_arguments
         _op_arguments=(
                     "email=:[QUERY] Returns users with email addresses containing the provided string."

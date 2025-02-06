@@ -4,14 +4,14 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getActivationLockBypassCode**](DeviceSecretsApi.md#getActivationLockBypassCode) | **GET** /api/v1/devices/{device_id}/secrets/bypasscode | Get Activation Lock Bypass Code
-[**getFilevaultRecoveryKey**](DeviceSecretsApi.md#getFilevaultRecoveryKey) | **GET** /api/v1/devices/{device_id}/secrets/filevaultkey | Get FileVault Recovery Key
-[**getRecoveryLockPassword**](DeviceSecretsApi.md#getRecoveryLockPassword) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
-[**getUnlockPin**](DeviceSecretsApi.md#getUnlockPin) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
+[**deviceSecretsGetActivationLockBypassCode**](DeviceSecretsApi.md#deviceSecretsGetActivationLockBypassCode) | **GET** /api/v1/devices/{device_id}/secrets/bypasscode | Get Activation Lock Bypass Code
+[**deviceSecretsGetFilevaultRecoveryKey**](DeviceSecretsApi.md#deviceSecretsGetFilevaultRecoveryKey) | **GET** /api/v1/devices/{device_id}/secrets/filevaultkey | Get FileVault Recovery Key
+[**deviceSecretsGetRecoveryLockPassword**](DeviceSecretsApi.md#deviceSecretsGetRecoveryLockPassword) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
+[**deviceSecretsGetUnlockPin**](DeviceSecretsApi.md#deviceSecretsGetUnlockPin) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
 
 
 
-## getActivationLockBypassCode
+## deviceSecretsGetActivationLockBypassCode
 
 Get Activation Lock Bypass Code
 
@@ -24,7 +24,7 @@ Get Activation Lock Bypass Code
 ### Example
 
 ```bash
-kandji_sdk getActivationLockBypassCode device_id=value
+kandji_sdk deviceSecretsGetActivationLockBypassCode device_id=value
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getFilevaultRecoveryKey
+## deviceSecretsGetFilevaultRecoveryKey
 
 Get FileVault Recovery Key
 
@@ -61,7 +61,7 @@ Get FileVault Recovery Key
 ### Example
 
 ```bash
-kandji_sdk getFilevaultRecoveryKey device_id=value
+kandji_sdk deviceSecretsGetFilevaultRecoveryKey device_id=value
 ```
 
 ### Parameters
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getRecoveryLockPassword
+## deviceSecretsGetRecoveryLockPassword
 
 Get Recovery Lock Password
 
@@ -99,7 +99,7 @@ Get Recovery Lock Password
 ### Example
 
 ```bash
-kandji_sdk getRecoveryLockPassword device_id=value
+kandji_sdk deviceSecretsGetRecoveryLockPassword device_id=value
 ```
 
 ### Parameters
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getUnlockPin
+## deviceSecretsGetUnlockPin
 
 Get Unlock Pin
 
@@ -136,7 +136,7 @@ Get Unlock Pin
 ### Example
 
 ```bash
-kandji_sdk getUnlockPin device_id=value
+kandji_sdk deviceSecretsGetUnlockPin device_id=value
 ```
 
 ### Parameters

@@ -4,21 +4,21 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#createAdeIntegration) | **POST** /api/v1/integrations/apple/ade/ | Create ADE integration
-[**deleteAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#deleteAdeIntegration) | **DELETE** /api/v1/integrations/apple/ade/{ade_token_id} | Delete ADE integration
-[**downloadAdePublicKey**](AutomatedDeviceEnrollmentIntegrationsApi.md#downloadAdePublicKey) | **GET** /api/v1/integrations/apple/ade/public_key/ | Download ADE public key
-[**getAdeDevice**](AutomatedDeviceEnrollmentIntegrationsApi.md#getAdeDevice) | **GET** /api/v1/integrations/apple/ade/devices/{device_id} | Get ADE device
-[**getAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#getAdeIntegration) | **GET** /api/v1/integrations/apple/ade/{ade_token_id} | Get ADE integration
-[**listAdeDevices**](AutomatedDeviceEnrollmentIntegrationsApi.md#listAdeDevices) | **GET** /api/v1/integrations/apple/ade/devices | List ADE devices
-[**listAdeIntegrations**](AutomatedDeviceEnrollmentIntegrationsApi.md#listAdeIntegrations) | **GET** /api/v1/integrations/apple/ade | List ADE integrations
-[**listDevicesAssociatedToAdeToken**](AutomatedDeviceEnrollmentIntegrationsApi.md#listDevicesAssociatedToAdeToken) | **GET** /api/v1/integrations/apple/ade/{ade_token_id}/devices | List devices associated to ADE token
-[**renewAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#renewAdeIntegration) | **POST** /api/v1/integrations/apple/ade/{ade_token_id}/renew | Renew ADE integration
-[**updateAdeDevice**](AutomatedDeviceEnrollmentIntegrationsApi.md#updateAdeDevice) | **PATCH** /api/v1/integrations/apple/ade/devices/{device_id} | Update ADE device
-[**updateAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#updateAdeIntegration) | **PATCH** /api/v1/integrations/apple/ade/{ade_token_id} | Update ADE integration
+[**automatedDeviceEnrollmentIntegrationsCreateAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsCreateAdeIntegration) | **POST** /api/v1/integrations/apple/ade/ | Create ADE integration
+[**automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration) | **DELETE** /api/v1/integrations/apple/ade/{ade_token_id} | Delete ADE integration
+[**automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey) | **GET** /api/v1/integrations/apple/ade/public_key/ | Download ADE public key
+[**automatedDeviceEnrollmentIntegrationsGetAdeDevice**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsGetAdeDevice) | **GET** /api/v1/integrations/apple/ade/devices/{device_id} | Get ADE device
+[**automatedDeviceEnrollmentIntegrationsGetAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsGetAdeIntegration) | **GET** /api/v1/integrations/apple/ade/{ade_token_id} | Get ADE integration
+[**automatedDeviceEnrollmentIntegrationsListAdeDevices**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsListAdeDevices) | **GET** /api/v1/integrations/apple/ade/devices | List ADE devices
+[**automatedDeviceEnrollmentIntegrationsListAdeIntegrations**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsListAdeIntegrations) | **GET** /api/v1/integrations/apple/ade | List ADE integrations
+[**automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken) | **GET** /api/v1/integrations/apple/ade/{ade_token_id}/devices | List devices associated to ADE token
+[**automatedDeviceEnrollmentIntegrationsRenewAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsRenewAdeIntegration) | **POST** /api/v1/integrations/apple/ade/{ade_token_id}/renew | Renew ADE integration
+[**automatedDeviceEnrollmentIntegrationsUpdateAdeDevice**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsUpdateAdeDevice) | **PATCH** /api/v1/integrations/apple/ade/devices/{device_id} | Update ADE device
+[**automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration**](AutomatedDeviceEnrollmentIntegrationsApi.md#automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration) | **PATCH** /api/v1/integrations/apple/ade/{ade_token_id} | Update ADE integration
 
 
 
-## createAdeIntegration
+## automatedDeviceEnrollmentIntegrationsCreateAdeIntegration
 
 Create ADE integration
 
@@ -28,7 +28,7 @@ Create ADE integration
 ### Example
 
 ```bash
-kandji_sdk createAdeIntegration
+kandji_sdk automatedDeviceEnrollmentIntegrationsCreateAdeIntegration
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deleteAdeIntegration
+## automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration
 
 Delete ADE integration
 
@@ -69,7 +69,7 @@ Delete ADE integration
 ### Example
 
 ```bash
-kandji_sdk deleteAdeIntegration ade_token_id=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## downloadAdePublicKey
+## automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey
 
 Download ADE public key
 
@@ -105,7 +105,7 @@ Download ADE public key
 ### Example
 
 ```bash
-kandji_sdk downloadAdePublicKey
+kandji_sdk automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey
 ```
 
 ### Parameters
@@ -128,7 +128,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getAdeDevice
+## automatedDeviceEnrollmentIntegrationsGetAdeDevice
 
 Get ADE device
 
@@ -137,7 +137,7 @@ Get information about a specific Automated Device Enrollment device.
 ### Example
 
 ```bash
-kandji_sdk getAdeDevice device_id=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsGetAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getAdeIntegration
+## automatedDeviceEnrollmentIntegrationsGetAdeIntegration
 
 Get ADE integration
 
@@ -172,7 +172,7 @@ This request returns a specific ADE integration based on the <code>ade_token_id<
 ### Example
 
 ```bash
-kandji_sdk getAdeIntegration ade_token_id=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsGetAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listAdeDevices
+## automatedDeviceEnrollmentIntegrationsListAdeDevices
 
 List ADE devices
 
@@ -207,7 +207,7 @@ Get a list of Automated Device Enrollment devices.
 ### Example
 
 ```bash
-kandji_sdk listAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsListAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
 ```
 
 ### Parameters
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listAdeIntegrations
+## automatedDeviceEnrollmentIntegrationsListAdeIntegrations
 
 List ADE integrations
 
@@ -250,7 +250,7 @@ This request returns a list of configured ADE integrations.
 ### Example
 
 ```bash
-kandji_sdk listAdeIntegrations
+kandji_sdk automatedDeviceEnrollmentIntegrationsListAdeIntegrations
 ```
 
 ### Parameters
@@ -273,7 +273,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listDevicesAssociatedToAdeToken
+## automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken
 
 List devices associated to ADE token
 
@@ -284,7 +284,7 @@ List devices associated to ADE token
 ### Example
 
 ```bash
-kandji_sdk listDevicesAssociatedToAdeToken ade_token_id=value  page=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken ade_token_id=value  page=value
 ```
 
 ### Parameters
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## renewAdeIntegration
+## automatedDeviceEnrollmentIntegrationsRenewAdeIntegration
 
 Renew ADE integration
 
@@ -321,7 +321,7 @@ Renew ADE integration
 ### Example
 
 ```bash
-kandji_sdk renewAdeIntegration ade_token_id=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsRenewAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## updateAdeDevice
+## automatedDeviceEnrollmentIntegrationsUpdateAdeDevice
 
 Update ADE device
 
@@ -362,7 +362,7 @@ Update ADE device
 ### Example
 
 ```bash
-kandji_sdk updateAdeDevice device_id=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsUpdateAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## updateAdeIntegration
+## automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration
 
 Update ADE integration
 
@@ -399,7 +399,7 @@ Update ADE integration
 ### Example
 
 ```bash
-kandji_sdk updateAdeIntegration ade_token_id=value
+kandji_sdk automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration ade_token_id=value
 ```
 
 ### Parameters

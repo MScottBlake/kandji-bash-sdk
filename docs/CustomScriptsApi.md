@@ -4,15 +4,15 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCustomScript**](CustomScriptsApi.md#createCustomScript) | **POST** /api/v1/library/custom-scripts | Create Custom Script
-[**deleteCustomScript**](CustomScriptsApi.md#deleteCustomScript) | **DELETE** /api/v1/library/custom-scripts/{library_item_id} | Delete Custom Script
-[**getCustomScript**](CustomScriptsApi.md#getCustomScript) | **GET** /api/v1/library/custom-scripts/{library_item_id} | Get Custom Script
-[**listCustomScripts**](CustomScriptsApi.md#listCustomScripts) | **GET** /api/v1/library/custom-scripts | List Custom Scripts
-[**updateCustomScript**](CustomScriptsApi.md#updateCustomScript) | **PATCH** /api/v1/library/custom-scripts/{library_item_id} | Update Custom Script
+[**customScriptsCreateCustomScript**](CustomScriptsApi.md#customScriptsCreateCustomScript) | **POST** /api/v1/library/custom-scripts | Create Custom Script
+[**customScriptsDeleteCustomScript**](CustomScriptsApi.md#customScriptsDeleteCustomScript) | **DELETE** /api/v1/library/custom-scripts/{library_item_id} | Delete Custom Script
+[**customScriptsGetCustomScript**](CustomScriptsApi.md#customScriptsGetCustomScript) | **GET** /api/v1/library/custom-scripts/{library_item_id} | Get Custom Script
+[**customScriptsListCustomScripts**](CustomScriptsApi.md#customScriptsListCustomScripts) | **GET** /api/v1/library/custom-scripts | List Custom Scripts
+[**customScriptsUpdateCustomScript**](CustomScriptsApi.md#customScriptsUpdateCustomScript) | **PATCH** /api/v1/library/custom-scripts/{library_item_id} | Update Custom Script
 
 
 
-## createCustomScript
+## customScriptsCreateCustomScript
 
 Create Custom Script
 
@@ -21,7 +21,7 @@ This request allows you to create a custom script in the Kandji library.
 ### Example
 
 ```bash
-kandji_sdk createCustomScript
+kandji_sdk customScriptsCreateCustomScript
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deleteCustomScript
+## customScriptsDeleteCustomScript
 
 Delete Custom Script
 
@@ -59,7 +59,7 @@ Delete Custom Script
 ### Example
 
 ```bash
-kandji_sdk deleteCustomScript library_item_id=value
+kandji_sdk customScriptsDeleteCustomScript library_item_id=value
 ```
 
 ### Parameters
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getCustomScript
+## customScriptsGetCustomScript
 
 Get Custom Script
 
@@ -96,7 +96,7 @@ Get Custom Script
 ### Example
 
 ```bash
-kandji_sdk getCustomScript library_item_id=value
+kandji_sdk customScriptsGetCustomScript library_item_id=value
 ```
 
 ### Parameters
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listCustomScripts
+## customScriptsListCustomScripts
 
 List Custom Scripts
 
@@ -131,7 +131,7 @@ This endpoint makes a request to retrieve a list of custom scripts from the Kand
 ### Example
 
 ```bash
-kandji_sdk listCustomScripts  page=value
+kandji_sdk customScriptsListCustomScripts  page=value
 ```
 
 ### Parameters
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## updateCustomScript
+## customScriptsUpdateCustomScript
 
 Update Custom Script
 
@@ -166,7 +166,7 @@ This request allows you to update a custom script in the Kandji library.
 ### Example
 
 ```bash
-kandji_sdk updateCustomScript library_item_id=value
+kandji_sdk customScriptsUpdateCustomScript library_item_id=value
 ```
 
 ### Parameters

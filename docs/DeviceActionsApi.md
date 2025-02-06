@@ -4,25 +4,25 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clearPasscode**](DeviceActionsApi.md#clearPasscode) | **POST** /api/v1/devices/{device_id}/action/clearpasscode | Clear Passcode
-[**deleteDevice**](DeviceActionsApi.md#deleteDevice) | **DELETE** /api/v1/devices/{device_id} | Delete Device
-[**deleteUser**](DeviceActionsApi.md#deleteUser) | **POST** /api/v1/devices/{device_id}/action/deleteuser | Delete User
-[**eraseDevice**](DeviceActionsApi.md#eraseDevice) | **POST** /api/v1/devices/{device_id}/action/erase | Erase Device
-[**getDeviceCommands**](DeviceActionsApi.md#getDeviceCommands) | **GET** /api/v1/devices/{device_id}/commands | Get Device Commands
-[**lockDevice**](DeviceActionsApi.md#lockDevice) | **POST** /api/v1/devices/{device_id}/action/lock | Lock Device
-[**reinstallAgent**](DeviceActionsApi.md#reinstallAgent) | **POST** /api/v1/devices/{device_id}/action/reinstallagent | Reinstall Agent
-[**remoteDesktop**](DeviceActionsApi.md#remoteDesktop) | **POST** /api/v1/devices/{device_id}/action/remotedesktop | Remote Desktop
-[**renewMdmProfile**](DeviceActionsApi.md#renewMdmProfile) | **POST** /api/v1/devices/{device_id}/action/renewmdmprofile | Renew MDM Profile
-[**restartDevice**](DeviceActionsApi.md#restartDevice) | **POST** /api/v1/devices/{device_id}/action/restart | Restart Device
-[**sendBlankpush**](DeviceActionsApi.md#sendBlankpush) | **POST** /api/v1/devices/{device_id}/action/blankpush | Send Blankpush
-[**setName**](DeviceActionsApi.md#setName) | **POST** /api/v1/devices/{device_id}/action/setname | Set Name
-[**shutdown**](DeviceActionsApi.md#shutdown) | **POST** /api/v1/devices/{device_id}/action/shutdown | Shutdown
-[**unlockAccount**](DeviceActionsApi.md#unlockAccount) | **POST** /api/v1/devices/{device_id}/action/unlockaccount | Unlock Account
-[**updateInventory**](DeviceActionsApi.md#updateInventory) | **POST** /api/v1/devices/{device_id}/action/updateinventory | Update Inventory
+[**deviceActionsClearPasscode**](DeviceActionsApi.md#deviceActionsClearPasscode) | **POST** /api/v1/devices/{device_id}/action/clearpasscode | Clear Passcode
+[**deviceActionsDeleteDevice**](DeviceActionsApi.md#deviceActionsDeleteDevice) | **DELETE** /api/v1/devices/{device_id} | Delete Device
+[**deviceActionsDeleteUser**](DeviceActionsApi.md#deviceActionsDeleteUser) | **POST** /api/v1/devices/{device_id}/action/deleteuser | Delete User
+[**deviceActionsEraseDevice**](DeviceActionsApi.md#deviceActionsEraseDevice) | **POST** /api/v1/devices/{device_id}/action/erase | Erase Device
+[**deviceActionsGetDeviceCommands**](DeviceActionsApi.md#deviceActionsGetDeviceCommands) | **GET** /api/v1/devices/{device_id}/commands | Get Device Commands
+[**deviceActionsLockDevice**](DeviceActionsApi.md#deviceActionsLockDevice) | **POST** /api/v1/devices/{device_id}/action/lock | Lock Device
+[**deviceActionsReinstallAgent**](DeviceActionsApi.md#deviceActionsReinstallAgent) | **POST** /api/v1/devices/{device_id}/action/reinstallagent | Reinstall Agent
+[**deviceActionsRemoteDesktop**](DeviceActionsApi.md#deviceActionsRemoteDesktop) | **POST** /api/v1/devices/{device_id}/action/remotedesktop | Remote Desktop
+[**deviceActionsRenewMdmProfile**](DeviceActionsApi.md#deviceActionsRenewMdmProfile) | **POST** /api/v1/devices/{device_id}/action/renewmdmprofile | Renew MDM Profile
+[**deviceActionsRestartDevice**](DeviceActionsApi.md#deviceActionsRestartDevice) | **POST** /api/v1/devices/{device_id}/action/restart | Restart Device
+[**deviceActionsSendBlankpush**](DeviceActionsApi.md#deviceActionsSendBlankpush) | **POST** /api/v1/devices/{device_id}/action/blankpush | Send Blankpush
+[**deviceActionsSetName**](DeviceActionsApi.md#deviceActionsSetName) | **POST** /api/v1/devices/{device_id}/action/setname | Set Name
+[**deviceActionsShutdown**](DeviceActionsApi.md#deviceActionsShutdown) | **POST** /api/v1/devices/{device_id}/action/shutdown | Shutdown
+[**deviceActionsUnlockAccount**](DeviceActionsApi.md#deviceActionsUnlockAccount) | **POST** /api/v1/devices/{device_id}/action/unlockaccount | Unlock Account
+[**deviceActionsUpdateInventory**](DeviceActionsApi.md#deviceActionsUpdateInventory) | **POST** /api/v1/devices/{device_id}/action/updateinventory | Update Inventory
 
 
 
-## clearPasscode
+## deviceActionsClearPasscode
 
 Clear Passcode
 
@@ -31,7 +31,7 @@ This endpoint sends an MDM command to clear a device passcode. Available for iPh
 ### Example
 
 ```bash
-kandji_sdk clearPasscode device_id=value
+kandji_sdk deviceActionsClearPasscode device_id=value
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deleteDevice
+## deviceActionsDeleteDevice
 
 Delete Device
 
@@ -66,7 +66,7 @@ This endpoint sends an MDM command to delete a device. This will remove the devi
 ### Example
 
 ```bash
-kandji_sdk deleteDevice device_id=value
+kandji_sdk deviceActionsDeleteDevice device_id=value
 ```
 
 ### Parameters
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deleteUser
+## deviceActionsDeleteUser
 
 Delete User
 
@@ -106,7 +106,7 @@ Delete User
 ### Example
 
 ```bash
-kandji_sdk deleteUser device_id=value
+kandji_sdk deviceActionsDeleteUser device_id=value
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## eraseDevice
+## deviceActionsEraseDevice
 
 Erase Device
 
@@ -186,7 +186,7 @@ Erase Device
 ### Example
 
 ```bash
-kandji_sdk eraseDevice device_id=value
+kandji_sdk deviceActionsEraseDevice device_id=value
 ```
 
 ### Parameters
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getDeviceCommands
+## deviceActionsGetDeviceCommands
 
 Get Device Commands
 
@@ -230,7 +230,7 @@ Get Device Commands
 ### Example
 
 ```bash
-kandji_sdk getDeviceCommands device_id=value  limit=value  offset=value
+kandji_sdk deviceActionsGetDeviceCommands device_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## lockDevice
+## deviceActionsLockDevice
 
 Lock Device
 
@@ -291,7 +291,7 @@ Lock Device
 ### Example
 
 ```bash
-kandji_sdk lockDevice device_id=value
+kandji_sdk deviceActionsLockDevice device_id=value
 ```
 
 ### Parameters
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## reinstallAgent
+## deviceActionsReinstallAgent
 
 Reinstall Agent
 
@@ -327,7 +327,7 @@ This endpoint sends an MDM command reinstall the Kandji Agent. Available for mac
 ### Example
 
 ```bash
-kandji_sdk reinstallAgent device_id=value
+kandji_sdk deviceActionsReinstallAgent device_id=value
 ```
 
 ### Parameters
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## remoteDesktop
+## deviceActionsRemoteDesktop
 
 Remote Desktop
 
@@ -365,7 +365,7 @@ Remote Desktop
 ### Example
 
 ```bash
-kandji_sdk remoteDesktop device_id=value
+kandji_sdk deviceActionsRemoteDesktop device_id=value
 ```
 
 ### Parameters
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## renewMdmProfile
+## deviceActionsRenewMdmProfile
 
 Renew MDM Profile
 
@@ -401,7 +401,7 @@ This endpoint sends an MDM command to re-install the existing root MDM profile f
 ### Example
 
 ```bash
-kandji_sdk renewMdmProfile device_id=value
+kandji_sdk deviceActionsRenewMdmProfile device_id=value
 ```
 
 ### Parameters
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## restartDevice
+## deviceActionsRestartDevice
 
 Restart Device
 
@@ -442,7 +442,7 @@ Restart Device
 ### Example
 
 ```bash
-kandji_sdk restartDevice device_id=value
+kandji_sdk deviceActionsRestartDevice device_id=value
 ```
 
 ### Parameters
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## sendBlankpush
+## deviceActionsSendBlankpush
 
 Send Blankpush
 
@@ -479,7 +479,7 @@ Send Blankpush
 ### Example
 
 ```bash
-kandji_sdk sendBlankpush device_id=value
+kandji_sdk deviceActionsSendBlankpush device_id=value
 ```
 
 ### Parameters
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## setName
+## deviceActionsSetName
 
 Set Name
 
@@ -517,7 +517,7 @@ Set Name
 ### Example
 
 ```bash
-kandji_sdk setName device_id=value
+kandji_sdk deviceActionsSetName device_id=value
 ```
 
 ### Parameters
@@ -544,7 +544,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## shutdown
+## deviceActionsShutdown
 
 Shutdown
 
@@ -553,7 +553,7 @@ This endpoint sends an MDM command to shutdown a device.
 ### Example
 
 ```bash
-kandji_sdk shutdown device_id=value
+kandji_sdk deviceActionsShutdown device_id=value
 ```
 
 ### Parameters
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## unlockAccount
+## deviceActionsUnlockAccount
 
 Unlock Account
 
@@ -591,7 +591,7 @@ Unlock Account
 ### Example
 
 ```bash
-kandji_sdk unlockAccount device_id=value
+kandji_sdk deviceActionsUnlockAccount device_id=value
 ```
 
 ### Parameters
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## updateInventory
+## deviceActionsUpdateInventory
 
 Update Inventory
 
@@ -627,7 +627,7 @@ This endpoint sends an MDM command to start a check-in for a device, initiating 
 ### Example
 
 ```bash
-kandji_sdk updateInventory device_id=value
+kandji_sdk deviceActionsUpdateInventory device_id=value
 ```
 
 ### Parameters

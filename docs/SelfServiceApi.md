@@ -4,11 +4,11 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listSelfServiceCategories**](SelfServiceApi.md#listSelfServiceCategories) | **GET** /api/v1/self-service/categories | List Self Service Categories
+[**selfServiceListSelfServiceCategories**](SelfServiceApi.md#selfServiceListSelfServiceCategories) | **GET** /api/v1/self-service/categories | List Self Service Categories
 
 
 
-## listSelfServiceCategories
+## selfServiceListSelfServiceCategories
 
 List Self Service Categories
 
@@ -18,7 +18,7 @@ List Self Service Categories
 ### Example
 
 ```bash
-kandji_sdk listSelfServiceCategories
+kandji_sdk selfServiceListSelfServiceCategories
 ```
 
 ### Parameters

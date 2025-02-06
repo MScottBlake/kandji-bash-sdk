@@ -4,20 +4,20 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignLibraryItem**](BlueprintsApi.md#assignLibraryItem) | **POST** /api/v1/blueprints/{blueprint_id}/assign-library-item | Assign Library Item
-[**createBlueprint**](BlueprintsApi.md#createBlueprint) | **POST** /api/v1/blueprints | Create Blueprint
-[**deleteBlueprint**](BlueprintsApi.md#deleteBlueprint) | **DELETE** /api/v1/blueprints/{blueprint_id} | Delete Blueprint
-[**getBlueprint**](BlueprintsApi.md#getBlueprint) | **GET** /api/v1/blueprints/{blueprint_id} | Get Blueprint
-[**getBlueprintTemplates**](BlueprintsApi.md#getBlueprintTemplates) | **GET** /api/v1/blueprints/templates/ | Get Blueprint Templates
-[**getManualEnrollmentProfile**](BlueprintsApi.md#getManualEnrollmentProfile) | **GET** /api/v1/blueprints/{blueprint_id}/ota-enrollment-profile | Get Manual Enrollment Profile
-[**listBlueprints**](BlueprintsApi.md#listBlueprints) | **GET** /api/v1/blueprints | List Blueprints
-[**listLibraryItems**](BlueprintsApi.md#listLibraryItems) | **GET** /api/v1/blueprints/{blueprint_id}/list-library-items | List Library Items
-[**removeLibraryItem**](BlueprintsApi.md#removeLibraryItem) | **POST** /api/v1/blueprints/{blueprint_id}/remove-library-item | Remove Library Item
-[**updateBlueprint**](BlueprintsApi.md#updateBlueprint) | **PATCH** /api/v1/blueprints/{blueprint_id} | Update Blueprint
+[**blueprintsAssignLibraryItem**](BlueprintsApi.md#blueprintsAssignLibraryItem) | **POST** /api/v1/blueprints/{blueprint_id}/assign-library-item | Assign Library Item
+[**blueprintsCreateBlueprint**](BlueprintsApi.md#blueprintsCreateBlueprint) | **POST** /api/v1/blueprints | Create Blueprint
+[**blueprintsDeleteBlueprint**](BlueprintsApi.md#blueprintsDeleteBlueprint) | **DELETE** /api/v1/blueprints/{blueprint_id} | Delete Blueprint
+[**blueprintsGetBlueprint**](BlueprintsApi.md#blueprintsGetBlueprint) | **GET** /api/v1/blueprints/{blueprint_id} | Get Blueprint
+[**blueprintsGetBlueprintTemplates**](BlueprintsApi.md#blueprintsGetBlueprintTemplates) | **GET** /api/v1/blueprints/templates/ | Get Blueprint Templates
+[**blueprintsGetManualEnrollmentProfile**](BlueprintsApi.md#blueprintsGetManualEnrollmentProfile) | **GET** /api/v1/blueprints/{blueprint_id}/ota-enrollment-profile | Get Manual Enrollment Profile
+[**blueprintsListBlueprints**](BlueprintsApi.md#blueprintsListBlueprints) | **GET** /api/v1/blueprints | List Blueprints
+[**blueprintsListLibraryItems**](BlueprintsApi.md#blueprintsListLibraryItems) | **GET** /api/v1/blueprints/{blueprint_id}/list-library-items | List Library Items
+[**blueprintsRemoveLibraryItem**](BlueprintsApi.md#blueprintsRemoveLibraryItem) | **POST** /api/v1/blueprints/{blueprint_id}/remove-library-item | Remove Library Item
+[**blueprintsUpdateBlueprint**](BlueprintsApi.md#blueprintsUpdateBlueprint) | **PATCH** /api/v1/blueprints/{blueprint_id} | Update Blueprint
 
 
 
-## assignLibraryItem
+## blueprintsAssignLibraryItem
 
 Assign Library Item
 
@@ -70,7 +70,7 @@ Assign Library Item
 ### Example
 
 ```bash
-kandji_sdk assignLibraryItem blueprint_id=value
+kandji_sdk blueprintsAssignLibraryItem blueprint_id=value
 ```
 
 ### Parameters
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## createBlueprint
+## blueprintsCreateBlueprint
 
 Create Blueprint
 
@@ -108,7 +108,7 @@ Create Blueprint
 ### Example
 
 ```bash
-kandji_sdk createBlueprint
+kandji_sdk blueprintsCreateBlueprint
 ```
 
 ### Parameters
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deleteBlueprint
+## blueprintsDeleteBlueprint
 
 Delete Blueprint
 
@@ -152,7 +152,7 @@ Delete Blueprint
 ### Example
 
 ```bash
-kandji_sdk deleteBlueprint blueprint_id=value
+kandji_sdk blueprintsDeleteBlueprint blueprint_id=value
 ```
 
 ### Parameters
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getBlueprint
+## blueprintsGetBlueprint
 
 Get Blueprint
 
@@ -189,7 +189,7 @@ Get Blueprint
 ### Example
 
 ```bash
-kandji_sdk getBlueprint blueprint_id=value
+kandji_sdk blueprintsGetBlueprint blueprint_id=value
 ```
 
 ### Parameters
@@ -215,14 +215,14 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getBlueprintTemplates
+## blueprintsGetBlueprintTemplates
 
 Get Blueprint Templates
 
 ### Example
 
 ```bash
-kandji_sdk getBlueprintTemplates  limit=value  offset=value
+kandji_sdk blueprintsGetBlueprintTemplates  limit=value  offset=value
 ```
 
 ### Parameters
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getManualEnrollmentProfile
+## blueprintsGetManualEnrollmentProfile
 
 Get Manual Enrollment Profile
 
@@ -269,7 +269,7 @@ Get Manual Enrollment Profile
 ### Example
 
 ```bash
-kandji_sdk getManualEnrollmentProfile blueprint_id=value  sso=value
+kandji_sdk blueprintsGetManualEnrollmentProfile blueprint_id=value  sso=value
 ```
 
 ### Parameters
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listBlueprints
+## blueprintsListBlueprints
 
 List Blueprints
 
@@ -305,7 +305,7 @@ This request returns a list of a blueprint records in the Kandji tenant. Optiona
 ### Example
 
 ```bash
-kandji_sdk listBlueprints  id=value  id__in=value  name=value  limit=value  offset=value
+kandji_sdk blueprintsListBlueprints  id=value  id__in=value  name=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listLibraryItems
+## blueprintsListLibraryItems
 
 List Library Items
 
@@ -363,7 +363,7 @@ List Library Items
 ### Example
 
 ```bash
-kandji_sdk listLibraryItems blueprint_id=value
+kandji_sdk blueprintsListLibraryItems blueprint_id=value
 ```
 
 ### Parameters
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## removeLibraryItem
+## blueprintsRemoveLibraryItem
 
 Remove Library Item
 
@@ -439,7 +439,7 @@ Remove Library Item
 ### Example
 
 ```bash
-kandji_sdk removeLibraryItem blueprint_id=value
+kandji_sdk blueprintsRemoveLibraryItem blueprint_id=value
 ```
 
 ### Parameters
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## updateBlueprint
+## blueprintsUpdateBlueprint
 
 Update Blueprint
 
@@ -477,7 +477,7 @@ Update Blueprint
 ### Example
 
 ```bash
-kandji_sdk updateBlueprint blueprint_id=value
+kandji_sdk blueprintsUpdateBlueprint blueprint_id=value
 ```
 
 ### Parameters

@@ -4,14 +4,14 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**disableLostMode**](LostModeApi.md#disableLostMode) | **POST** /api/v1/devices/{device_id}/action/disablelostmode | Disable Lost Mode
-[**enableLostMode**](LostModeApi.md#enableLostMode) | **POST** /api/v1/devices/{device_id}/action/enablelostmode | Enable Lost Mode
-[**playLostModeSound**](LostModeApi.md#playLostModeSound) | **POST** /api/v1/devices/{device_id}/action/playlostmodesound | Play Lost Mode Sound
-[**updateLocation**](LostModeApi.md#updateLocation) | **POST** /api/v1/devices/{device_id}/action/updatelocation | Update Location
+[**lostModeDisableLostMode**](LostModeApi.md#lostModeDisableLostMode) | **POST** /api/v1/devices/{device_id}/action/disablelostmode | Disable Lost Mode
+[**lostModeEnableLostMode**](LostModeApi.md#lostModeEnableLostMode) | **POST** /api/v1/devices/{device_id}/action/enablelostmode | Enable Lost Mode
+[**lostModePlayLostModeSound**](LostModeApi.md#lostModePlayLostModeSound) | **POST** /api/v1/devices/{device_id}/action/playlostmodesound | Play Lost Mode Sound
+[**lostModeUpdateLocation**](LostModeApi.md#lostModeUpdateLocation) | **POST** /api/v1/devices/{device_id}/action/updatelocation | Update Location
 
 
 
-## disableLostMode
+## lostModeDisableLostMode
 
 Disable Lost Mode
 
@@ -21,7 +21,7 @@ Disable Lost Mode
 ### Example
 
 ```bash
-kandji_sdk disableLostMode device_id=value
+kandji_sdk lostModeDisableLostMode device_id=value
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## enableLostMode
+## lostModeEnableLostMode
 
 Enable Lost Mode
 
@@ -57,7 +57,7 @@ Enable Lost Mode
 ### Example
 
 ```bash
-kandji_sdk enableLostMode device_id=value
+kandji_sdk lostModeEnableLostMode device_id=value
 ```
 
 ### Parameters
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## playLostModeSound
+## lostModePlayLostModeSound
 
 Play Lost Mode Sound
 
@@ -94,7 +94,7 @@ Play Lost Mode Sound
 ### Example
 
 ```bash
-kandji_sdk playLostModeSound device_id=value
+kandji_sdk lostModePlayLostModeSound device_id=value
 ```
 
 ### Parameters
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## updateLocation
+## lostModeUpdateLocation
 
 Update Location
 
@@ -129,7 +129,7 @@ This endpoint sends an MDM command to update the location data on iOS and iPadOS
 ### Example
 
 ```bash
-kandji_sdk updateLocation device_id=value
+kandji_sdk lostModeUpdateLocation device_id=value
 ```
 
 ### Parameters

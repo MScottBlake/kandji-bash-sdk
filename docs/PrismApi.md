@@ -4,28 +4,28 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**activationLock**](PrismApi.md#activationLock) | **GET** /api/v1/prism/activation_lock | Activation lock
-[**applicationFirewall**](PrismApi.md#applicationFirewall) | **GET** /api/v1/prism/application_firewall | Application firewall
-[**applications**](PrismApi.md#applications) | **GET** /api/v1/prism/apps | Applications
-[**certificates**](PrismApi.md#certificates) | **GET** /api/v1/prism/certificates | Certificates
-[**count**](PrismApi.md#count) | **GET** /api/v1/prism/count | Count
-[**desktopAndScreensaver**](PrismApi.md#desktopAndScreensaver) | **GET** /api/v1/prism/desktop_and_screensaver | Desktop and Screensaver
-[**deviceInformation**](PrismApi.md#deviceInformation) | **GET** /api/v1/prism/device_information | Device information
-[**filevault**](PrismApi.md#filevault) | **GET** /api/v1/prism/filevault | FileVault
-[**gatekeeperAndXprotect**](PrismApi.md#gatekeeperAndXprotect) | **GET** /api/v1/prism/gatekeeper_and_xprotect | Gatekeeper and XProtect
-[**getCategoryExport**](PrismApi.md#getCategoryExport) | **GET** /api/v1/prism/export/{export_id} | Get category export
-[**installedProfiles**](PrismApi.md#installedProfiles) | **GET** /api/v1/prism/installed_profiles | Installed profiles
-[**kernelExtensions**](PrismApi.md#kernelExtensions) | **GET** /api/v1/prism/kernel_extensions | Kernel Extensions
-[**launchAgentsAndDaemons**](PrismApi.md#launchAgentsAndDaemons) | **GET** /api/v1/prism/launch_agents_and_daemons | Launch Agents and Daemons
-[**localUsers**](PrismApi.md#localUsers) | **GET** /api/v1/prism/local_users | Local users
-[**requestCategoryExport**](PrismApi.md#requestCategoryExport) | **POST** /api/v1/prism/export | Request category export
-[**startupSettings**](PrismApi.md#startupSettings) | **GET** /api/v1/prism/startup_settings | Startup settings
-[**systemExtensions**](PrismApi.md#systemExtensions) | **GET** /api/v1/prism/system_extensions | System Extensions
-[**transparencyDatabase**](PrismApi.md#transparencyDatabase) | **GET** /api/v1/prism/transparency_database | Transparency database
+[**prismActivationLock**](PrismApi.md#prismActivationLock) | **GET** /api/v1/prism/activation_lock | Activation lock
+[**prismApplicationFirewall**](PrismApi.md#prismApplicationFirewall) | **GET** /api/v1/prism/application_firewall | Application firewall
+[**prismApplications**](PrismApi.md#prismApplications) | **GET** /api/v1/prism/apps | Applications
+[**prismCertificates**](PrismApi.md#prismCertificates) | **GET** /api/v1/prism/certificates | Certificates
+[**prismCount**](PrismApi.md#prismCount) | **GET** /api/v1/prism/count | Count
+[**prismDesktopAndScreensaver**](PrismApi.md#prismDesktopAndScreensaver) | **GET** /api/v1/prism/desktop_and_screensaver | Desktop and Screensaver
+[**prismDeviceInformation**](PrismApi.md#prismDeviceInformation) | **GET** /api/v1/prism/device_information | Device information
+[**prismFilevault**](PrismApi.md#prismFilevault) | **GET** /api/v1/prism/filevault | FileVault
+[**prismGatekeeperAndXprotect**](PrismApi.md#prismGatekeeperAndXprotect) | **GET** /api/v1/prism/gatekeeper_and_xprotect | Gatekeeper and XProtect
+[**prismGetCategoryExport**](PrismApi.md#prismGetCategoryExport) | **GET** /api/v1/prism/export/{export_id} | Get category export
+[**prismInstalledProfiles**](PrismApi.md#prismInstalledProfiles) | **GET** /api/v1/prism/installed_profiles | Installed profiles
+[**prismKernelExtensions**](PrismApi.md#prismKernelExtensions) | **GET** /api/v1/prism/kernel_extensions | Kernel Extensions
+[**prismLaunchAgentsAndDaemons**](PrismApi.md#prismLaunchAgentsAndDaemons) | **GET** /api/v1/prism/launch_agents_and_daemons | Launch Agents and Daemons
+[**prismLocalUsers**](PrismApi.md#prismLocalUsers) | **GET** /api/v1/prism/local_users | Local users
+[**prismRequestCategoryExport**](PrismApi.md#prismRequestCategoryExport) | **POST** /api/v1/prism/export | Request category export
+[**prismStartupSettings**](PrismApi.md#prismStartupSettings) | **GET** /api/v1/prism/startup_settings | Startup settings
+[**prismSystemExtensions**](PrismApi.md#prismSystemExtensions) | **GET** /api/v1/prism/system_extensions | System Extensions
+[**prismTransparencyDatabase**](PrismApi.md#prismTransparencyDatabase) | **GET** /api/v1/prism/transparency_database | Transparency database
 
 
 
-## activationLock
+## prismActivationLock
 
 Activation lock
 
@@ -34,7 +34,7 @@ Get activation lock attributes for devices.
 ### Example
 
 ```bash
-kandji_sdk activationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismActivationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -66,7 +66,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## applicationFirewall
+## prismApplicationFirewall
 
 Application firewall
 
@@ -75,7 +75,7 @@ Get Application Firewall details for macOS.
 ### Example
 
 ```bash
-kandji_sdk applicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismApplicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -107,7 +107,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## applications
+## prismApplications
 
 Applications
 
@@ -116,7 +116,7 @@ Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.
 ### Example
 
 ```bash
-kandji_sdk applications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismApplications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -148,7 +148,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## certificates
+## prismCertificates
 
 Certificates
 
@@ -157,7 +157,7 @@ Get certificate details.
 ### Example
 
 ```bash
-kandji_sdk certificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismCertificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -189,7 +189,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## count
+## prismCount
 
 Count
 
@@ -200,7 +200,7 @@ Count
 ### Example
 
 ```bash
-kandji_sdk count  category=value
+kandji_sdk prismCount  category=value
 ```
 
 ### Parameters
@@ -232,7 +232,7 @@ system_extensions</p> | [default to null]
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## desktopAndScreensaver
+## prismDesktopAndScreensaver
 
 Desktop and Screensaver
 
@@ -241,7 +241,7 @@ Get Desktop and Screensaver details for macOS.
 ### Example
 
 ```bash
-kandji_sdk desktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismDesktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -273,7 +273,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformation
+## prismDeviceInformation
 
 Device information
 
@@ -282,7 +282,7 @@ Get attributes about devices.
 ### Example
 
 ```bash
-kandji_sdk deviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismDeviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## filevault
+## prismFilevault
 
 FileVault
 
@@ -324,7 +324,7 @@ Get FileVault information for macOS.
 ### Example
 
 ```bash
-kandji_sdk filevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismFilevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -356,7 +356,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## gatekeeperAndXprotect
+## prismGatekeeperAndXprotect
 
 Gatekeeper and XProtect
 
@@ -365,7 +365,7 @@ Get Gatekeeper and XProtect attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk gatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismGatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -397,7 +397,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## getCategoryExport
+## prismGetCategoryExport
 
 Get category export
 
@@ -408,7 +408,7 @@ Get category export
 ### Example
 
 ```bash
-kandji_sdk getCategoryExport export_id=value
+kandji_sdk prismGetCategoryExport export_id=value
 ```
 
 ### Parameters
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## installedProfiles
+## prismInstalledProfiles
 
 Installed profiles
 
@@ -443,7 +443,7 @@ Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.
 ### Example
 
 ```bash
-kandji_sdk installedProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismInstalledProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -475,7 +475,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## kernelExtensions
+## prismKernelExtensions
 
 Kernel Extensions
 
@@ -484,7 +484,7 @@ Get Kernel Extension attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk kernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismKernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -516,7 +516,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## launchAgentsAndDaemons
+## prismLaunchAgentsAndDaemons
 
 Launch Agents and Daemons
 
@@ -525,7 +525,7 @@ Get Launch Agents and Daemons installed on macOS.
 ### Example
 
 ```bash
-kandji_sdk launchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismLaunchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -557,7 +557,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## localUsers
+## prismLocalUsers
 
 Local users
 
@@ -566,7 +566,7 @@ Get Local Users detials for macOS.
 ### Example
 
 ```bash
-kandji_sdk localUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismLocalUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -598,7 +598,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## requestCategoryExport
+## prismRequestCategoryExport
 
 Request category export
 
@@ -651,7 +651,7 @@ Request category export
 ### Example
 
 ```bash
-kandji_sdk requestCategoryExport
+kandji_sdk prismRequestCategoryExport
 ```
 
 ### Parameters
@@ -677,7 +677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## startupSettings
+## prismStartupSettings
 
 Startup settings
 
@@ -686,7 +686,7 @@ Get Startup settings for macOS.
 ### Example
 
 ```bash
-kandji_sdk startupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismStartupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -718,7 +718,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## systemExtensions
+## prismSystemExtensions
 
 System Extensions
 
@@ -727,7 +727,7 @@ Get System Extension attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk systemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismSystemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -759,7 +759,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## transparencyDatabase
+## prismTransparencyDatabase
 
 Transparency database
 
@@ -768,7 +768,7 @@ Get Transparency Database (TCC) attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk transparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk prismTransparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
