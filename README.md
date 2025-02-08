@@ -10,25 +10,25 @@ The script uses cURL underneath for making all REST calls.
 
 ```shell
 # Make sure the script has executable rights
-$ chmod u+x kandji_sdk
+$ chmod u+x kandji
 
 # Print the list of operations available on the service
-$ ./kandji_sdk -h
+$ ./kandji -h
 
 # Print the service description
-$ ./kandji_sdk --about
+$ ./kandji --about
 
 # Print detailed information about specific operation
-$ ./kandji_sdk <operationId> -h
+$ ./kandji <operationId> -h
 
 # Make GET request
-./kandji_sdk --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+./kandji --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make GET request using arbitrary curl options (must be passed before <operationId>) to an SSL service using username:password
-kandji_sdk -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+kandji -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make POST request
-$ echo '<body_content>' | kandji_sdk --host <hostname> --content-type json <operationId> -
+$ echo '<body_content>' | kandji --host <hostname> --content-type json <operationId> -
 
 # Make POST request with simple JSON content, e.g.:
 # {
@@ -36,13 +36,13 @@ $ echo '<body_content>' | kandji_sdk --host <hostname> --content-type json <oper
 #   "key2": "value2",
 #   "key3": 23
 # }
-$ echo '<body_content>' | kandji_sdk --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
+$ echo '<body_content>' | kandji --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
 
 # Make POST request with form data
-$ kandji_sdk --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
+$ kandji --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
 
 # Preview the cURL command without actually executing it
-$ kandji_sdk --host http://<hostname>:<port> --dry-run <operationid>
+$ kandji --host http://<hostname>:<port> --dry-run <operationid>
 
 ```
 
@@ -68,13 +68,13 @@ is also available.
 The generated bash-completion script can be either directly loaded to the current Bash session using:
 
 ```shell
-source kandji_sdk.bash-completion
+source kandji.bash-completion
 ```
 
 Alternatively, the script can be copied to the `/etc/bash-completion.d` (or on OSX with Homebrew to `/usr/local/etc/bash-completion.d`):
 
 ```shell
-sudo cp kandji_sdk.bash-completion /etc/bash-completion.d/kandji_sdk
+sudo cp kandji.bash-completion /etc/bash-completion.d/kandji
 ```
 
 #### OS X
@@ -95,7 +95,7 @@ fi
 
 ### Zsh
 
-In Zsh, the generated `_kandji_sdk` Zsh completion file must be copied to one of the folders under `$FPATH` variable.
+In Zsh, the generated `_kandji` Zsh completion file must be copied to one of the folders under `$FPATH` variable.
 
 ## Documentation for API Endpoints
 
@@ -168,13 +168,13 @@ Class | Method | HTTP request | Description
 *DeviceSecretsApi* | [**deviceSecretsGetFilevaultRecoveryKey**](docs/DeviceSecretsApi.md#devicesecretsgetfilevaultrecoverykey) | **GET** /api/v1/devices/{device_id}/secrets/filevaultkey | Get FileVault Recovery Key
 *DeviceSecretsApi* | [**deviceSecretsGetRecoveryLockPassword**](docs/DeviceSecretsApi.md#devicesecretsgetrecoverylockpassword) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
 *DeviceSecretsApi* | [**deviceSecretsGetUnlockPin**](docs/DeviceSecretsApi.md#devicesecretsgetunlockpin) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
-*InHouseAppsApi* | [**inhouseAppsCreateInhouseApp**](docs/InHouseAppsApi.md#inhouseappscreateinhouseapp) | **POST** /api/v1/library/ipa-apps | Create In-House App
-*InHouseAppsApi* | [**inhouseAppsDeleteInhouseApp**](docs/InHouseAppsApi.md#inhouseappsdeleteinhouseapp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
-*InHouseAppsApi* | [**inhouseAppsGetInhouseApp**](docs/InHouseAppsApi.md#inhouseappsgetinhouseapp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
-*InHouseAppsApi* | [**inhouseAppsListInhouseApps**](docs/InHouseAppsApi.md#inhouseappslistinhouseapps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
-*InHouseAppsApi* | [**inhouseAppsUpdateInhouseApp**](docs/InHouseAppsApi.md#inhouseappsupdateinhouseapp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
-*InHouseAppsApi* | [**inhouseAppsUploadInhouseApp**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseapp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
-*InHouseAppsApi* | [**inhouseAppsUploadInhouseAppStatus**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseappstatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
+*InHouseAppsApi* | [**inHouseAppsCreateInhouseApp**](docs/InHouseAppsApi.md#inhouseappscreateinhouseapp) | **POST** /api/v1/library/ipa-apps | Create In-House App
+*InHouseAppsApi* | [**inHouseAppsDeleteInhouseApp**](docs/InHouseAppsApi.md#inhouseappsdeleteinhouseapp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
+*InHouseAppsApi* | [**inHouseAppsGetInhouseApp**](docs/InHouseAppsApi.md#inhouseappsgetinhouseapp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
+*InHouseAppsApi* | [**inHouseAppsListInhouseApps**](docs/InHouseAppsApi.md#inhouseappslistinhouseapps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
+*InHouseAppsApi* | [**inHouseAppsUpdateInhouseApp**](docs/InHouseAppsApi.md#inhouseappsupdateinhouseapp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
+*InHouseAppsApi* | [**inHouseAppsUploadInhouseApp**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseapp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
+*InHouseAppsApi* | [**inHouseAppsUploadInhouseAppStatus**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseappstatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
 *LibraryItemsApi* | [**libraryItemsGetLibraryItemActivity**](docs/LibraryItemsApi.md#libraryitemsgetlibraryitemactivity) | **GET** /api/v1/library/library-items/{library_item_id}/activity | Get Library Item Activity
 *LibraryItemsApi* | [**libraryItemsGetLibraryItemStatuses**](docs/LibraryItemsApi.md#libraryitemsgetlibraryitemstatuses) | **GET** /api/v1/library/library-items/{library_item_id}/status | Get Library Item Statuses
 *LostModeApi* | [**lostModeDisableLostMode**](docs/LostModeApi.md#lostmodedisablelostmode) | **POST** /api/v1/devices/{device_id}/action/disablelostmode | Disable Lost Mode

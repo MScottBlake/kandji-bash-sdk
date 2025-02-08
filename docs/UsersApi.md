@@ -26,7 +26,7 @@ Delete User
 ### Example
 
 ```bash
-kandji_sdk usersDeleteUser user_id=value
+kandji usersDeleteUser user_id=value
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ This endpoint makes a request to retrieve a specified user directory integration
 ### Example
 
 ```bash
-kandji_sdk usersGetUser user_id=value
+kandji usersGetUser user_id=value
 ```
 
 ### Parameters
@@ -97,7 +97,7 @@ List Users
 ### Example
 
 ```bash
-kandji_sdk usersListUsers  email=value  id=value  integration_id=value  archived=value
+kandji usersListUsers  email=value  id=value  integration_id=value  archived=value
 ```
 
 ### Parameters

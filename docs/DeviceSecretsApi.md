@@ -24,7 +24,7 @@ Get Activation Lock Bypass Code
 ### Example
 
 ```bash
-kandji_sdk deviceSecretsGetActivationLockBypassCode device_id=value
+kandji deviceSecretsGetActivationLockBypassCode device_id=value
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ Get FileVault Recovery Key
 ### Example
 
 ```bash
-kandji_sdk deviceSecretsGetFilevaultRecoveryKey device_id=value
+kandji deviceSecretsGetFilevaultRecoveryKey device_id=value
 ```
 
 ### Parameters
@@ -99,7 +99,7 @@ Get Recovery Lock Password
 ### Example
 
 ```bash
-kandji_sdk deviceSecretsGetRecoveryLockPassword device_id=value
+kandji deviceSecretsGetRecoveryLockPassword device_id=value
 ```
 
 ### Parameters
@@ -136,7 +136,7 @@ Get Unlock Pin
 ### Example
 
 ```bash
-kandji_sdk deviceSecretsGetUnlockPin device_id=value
+kandji deviceSecretsGetUnlockPin device_id=value
 ```
 
 ### Parameters

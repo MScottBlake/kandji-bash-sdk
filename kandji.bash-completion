@@ -1,0 +1,463 @@
+# kandji completion                               -*- shell-script -*-
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !
+# ! Note:
+# !
+# ! THIS SCRIPT HAS BEEN AUTOMATICALLY GENERATED USING
+# ! openapi-generator (https://openapi-generator.tech)
+# ! FROM OPENAPI SPECIFICATION IN JSON.
+# !
+# ! Generator version: 7.11.0
+# !
+# !
+# ! System wide installation:
+# !
+# ! $ sudo cp kandji.bash-completion /etc/bash-completion.d/kandji
+# !
+# !
+# ! User home installation (add this line to .bash_profile):
+# !
+# ! [ -r ~/kandji.bash-completion ] && source ~/kandji.bash-completion
+# !
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+declare -A mime_type_abbreviations
+# text/*
+mime_type_abbreviations["text"]="text/plain"
+mime_type_abbreviations["html"]="text/html"
+mime_type_abbreviations["md"]="text/x-markdown"
+mime_type_abbreviations["csv"]="text/csv"
+mime_type_abbreviations["css"]="text/css"
+mime_type_abbreviations["rtf"]="text/rtf"
+# application/*
+mime_type_abbreviations["json"]="application/json"
+mime_type_abbreviations["xml"]="application/xml"
+mime_type_abbreviations["yaml"]="application/yaml"
+mime_type_abbreviations["js"]="application/javascript"
+mime_type_abbreviations["bin"]="application/octet-stream"
+mime_type_abbreviations["rdf"]="application/rdf+xml"
+# image/*
+mime_type_abbreviations["jpg"]="image/jpeg"
+mime_type_abbreviations["png"]="image/png"
+mime_type_abbreviations["gif"]="image/gif"
+mime_type_abbreviations["bmp"]="image/bmp"
+mime_type_abbreviations["tiff"]="image/tiff"
+
+
+#
+# Check if this is OSX, if so defined custom init_completion
+#
+if [[ `uname` =~ "Darwin" ]]; then
+    __osx_init_completion()
+    {
+        COMPREPLY=()
+        _get_comp_words_by_ref cur prev words cword
+    }
+fi
+
+_kandji()
+{
+    local cur
+    local prev
+    local words
+    local cword
+
+    # The reference of currently selected REST operation
+    local operation=""
+
+    # The list of available operation in the REST service
+    # It's modelled as an associative array for efficient key lookup
+    declare -A operations
+    operations["automatedDeviceEnrollmentIntegrationsCreateAdeIntegration"]=1
+    operations["automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration"]=1
+    operations["automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey"]=1
+    operations["automatedDeviceEnrollmentIntegrationsGetAdeDevice"]=1
+    operations["automatedDeviceEnrollmentIntegrationsGetAdeIntegration"]=1
+    operations["automatedDeviceEnrollmentIntegrationsListAdeDevices"]=1
+    operations["automatedDeviceEnrollmentIntegrationsListAdeIntegrations"]=1
+    operations["automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken"]=1
+    operations["automatedDeviceEnrollmentIntegrationsRenewAdeIntegration"]=1
+    operations["automatedDeviceEnrollmentIntegrationsUpdateAdeDevice"]=1
+    operations["automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration"]=1
+    operations["blueprintsAssignLibraryItem"]=1
+    operations["blueprintsCreateBlueprint"]=1
+    operations["blueprintsDeleteBlueprint"]=1
+    operations["blueprintsGetBlueprint"]=1
+    operations["blueprintsGetBlueprintTemplates"]=1
+    operations["blueprintsGetManualEnrollmentProfile"]=1
+    operations["blueprintsListBlueprints"]=1
+    operations["blueprintsListLibraryItems"]=1
+    operations["blueprintsRemoveLibraryItem"]=1
+    operations["blueprintsUpdateBlueprint"]=1
+    operations["customAppsCreateCustomApp"]=1
+    operations["customAppsDeleteCustomApp"]=1
+    operations["customAppsGetCustomApp"]=1
+    operations["customAppsListCustomApps"]=1
+    operations["customAppsUpdateCustomApp"]=1
+    operations["customAppsUploadCustomApp"]=1
+    operations["customProfilesCreateCustomProfile"]=1
+    operations["customProfilesDeleteCustomProfile"]=1
+    operations["customProfilesGetCustomProfile"]=1
+    operations["customProfilesListCustomProfiles"]=1
+    operations["customProfilesUpdateCustomProfile"]=1
+    operations["customScriptsCreateCustomScript"]=1
+    operations["customScriptsDeleteCustomScript"]=1
+    operations["customScriptsGetCustomScript"]=1
+    operations["customScriptsListCustomScripts"]=1
+    operations["customScriptsUpdateCustomScript"]=1
+    operations["deviceActionsClearPasscode"]=1
+    operations["deviceActionsDeleteDevice"]=1
+    operations["deviceActionsDeleteUser"]=1
+    operations["deviceActionsEraseDevice"]=1
+    operations["deviceActionsGetDeviceCommands"]=1
+    operations["deviceActionsLockDevice"]=1
+    operations["deviceActionsReinstallAgent"]=1
+    operations["deviceActionsRemoteDesktop"]=1
+    operations["deviceActionsRenewMdmProfile"]=1
+    operations["deviceActionsRestartDevice"]=1
+    operations["deviceActionsSendBlankpush"]=1
+    operations["deviceActionsSetName"]=1
+    operations["deviceActionsShutdown"]=1
+    operations["deviceActionsUnlockAccount"]=1
+    operations["deviceActionsUpdateInventory"]=1
+    operations["deviceInformationCancelLostMode"]=1
+    operations["deviceInformationGetDeviceActivity"]=1
+    operations["deviceInformationGetDeviceApps"]=1
+    operations["deviceInformationGetDeviceDetails"]=1
+    operations["deviceInformationGetDeviceLibraryItems"]=1
+    operations["deviceInformationGetDeviceLostModeDetails"]=1
+    operations["deviceInformationGetDeviceParameters"]=1
+    operations["deviceInformationGetDeviceStatus"]=1
+    operations["deviceInformationListDevices"]=1
+    operations["deviceSecretsGetActivationLockBypassCode"]=1
+    operations["deviceSecretsGetFilevaultRecoveryKey"]=1
+    operations["deviceSecretsGetRecoveryLockPassword"]=1
+    operations["deviceSecretsGetUnlockPin"]=1
+    operations["inHouseAppsCreateInhouseApp"]=1
+    operations["inHouseAppsDeleteInhouseApp"]=1
+    operations["inHouseAppsGetInhouseApp"]=1
+    operations["inHouseAppsListInhouseApps"]=1
+    operations["inHouseAppsUpdateInhouseApp"]=1
+    operations["inHouseAppsUploadInhouseApp"]=1
+    operations["inHouseAppsUploadInhouseAppStatus"]=1
+    operations["libraryItemsGetLibraryItemActivity"]=1
+    operations["libraryItemsGetLibraryItemStatuses"]=1
+    operations["lostModeDisableLostMode"]=1
+    operations["lostModeEnableLostMode"]=1
+    operations["lostModePlayLostModeSound"]=1
+    operations["lostModeUpdateLocation"]=1
+    operations["notesCreateDeviceNote"]=1
+    operations["notesDeleteDeviceNote"]=1
+    operations["notesGetDeviceNotes"]=1
+    operations["notesRetrieveDeviceNote"]=1
+    operations["notesUpdateDeviceNote"]=1
+    operations["prismActivationLock"]=1
+    operations["prismApplicationFirewall"]=1
+    operations["prismApplications"]=1
+    operations["prismCertificates"]=1
+    operations["prismCount"]=1
+    operations["prismDesktopAndScreensaver"]=1
+    operations["prismDeviceInformation"]=1
+    operations["prismFilevault"]=1
+    operations["prismGatekeeperAndXprotect"]=1
+    operations["prismGetCategoryExport"]=1
+    operations["prismInstalledProfiles"]=1
+    operations["prismKernelExtensions"]=1
+    operations["prismLaunchAgentsAndDaemons"]=1
+    operations["prismLocalUsers"]=1
+    operations["prismRequestCategoryExport"]=1
+    operations["prismStartupSettings"]=1
+    operations["prismSystemExtensions"]=1
+    operations["prismTransparencyDatabase"]=1
+    operations["selfServiceListSelfServiceCategories"]=1
+    operations["settingsLicensing"]=1
+    operations["tagsCreateTag"]=1
+    operations["tagsDeleteTag"]=1
+    operations["tagsGetTags"]=1
+    operations["tagsUpdateTag"]=1
+    operations["threatsGetThreatDetails"]=1
+    operations["usersDeleteUser"]=1
+    operations["usersGetUser"]=1
+    operations["usersListUsers"]=1
+
+    # An associative array of operations to their parameters
+    # Only include path, query and header parameters
+    declare -A operation_parameters
+    operation_parameters["automatedDeviceEnrollmentIntegrationsCreateAdeIntegration"]=""
+    operation_parameters["automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration"]="ade_token_id= "
+    operation_parameters["automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey"]=""
+    operation_parameters["automatedDeviceEnrollmentIntegrationsGetAdeDevice"]="device_id= "
+    operation_parameters["automatedDeviceEnrollmentIntegrationsGetAdeIntegration"]="ade_token_id= "
+    operation_parameters["automatedDeviceEnrollmentIntegrationsListAdeDevices"]="blueprint_id= user_id= dep_account= device_family= model= os= profile_status= serial_number= page= "
+    operation_parameters["automatedDeviceEnrollmentIntegrationsListAdeIntegrations"]=""
+    operation_parameters["automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken"]="ade_token_id= page= "
+    operation_parameters["automatedDeviceEnrollmentIntegrationsRenewAdeIntegration"]="ade_token_id= "
+    operation_parameters["automatedDeviceEnrollmentIntegrationsUpdateAdeDevice"]="device_id= "
+    operation_parameters["automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration"]="ade_token_id= "
+    operation_parameters["blueprintsAssignLibraryItem"]="blueprint_id= "
+    operation_parameters["blueprintsCreateBlueprint"]=""
+    operation_parameters["blueprintsDeleteBlueprint"]="blueprint_id= "
+    operation_parameters["blueprintsGetBlueprint"]="blueprint_id= "
+    operation_parameters["blueprintsGetBlueprintTemplates"]="limit= offset= "
+    operation_parameters["blueprintsGetManualEnrollmentProfile"]="blueprint_id= sso= "
+    operation_parameters["blueprintsListBlueprints"]="id= id__in= name= limit= offset= "
+    operation_parameters["blueprintsListLibraryItems"]="blueprint_id= "
+    operation_parameters["blueprintsRemoveLibraryItem"]="blueprint_id= "
+    operation_parameters["blueprintsUpdateBlueprint"]="blueprint_id= "
+    operation_parameters["customAppsCreateCustomApp"]=""
+    operation_parameters["customAppsDeleteCustomApp"]="library_item_id= "
+    operation_parameters["customAppsGetCustomApp"]="library_item_id= "
+    operation_parameters["customAppsListCustomApps"]="page= "
+    operation_parameters["customAppsUpdateCustomApp"]="library_item_id= "
+    operation_parameters["customAppsUploadCustomApp"]=""
+    operation_parameters["customProfilesCreateCustomProfile"]=""
+    operation_parameters["customProfilesDeleteCustomProfile"]="library_item_id= "
+    operation_parameters["customProfilesGetCustomProfile"]="library_item_id= "
+    operation_parameters["customProfilesListCustomProfiles"]="page= "
+    operation_parameters["customProfilesUpdateCustomProfile"]="library_item_id= "
+    operation_parameters["customScriptsCreateCustomScript"]=""
+    operation_parameters["customScriptsDeleteCustomScript"]="library_item_id= "
+    operation_parameters["customScriptsGetCustomScript"]="library_item_id= "
+    operation_parameters["customScriptsListCustomScripts"]="page= "
+    operation_parameters["customScriptsUpdateCustomScript"]="library_item_id= "
+    operation_parameters["deviceActionsClearPasscode"]="device_id= "
+    operation_parameters["deviceActionsDeleteDevice"]="device_id= "
+    operation_parameters["deviceActionsDeleteUser"]="device_id= "
+    operation_parameters["deviceActionsEraseDevice"]="device_id= "
+    operation_parameters["deviceActionsGetDeviceCommands"]="device_id= limit= offset= "
+    operation_parameters["deviceActionsLockDevice"]="device_id= "
+    operation_parameters["deviceActionsReinstallAgent"]="device_id= "
+    operation_parameters["deviceActionsRemoteDesktop"]="device_id= "
+    operation_parameters["deviceActionsRenewMdmProfile"]="device_id= "
+    operation_parameters["deviceActionsRestartDevice"]="device_id= "
+    operation_parameters["deviceActionsSendBlankpush"]="device_id= "
+    operation_parameters["deviceActionsSetName"]="device_id= "
+    operation_parameters["deviceActionsShutdown"]="device_id= "
+    operation_parameters["deviceActionsUnlockAccount"]="device_id= "
+    operation_parameters["deviceActionsUpdateInventory"]="device_id= "
+    operation_parameters["deviceInformationCancelLostMode"]="device_id= "
+    operation_parameters["deviceInformationGetDeviceActivity"]="device_id= limit= offset= "
+    operation_parameters["deviceInformationGetDeviceApps"]="device_id= "
+    operation_parameters["deviceInformationGetDeviceDetails"]="device_id= "
+    operation_parameters["deviceInformationGetDeviceLibraryItems"]="device_id= "
+    operation_parameters["deviceInformationGetDeviceLostModeDetails"]="device_id= "
+    operation_parameters["deviceInformationGetDeviceParameters"]="device_id= "
+    operation_parameters["deviceInformationGetDeviceStatus"]="device_id= "
+    operation_parameters["deviceInformationListDevices"]="asset_tag= blueprint_id= device_id= device_name= filevault_enabled= mac_address= model= ordering= os_version= platform= serial_number= tag_name= tag_name_in= tag_id= tag_id_in= user= user_email= user_id= user_name= limit= offset= "
+    operation_parameters["deviceSecretsGetActivationLockBypassCode"]="device_id= "
+    operation_parameters["deviceSecretsGetFilevaultRecoveryKey"]="device_id= "
+    operation_parameters["deviceSecretsGetRecoveryLockPassword"]="device_id= "
+    operation_parameters["deviceSecretsGetUnlockPin"]="device_id= "
+    operation_parameters["inHouseAppsCreateInhouseApp"]="Content-Type: "
+    operation_parameters["inHouseAppsDeleteInhouseApp"]="library_item_id= "
+    operation_parameters["inHouseAppsGetInhouseApp"]="library_item_id= "
+    operation_parameters["inHouseAppsListInhouseApps"]="page= "
+    operation_parameters["inHouseAppsUpdateInhouseApp"]="library_item_id= Content-Type: "
+    operation_parameters["inHouseAppsUploadInhouseApp"]="Content-Type: "
+    operation_parameters["inHouseAppsUploadInhouseAppStatus"]="pending_upload_id= "
+    operation_parameters["libraryItemsGetLibraryItemActivity"]="library_item_id= activity_type= user_id= user_email= limit= offset= "
+    operation_parameters["libraryItemsGetLibraryItemStatuses"]="library_item_id= computer_id= limit= offset= "
+    operation_parameters["lostModeDisableLostMode"]="device_id= "
+    operation_parameters["lostModeEnableLostMode"]="device_id= "
+    operation_parameters["lostModePlayLostModeSound"]="device_id= "
+    operation_parameters["lostModeUpdateLocation"]="device_id= "
+    operation_parameters["notesCreateDeviceNote"]="device_id= "
+    operation_parameters["notesDeleteDeviceNote"]="device_id= note_id= "
+    operation_parameters["notesGetDeviceNotes"]="device_id= "
+    operation_parameters["notesRetrieveDeviceNote"]="device_id= note_id= "
+    operation_parameters["notesUpdateDeviceNote"]="device_id= note_id= "
+    operation_parameters["prismActivationLock"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismApplicationFirewall"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismApplications"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismCertificates"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismCount"]="category= "
+    operation_parameters["prismDesktopAndScreensaver"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismDeviceInformation"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismFilevault"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismGatekeeperAndXprotect"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismGetCategoryExport"]="export_id= "
+    operation_parameters["prismInstalledProfiles"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismKernelExtensions"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismLaunchAgentsAndDaemons"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismLocalUsers"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismRequestCategoryExport"]=""
+    operation_parameters["prismStartupSettings"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismSystemExtensions"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["prismTransparencyDatabase"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["selfServiceListSelfServiceCategories"]=""
+    operation_parameters["settingsLicensing"]=""
+    operation_parameters["tagsCreateTag"]=""
+    operation_parameters["tagsDeleteTag"]="tag_id= "
+    operation_parameters["tagsGetTags"]="search= "
+    operation_parameters["tagsUpdateTag"]="tag_id= "
+    operation_parameters["threatsGetThreatDetails"]="classification= date_range= device_id= status= sort_by= term= limit= offset= "
+    operation_parameters["usersDeleteUser"]="user_id= "
+    operation_parameters["usersGetUser"]="user_id= "
+    operation_parameters["usersListUsers"]="email= id= integration_id= archived= "
+
+    # An associative array of possible values for enum parameters
+    declare -A operation_parameters_enum_values
+
+    #
+    # Check if this is OSX and use special __osx_init_completion function
+    #
+    if [[ `uname` =~ "Darwin" ]]; then
+        __osx_init_completion || return
+    else
+        _init_completion -s || return
+    fi
+
+
+    # Check if operation is already in the command line provided
+    for word in "${words[@]}"; do
+        if [[ -n $word && ${operations[$word]} ]]; then
+            operation="${word}"
+        fi
+    done
+
+    if [[ -z $operation ]]; then
+        case $prev in
+            --ciphers|--connect-timeout|-C|--continue-at|-F|--form|--form-string|\
+            --ftp-account|--ftp-alternative-to-user|-P|--ftp-port|-H|--header|-h|\
+            --help|--hostpubmd5|--keepalive-time|--krb|--limit-rate|--local-port|\
+            --mail-from|--mail-rcpt|--max-filesize|--max-redirs|-m|--max-time|\
+            --pass|--proto|--proto-redir|--proxy-user|--proxy1.0|-Q|--quote|-r|\
+            --range|-X|--request|--retry|--retry-delay|--retry-max-time|\
+            --socks5-gssapi-service|-t|--telnet-option|--tftp-blksize|-z|\
+            --time-cond|--url|-u|--user|-A|--user-agent|-V|--version|-w|\
+            --write-out|--resolve|--tlsuser|--tlspassword|--about)
+                return
+                ;;
+            -K|--config|-b|--cookie|-c|--cookie-jar|-D|--dump-header|--egd-file|\
+            --key|--libcurl|-o|--output|--random-file|-T|--upload-file|--trace|\
+            --trace-ascii|--netrc-file)
+                _filedir
+                return
+                ;;
+            --cacert|-E|--cert)
+                _filedir '@(c?(e)rt|cer|pem|der)'
+                return
+                ;;
+            --capath)
+                _filedir -d
+                return
+                ;;
+            --cert-type|--key-type)
+                COMPREPLY=( $( compgen -W 'DER PEM ENG' -- "$cur" ) )
+                return
+                ;;
+            --crlfile)
+                _filedir crl
+                return
+                ;;
+            -d|--data|--data-ascii|--data-binary|--data-urlencode)
+                if [[ $cur == \@* ]]; then
+                    cur=${cur:1}
+                    _filedir
+                    COMPREPLY=( "${COMPREPLY[@]/#/@}" )
+                fi
+                return
+                ;;
+            --delegation)
+                COMPREPLY=( $( compgen -W 'none policy always' -- "$cur" ) )
+                return
+                ;;
+            --engine)
+                COMPREPLY=( $( compgen -W 'list' -- "$cur" ) )
+                return
+                ;;
+            --ftp-method)
+                COMPREPLY=( $( compgen -W 'multicwd nocwd singlecwd' -- "$cur" ) )
+                return
+                ;;
+            --ftp-ssl-ccc-mode)
+                COMPREPLY=( $( compgen -W 'active passive' -- "$cur" ) )
+                return
+                ;;
+            --interface)
+                _available_interfaces -a
+                return
+                ;;
+            -x|--proxy|--socks4|--socks4a|--socks5|--socks5-hostname)
+                _known_hosts_real
+                return
+                ;;
+            --pubkey)
+                _filedir pub
+                return
+                ;;
+            --stderr)
+                COMPREPLY=( $( compgen -W '-' -- "$cur" ) )
+                _filedir
+                return
+                ;;
+            --tlsauthtype)
+                COMPREPLY=( $( compgen -W 'SRP' -- "$cur" ) )
+                return
+                ;;
+            --host)
+                COMPREPLY=( $( compgen -W 'http:// https://' -- "$cur" ) )
+                return
+                ;;
+            -ct|--content-type|-ac|--accept)
+                COMPREPLY=( $( compgen -W '${!mime_type_abbreviations[*]}' -- "$cur" ) )
+                return
+                ;;
+        esac
+    fi
+
+    #
+    # Complete the server address based on ~/.ssh/known_hosts
+    # and ~/.ssh/config
+    #
+    local prefix=${COMP_WORDS[COMP_CWORD-2]}
+    local colon=${COMP_WORDS[COMP_CWORD-1]}
+    if [[ "$colon" == ":" && ( $prefix == "https" || $prefix == "http" ) ]]; then
+        COMPREPLY=()
+        local comp_ssh_hosts=`[[ -f ~/.ssh/known_hosts ]] && \
+                              ( cat ~/.ssh/known_hosts | \
+                              grep '^[a-zA-Z0-9]' | \
+                              cut -f 1 -d ' ' | \
+                              sed -e s/,.*//g | \
+                              grep -v ^# | \
+                              uniq | \
+                              grep -v "\[" ) ;
+                              [[ -f ~/.ssh/config ]] && \
+                              ( cat ~/.ssh/config | \
+                              grep "^Host " | \
+                              awk '{print $2}' )`
+        COMPREPLY=( $( compgen -P '//' -W '${comp_ssh_hosts}' -- "${cur:2}") )
+        return
+    fi
+
+    #
+    # Complete the kandji and cURL's arguments
+    #
+    if [[ $cur == -* ]]; then
+        COMPREPLY=( $( compgen -W '$(_parse_help curl) $(_parse_help $1)' -- "$cur" ) )
+        return
+    fi
+
+    #
+    # If the argument starts with a letter this could be either an operation
+    # or an operation parameter
+    # When $cur is empty, suggest the list of operations by default
+    #
+    if [[ $cur =~ ^[A-Za-z_0-9]* ]]; then
+        # If operation has not been yet selected, suggest the list of operations
+        # otherwise suggest arguments of this operation as declared in the
+        # OpenAPI specification
+        if [[ -z $operation ]]; then
+            COMPREPLY=( $(compgen -W '${!operations[*]}' -- ${cur}) )
+        else
+            COMPREPLY=( $(compgen -W '${operation_parameters[$operation]}' -- ${cur}) )
+            compopt -o nospace
+        fi
+        return
+    fi
+
+} &&
+complete -F _kandji kandji
+
+# ex: ts=4 sw=4 et filetype=sh

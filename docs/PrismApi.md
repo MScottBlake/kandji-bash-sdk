@@ -34,7 +34,7 @@ Get activation lock attributes for devices.
 ### Example
 
 ```bash
-kandji_sdk prismActivationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismActivationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -75,7 +75,7 @@ Get Application Firewall details for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismApplicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismApplicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -116,7 +116,7 @@ Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.
 ### Example
 
 ```bash
-kandji_sdk prismApplications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismApplications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -157,7 +157,7 @@ Get certificate details.
 ### Example
 
 ```bash
-kandji_sdk prismCertificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismCertificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -200,7 +200,7 @@ Count
 ### Example
 
 ```bash
-kandji_sdk prismCount  category=value
+kandji prismCount  category=value
 ```
 
 ### Parameters
@@ -241,7 +241,7 @@ Get Desktop and Screensaver details for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismDesktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismDesktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -282,7 +282,7 @@ Get attributes about devices.
 ### Example
 
 ```bash
-kandji_sdk prismDeviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismDeviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -324,7 +324,7 @@ Get FileVault information for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismFilevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismFilevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -365,7 +365,7 @@ Get Gatekeeper and XProtect attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismGatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismGatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -408,7 +408,7 @@ Get category export
 ### Example
 
 ```bash
-kandji_sdk prismGetCategoryExport export_id=value
+kandji prismGetCategoryExport export_id=value
 ```
 
 ### Parameters
@@ -443,7 +443,7 @@ Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.
 ### Example
 
 ```bash
-kandji_sdk prismInstalledProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismInstalledProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -484,7 +484,7 @@ Get Kernel Extension attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismKernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismKernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -525,7 +525,7 @@ Get Launch Agents and Daemons installed on macOS.
 ### Example
 
 ```bash
-kandji_sdk prismLaunchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismLaunchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -566,7 +566,7 @@ Get Local Users detials for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismLocalUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismLocalUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -651,7 +651,7 @@ Request category export
 ### Example
 
 ```bash
-kandji_sdk prismRequestCategoryExport
+kandji prismRequestCategoryExport
 ```
 
 ### Parameters
@@ -686,7 +686,7 @@ Get Startup settings for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismStartupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismStartupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -727,7 +727,7 @@ Get System Extension attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismSystemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismSystemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -768,7 +768,7 @@ Get Transparency Database (TCC) attributes for macOS.
 ### Example
 
 ```bash
-kandji_sdk prismTransparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji prismTransparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters

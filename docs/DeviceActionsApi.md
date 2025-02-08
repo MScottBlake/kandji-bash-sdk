@@ -31,7 +31,7 @@ This endpoint sends an MDM command to clear a device passcode. Available for iPh
 ### Example
 
 ```bash
-kandji_sdk deviceActionsClearPasscode device_id=value
+kandji deviceActionsClearPasscode device_id=value
 ```
 
 ### Parameters
@@ -66,7 +66,7 @@ This endpoint sends an MDM command to delete a device. This will remove the devi
 ### Example
 
 ```bash
-kandji_sdk deviceActionsDeleteDevice device_id=value
+kandji deviceActionsDeleteDevice device_id=value
 ```
 
 ### Parameters
@@ -106,7 +106,7 @@ Delete User
 ### Example
 
 ```bash
-kandji_sdk deviceActionsDeleteUser device_id=value
+kandji deviceActionsDeleteUser device_id=value
 ```
 
 ### Parameters
@@ -186,7 +186,7 @@ Erase Device
 ### Example
 
 ```bash
-kandji_sdk deviceActionsEraseDevice device_id=value
+kandji deviceActionsEraseDevice device_id=value
 ```
 
 ### Parameters
@@ -230,7 +230,7 @@ Get Device Commands
 ### Example
 
 ```bash
-kandji_sdk deviceActionsGetDeviceCommands device_id=value  limit=value  offset=value
+kandji deviceActionsGetDeviceCommands device_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -291,7 +291,7 @@ Lock Device
 ### Example
 
 ```bash
-kandji_sdk deviceActionsLockDevice device_id=value
+kandji deviceActionsLockDevice device_id=value
 ```
 
 ### Parameters
@@ -327,7 +327,7 @@ This endpoint sends an MDM command reinstall the Kandji Agent. Available for mac
 ### Example
 
 ```bash
-kandji_sdk deviceActionsReinstallAgent device_id=value
+kandji deviceActionsReinstallAgent device_id=value
 ```
 
 ### Parameters
@@ -365,7 +365,7 @@ Remote Desktop
 ### Example
 
 ```bash
-kandji_sdk deviceActionsRemoteDesktop device_id=value
+kandji deviceActionsRemoteDesktop device_id=value
 ```
 
 ### Parameters
@@ -401,7 +401,7 @@ This endpoint sends an MDM command to re-install the existing root MDM profile f
 ### Example
 
 ```bash
-kandji_sdk deviceActionsRenewMdmProfile device_id=value
+kandji deviceActionsRenewMdmProfile device_id=value
 ```
 
 ### Parameters
@@ -442,7 +442,7 @@ Restart Device
 ### Example
 
 ```bash
-kandji_sdk deviceActionsRestartDevice device_id=value
+kandji deviceActionsRestartDevice device_id=value
 ```
 
 ### Parameters
@@ -479,7 +479,7 @@ Send Blankpush
 ### Example
 
 ```bash
-kandji_sdk deviceActionsSendBlankpush device_id=value
+kandji deviceActionsSendBlankpush device_id=value
 ```
 
 ### Parameters
@@ -517,7 +517,7 @@ Set Name
 ### Example
 
 ```bash
-kandji_sdk deviceActionsSetName device_id=value
+kandji deviceActionsSetName device_id=value
 ```
 
 ### Parameters
@@ -553,7 +553,7 @@ This endpoint sends an MDM command to shutdown a device.
 ### Example
 
 ```bash
-kandji_sdk deviceActionsShutdown device_id=value
+kandji deviceActionsShutdown device_id=value
 ```
 
 ### Parameters
@@ -591,7 +591,7 @@ Unlock Account
 ### Example
 
 ```bash
-kandji_sdk deviceActionsUnlockAccount device_id=value
+kandji deviceActionsUnlockAccount device_id=value
 ```
 
 ### Parameters
@@ -627,7 +627,7 @@ This endpoint sends an MDM command to start a check-in for a device, initiating 
 ### Example
 
 ```bash
-kandji_sdk deviceActionsUpdateInventory device_id=value
+kandji deviceActionsUpdateInventory device_id=value
 ```
 
 ### Parameters

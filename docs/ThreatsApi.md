@@ -17,7 +17,7 @@ Get threat details.
 ### Example
 
 ```bash
-kandji_sdk threatsGetThreatDetails  classification=value  date_range=value  device_id=value  status=value  sort_by=value  term=value  limit=value  offset=value
+kandji threatsGetThreatDetails  classification=value  date_range=value  device_id=value  status=value  sort_by=value  term=value  limit=value  offset=value
 ```
 
 ### Parameters

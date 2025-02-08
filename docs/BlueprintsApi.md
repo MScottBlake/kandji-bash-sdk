@@ -70,7 +70,7 @@ Assign Library Item
 ### Example
 
 ```bash
-kandji_sdk blueprintsAssignLibraryItem blueprint_id=value
+kandji blueprintsAssignLibraryItem blueprint_id=value
 ```
 
 ### Parameters
@@ -108,7 +108,7 @@ Create Blueprint
 ### Example
 
 ```bash
-kandji_sdk blueprintsCreateBlueprint
+kandji blueprintsCreateBlueprint
 ```
 
 ### Parameters
@@ -152,7 +152,7 @@ Delete Blueprint
 ### Example
 
 ```bash
-kandji_sdk blueprintsDeleteBlueprint blueprint_id=value
+kandji blueprintsDeleteBlueprint blueprint_id=value
 ```
 
 ### Parameters
@@ -189,7 +189,7 @@ Get Blueprint
 ### Example
 
 ```bash
-kandji_sdk blueprintsGetBlueprint blueprint_id=value
+kandji blueprintsGetBlueprint blueprint_id=value
 ```
 
 ### Parameters
@@ -222,7 +222,7 @@ Get Blueprint Templates
 ### Example
 
 ```bash
-kandji_sdk blueprintsGetBlueprintTemplates  limit=value  offset=value
+kandji blueprintsGetBlueprintTemplates  limit=value  offset=value
 ```
 
 ### Parameters
@@ -269,7 +269,7 @@ Get Manual Enrollment Profile
 ### Example
 
 ```bash
-kandji_sdk blueprintsGetManualEnrollmentProfile blueprint_id=value  sso=value
+kandji blueprintsGetManualEnrollmentProfile blueprint_id=value  sso=value
 ```
 
 ### Parameters
@@ -305,7 +305,7 @@ This request returns a list of a blueprint records in the Kandji tenant. Optiona
 ### Example
 
 ```bash
-kandji_sdk blueprintsListBlueprints  id=value  id__in=value  name=value  limit=value  offset=value
+kandji blueprintsListBlueprints  id=value  id__in=value  name=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -363,7 +363,7 @@ List Library Items
 ### Example
 
 ```bash
-kandji_sdk blueprintsListLibraryItems blueprint_id=value
+kandji blueprintsListLibraryItems blueprint_id=value
 ```
 
 ### Parameters
@@ -439,7 +439,7 @@ Remove Library Item
 ### Example
 
 ```bash
-kandji_sdk blueprintsRemoveLibraryItem blueprint_id=value
+kandji blueprintsRemoveLibraryItem blueprint_id=value
 ```
 
 ### Parameters
@@ -477,7 +477,7 @@ Update Blueprint
 ### Example
 
 ```bash
-kandji_sdk blueprintsUpdateBlueprint blueprint_id=value
+kandji blueprintsUpdateBlueprint blueprint_id=value
 ```
 
 ### Parameters

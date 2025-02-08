@@ -2,10 +2,10 @@ FROM alpine:3.12.0
 
 RUN apk add --update --no-cache curl ca-certificates bash bash-completion zsh curl git vim ncurses util-linux
 
-ADD kandji_sdk /usr/bin/kandji_sdk
-ADD _kandji_sdk /usr/local/share/zsh/site-functions/_kandji_sdk
-ADD kandji_sdk.bash-completion /etc/bash-completion.d/kandji_sdk
-RUN chmod 755 /usr/bin/kandji_sdk
+ADD kandji /usr/bin/kandji
+ADD _kandji /usr/local/share/zsh/site-functions/_kandji
+ADD kandji.bash-completion /etc/bash-completion.d/kandji
+RUN chmod 755 /usr/bin/kandji
 
 #
 # Install oh-my-zsh
@@ -17,7 +17,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh
 #
 RUN echo '\n\
 . /etc/bash_completion\n\
-source /etc/bash-completion.d/kandji_sdk\n\
+source /etc/bash-completion.d/kandji\n\
 ' >> ~/.bashrc
 
 #
@@ -41,13 +41,13 @@ For convenience, you can export the following environment variables:\n\
 $(tput setaf 7)Basic usage:$(tput sgr0)\n\
 \n\
 $(tput setaf 3)Print the list of operations available on the service$(tput sgr0)\n\
-$ kandji_sdk -h\n\
+$ kandji -h\n\
 \n\
 $(tput setaf 3)Print the service description$(tput sgr0)\n\
-$ kandji_sdk --about\n\
+$ kandji --about\n\
 \n\
 $(tput setaf 3)Print detailed information about specific operation$(tput sgr0)\n\
-$ kandji_sdk <operationId> -h\n\
+$ kandji <operationId> -h\n\
 \n\
 By default you are logged into Zsh with full autocompletion for your REST API,\n\
 but you can switch to Bash, where basic autocompletion is also supported.\n\

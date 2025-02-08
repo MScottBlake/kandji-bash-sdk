@@ -21,7 +21,7 @@ This request allows you to create a custom profile in the Kandji library.
 ### Example
 
 ```bash
-kandji_sdk customProfilesCreateCustomProfile
+kandji customProfilesCreateCustomProfile
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ Delete Custom Profile
 ### Example
 
 ```bash
-kandji_sdk customProfilesDeleteCustomProfile library_item_id=value
+kandji customProfilesDeleteCustomProfile library_item_id=value
 ```
 
 ### Parameters
@@ -98,7 +98,7 @@ Get Custom Profile
 ### Example
 
 ```bash
-kandji_sdk customProfilesGetCustomProfile library_item_id=value
+kandji customProfilesGetCustomProfile library_item_id=value
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ This endpoint makes a request to retrieve a list of custom profiles from the Kan
 ### Example
 
 ```bash
-kandji_sdk customProfilesListCustomProfiles  page=value
+kandji customProfilesListCustomProfiles  page=value
 ```
 
 ### Parameters
@@ -170,7 +170,7 @@ Update Custom Profile
 ### Example
 
 ```bash
-kandji_sdk customProfilesUpdateCustomProfile library_item_id=value
+kandji customProfilesUpdateCustomProfile library_item_id=value
 ```
 
 ### Parameters

@@ -25,7 +25,7 @@ This endpoint can be used to send a cancelation request if Lost Mode is in an er
 ### Example
 
 ```bash
-kandji_sdk deviceInformationCancelLostMode device_id=value
+kandji deviceInformationCancelLostMode device_id=value
 ```
 
 ### Parameters
@@ -60,7 +60,7 @@ This request returns the device activity for a specified Device ID.
 ### Example
 
 ```bash
-kandji_sdk deviceInformationGetDeviceActivity device_id=value  limit=value  offset=value
+kandji deviceInformationGetDeviceActivity device_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -98,7 +98,7 @@ Get Device Apps
 ### Example
 
 ```bash
-kandji_sdk deviceInformationGetDeviceApps device_id=value
+kandji deviceInformationGetDeviceApps device_id=value
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ This request returns the device details for a specified Device ID.
 ### Example
 
 ```bash
-kandji_sdk deviceInformationGetDeviceDetails device_id=value
+kandji deviceInformationGetDeviceDetails device_id=value
 ```
 
 ### Parameters
@@ -246,7 +246,7 @@ Get Device Library Items
 ### Example
 
 ```bash
-kandji_sdk deviceInformationGetDeviceLibraryItems device_id=value
+kandji deviceInformationGetDeviceLibraryItems device_id=value
 ```
 
 ### Parameters
@@ -282,7 +282,7 @@ Get Device Lost Mode details
 ### Example
 
 ```bash
-kandji_sdk deviceInformationGetDeviceLostModeDetails device_id=value
+kandji deviceInformationGetDeviceLostModeDetails device_id=value
 ```
 
 ### Parameters
@@ -362,7 +362,7 @@ Get Device Parameters
 ### Example
 
 ```bash
-kandji_sdk deviceInformationGetDeviceParameters device_id=value
+kandji deviceInformationGetDeviceParameters device_id=value
 ```
 
 ### Parameters
@@ -499,7 +499,7 @@ Get Device Status
 ### Example
 
 ```bash
-kandji_sdk deviceInformationGetDeviceStatus device_id=value
+kandji deviceInformationGetDeviceStatus device_id=value
 ```
 
 ### Parameters
@@ -535,7 +535,7 @@ List Devices
 ### Example
 
 ```bash
-kandji_sdk deviceInformationListDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
+kandji deviceInformationListDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
 ```
 
 ### Parameters

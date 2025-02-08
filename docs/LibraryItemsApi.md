@@ -21,7 +21,7 @@ Get Library Item Activity
 ### Example
 
 ```bash
-kandji_sdk libraryItemsGetLibraryItemActivity library_item_id=value  activity_type=value  user_id=value  user_email=value  limit=value  offset=value
+kandji libraryItemsGetLibraryItemActivity library_item_id=value  activity_type=value  user_id=value  user_email=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -63,7 +63,7 @@ Get Library Item Statuses
 ### Example
 
 ```bash
-kandji_sdk libraryItemsGetLibraryItemStatuses library_item_id=value  computer_id=value  limit=value  offset=value
+kandji libraryItemsGetLibraryItemStatuses library_item_id=value  computer_id=value  limit=value  offset=value
 ```
 
 ### Parameters

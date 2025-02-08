@@ -17,7 +17,7 @@ Returns Kandji tenant licensing and utilization information.
 ### Example
 
 ```bash
-kandji_sdk settingsLicensing
+kandji settingsLicensing
 ```
 
 ### Parameters

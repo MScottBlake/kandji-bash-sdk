@@ -28,7 +28,7 @@ Create ADE integration
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsCreateAdeIntegration
+kandji automatedDeviceEnrollmentIntegrationsCreateAdeIntegration
 ```
 
 ### Parameters
@@ -69,7 +69,7 @@ Delete ADE integration
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration ade_token_id=value
+kandji automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -105,7 +105,7 @@ Download ADE public key
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey
+kandji automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey
 ```
 
 ### Parameters
@@ -137,7 +137,7 @@ Get information about a specific Automated Device Enrollment device.
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsGetAdeDevice device_id=value
+kandji automatedDeviceEnrollmentIntegrationsGetAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -172,7 +172,7 @@ This request returns a specific ADE integration based on the <code>ade_token_id<
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsGetAdeIntegration ade_token_id=value
+kandji automatedDeviceEnrollmentIntegrationsGetAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -207,7 +207,7 @@ Get a list of Automated Device Enrollment devices.
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsListAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
+kandji automatedDeviceEnrollmentIntegrationsListAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
 ```
 
 ### Parameters
@@ -250,7 +250,7 @@ This request returns a list of configured ADE integrations.
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsListAdeIntegrations
+kandji automatedDeviceEnrollmentIntegrationsListAdeIntegrations
 ```
 
 ### Parameters
@@ -284,7 +284,7 @@ List devices associated to ADE token
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken ade_token_id=value  page=value
+kandji automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken ade_token_id=value  page=value
 ```
 
 ### Parameters
@@ -321,7 +321,7 @@ Renew ADE integration
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsRenewAdeIntegration ade_token_id=value
+kandji automatedDeviceEnrollmentIntegrationsRenewAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -362,7 +362,7 @@ Update ADE device
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsUpdateAdeDevice device_id=value
+kandji automatedDeviceEnrollmentIntegrationsUpdateAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -399,7 +399,7 @@ Update ADE integration
 ### Example
 
 ```bash
-kandji_sdk automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration ade_token_id=value
+kandji automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration ade_token_id=value
 ```
 
 ### Parameters

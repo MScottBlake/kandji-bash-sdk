@@ -21,7 +21,7 @@ This request allows you to create a custom script in the Kandji library.
 ### Example
 
 ```bash
-kandji_sdk customScriptsCreateCustomScript
+kandji customScriptsCreateCustomScript
 ```
 
 ### Parameters
@@ -59,7 +59,7 @@ Delete Custom Script
 ### Example
 
 ```bash
-kandji_sdk customScriptsDeleteCustomScript library_item_id=value
+kandji customScriptsDeleteCustomScript library_item_id=value
 ```
 
 ### Parameters
@@ -96,7 +96,7 @@ Get Custom Script
 ### Example
 
 ```bash
-kandji_sdk customScriptsGetCustomScript library_item_id=value
+kandji customScriptsGetCustomScript library_item_id=value
 ```
 
 ### Parameters
@@ -131,7 +131,7 @@ This endpoint makes a request to retrieve a list of custom scripts from the Kand
 ### Example
 
 ```bash
-kandji_sdk customScriptsListCustomScripts  page=value
+kandji customScriptsListCustomScripts  page=value
 ```
 
 ### Parameters
@@ -166,7 +166,7 @@ This request allows you to update a custom script in the Kandji library.
 ### Example
 
 ```bash
-kandji_sdk customScriptsUpdateCustomScript library_item_id=value
+kandji customScriptsUpdateCustomScript library_item_id=value
 ```
 
 ### Parameters

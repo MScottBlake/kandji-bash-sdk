@@ -23,7 +23,7 @@ Create Custom App
 ### Example
 
 ```bash
-kandji_sdk customAppsCreateCustomApp
+kandji customAppsCreateCustomApp
 ```
 
 ### Parameters
@@ -67,7 +67,7 @@ Delete Custom App
 ### Example
 
 ```bash
-kandji_sdk customAppsDeleteCustomApp library_item_id=value
+kandji customAppsDeleteCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -104,7 +104,7 @@ Get Custom App
 ### Example
 
 ```bash
-kandji_sdk customAppsGetCustomApp library_item_id=value
+kandji customAppsGetCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -139,7 +139,7 @@ This endpoint makes a request to retrieve a list of custom apps from the Kandji 
 ### Example
 
 ```bash
-kandji_sdk customAppsListCustomApps  page=value
+kandji customAppsListCustomApps  page=value
 ```
 
 ### Parameters
@@ -177,7 +177,7 @@ Update Custom App
 ### Example
 
 ```bash
-kandji_sdk customAppsUpdateCustomApp library_item_id=value
+kandji customAppsUpdateCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -217,7 +217,7 @@ Upload Custom App
 ### Example
 
 ```bash
-kandji_sdk customAppsUploadCustomApp
+kandji customAppsUploadCustomApp
 ```
 
 ### Parameters
