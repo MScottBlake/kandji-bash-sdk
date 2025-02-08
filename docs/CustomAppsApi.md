@@ -4,16 +4,16 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**customAppsCreateCustomApp**](CustomAppsApi.md#customAppsCreateCustomApp) | **POST** /api/v1/library/custom-apps | Create Custom App
-[**customAppsDeleteCustomApp**](CustomAppsApi.md#customAppsDeleteCustomApp) | **DELETE** /api/v1/library/custom-apps/{library_item_id} | Delete Custom App
-[**customAppsGetCustomApp**](CustomAppsApi.md#customAppsGetCustomApp) | **GET** /api/v1/library/custom-apps/{library_item_id} | Get Custom App
-[**customAppsListCustomApps**](CustomAppsApi.md#customAppsListCustomApps) | **GET** /api/v1/library/custom-apps | List Custom Apps
-[**customAppsUpdateCustomApp**](CustomAppsApi.md#customAppsUpdateCustomApp) | **PATCH** /api/v1/library/custom-apps/{library_item_id} | Update Custom App
-[**customAppsUploadCustomApp**](CustomAppsApi.md#customAppsUploadCustomApp) | **POST** /api/v1/library/custom-apps/upload | Upload Custom App
+[**createCustomApp**](CustomAppsApi.md#createCustomApp) | **POST** /api/v1/library/custom-apps | Create Custom App
+[**deleteCustomApp**](CustomAppsApi.md#deleteCustomApp) | **DELETE** /api/v1/library/custom-apps/{library_item_id} | Delete Custom App
+[**getCustomApp**](CustomAppsApi.md#getCustomApp) | **GET** /api/v1/library/custom-apps/{library_item_id} | Get Custom App
+[**listCustomApps**](CustomAppsApi.md#listCustomApps) | **GET** /api/v1/library/custom-apps | List Custom Apps
+[**updateCustomApp**](CustomAppsApi.md#updateCustomApp) | **PATCH** /api/v1/library/custom-apps/{library_item_id} | Update Custom App
+[**uploadCustomApp**](CustomAppsApi.md#uploadCustomApp) | **POST** /api/v1/library/custom-apps/upload | Upload Custom App
 
 
 
-## customAppsCreateCustomApp
+## createCustomApp
 
 Create Custom App
 
@@ -23,7 +23,7 @@ Create Custom App
 ### Example
 
 ```bash
-kandji customAppsCreateCustomApp
+kandji createCustomApp
 ```
 
 ### Parameters
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customAppsDeleteCustomApp
+## deleteCustomApp
 
 Delete Custom App
 
@@ -67,7 +67,7 @@ Delete Custom App
 ### Example
 
 ```bash
-kandji customAppsDeleteCustomApp library_item_id=value
+kandji deleteCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customAppsGetCustomApp
+## getCustomApp
 
 Get Custom App
 
@@ -104,7 +104,7 @@ Get Custom App
 ### Example
 
 ```bash
-kandji customAppsGetCustomApp library_item_id=value
+kandji getCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customAppsListCustomApps
+## listCustomApps
 
 List Custom Apps
 
@@ -139,7 +139,7 @@ This endpoint makes a request to retrieve a list of custom apps from the Kandji 
 ### Example
 
 ```bash
-kandji customAppsListCustomApps  page=value
+kandji listCustomApps  page=value
 ```
 
 ### Parameters
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customAppsUpdateCustomApp
+## updateCustomApp
 
 Update Custom App
 
@@ -177,7 +177,7 @@ Update Custom App
 ### Example
 
 ```bash
-kandji customAppsUpdateCustomApp library_item_id=value
+kandji updateCustomApp library_item_id=value
 ```
 
 ### Parameters
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customAppsUploadCustomApp
+## uploadCustomApp
 
 Upload Custom App
 
@@ -217,7 +217,7 @@ Upload Custom App
 ### Example
 
 ```bash
-kandji customAppsUploadCustomApp
+kandji uploadCustomApp
 ```
 
 ### Parameters

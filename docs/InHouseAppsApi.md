@@ -4,17 +4,17 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**inhouseAppsCreateInhouseApp**](InHouseAppsApi.md#inhouseAppsCreateInhouseApp) | **POST** /api/v1/library/ipa-apps | Create In-House App
-[**inhouseAppsDeleteInhouseApp**](InHouseAppsApi.md#inhouseAppsDeleteInhouseApp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
-[**inhouseAppsGetInhouseApp**](InHouseAppsApi.md#inhouseAppsGetInhouseApp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
-[**inhouseAppsListInhouseApps**](InHouseAppsApi.md#inhouseAppsListInhouseApps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
-[**inhouseAppsUpdateInhouseApp**](InHouseAppsApi.md#inhouseAppsUpdateInhouseApp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
-[**inhouseAppsUploadInhouseApp**](InHouseAppsApi.md#inhouseAppsUploadInhouseApp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
-[**inhouseAppsUploadInhouseAppStatus**](InHouseAppsApi.md#inhouseAppsUploadInhouseAppStatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
+[**createInhouseApp**](InHouseAppsApi.md#createInhouseApp) | **POST** /api/v1/library/ipa-apps | Create In-House App
+[**deleteInhouseApp**](InHouseAppsApi.md#deleteInhouseApp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
+[**getInhouseApp**](InHouseAppsApi.md#getInhouseApp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
+[**listInhouseApps**](InHouseAppsApi.md#listInhouseApps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
+[**updateInhouseApp**](InHouseAppsApi.md#updateInhouseApp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
+[**uploadInhouseApp**](InHouseAppsApi.md#uploadInhouseApp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
+[**uploadInhouseAppStatus**](InHouseAppsApi.md#uploadInhouseAppStatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
 
 
 
-## inhouseAppsCreateInhouseApp
+## createInhouseApp
 
 Create In-House App
 
@@ -25,7 +25,7 @@ Create In-House App
 ### Example
 
 ```bash
-kandji inhouseAppsCreateInhouseApp Content-Type:value
+kandji createInhouseApp Content-Type:value
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## inhouseAppsDeleteInhouseApp
+## deleteInhouseApp
 
 Delete In-House App
 
@@ -64,7 +64,7 @@ Delete In-House App
 ### Example
 
 ```bash
-kandji inhouseAppsDeleteInhouseApp library_item_id=value
+kandji deleteInhouseApp library_item_id=value
 ```
 
 ### Parameters
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## inhouseAppsGetInhouseApp
+## getInhouseApp
 
 Get In-House App
 
@@ -101,7 +101,7 @@ Get In-House App
 ### Example
 
 ```bash
-kandji inhouseAppsGetInhouseApp library_item_id=value
+kandji getInhouseApp library_item_id=value
 ```
 
 ### Parameters
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## inhouseAppsListInhouseApps
+## listInhouseApps
 
 List In-House Apps
 
@@ -136,7 +136,7 @@ This endpoint makes a request to retrieve a list of In-House Apps from the Kandj
 ### Example
 
 ```bash
-kandji inhouseAppsListInhouseApps  page=value
+kandji listInhouseApps  page=value
 ```
 
 ### Parameters
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## inhouseAppsUpdateInhouseApp
+## updateInhouseApp
 
 Update In-House App
 
@@ -174,7 +174,7 @@ Update In-House App
 ### Example
 
 ```bash
-kandji inhouseAppsUpdateInhouseApp library_item_id=value Content-Type:value
+kandji updateInhouseApp library_item_id=value Content-Type:value
 ```
 
 ### Parameters
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## inhouseAppsUploadInhouseApp
+## uploadInhouseApp
 
 Upload In-House App
 
@@ -215,7 +215,7 @@ Upload In-House App
 ### Example
 
 ```bash
-kandji inhouseAppsUploadInhouseApp Content-Type:value
+kandji uploadInhouseApp Content-Type:value
 ```
 
 ### Parameters
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## inhouseAppsUploadInhouseAppStatus
+## uploadInhouseAppStatus
 
 Upload In-House App Status
 
@@ -256,7 +256,7 @@ Upload In-House App Status
 ### Example
 
 ```bash
-kandji inhouseAppsUploadInhouseAppStatus pending_upload_id=value
+kandji uploadInhouseAppStatus pending_upload_id=value
 ```
 
 ### Parameters

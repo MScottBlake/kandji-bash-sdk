@@ -4,11 +4,11 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**threatsGetThreatDetails**](ThreatsApi.md#threatsGetThreatDetails) | **GET** /api/v1/threat-details | Get Threat Details
+[**getThreatDetails**](ThreatsApi.md#getThreatDetails) | **GET** /api/v1/threat-details | Get Threat Details
 
 
 
-## threatsGetThreatDetails
+## getThreatDetails
 
 Get Threat Details
 
@@ -17,7 +17,7 @@ Get threat details.
 ### Example
 
 ```bash
-kandji threatsGetThreatDetails  classification=value  date_range=value  device_id=value  status=value  sort_by=value  term=value  limit=value  offset=value
+kandji getThreatDetails  classification=value  date_range=value  device_id=value  status=value  sort_by=value  term=value  limit=value  offset=value
 ```
 
 ### Parameters

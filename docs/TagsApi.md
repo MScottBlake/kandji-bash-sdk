@@ -4,14 +4,14 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tagsCreateTag**](TagsApi.md#tagsCreateTag) | **POST** /api/v1/tags | Create Tag
-[**tagsDeleteTag**](TagsApi.md#tagsDeleteTag) | **DELETE** /api/v1/tags/{tag_id} | Delete Tag
-[**tagsGetTags**](TagsApi.md#tagsGetTags) | **GET** /api/v1/tags | Get Tags
-[**tagsUpdateTag**](TagsApi.md#tagsUpdateTag) | **PATCH** /api/v1/tags/{tag_id} | Update Tag
+[**createTag**](TagsApi.md#createTag) | **POST** /api/v1/tags | Create Tag
+[**deleteTag**](TagsApi.md#deleteTag) | **DELETE** /api/v1/tags/{tag_id} | Delete Tag
+[**getTags**](TagsApi.md#getTags) | **GET** /api/v1/tags | Get Tags
+[**updateTag**](TagsApi.md#updateTag) | **PATCH** /api/v1/tags/{tag_id} | Update Tag
 
 
 
-## tagsCreateTag
+## createTag
 
 Create Tag
 
@@ -20,7 +20,7 @@ Create a tag. Can only create one tag per request.
 ### Example
 
 ```bash
-kandji tagsCreateTag
+kandji createTag
 ```
 
 ### Parameters
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## tagsDeleteTag
+## deleteTag
 
 Delete Tag
 
@@ -57,7 +57,7 @@ Delete Tag
 ### Example
 
 ```bash
-kandji tagsDeleteTag tag_id=value
+kandji deleteTag tag_id=value
 ```
 
 ### Parameters
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## tagsGetTags
+## getTags
 
 Get Tags
 
@@ -92,7 +92,7 @@ Return configured tags.
 ### Example
 
 ```bash
-kandji tagsGetTags  search=value
+kandji getTags  search=value
 ```
 
 ### Parameters
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## tagsUpdateTag
+## updateTag
 
 Update Tag
 
@@ -129,7 +129,7 @@ Update Tag
 ### Example
 
 ```bash
-kandji tagsUpdateTag tag_id=value
+kandji updateTag tag_id=value
 ```
 
 ### Parameters

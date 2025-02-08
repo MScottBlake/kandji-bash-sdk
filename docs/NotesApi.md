@@ -4,15 +4,15 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**notesCreateDeviceNote**](NotesApi.md#notesCreateDeviceNote) | **POST** /api/v1/devices/{device_id}/notes | Create Device Note
-[**notesDeleteDeviceNote**](NotesApi.md#notesDeleteDeviceNote) | **DELETE** /api/v1/devices/{device_id}/notes/{note_id} | Delete Device Note
-[**notesGetDeviceNotes**](NotesApi.md#notesGetDeviceNotes) | **GET** /api/v1/devices/{device_id}/notes | Get Device Notes
-[**notesRetrieveDeviceNote**](NotesApi.md#notesRetrieveDeviceNote) | **GET** /api/v1/devices/{device_id}/notes/{note_id} | Retrieve Device Note
-[**notesUpdateDeviceNote**](NotesApi.md#notesUpdateDeviceNote) | **PATCH** /api/v1/devices/{device_id}/notes/{note_id} | Update Device Note
+[**createDeviceNote**](NotesApi.md#createDeviceNote) | **POST** /api/v1/devices/{device_id}/notes | Create Device Note
+[**deleteDeviceNote**](NotesApi.md#deleteDeviceNote) | **DELETE** /api/v1/devices/{device_id}/notes/{note_id} | Delete Device Note
+[**getDeviceNotes**](NotesApi.md#getDeviceNotes) | **GET** /api/v1/devices/{device_id}/notes | Get Device Notes
+[**retrieveDeviceNote**](NotesApi.md#retrieveDeviceNote) | **GET** /api/v1/devices/{device_id}/notes/{note_id} | Retrieve Device Note
+[**updateDeviceNote**](NotesApi.md#updateDeviceNote) | **PATCH** /api/v1/devices/{device_id}/notes/{note_id} | Update Device Note
 
 
 
-## notesCreateDeviceNote
+## createDeviceNote
 
 Create Device Note
 
@@ -21,7 +21,7 @@ This request creates a note for the specified device ID.
 ### Example
 
 ```bash
-kandji notesCreateDeviceNote device_id=value
+kandji createDeviceNote device_id=value
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## notesDeleteDeviceNote
+## deleteDeviceNote
 
 Delete Device Note
 
@@ -57,7 +57,7 @@ This request deletes a specified note (Note ID) for the specified Device ID.
 ### Example
 
 ```bash
-kandji notesDeleteDeviceNote device_id=value note_id=value
+kandji deleteDeviceNote device_id=value note_id=value
 ```
 
 ### Parameters
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## notesGetDeviceNotes
+## getDeviceNotes
 
 Get Device Notes
 
@@ -93,7 +93,7 @@ This request gets all notes for the specified Device ID.
 ### Example
 
 ```bash
-kandji notesGetDeviceNotes device_id=value
+kandji getDeviceNotes device_id=value
 ```
 
 ### Parameters
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## notesRetrieveDeviceNote
+## retrieveDeviceNote
 
 Retrieve Device Note
 
@@ -128,7 +128,7 @@ This request retrieves a specified note (Note ID) for the specified Device ID.
 ### Example
 
 ```bash
-kandji notesRetrieveDeviceNote device_id=value note_id=value
+kandji retrieveDeviceNote device_id=value note_id=value
 ```
 
 ### Parameters
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## notesUpdateDeviceNote
+## updateDeviceNote
 
 Update Device Note
 
@@ -164,7 +164,7 @@ This request patches a specified note (Note ID) for the specified Device ID.
 ### Example
 
 ```bash
-kandji notesUpdateDeviceNote device_id=value note_id=value
+kandji updateDeviceNote device_id=value note_id=value
 ```
 
 ### Parameters

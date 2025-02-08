@@ -103,117 +103,117 @@ All URIs are relative to **
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsCreateAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationscreateadeintegration) | **POST** /api/v1/integrations/apple/ade/ | Create ADE integration
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationsdeleteadeintegration) | **DELETE** /api/v1/integrations/apple/ade/{ade_token_id} | Delete ADE integration
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationsdownloadadepublickey) | **GET** /api/v1/integrations/apple/ade/public_key/ | Download ADE public key
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsGetAdeDevice**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationsgetadedevice) | **GET** /api/v1/integrations/apple/ade/devices/{device_id} | Get ADE device
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsGetAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationsgetadeintegration) | **GET** /api/v1/integrations/apple/ade/{ade_token_id} | Get ADE integration
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsListAdeDevices**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationslistadedevices) | **GET** /api/v1/integrations/apple/ade/devices | List ADE devices
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsListAdeIntegrations**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationslistadeintegrations) | **GET** /api/v1/integrations/apple/ade | List ADE integrations
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationslistdevicesassociatedtoadetoken) | **GET** /api/v1/integrations/apple/ade/{ade_token_id}/devices | List devices associated to ADE token
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsRenewAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationsrenewadeintegration) | **POST** /api/v1/integrations/apple/ade/{ade_token_id}/renew | Renew ADE integration
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsUpdateAdeDevice**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationsupdateadedevice) | **PATCH** /api/v1/integrations/apple/ade/devices/{device_id} | Update ADE device
-*AutomatedDeviceEnrollmentIntegrationsApi* | [**automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#automateddeviceenrollmentintegrationsupdateadeintegration) | **PATCH** /api/v1/integrations/apple/ade/{ade_token_id} | Update ADE integration
-*BlueprintsApi* | [**blueprintsAssignLibraryItem**](docs/BlueprintsApi.md#blueprintsassignlibraryitem) | **POST** /api/v1/blueprints/{blueprint_id}/assign-library-item | Assign Library Item
-*BlueprintsApi* | [**blueprintsCreateBlueprint**](docs/BlueprintsApi.md#blueprintscreateblueprint) | **POST** /api/v1/blueprints | Create Blueprint
-*BlueprintsApi* | [**blueprintsDeleteBlueprint**](docs/BlueprintsApi.md#blueprintsdeleteblueprint) | **DELETE** /api/v1/blueprints/{blueprint_id} | Delete Blueprint
-*BlueprintsApi* | [**blueprintsGetBlueprint**](docs/BlueprintsApi.md#blueprintsgetblueprint) | **GET** /api/v1/blueprints/{blueprint_id} | Get Blueprint
-*BlueprintsApi* | [**blueprintsGetBlueprintTemplates**](docs/BlueprintsApi.md#blueprintsgetblueprinttemplates) | **GET** /api/v1/blueprints/templates/ | Get Blueprint Templates
-*BlueprintsApi* | [**blueprintsGetManualEnrollmentProfile**](docs/BlueprintsApi.md#blueprintsgetmanualenrollmentprofile) | **GET** /api/v1/blueprints/{blueprint_id}/ota-enrollment-profile | Get Manual Enrollment Profile
-*BlueprintsApi* | [**blueprintsListBlueprints**](docs/BlueprintsApi.md#blueprintslistblueprints) | **GET** /api/v1/blueprints | List Blueprints
-*BlueprintsApi* | [**blueprintsListLibraryItems**](docs/BlueprintsApi.md#blueprintslistlibraryitems) | **GET** /api/v1/blueprints/{blueprint_id}/list-library-items | List Library Items
-*BlueprintsApi* | [**blueprintsRemoveLibraryItem**](docs/BlueprintsApi.md#blueprintsremovelibraryitem) | **POST** /api/v1/blueprints/{blueprint_id}/remove-library-item | Remove Library Item
-*BlueprintsApi* | [**blueprintsUpdateBlueprint**](docs/BlueprintsApi.md#blueprintsupdateblueprint) | **PATCH** /api/v1/blueprints/{blueprint_id} | Update Blueprint
-*CustomAppsApi* | [**customAppsCreateCustomApp**](docs/CustomAppsApi.md#customappscreatecustomapp) | **POST** /api/v1/library/custom-apps | Create Custom App
-*CustomAppsApi* | [**customAppsDeleteCustomApp**](docs/CustomAppsApi.md#customappsdeletecustomapp) | **DELETE** /api/v1/library/custom-apps/{library_item_id} | Delete Custom App
-*CustomAppsApi* | [**customAppsGetCustomApp**](docs/CustomAppsApi.md#customappsgetcustomapp) | **GET** /api/v1/library/custom-apps/{library_item_id} | Get Custom App
-*CustomAppsApi* | [**customAppsListCustomApps**](docs/CustomAppsApi.md#customappslistcustomapps) | **GET** /api/v1/library/custom-apps | List Custom Apps
-*CustomAppsApi* | [**customAppsUpdateCustomApp**](docs/CustomAppsApi.md#customappsupdatecustomapp) | **PATCH** /api/v1/library/custom-apps/{library_item_id} | Update Custom App
-*CustomAppsApi* | [**customAppsUploadCustomApp**](docs/CustomAppsApi.md#customappsuploadcustomapp) | **POST** /api/v1/library/custom-apps/upload | Upload Custom App
-*CustomProfilesApi* | [**customProfilesCreateCustomProfile**](docs/CustomProfilesApi.md#customprofilescreatecustomprofile) | **POST** /api/v1/library/custom-profiles | Create Custom Profile
-*CustomProfilesApi* | [**customProfilesDeleteCustomProfile**](docs/CustomProfilesApi.md#customprofilesdeletecustomprofile) | **DELETE** /api/v1/library/custom-profiles/{library_item_id} | Delete Custom Profile
-*CustomProfilesApi* | [**customProfilesGetCustomProfile**](docs/CustomProfilesApi.md#customprofilesgetcustomprofile) | **GET** /api/v1/library/custom-profiles/{library_item_id} | Get Custom Profile
-*CustomProfilesApi* | [**customProfilesListCustomProfiles**](docs/CustomProfilesApi.md#customprofileslistcustomprofiles) | **GET** /api/v1/library/custom-profiles | List Custom Profiles
-*CustomProfilesApi* | [**customProfilesUpdateCustomProfile**](docs/CustomProfilesApi.md#customprofilesupdatecustomprofile) | **PATCH** /api/v1/library/custom-profiles/{library_item_id} | Update Custom Profile
-*CustomScriptsApi* | [**customScriptsCreateCustomScript**](docs/CustomScriptsApi.md#customscriptscreatecustomscript) | **POST** /api/v1/library/custom-scripts | Create Custom Script
-*CustomScriptsApi* | [**customScriptsDeleteCustomScript**](docs/CustomScriptsApi.md#customscriptsdeletecustomscript) | **DELETE** /api/v1/library/custom-scripts/{library_item_id} | Delete Custom Script
-*CustomScriptsApi* | [**customScriptsGetCustomScript**](docs/CustomScriptsApi.md#customscriptsgetcustomscript) | **GET** /api/v1/library/custom-scripts/{library_item_id} | Get Custom Script
-*CustomScriptsApi* | [**customScriptsListCustomScripts**](docs/CustomScriptsApi.md#customscriptslistcustomscripts) | **GET** /api/v1/library/custom-scripts | List Custom Scripts
-*CustomScriptsApi* | [**customScriptsUpdateCustomScript**](docs/CustomScriptsApi.md#customscriptsupdatecustomscript) | **PATCH** /api/v1/library/custom-scripts/{library_item_id} | Update Custom Script
-*DeviceActionsApi* | [**deviceActionsClearPasscode**](docs/DeviceActionsApi.md#deviceactionsclearpasscode) | **POST** /api/v1/devices/{device_id}/action/clearpasscode | Clear Passcode
-*DeviceActionsApi* | [**deviceActionsDeleteDevice**](docs/DeviceActionsApi.md#deviceactionsdeletedevice) | **DELETE** /api/v1/devices/{device_id} | Delete Device
-*DeviceActionsApi* | [**deviceActionsDeleteUser**](docs/DeviceActionsApi.md#deviceactionsdeleteuser) | **POST** /api/v1/devices/{device_id}/action/deleteuser | Delete User
-*DeviceActionsApi* | [**deviceActionsEraseDevice**](docs/DeviceActionsApi.md#deviceactionserasedevice) | **POST** /api/v1/devices/{device_id}/action/erase | Erase Device
-*DeviceActionsApi* | [**deviceActionsGetDeviceCommands**](docs/DeviceActionsApi.md#deviceactionsgetdevicecommands) | **GET** /api/v1/devices/{device_id}/commands | Get Device Commands
-*DeviceActionsApi* | [**deviceActionsLockDevice**](docs/DeviceActionsApi.md#deviceactionslockdevice) | **POST** /api/v1/devices/{device_id}/action/lock | Lock Device
-*DeviceActionsApi* | [**deviceActionsReinstallAgent**](docs/DeviceActionsApi.md#deviceactionsreinstallagent) | **POST** /api/v1/devices/{device_id}/action/reinstallagent | Reinstall Agent
-*DeviceActionsApi* | [**deviceActionsRemoteDesktop**](docs/DeviceActionsApi.md#deviceactionsremotedesktop) | **POST** /api/v1/devices/{device_id}/action/remotedesktop | Remote Desktop
-*DeviceActionsApi* | [**deviceActionsRenewMdmProfile**](docs/DeviceActionsApi.md#deviceactionsrenewmdmprofile) | **POST** /api/v1/devices/{device_id}/action/renewmdmprofile | Renew MDM Profile
-*DeviceActionsApi* | [**deviceActionsRestartDevice**](docs/DeviceActionsApi.md#deviceactionsrestartdevice) | **POST** /api/v1/devices/{device_id}/action/restart | Restart Device
-*DeviceActionsApi* | [**deviceActionsSendBlankpush**](docs/DeviceActionsApi.md#deviceactionssendblankpush) | **POST** /api/v1/devices/{device_id}/action/blankpush | Send Blankpush
-*DeviceActionsApi* | [**deviceActionsSetName**](docs/DeviceActionsApi.md#deviceactionssetname) | **POST** /api/v1/devices/{device_id}/action/setname | Set Name
-*DeviceActionsApi* | [**deviceActionsShutdown**](docs/DeviceActionsApi.md#deviceactionsshutdown) | **POST** /api/v1/devices/{device_id}/action/shutdown | Shutdown
-*DeviceActionsApi* | [**deviceActionsUnlockAccount**](docs/DeviceActionsApi.md#deviceactionsunlockaccount) | **POST** /api/v1/devices/{device_id}/action/unlockaccount | Unlock Account
-*DeviceActionsApi* | [**deviceActionsUpdateInventory**](docs/DeviceActionsApi.md#deviceactionsupdateinventory) | **POST** /api/v1/devices/{device_id}/action/updateinventory | Update Inventory
-*DeviceInformationApi* | [**deviceInformationCancelLostMode**](docs/DeviceInformationApi.md#deviceinformationcancellostmode) | **DELETE** /api/v1/devices/{device_id}/details/lostmode | Cancel Lost Mode
-*DeviceInformationApi* | [**deviceInformationGetDeviceActivity**](docs/DeviceInformationApi.md#deviceinformationgetdeviceactivity) | **GET** /api/v1/devices/{device_id}/activity | Get Device Activity
-*DeviceInformationApi* | [**deviceInformationGetDeviceApps**](docs/DeviceInformationApi.md#deviceinformationgetdeviceapps) | **GET** /api/v1/devices/{device_id}/apps | Get Device Apps
-*DeviceInformationApi* | [**deviceInformationGetDeviceDetails**](docs/DeviceInformationApi.md#deviceinformationgetdevicedetails) | **GET** /api/v1/devices/{device_id}/details | Get Device Details
-*DeviceInformationApi* | [**deviceInformationGetDeviceLibraryItems**](docs/DeviceInformationApi.md#deviceinformationgetdevicelibraryitems) | **GET** /api/v1/devices/{device_id}/library-items | Get Device Library Items
-*DeviceInformationApi* | [**deviceInformationGetDeviceLostModeDetails**](docs/DeviceInformationApi.md#deviceinformationgetdevicelostmodedetails) | **GET** /api/v1/devices/{device_id}/details/lostmode | Get Device Lost Mode details
-*DeviceInformationApi* | [**deviceInformationGetDeviceParameters**](docs/DeviceInformationApi.md#deviceinformationgetdeviceparameters) | **GET** /api/v1/devices/{device_id}/parameters | Get Device Parameters
-*DeviceInformationApi* | [**deviceInformationGetDeviceStatus**](docs/DeviceInformationApi.md#deviceinformationgetdevicestatus) | **GET** /api/v1/devices/{device_id}/status | Get Device Status
-*DeviceInformationApi* | [**deviceInformationListDevices**](docs/DeviceInformationApi.md#deviceinformationlistdevices) | **GET** /api/v1/devices | List Devices
-*DeviceSecretsApi* | [**deviceSecretsGetActivationLockBypassCode**](docs/DeviceSecretsApi.md#devicesecretsgetactivationlockbypasscode) | **GET** /api/v1/devices/{device_id}/secrets/bypasscode | Get Activation Lock Bypass Code
-*DeviceSecretsApi* | [**deviceSecretsGetFilevaultRecoveryKey**](docs/DeviceSecretsApi.md#devicesecretsgetfilevaultrecoverykey) | **GET** /api/v1/devices/{device_id}/secrets/filevaultkey | Get FileVault Recovery Key
-*DeviceSecretsApi* | [**deviceSecretsGetRecoveryLockPassword**](docs/DeviceSecretsApi.md#devicesecretsgetrecoverylockpassword) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
-*DeviceSecretsApi* | [**deviceSecretsGetUnlockPin**](docs/DeviceSecretsApi.md#devicesecretsgetunlockpin) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
-*InHouseAppsApi* | [**inhouseAppsCreateInhouseApp**](docs/InHouseAppsApi.md#inhouseappscreateinhouseapp) | **POST** /api/v1/library/ipa-apps | Create In-House App
-*InHouseAppsApi* | [**inhouseAppsDeleteInhouseApp**](docs/InHouseAppsApi.md#inhouseappsdeleteinhouseapp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
-*InHouseAppsApi* | [**inhouseAppsGetInhouseApp**](docs/InHouseAppsApi.md#inhouseappsgetinhouseapp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
-*InHouseAppsApi* | [**inhouseAppsListInhouseApps**](docs/InHouseAppsApi.md#inhouseappslistinhouseapps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
-*InHouseAppsApi* | [**inhouseAppsUpdateInhouseApp**](docs/InHouseAppsApi.md#inhouseappsupdateinhouseapp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
-*InHouseAppsApi* | [**inhouseAppsUploadInhouseApp**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseapp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
-*InHouseAppsApi* | [**inhouseAppsUploadInhouseAppStatus**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseappstatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
-*LibraryItemsApi* | [**libraryItemsGetLibraryItemActivity**](docs/LibraryItemsApi.md#libraryitemsgetlibraryitemactivity) | **GET** /api/v1/library/library-items/{library_item_id}/activity | Get Library Item Activity
-*LibraryItemsApi* | [**libraryItemsGetLibraryItemStatuses**](docs/LibraryItemsApi.md#libraryitemsgetlibraryitemstatuses) | **GET** /api/v1/library/library-items/{library_item_id}/status | Get Library Item Statuses
-*LostModeApi* | [**lostModeDisableLostMode**](docs/LostModeApi.md#lostmodedisablelostmode) | **POST** /api/v1/devices/{device_id}/action/disablelostmode | Disable Lost Mode
-*LostModeApi* | [**lostModeEnableLostMode**](docs/LostModeApi.md#lostmodeenablelostmode) | **POST** /api/v1/devices/{device_id}/action/enablelostmode | Enable Lost Mode
-*LostModeApi* | [**lostModePlayLostModeSound**](docs/LostModeApi.md#lostmodeplaylostmodesound) | **POST** /api/v1/devices/{device_id}/action/playlostmodesound | Play Lost Mode Sound
-*LostModeApi* | [**lostModeUpdateLocation**](docs/LostModeApi.md#lostmodeupdatelocation) | **POST** /api/v1/devices/{device_id}/action/updatelocation | Update Location
-*NotesApi* | [**notesCreateDeviceNote**](docs/NotesApi.md#notescreatedevicenote) | **POST** /api/v1/devices/{device_id}/notes | Create Device Note
-*NotesApi* | [**notesDeleteDeviceNote**](docs/NotesApi.md#notesdeletedevicenote) | **DELETE** /api/v1/devices/{device_id}/notes/{note_id} | Delete Device Note
-*NotesApi* | [**notesGetDeviceNotes**](docs/NotesApi.md#notesgetdevicenotes) | **GET** /api/v1/devices/{device_id}/notes | Get Device Notes
-*NotesApi* | [**notesRetrieveDeviceNote**](docs/NotesApi.md#notesretrievedevicenote) | **GET** /api/v1/devices/{device_id}/notes/{note_id} | Retrieve Device Note
-*NotesApi* | [**notesUpdateDeviceNote**](docs/NotesApi.md#notesupdatedevicenote) | **PATCH** /api/v1/devices/{device_id}/notes/{note_id} | Update Device Note
-*PrismApi* | [**prismActivationLock**](docs/PrismApi.md#prismactivationlock) | **GET** /api/v1/prism/activation_lock | Activation lock
-*PrismApi* | [**prismApplicationFirewall**](docs/PrismApi.md#prismapplicationfirewall) | **GET** /api/v1/prism/application_firewall | Application firewall
-*PrismApi* | [**prismApplications**](docs/PrismApi.md#prismapplications) | **GET** /api/v1/prism/apps | Applications
-*PrismApi* | [**prismCertificates**](docs/PrismApi.md#prismcertificates) | **GET** /api/v1/prism/certificates | Certificates
-*PrismApi* | [**prismCount**](docs/PrismApi.md#prismcount) | **GET** /api/v1/prism/count | Count
-*PrismApi* | [**prismDesktopAndScreensaver**](docs/PrismApi.md#prismdesktopandscreensaver) | **GET** /api/v1/prism/desktop_and_screensaver | Desktop and Screensaver
-*PrismApi* | [**prismDeviceInformation**](docs/PrismApi.md#prismdeviceinformation) | **GET** /api/v1/prism/device_information | Device information
-*PrismApi* | [**prismFilevault**](docs/PrismApi.md#prismfilevault) | **GET** /api/v1/prism/filevault | FileVault
-*PrismApi* | [**prismGatekeeperAndXprotect**](docs/PrismApi.md#prismgatekeeperandxprotect) | **GET** /api/v1/prism/gatekeeper_and_xprotect | Gatekeeper and XProtect
-*PrismApi* | [**prismGetCategoryExport**](docs/PrismApi.md#prismgetcategoryexport) | **GET** /api/v1/prism/export/{export_id} | Get category export
-*PrismApi* | [**prismInstalledProfiles**](docs/PrismApi.md#prisminstalledprofiles) | **GET** /api/v1/prism/installed_profiles | Installed profiles
-*PrismApi* | [**prismKernelExtensions**](docs/PrismApi.md#prismkernelextensions) | **GET** /api/v1/prism/kernel_extensions | Kernel Extensions
-*PrismApi* | [**prismLaunchAgentsAndDaemons**](docs/PrismApi.md#prismlaunchagentsanddaemons) | **GET** /api/v1/prism/launch_agents_and_daemons | Launch Agents and Daemons
-*PrismApi* | [**prismLocalUsers**](docs/PrismApi.md#prismlocalusers) | **GET** /api/v1/prism/local_users | Local users
-*PrismApi* | [**prismRequestCategoryExport**](docs/PrismApi.md#prismrequestcategoryexport) | **POST** /api/v1/prism/export | Request category export
-*PrismApi* | [**prismStartupSettings**](docs/PrismApi.md#prismstartupsettings) | **GET** /api/v1/prism/startup_settings | Startup settings
-*PrismApi* | [**prismSystemExtensions**](docs/PrismApi.md#prismsystemextensions) | **GET** /api/v1/prism/system_extensions | System Extensions
-*PrismApi* | [**prismTransparencyDatabase**](docs/PrismApi.md#prismtransparencydatabase) | **GET** /api/v1/prism/transparency_database | Transparency database
-*SelfServiceApi* | [**selfServiceListSelfServiceCategories**](docs/SelfServiceApi.md#selfservicelistselfservicecategories) | **GET** /api/v1/self-service/categories | List Self Service Categories
-*SettingsApi* | [**settingsLicensing**](docs/SettingsApi.md#settingslicensing) | **GET** /api/v1/settings/licensing | Licensing
-*TagsApi* | [**tagsCreateTag**](docs/TagsApi.md#tagscreatetag) | **POST** /api/v1/tags | Create Tag
-*TagsApi* | [**tagsDeleteTag**](docs/TagsApi.md#tagsdeletetag) | **DELETE** /api/v1/tags/{tag_id} | Delete Tag
-*TagsApi* | [**tagsGetTags**](docs/TagsApi.md#tagsgettags) | **GET** /api/v1/tags | Get Tags
-*TagsApi* | [**tagsUpdateTag**](docs/TagsApi.md#tagsupdatetag) | **PATCH** /api/v1/tags/{tag_id} | Update Tag
-*ThreatsApi* | [**threatsGetThreatDetails**](docs/ThreatsApi.md#threatsgetthreatdetails) | **GET** /api/v1/threat-details | Get Threat Details
-*UsersApi* | [**usersDeleteUser**](docs/UsersApi.md#usersdeleteuser) | **DELETE** /api/v1/users/{user_id} | Delete User
-*UsersApi* | [**usersGetUser**](docs/UsersApi.md#usersgetuser) | **GET** /api/v1/users/{user_id} | Get User
-*UsersApi* | [**usersListUsers**](docs/UsersApi.md#userslistusers) | **GET** /api/v1/users | List Users
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**createAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#createadeintegration) | **POST** /api/v1/integrations/apple/ade/ | Create ADE integration
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**deleteAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#deleteadeintegration) | **DELETE** /api/v1/integrations/apple/ade/{ade_token_id} | Delete ADE integration
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**downloadAdePublicKey**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#downloadadepublickey) | **GET** /api/v1/integrations/apple/ade/public_key/ | Download ADE public key
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**getAdeDevice**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#getadedevice) | **GET** /api/v1/integrations/apple/ade/devices/{device_id} | Get ADE device
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**getAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#getadeintegration) | **GET** /api/v1/integrations/apple/ade/{ade_token_id} | Get ADE integration
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**listAdeDevices**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#listadedevices) | **GET** /api/v1/integrations/apple/ade/devices | List ADE devices
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**listAdeIntegrations**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#listadeintegrations) | **GET** /api/v1/integrations/apple/ade | List ADE integrations
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**listDevicesAssociatedToAdeToken**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#listdevicesassociatedtoadetoken) | **GET** /api/v1/integrations/apple/ade/{ade_token_id}/devices | List devices associated to ADE token
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**renewAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#renewadeintegration) | **POST** /api/v1/integrations/apple/ade/{ade_token_id}/renew | Renew ADE integration
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**updateAdeDevice**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#updateadedevice) | **PATCH** /api/v1/integrations/apple/ade/devices/{device_id} | Update ADE device
+*AutomatedDeviceEnrollmentIntegrationsApi* | [**updateAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#updateadeintegration) | **PATCH** /api/v1/integrations/apple/ade/{ade_token_id} | Update ADE integration
+*BlueprintsApi* | [**assignLibraryItem**](docs/BlueprintsApi.md#assignlibraryitem) | **POST** /api/v1/blueprints/{blueprint_id}/assign-library-item | Assign Library Item
+*BlueprintsApi* | [**createBlueprint**](docs/BlueprintsApi.md#createblueprint) | **POST** /api/v1/blueprints | Create Blueprint
+*BlueprintsApi* | [**deleteBlueprint**](docs/BlueprintsApi.md#deleteblueprint) | **DELETE** /api/v1/blueprints/{blueprint_id} | Delete Blueprint
+*BlueprintsApi* | [**getBlueprint**](docs/BlueprintsApi.md#getblueprint) | **GET** /api/v1/blueprints/{blueprint_id} | Get Blueprint
+*BlueprintsApi* | [**getBlueprintTemplates**](docs/BlueprintsApi.md#getblueprinttemplates) | **GET** /api/v1/blueprints/templates/ | Get Blueprint Templates
+*BlueprintsApi* | [**getManualEnrollmentProfile**](docs/BlueprintsApi.md#getmanualenrollmentprofile) | **GET** /api/v1/blueprints/{blueprint_id}/ota-enrollment-profile | Get Manual Enrollment Profile
+*BlueprintsApi* | [**listBlueprints**](docs/BlueprintsApi.md#listblueprints) | **GET** /api/v1/blueprints | List Blueprints
+*BlueprintsApi* | [**listLibraryItems**](docs/BlueprintsApi.md#listlibraryitems) | **GET** /api/v1/blueprints/{blueprint_id}/list-library-items | List Library Items
+*BlueprintsApi* | [**removeLibraryItem**](docs/BlueprintsApi.md#removelibraryitem) | **POST** /api/v1/blueprints/{blueprint_id}/remove-library-item | Remove Library Item
+*BlueprintsApi* | [**updateBlueprint**](docs/BlueprintsApi.md#updateblueprint) | **PATCH** /api/v1/blueprints/{blueprint_id} | Update Blueprint
+*CustomAppsApi* | [**createCustomApp**](docs/CustomAppsApi.md#createcustomapp) | **POST** /api/v1/library/custom-apps | Create Custom App
+*CustomAppsApi* | [**deleteCustomApp**](docs/CustomAppsApi.md#deletecustomapp) | **DELETE** /api/v1/library/custom-apps/{library_item_id} | Delete Custom App
+*CustomAppsApi* | [**getCustomApp**](docs/CustomAppsApi.md#getcustomapp) | **GET** /api/v1/library/custom-apps/{library_item_id} | Get Custom App
+*CustomAppsApi* | [**listCustomApps**](docs/CustomAppsApi.md#listcustomapps) | **GET** /api/v1/library/custom-apps | List Custom Apps
+*CustomAppsApi* | [**updateCustomApp**](docs/CustomAppsApi.md#updatecustomapp) | **PATCH** /api/v1/library/custom-apps/{library_item_id} | Update Custom App
+*CustomAppsApi* | [**uploadCustomApp**](docs/CustomAppsApi.md#uploadcustomapp) | **POST** /api/v1/library/custom-apps/upload | Upload Custom App
+*CustomProfilesApi* | [**createCustomProfile**](docs/CustomProfilesApi.md#createcustomprofile) | **POST** /api/v1/library/custom-profiles | Create Custom Profile
+*CustomProfilesApi* | [**deleteCustomProfile**](docs/CustomProfilesApi.md#deletecustomprofile) | **DELETE** /api/v1/library/custom-profiles/{library_item_id} | Delete Custom Profile
+*CustomProfilesApi* | [**getCustomProfile**](docs/CustomProfilesApi.md#getcustomprofile) | **GET** /api/v1/library/custom-profiles/{library_item_id} | Get Custom Profile
+*CustomProfilesApi* | [**listCustomProfiles**](docs/CustomProfilesApi.md#listcustomprofiles) | **GET** /api/v1/library/custom-profiles | List Custom Profiles
+*CustomProfilesApi* | [**updateCustomProfile**](docs/CustomProfilesApi.md#updatecustomprofile) | **PATCH** /api/v1/library/custom-profiles/{library_item_id} | Update Custom Profile
+*CustomScriptsApi* | [**createCustomScript**](docs/CustomScriptsApi.md#createcustomscript) | **POST** /api/v1/library/custom-scripts | Create Custom Script
+*CustomScriptsApi* | [**deleteCustomScript**](docs/CustomScriptsApi.md#deletecustomscript) | **DELETE** /api/v1/library/custom-scripts/{library_item_id} | Delete Custom Script
+*CustomScriptsApi* | [**getCustomScript**](docs/CustomScriptsApi.md#getcustomscript) | **GET** /api/v1/library/custom-scripts/{library_item_id} | Get Custom Script
+*CustomScriptsApi* | [**listCustomScripts**](docs/CustomScriptsApi.md#listcustomscripts) | **GET** /api/v1/library/custom-scripts | List Custom Scripts
+*CustomScriptsApi* | [**updateCustomScript**](docs/CustomScriptsApi.md#updatecustomscript) | **PATCH** /api/v1/library/custom-scripts/{library_item_id} | Update Custom Script
+*DeviceActionsApi* | [**clearPasscode**](docs/DeviceActionsApi.md#clearpasscode) | **POST** /api/v1/devices/{device_id}/action/clearpasscode | Clear Passcode
+*DeviceActionsApi* | [**deleteDevice**](docs/DeviceActionsApi.md#deletedevice) | **DELETE** /api/v1/devices/{device_id} | Delete Device
+*DeviceActionsApi* | [**deleteUser**](docs/DeviceActionsApi.md#deleteuser) | **POST** /api/v1/devices/{device_id}/action/deleteuser | Delete User
+*DeviceActionsApi* | [**eraseDevice**](docs/DeviceActionsApi.md#erasedevice) | **POST** /api/v1/devices/{device_id}/action/erase | Erase Device
+*DeviceActionsApi* | [**getDeviceCommands**](docs/DeviceActionsApi.md#getdevicecommands) | **GET** /api/v1/devices/{device_id}/commands | Get Device Commands
+*DeviceActionsApi* | [**lockDevice**](docs/DeviceActionsApi.md#lockdevice) | **POST** /api/v1/devices/{device_id}/action/lock | Lock Device
+*DeviceActionsApi* | [**reinstallAgent**](docs/DeviceActionsApi.md#reinstallagent) | **POST** /api/v1/devices/{device_id}/action/reinstallagent | Reinstall Agent
+*DeviceActionsApi* | [**remoteDesktop**](docs/DeviceActionsApi.md#remotedesktop) | **POST** /api/v1/devices/{device_id}/action/remotedesktop | Remote Desktop
+*DeviceActionsApi* | [**renewMdmProfile**](docs/DeviceActionsApi.md#renewmdmprofile) | **POST** /api/v1/devices/{device_id}/action/renewmdmprofile | Renew MDM Profile
+*DeviceActionsApi* | [**restartDevice**](docs/DeviceActionsApi.md#restartdevice) | **POST** /api/v1/devices/{device_id}/action/restart | Restart Device
+*DeviceActionsApi* | [**sendBlankpush**](docs/DeviceActionsApi.md#sendblankpush) | **POST** /api/v1/devices/{device_id}/action/blankpush | Send Blankpush
+*DeviceActionsApi* | [**setName**](docs/DeviceActionsApi.md#setname) | **POST** /api/v1/devices/{device_id}/action/setname | Set Name
+*DeviceActionsApi* | [**shutdown**](docs/DeviceActionsApi.md#shutdown) | **POST** /api/v1/devices/{device_id}/action/shutdown | Shutdown
+*DeviceActionsApi* | [**unlockAccount**](docs/DeviceActionsApi.md#unlockaccount) | **POST** /api/v1/devices/{device_id}/action/unlockaccount | Unlock Account
+*DeviceActionsApi* | [**updateInventory**](docs/DeviceActionsApi.md#updateinventory) | **POST** /api/v1/devices/{device_id}/action/updateinventory | Update Inventory
+*DeviceInformationApi* | [**cancelLostMode**](docs/DeviceInformationApi.md#cancellostmode) | **DELETE** /api/v1/devices/{device_id}/details/lostmode | Cancel Lost Mode
+*DeviceInformationApi* | [**getDeviceActivity**](docs/DeviceInformationApi.md#getdeviceactivity) | **GET** /api/v1/devices/{device_id}/activity | Get Device Activity
+*DeviceInformationApi* | [**getDeviceApps**](docs/DeviceInformationApi.md#getdeviceapps) | **GET** /api/v1/devices/{device_id}/apps | Get Device Apps
+*DeviceInformationApi* | [**getDeviceDetails**](docs/DeviceInformationApi.md#getdevicedetails) | **GET** /api/v1/devices/{device_id}/details | Get Device Details
+*DeviceInformationApi* | [**getDeviceLibraryItems**](docs/DeviceInformationApi.md#getdevicelibraryitems) | **GET** /api/v1/devices/{device_id}/library-items | Get Device Library Items
+*DeviceInformationApi* | [**getDeviceLostModeDetails**](docs/DeviceInformationApi.md#getdevicelostmodedetails) | **GET** /api/v1/devices/{device_id}/details/lostmode | Get Device Lost Mode details
+*DeviceInformationApi* | [**getDeviceParameters**](docs/DeviceInformationApi.md#getdeviceparameters) | **GET** /api/v1/devices/{device_id}/parameters | Get Device Parameters
+*DeviceInformationApi* | [**getDeviceStatus**](docs/DeviceInformationApi.md#getdevicestatus) | **GET** /api/v1/devices/{device_id}/status | Get Device Status
+*DeviceInformationApi* | [**listDevices**](docs/DeviceInformationApi.md#listdevices) | **GET** /api/v1/devices | List Devices
+*DeviceSecretsApi* | [**getActivationLockBypassCode**](docs/DeviceSecretsApi.md#getactivationlockbypasscode) | **GET** /api/v1/devices/{device_id}/secrets/bypasscode | Get Activation Lock Bypass Code
+*DeviceSecretsApi* | [**getFilevaultRecoveryKey**](docs/DeviceSecretsApi.md#getfilevaultrecoverykey) | **GET** /api/v1/devices/{device_id}/secrets/filevaultkey | Get FileVault Recovery Key
+*DeviceSecretsApi* | [**getRecoveryLockPassword**](docs/DeviceSecretsApi.md#getrecoverylockpassword) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
+*DeviceSecretsApi* | [**getUnlockPin**](docs/DeviceSecretsApi.md#getunlockpin) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
+*InHouseAppsApi* | [**createInhouseApp**](docs/InHouseAppsApi.md#createinhouseapp) | **POST** /api/v1/library/ipa-apps | Create In-House App
+*InHouseAppsApi* | [**deleteInhouseApp**](docs/InHouseAppsApi.md#deleteinhouseapp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
+*InHouseAppsApi* | [**getInhouseApp**](docs/InHouseAppsApi.md#getinhouseapp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
+*InHouseAppsApi* | [**listInhouseApps**](docs/InHouseAppsApi.md#listinhouseapps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
+*InHouseAppsApi* | [**updateInhouseApp**](docs/InHouseAppsApi.md#updateinhouseapp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
+*InHouseAppsApi* | [**uploadInhouseApp**](docs/InHouseAppsApi.md#uploadinhouseapp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
+*InHouseAppsApi* | [**uploadInhouseAppStatus**](docs/InHouseAppsApi.md#uploadinhouseappstatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
+*LibraryItemsApi* | [**getLibraryItemActivity**](docs/LibraryItemsApi.md#getlibraryitemactivity) | **GET** /api/v1/library/library-items/{library_item_id}/activity | Get Library Item Activity
+*LibraryItemsApi* | [**getLibraryItemStatuses**](docs/LibraryItemsApi.md#getlibraryitemstatuses) | **GET** /api/v1/library/library-items/{library_item_id}/status | Get Library Item Statuses
+*LostModeApi* | [**disableLostMode**](docs/LostModeApi.md#disablelostmode) | **POST** /api/v1/devices/{device_id}/action/disablelostmode | Disable Lost Mode
+*LostModeApi* | [**enableLostMode**](docs/LostModeApi.md#enablelostmode) | **POST** /api/v1/devices/{device_id}/action/enablelostmode | Enable Lost Mode
+*LostModeApi* | [**playLostModeSound**](docs/LostModeApi.md#playlostmodesound) | **POST** /api/v1/devices/{device_id}/action/playlostmodesound | Play Lost Mode Sound
+*LostModeApi* | [**updateLocation**](docs/LostModeApi.md#updatelocation) | **POST** /api/v1/devices/{device_id}/action/updatelocation | Update Location
+*NotesApi* | [**createDeviceNote**](docs/NotesApi.md#createdevicenote) | **POST** /api/v1/devices/{device_id}/notes | Create Device Note
+*NotesApi* | [**deleteDeviceNote**](docs/NotesApi.md#deletedevicenote) | **DELETE** /api/v1/devices/{device_id}/notes/{note_id} | Delete Device Note
+*NotesApi* | [**getDeviceNotes**](docs/NotesApi.md#getdevicenotes) | **GET** /api/v1/devices/{device_id}/notes | Get Device Notes
+*NotesApi* | [**retrieveDeviceNote**](docs/NotesApi.md#retrievedevicenote) | **GET** /api/v1/devices/{device_id}/notes/{note_id} | Retrieve Device Note
+*NotesApi* | [**updateDeviceNote**](docs/NotesApi.md#updatedevicenote) | **PATCH** /api/v1/devices/{device_id}/notes/{note_id} | Update Device Note
+*PrismApi* | [**activationLock**](docs/PrismApi.md#activationlock) | **GET** /api/v1/prism/activation_lock | Activation lock
+*PrismApi* | [**applicationFirewall**](docs/PrismApi.md#applicationfirewall) | **GET** /api/v1/prism/application_firewall | Application firewall
+*PrismApi* | [**applications**](docs/PrismApi.md#applications) | **GET** /api/v1/prism/apps | Applications
+*PrismApi* | [**certificates**](docs/PrismApi.md#certificates) | **GET** /api/v1/prism/certificates | Certificates
+*PrismApi* | [**count**](docs/PrismApi.md#count) | **GET** /api/v1/prism/count | Count
+*PrismApi* | [**desktopAndScreensaver**](docs/PrismApi.md#desktopandscreensaver) | **GET** /api/v1/prism/desktop_and_screensaver | Desktop and Screensaver
+*PrismApi* | [**deviceInformation**](docs/PrismApi.md#deviceinformation) | **GET** /api/v1/prism/device_information | Device information
+*PrismApi* | [**filevault**](docs/PrismApi.md#filevault) | **GET** /api/v1/prism/filevault | FileVault
+*PrismApi* | [**gatekeeperAndXprotect**](docs/PrismApi.md#gatekeeperandxprotect) | **GET** /api/v1/prism/gatekeeper_and_xprotect | Gatekeeper and XProtect
+*PrismApi* | [**getCategoryExport**](docs/PrismApi.md#getcategoryexport) | **GET** /api/v1/prism/export/{export_id} | Get category export
+*PrismApi* | [**installedProfiles**](docs/PrismApi.md#installedprofiles) | **GET** /api/v1/prism/installed_profiles | Installed profiles
+*PrismApi* | [**kernelExtensions**](docs/PrismApi.md#kernelextensions) | **GET** /api/v1/prism/kernel_extensions | Kernel Extensions
+*PrismApi* | [**launchAgentsAndDaemons**](docs/PrismApi.md#launchagentsanddaemons) | **GET** /api/v1/prism/launch_agents_and_daemons | Launch Agents and Daemons
+*PrismApi* | [**localUsers**](docs/PrismApi.md#localusers) | **GET** /api/v1/prism/local_users | Local users
+*PrismApi* | [**requestCategoryExport**](docs/PrismApi.md#requestcategoryexport) | **POST** /api/v1/prism/export | Request category export
+*PrismApi* | [**startupSettings**](docs/PrismApi.md#startupsettings) | **GET** /api/v1/prism/startup_settings | Startup settings
+*PrismApi* | [**systemExtensions**](docs/PrismApi.md#systemextensions) | **GET** /api/v1/prism/system_extensions | System Extensions
+*PrismApi* | [**transparencyDatabase**](docs/PrismApi.md#transparencydatabase) | **GET** /api/v1/prism/transparency_database | Transparency database
+*SelfServiceApi* | [**listSelfServiceCategories**](docs/SelfServiceApi.md#listselfservicecategories) | **GET** /api/v1/self-service/categories | List Self Service Categories
+*SettingsApi* | [**licensing**](docs/SettingsApi.md#licensing) | **GET** /api/v1/settings/licensing | Licensing
+*TagsApi* | [**createTag**](docs/TagsApi.md#createtag) | **POST** /api/v1/tags | Create Tag
+*TagsApi* | [**deleteTag**](docs/TagsApi.md#deletetag) | **DELETE** /api/v1/tags/{tag_id} | Delete Tag
+*TagsApi* | [**getTags**](docs/TagsApi.md#gettags) | **GET** /api/v1/tags | Get Tags
+*TagsApi* | [**updateTag**](docs/TagsApi.md#updatetag) | **PATCH** /api/v1/tags/{tag_id} | Update Tag
+*ThreatsApi* | [**getThreatDetails**](docs/ThreatsApi.md#getthreatdetails) | **GET** /api/v1/threat-details | Get Threat Details
+*UsersApi* | [**deleteUser**](docs/UsersApi.md#deleteuser) | **DELETE** /api/v1/users/{user_id} | Delete User
+*UsersApi* | [**getUser**](docs/UsersApi.md#getuser) | **GET** /api/v1/users/{user_id} | Get User
+*UsersApi* | [**listUsers**](docs/UsersApi.md#listusers) | **GET** /api/v1/users | List Users
 
 
 ## Documentation For Models

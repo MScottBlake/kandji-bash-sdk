@@ -69,232 +69,232 @@ _kandji()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
-    operations["automatedDeviceEnrollmentIntegrationsCreateAdeIntegration"]=1
-    operations["automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration"]=1
-    operations["automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey"]=1
-    operations["automatedDeviceEnrollmentIntegrationsGetAdeDevice"]=1
-    operations["automatedDeviceEnrollmentIntegrationsGetAdeIntegration"]=1
-    operations["automatedDeviceEnrollmentIntegrationsListAdeDevices"]=1
-    operations["automatedDeviceEnrollmentIntegrationsListAdeIntegrations"]=1
-    operations["automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken"]=1
-    operations["automatedDeviceEnrollmentIntegrationsRenewAdeIntegration"]=1
-    operations["automatedDeviceEnrollmentIntegrationsUpdateAdeDevice"]=1
-    operations["automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration"]=1
-    operations["blueprintsAssignLibraryItem"]=1
-    operations["blueprintsCreateBlueprint"]=1
-    operations["blueprintsDeleteBlueprint"]=1
-    operations["blueprintsGetBlueprint"]=1
-    operations["blueprintsGetBlueprintTemplates"]=1
-    operations["blueprintsGetManualEnrollmentProfile"]=1
-    operations["blueprintsListBlueprints"]=1
-    operations["blueprintsListLibraryItems"]=1
-    operations["blueprintsRemoveLibraryItem"]=1
-    operations["blueprintsUpdateBlueprint"]=1
-    operations["customAppsCreateCustomApp"]=1
-    operations["customAppsDeleteCustomApp"]=1
-    operations["customAppsGetCustomApp"]=1
-    operations["customAppsListCustomApps"]=1
-    operations["customAppsUpdateCustomApp"]=1
-    operations["customAppsUploadCustomApp"]=1
-    operations["customProfilesCreateCustomProfile"]=1
-    operations["customProfilesDeleteCustomProfile"]=1
-    operations["customProfilesGetCustomProfile"]=1
-    operations["customProfilesListCustomProfiles"]=1
-    operations["customProfilesUpdateCustomProfile"]=1
-    operations["customScriptsCreateCustomScript"]=1
-    operations["customScriptsDeleteCustomScript"]=1
-    operations["customScriptsGetCustomScript"]=1
-    operations["customScriptsListCustomScripts"]=1
-    operations["customScriptsUpdateCustomScript"]=1
-    operations["deviceActionsClearPasscode"]=1
-    operations["deviceActionsDeleteDevice"]=1
-    operations["deviceActionsDeleteUser"]=1
-    operations["deviceActionsEraseDevice"]=1
-    operations["deviceActionsGetDeviceCommands"]=1
-    operations["deviceActionsLockDevice"]=1
-    operations["deviceActionsReinstallAgent"]=1
-    operations["deviceActionsRemoteDesktop"]=1
-    operations["deviceActionsRenewMdmProfile"]=1
-    operations["deviceActionsRestartDevice"]=1
-    operations["deviceActionsSendBlankpush"]=1
-    operations["deviceActionsSetName"]=1
-    operations["deviceActionsShutdown"]=1
-    operations["deviceActionsUnlockAccount"]=1
-    operations["deviceActionsUpdateInventory"]=1
-    operations["deviceInformationCancelLostMode"]=1
-    operations["deviceInformationGetDeviceActivity"]=1
-    operations["deviceInformationGetDeviceApps"]=1
-    operations["deviceInformationGetDeviceDetails"]=1
-    operations["deviceInformationGetDeviceLibraryItems"]=1
-    operations["deviceInformationGetDeviceLostModeDetails"]=1
-    operations["deviceInformationGetDeviceParameters"]=1
-    operations["deviceInformationGetDeviceStatus"]=1
-    operations["deviceInformationListDevices"]=1
-    operations["deviceSecretsGetActivationLockBypassCode"]=1
-    operations["deviceSecretsGetFilevaultRecoveryKey"]=1
-    operations["deviceSecretsGetRecoveryLockPassword"]=1
-    operations["deviceSecretsGetUnlockPin"]=1
-    operations["inhouseAppsCreateInhouseApp"]=1
-    operations["inhouseAppsDeleteInhouseApp"]=1
-    operations["inhouseAppsGetInhouseApp"]=1
-    operations["inhouseAppsListInhouseApps"]=1
-    operations["inhouseAppsUpdateInhouseApp"]=1
-    operations["inhouseAppsUploadInhouseApp"]=1
-    operations["inhouseAppsUploadInhouseAppStatus"]=1
-    operations["libraryItemsGetLibraryItemActivity"]=1
-    operations["libraryItemsGetLibraryItemStatuses"]=1
-    operations["lostModeDisableLostMode"]=1
-    operations["lostModeEnableLostMode"]=1
-    operations["lostModePlayLostModeSound"]=1
-    operations["lostModeUpdateLocation"]=1
-    operations["notesCreateDeviceNote"]=1
-    operations["notesDeleteDeviceNote"]=1
-    operations["notesGetDeviceNotes"]=1
-    operations["notesRetrieveDeviceNote"]=1
-    operations["notesUpdateDeviceNote"]=1
-    operations["prismActivationLock"]=1
-    operations["prismApplicationFirewall"]=1
-    operations["prismApplications"]=1
-    operations["prismCertificates"]=1
-    operations["prismCount"]=1
-    operations["prismDesktopAndScreensaver"]=1
-    operations["prismDeviceInformation"]=1
-    operations["prismFilevault"]=1
-    operations["prismGatekeeperAndXprotect"]=1
-    operations["prismGetCategoryExport"]=1
-    operations["prismInstalledProfiles"]=1
-    operations["prismKernelExtensions"]=1
-    operations["prismLaunchAgentsAndDaemons"]=1
-    operations["prismLocalUsers"]=1
-    operations["prismRequestCategoryExport"]=1
-    operations["prismStartupSettings"]=1
-    operations["prismSystemExtensions"]=1
-    operations["prismTransparencyDatabase"]=1
-    operations["selfServiceListSelfServiceCategories"]=1
-    operations["settingsLicensing"]=1
-    operations["tagsCreateTag"]=1
-    operations["tagsDeleteTag"]=1
-    operations["tagsGetTags"]=1
-    operations["tagsUpdateTag"]=1
-    operations["threatsGetThreatDetails"]=1
-    operations["usersDeleteUser"]=1
-    operations["usersGetUser"]=1
-    operations["usersListUsers"]=1
+    operations["createAdeIntegration"]=1
+    operations["deleteAdeIntegration"]=1
+    operations["downloadAdePublicKey"]=1
+    operations["getAdeDevice"]=1
+    operations["getAdeIntegration"]=1
+    operations["listAdeDevices"]=1
+    operations["listAdeIntegrations"]=1
+    operations["listDevicesAssociatedToAdeToken"]=1
+    operations["renewAdeIntegration"]=1
+    operations["updateAdeDevice"]=1
+    operations["updateAdeIntegration"]=1
+    operations["assignLibraryItem"]=1
+    operations["createBlueprint"]=1
+    operations["deleteBlueprint"]=1
+    operations["getBlueprint"]=1
+    operations["getBlueprintTemplates"]=1
+    operations["getManualEnrollmentProfile"]=1
+    operations["listBlueprints"]=1
+    operations["listLibraryItems"]=1
+    operations["removeLibraryItem"]=1
+    operations["updateBlueprint"]=1
+    operations["createCustomApp"]=1
+    operations["deleteCustomApp"]=1
+    operations["getCustomApp"]=1
+    operations["listCustomApps"]=1
+    operations["updateCustomApp"]=1
+    operations["uploadCustomApp"]=1
+    operations["createCustomProfile"]=1
+    operations["deleteCustomProfile"]=1
+    operations["getCustomProfile"]=1
+    operations["listCustomProfiles"]=1
+    operations["updateCustomProfile"]=1
+    operations["createCustomScript"]=1
+    operations["deleteCustomScript"]=1
+    operations["getCustomScript"]=1
+    operations["listCustomScripts"]=1
+    operations["updateCustomScript"]=1
+    operations["clearPasscode"]=1
+    operations["deleteDevice"]=1
+    operations["deleteUser"]=1
+    operations["eraseDevice"]=1
+    operations["getDeviceCommands"]=1
+    operations["lockDevice"]=1
+    operations["reinstallAgent"]=1
+    operations["remoteDesktop"]=1
+    operations["renewMdmProfile"]=1
+    operations["restartDevice"]=1
+    operations["sendBlankpush"]=1
+    operations["setName"]=1
+    operations["shutdown"]=1
+    operations["unlockAccount"]=1
+    operations["updateInventory"]=1
+    operations["cancelLostMode"]=1
+    operations["getDeviceActivity"]=1
+    operations["getDeviceApps"]=1
+    operations["getDeviceDetails"]=1
+    operations["getDeviceLibraryItems"]=1
+    operations["getDeviceLostModeDetails"]=1
+    operations["getDeviceParameters"]=1
+    operations["getDeviceStatus"]=1
+    operations["listDevices"]=1
+    operations["getActivationLockBypassCode"]=1
+    operations["getFilevaultRecoveryKey"]=1
+    operations["getRecoveryLockPassword"]=1
+    operations["getUnlockPin"]=1
+    operations["createInhouseApp"]=1
+    operations["deleteInhouseApp"]=1
+    operations["getInhouseApp"]=1
+    operations["listInhouseApps"]=1
+    operations["updateInhouseApp"]=1
+    operations["uploadInhouseApp"]=1
+    operations["uploadInhouseAppStatus"]=1
+    operations["getLibraryItemActivity"]=1
+    operations["getLibraryItemStatuses"]=1
+    operations["disableLostMode"]=1
+    operations["enableLostMode"]=1
+    operations["playLostModeSound"]=1
+    operations["updateLocation"]=1
+    operations["createDeviceNote"]=1
+    operations["deleteDeviceNote"]=1
+    operations["getDeviceNotes"]=1
+    operations["retrieveDeviceNote"]=1
+    operations["updateDeviceNote"]=1
+    operations["activationLock"]=1
+    operations["applicationFirewall"]=1
+    operations["applications"]=1
+    operations["certificates"]=1
+    operations["count"]=1
+    operations["desktopAndScreensaver"]=1
+    operations["deviceInformation"]=1
+    operations["filevault"]=1
+    operations["gatekeeperAndXprotect"]=1
+    operations["getCategoryExport"]=1
+    operations["installedProfiles"]=1
+    operations["kernelExtensions"]=1
+    operations["launchAgentsAndDaemons"]=1
+    operations["localUsers"]=1
+    operations["requestCategoryExport"]=1
+    operations["startupSettings"]=1
+    operations["systemExtensions"]=1
+    operations["transparencyDatabase"]=1
+    operations["listSelfServiceCategories"]=1
+    operations["licensing"]=1
+    operations["createTag"]=1
+    operations["deleteTag"]=1
+    operations["getTags"]=1
+    operations["updateTag"]=1
+    operations["getThreatDetails"]=1
+    operations["deleteUser"]=1
+    operations["getUser"]=1
+    operations["listUsers"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
-    operation_parameters["automatedDeviceEnrollmentIntegrationsCreateAdeIntegration"]=""
-    operation_parameters["automatedDeviceEnrollmentIntegrationsDeleteAdeIntegration"]="ade_token_id= "
-    operation_parameters["automatedDeviceEnrollmentIntegrationsDownloadAdePublicKey"]=""
-    operation_parameters["automatedDeviceEnrollmentIntegrationsGetAdeDevice"]="device_id= "
-    operation_parameters["automatedDeviceEnrollmentIntegrationsGetAdeIntegration"]="ade_token_id= "
-    operation_parameters["automatedDeviceEnrollmentIntegrationsListAdeDevices"]="blueprint_id= user_id= dep_account= device_family= model= os= profile_status= serial_number= page= "
-    operation_parameters["automatedDeviceEnrollmentIntegrationsListAdeIntegrations"]=""
-    operation_parameters["automatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken"]="ade_token_id= page= "
-    operation_parameters["automatedDeviceEnrollmentIntegrationsRenewAdeIntegration"]="ade_token_id= "
-    operation_parameters["automatedDeviceEnrollmentIntegrationsUpdateAdeDevice"]="device_id= "
-    operation_parameters["automatedDeviceEnrollmentIntegrationsUpdateAdeIntegration"]="ade_token_id= "
-    operation_parameters["blueprintsAssignLibraryItem"]="blueprint_id= "
-    operation_parameters["blueprintsCreateBlueprint"]=""
-    operation_parameters["blueprintsDeleteBlueprint"]="blueprint_id= "
-    operation_parameters["blueprintsGetBlueprint"]="blueprint_id= "
-    operation_parameters["blueprintsGetBlueprintTemplates"]="limit= offset= "
-    operation_parameters["blueprintsGetManualEnrollmentProfile"]="blueprint_id= sso= "
-    operation_parameters["blueprintsListBlueprints"]="id= id__in= name= limit= offset= "
-    operation_parameters["blueprintsListLibraryItems"]="blueprint_id= "
-    operation_parameters["blueprintsRemoveLibraryItem"]="blueprint_id= "
-    operation_parameters["blueprintsUpdateBlueprint"]="blueprint_id= "
-    operation_parameters["customAppsCreateCustomApp"]=""
-    operation_parameters["customAppsDeleteCustomApp"]="library_item_id= "
-    operation_parameters["customAppsGetCustomApp"]="library_item_id= "
-    operation_parameters["customAppsListCustomApps"]="page= "
-    operation_parameters["customAppsUpdateCustomApp"]="library_item_id= "
-    operation_parameters["customAppsUploadCustomApp"]=""
-    operation_parameters["customProfilesCreateCustomProfile"]=""
-    operation_parameters["customProfilesDeleteCustomProfile"]="library_item_id= "
-    operation_parameters["customProfilesGetCustomProfile"]="library_item_id= "
-    operation_parameters["customProfilesListCustomProfiles"]="page= "
-    operation_parameters["customProfilesUpdateCustomProfile"]="library_item_id= "
-    operation_parameters["customScriptsCreateCustomScript"]=""
-    operation_parameters["customScriptsDeleteCustomScript"]="library_item_id= "
-    operation_parameters["customScriptsGetCustomScript"]="library_item_id= "
-    operation_parameters["customScriptsListCustomScripts"]="page= "
-    operation_parameters["customScriptsUpdateCustomScript"]="library_item_id= "
-    operation_parameters["deviceActionsClearPasscode"]="device_id= "
-    operation_parameters["deviceActionsDeleteDevice"]="device_id= "
-    operation_parameters["deviceActionsDeleteUser"]="device_id= "
-    operation_parameters["deviceActionsEraseDevice"]="device_id= "
-    operation_parameters["deviceActionsGetDeviceCommands"]="device_id= limit= offset= "
-    operation_parameters["deviceActionsLockDevice"]="device_id= "
-    operation_parameters["deviceActionsReinstallAgent"]="device_id= "
-    operation_parameters["deviceActionsRemoteDesktop"]="device_id= "
-    operation_parameters["deviceActionsRenewMdmProfile"]="device_id= "
-    operation_parameters["deviceActionsRestartDevice"]="device_id= "
-    operation_parameters["deviceActionsSendBlankpush"]="device_id= "
-    operation_parameters["deviceActionsSetName"]="device_id= "
-    operation_parameters["deviceActionsShutdown"]="device_id= "
-    operation_parameters["deviceActionsUnlockAccount"]="device_id= "
-    operation_parameters["deviceActionsUpdateInventory"]="device_id= "
-    operation_parameters["deviceInformationCancelLostMode"]="device_id= "
-    operation_parameters["deviceInformationGetDeviceActivity"]="device_id= limit= offset= "
-    operation_parameters["deviceInformationGetDeviceApps"]="device_id= "
-    operation_parameters["deviceInformationGetDeviceDetails"]="device_id= "
-    operation_parameters["deviceInformationGetDeviceLibraryItems"]="device_id= "
-    operation_parameters["deviceInformationGetDeviceLostModeDetails"]="device_id= "
-    operation_parameters["deviceInformationGetDeviceParameters"]="device_id= "
-    operation_parameters["deviceInformationGetDeviceStatus"]="device_id= "
-    operation_parameters["deviceInformationListDevices"]="asset_tag= blueprint_id= device_id= device_name= filevault_enabled= mac_address= model= ordering= os_version= platform= serial_number= tag_name= tag_name_in= tag_id= tag_id_in= user= user_email= user_id= user_name= limit= offset= "
-    operation_parameters["deviceSecretsGetActivationLockBypassCode"]="device_id= "
-    operation_parameters["deviceSecretsGetFilevaultRecoveryKey"]="device_id= "
-    operation_parameters["deviceSecretsGetRecoveryLockPassword"]="device_id= "
-    operation_parameters["deviceSecretsGetUnlockPin"]="device_id= "
-    operation_parameters["inhouseAppsCreateInhouseApp"]="Content-Type: "
-    operation_parameters["inhouseAppsDeleteInhouseApp"]="library_item_id= "
-    operation_parameters["inhouseAppsGetInhouseApp"]="library_item_id= "
-    operation_parameters["inhouseAppsListInhouseApps"]="page= "
-    operation_parameters["inhouseAppsUpdateInhouseApp"]="library_item_id= Content-Type: "
-    operation_parameters["inhouseAppsUploadInhouseApp"]="Content-Type: "
-    operation_parameters["inhouseAppsUploadInhouseAppStatus"]="pending_upload_id= "
-    operation_parameters["libraryItemsGetLibraryItemActivity"]="library_item_id= activity_type= user_id= user_email= limit= offset= "
-    operation_parameters["libraryItemsGetLibraryItemStatuses"]="library_item_id= computer_id= limit= offset= "
-    operation_parameters["lostModeDisableLostMode"]="device_id= "
-    operation_parameters["lostModeEnableLostMode"]="device_id= "
-    operation_parameters["lostModePlayLostModeSound"]="device_id= "
-    operation_parameters["lostModeUpdateLocation"]="device_id= "
-    operation_parameters["notesCreateDeviceNote"]="device_id= "
-    operation_parameters["notesDeleteDeviceNote"]="device_id= note_id= "
-    operation_parameters["notesGetDeviceNotes"]="device_id= "
-    operation_parameters["notesRetrieveDeviceNote"]="device_id= note_id= "
-    operation_parameters["notesUpdateDeviceNote"]="device_id= note_id= "
-    operation_parameters["prismActivationLock"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismApplicationFirewall"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismApplications"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismCertificates"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismCount"]="category= "
-    operation_parameters["prismDesktopAndScreensaver"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismDeviceInformation"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismFilevault"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismGatekeeperAndXprotect"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismGetCategoryExport"]="export_id= "
-    operation_parameters["prismInstalledProfiles"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismKernelExtensions"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismLaunchAgentsAndDaemons"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismLocalUsers"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismRequestCategoryExport"]=""
-    operation_parameters["prismStartupSettings"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismSystemExtensions"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["prismTransparencyDatabase"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["selfServiceListSelfServiceCategories"]=""
-    operation_parameters["settingsLicensing"]=""
-    operation_parameters["tagsCreateTag"]=""
-    operation_parameters["tagsDeleteTag"]="tag_id= "
-    operation_parameters["tagsGetTags"]="search= "
-    operation_parameters["tagsUpdateTag"]="tag_id= "
-    operation_parameters["threatsGetThreatDetails"]="classification= date_range= device_id= status= sort_by= term= limit= offset= "
-    operation_parameters["usersDeleteUser"]="user_id= "
-    operation_parameters["usersGetUser"]="user_id= "
-    operation_parameters["usersListUsers"]="email= id= integration_id= archived= "
+    operation_parameters["createAdeIntegration"]=""
+    operation_parameters["deleteAdeIntegration"]="ade_token_id= "
+    operation_parameters["downloadAdePublicKey"]=""
+    operation_parameters["getAdeDevice"]="device_id= "
+    operation_parameters["getAdeIntegration"]="ade_token_id= "
+    operation_parameters["listAdeDevices"]="blueprint_id= user_id= dep_account= device_family= model= os= profile_status= serial_number= page= "
+    operation_parameters["listAdeIntegrations"]=""
+    operation_parameters["listDevicesAssociatedToAdeToken"]="ade_token_id= page= "
+    operation_parameters["renewAdeIntegration"]="ade_token_id= "
+    operation_parameters["updateAdeDevice"]="device_id= "
+    operation_parameters["updateAdeIntegration"]="ade_token_id= "
+    operation_parameters["assignLibraryItem"]="blueprint_id= "
+    operation_parameters["createBlueprint"]=""
+    operation_parameters["deleteBlueprint"]="blueprint_id= "
+    operation_parameters["getBlueprint"]="blueprint_id= "
+    operation_parameters["getBlueprintTemplates"]="limit= offset= "
+    operation_parameters["getManualEnrollmentProfile"]="blueprint_id= sso= "
+    operation_parameters["listBlueprints"]="id= id__in= name= limit= offset= "
+    operation_parameters["listLibraryItems"]="blueprint_id= "
+    operation_parameters["removeLibraryItem"]="blueprint_id= "
+    operation_parameters["updateBlueprint"]="blueprint_id= "
+    operation_parameters["createCustomApp"]=""
+    operation_parameters["deleteCustomApp"]="library_item_id= "
+    operation_parameters["getCustomApp"]="library_item_id= "
+    operation_parameters["listCustomApps"]="page= "
+    operation_parameters["updateCustomApp"]="library_item_id= "
+    operation_parameters["uploadCustomApp"]=""
+    operation_parameters["createCustomProfile"]=""
+    operation_parameters["deleteCustomProfile"]="library_item_id= "
+    operation_parameters["getCustomProfile"]="library_item_id= "
+    operation_parameters["listCustomProfiles"]="page= "
+    operation_parameters["updateCustomProfile"]="library_item_id= "
+    operation_parameters["createCustomScript"]=""
+    operation_parameters["deleteCustomScript"]="library_item_id= "
+    operation_parameters["getCustomScript"]="library_item_id= "
+    operation_parameters["listCustomScripts"]="page= "
+    operation_parameters["updateCustomScript"]="library_item_id= "
+    operation_parameters["clearPasscode"]="device_id= "
+    operation_parameters["deleteDevice"]="device_id= "
+    operation_parameters["deleteUser"]="device_id= "
+    operation_parameters["eraseDevice"]="device_id= "
+    operation_parameters["getDeviceCommands"]="device_id= limit= offset= "
+    operation_parameters["lockDevice"]="device_id= "
+    operation_parameters["reinstallAgent"]="device_id= "
+    operation_parameters["remoteDesktop"]="device_id= "
+    operation_parameters["renewMdmProfile"]="device_id= "
+    operation_parameters["restartDevice"]="device_id= "
+    operation_parameters["sendBlankpush"]="device_id= "
+    operation_parameters["setName"]="device_id= "
+    operation_parameters["shutdown"]="device_id= "
+    operation_parameters["unlockAccount"]="device_id= "
+    operation_parameters["updateInventory"]="device_id= "
+    operation_parameters["cancelLostMode"]="device_id= "
+    operation_parameters["getDeviceActivity"]="device_id= limit= offset= "
+    operation_parameters["getDeviceApps"]="device_id= "
+    operation_parameters["getDeviceDetails"]="device_id= "
+    operation_parameters["getDeviceLibraryItems"]="device_id= "
+    operation_parameters["getDeviceLostModeDetails"]="device_id= "
+    operation_parameters["getDeviceParameters"]="device_id= "
+    operation_parameters["getDeviceStatus"]="device_id= "
+    operation_parameters["listDevices"]="asset_tag= blueprint_id= device_id= device_name= filevault_enabled= mac_address= model= ordering= os_version= platform= serial_number= tag_name= tag_name_in= tag_id= tag_id_in= user= user_email= user_id= user_name= limit= offset= "
+    operation_parameters["getActivationLockBypassCode"]="device_id= "
+    operation_parameters["getFilevaultRecoveryKey"]="device_id= "
+    operation_parameters["getRecoveryLockPassword"]="device_id= "
+    operation_parameters["getUnlockPin"]="device_id= "
+    operation_parameters["createInhouseApp"]="Content-Type: "
+    operation_parameters["deleteInhouseApp"]="library_item_id= "
+    operation_parameters["getInhouseApp"]="library_item_id= "
+    operation_parameters["listInhouseApps"]="page= "
+    operation_parameters["updateInhouseApp"]="library_item_id= Content-Type: "
+    operation_parameters["uploadInhouseApp"]="Content-Type: "
+    operation_parameters["uploadInhouseAppStatus"]="pending_upload_id= "
+    operation_parameters["getLibraryItemActivity"]="library_item_id= activity_type= user_id= user_email= limit= offset= "
+    operation_parameters["getLibraryItemStatuses"]="library_item_id= computer_id= limit= offset= "
+    operation_parameters["disableLostMode"]="device_id= "
+    operation_parameters["enableLostMode"]="device_id= "
+    operation_parameters["playLostModeSound"]="device_id= "
+    operation_parameters["updateLocation"]="device_id= "
+    operation_parameters["createDeviceNote"]="device_id= "
+    operation_parameters["deleteDeviceNote"]="device_id= note_id= "
+    operation_parameters["getDeviceNotes"]="device_id= "
+    operation_parameters["retrieveDeviceNote"]="device_id= note_id= "
+    operation_parameters["updateDeviceNote"]="device_id= note_id= "
+    operation_parameters["activationLock"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["applicationFirewall"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["applications"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["certificates"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["count"]="category= "
+    operation_parameters["desktopAndScreensaver"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["deviceInformation"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["filevault"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["gatekeeperAndXprotect"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["getCategoryExport"]="export_id= "
+    operation_parameters["installedProfiles"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["kernelExtensions"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["launchAgentsAndDaemons"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["localUsers"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["requestCategoryExport"]=""
+    operation_parameters["startupSettings"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["systemExtensions"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["transparencyDatabase"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["listSelfServiceCategories"]=""
+    operation_parameters["licensing"]=""
+    operation_parameters["createTag"]=""
+    operation_parameters["deleteTag"]="tag_id= "
+    operation_parameters["getTags"]="search= "
+    operation_parameters["updateTag"]="tag_id= "
+    operation_parameters["getThreatDetails"]="classification= date_range= device_id= status= sort_by= term= limit= offset= "
+    operation_parameters["deleteUser"]="user_id= "
+    operation_parameters["getUser"]="user_id= "
+    operation_parameters["listUsers"]="email= id= integration_id= archived= "
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values

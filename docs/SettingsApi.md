@@ -4,11 +4,11 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**settingsLicensing**](SettingsApi.md#settingsLicensing) | **GET** /api/v1/settings/licensing | Licensing
+[**licensing**](SettingsApi.md#licensing) | **GET** /api/v1/settings/licensing | Licensing
 
 
 
-## settingsLicensing
+## licensing
 
 Licensing
 
@@ -17,7 +17,7 @@ Returns Kandji tenant licensing and utilization information.
 ### Example
 
 ```bash
-kandji settingsLicensing
+kandji licensing
 ```
 
 ### Parameters

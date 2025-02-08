@@ -4,12 +4,12 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**libraryItemsGetLibraryItemActivity**](LibraryItemsApi.md#libraryItemsGetLibraryItemActivity) | **GET** /api/v1/library/library-items/{library_item_id}/activity | Get Library Item Activity
-[**libraryItemsGetLibraryItemStatuses**](LibraryItemsApi.md#libraryItemsGetLibraryItemStatuses) | **GET** /api/v1/library/library-items/{library_item_id}/status | Get Library Item Statuses
+[**getLibraryItemActivity**](LibraryItemsApi.md#getLibraryItemActivity) | **GET** /api/v1/library/library-items/{library_item_id}/activity | Get Library Item Activity
+[**getLibraryItemStatuses**](LibraryItemsApi.md#getLibraryItemStatuses) | **GET** /api/v1/library/library-items/{library_item_id}/status | Get Library Item Statuses
 
 
 
-## libraryItemsGetLibraryItemActivity
+## getLibraryItemActivity
 
 Get Library Item Activity
 
@@ -21,7 +21,7 @@ Get Library Item Activity
 ### Example
 
 ```bash
-kandji libraryItemsGetLibraryItemActivity library_item_id=value  activity_type=value  user_id=value  user_email=value  limit=value  offset=value
+kandji getLibraryItemActivity library_item_id=value  activity_type=value  user_id=value  user_email=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## libraryItemsGetLibraryItemStatuses
+## getLibraryItemStatuses
 
 Get Library Item Statuses
 
@@ -63,7 +63,7 @@ Get Library Item Statuses
 ### Example
 
 ```bash
-kandji libraryItemsGetLibraryItemStatuses library_item_id=value  computer_id=value  limit=value  offset=value
+kandji getLibraryItemStatuses library_item_id=value  computer_id=value  limit=value  offset=value
 ```
 
 ### Parameters

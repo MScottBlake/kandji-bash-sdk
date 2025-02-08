@@ -4,13 +4,13 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**usersDeleteUser**](UsersApi.md#usersDeleteUser) | **DELETE** /api/v1/users/{user_id} | Delete User
-[**usersGetUser**](UsersApi.md#usersGetUser) | **GET** /api/v1/users/{user_id} | Get User
-[**usersListUsers**](UsersApi.md#usersListUsers) | **GET** /api/v1/users | List Users
+[**deleteUser**](UsersApi.md#deleteUser) | **DELETE** /api/v1/users/{user_id} | Delete User
+[**getUser**](UsersApi.md#getUser) | **GET** /api/v1/users/{user_id} | Get User
+[**listUsers**](UsersApi.md#listUsers) | **GET** /api/v1/users | List Users
 
 
 
-## usersDeleteUser
+## deleteUser
 
 Delete User
 
@@ -26,7 +26,7 @@ Delete User
 ### Example
 
 ```bash
-kandji usersDeleteUser user_id=value
+kandji deleteUser user_id=value
 ```
 
 ### Parameters
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## usersGetUser
+## getUser
 
 Get User
 
@@ -61,7 +61,7 @@ This endpoint makes a request to retrieve a specified user directory integration
 ### Example
 
 ```bash
-kandji usersGetUser user_id=value
+kandji getUser user_id=value
 ```
 
 ### Parameters
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## usersListUsers
+## listUsers
 
 List Users
 
@@ -97,7 +97,7 @@ List Users
 ### Example
 
 ```bash
-kandji usersListUsers  email=value  id=value  integration_id=value  archived=value
+kandji listUsers  email=value  id=value  integration_id=value  archived=value
 ```
 
 ### Parameters

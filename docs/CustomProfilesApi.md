@@ -4,15 +4,15 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**customProfilesCreateCustomProfile**](CustomProfilesApi.md#customProfilesCreateCustomProfile) | **POST** /api/v1/library/custom-profiles | Create Custom Profile
-[**customProfilesDeleteCustomProfile**](CustomProfilesApi.md#customProfilesDeleteCustomProfile) | **DELETE** /api/v1/library/custom-profiles/{library_item_id} | Delete Custom Profile
-[**customProfilesGetCustomProfile**](CustomProfilesApi.md#customProfilesGetCustomProfile) | **GET** /api/v1/library/custom-profiles/{library_item_id} | Get Custom Profile
-[**customProfilesListCustomProfiles**](CustomProfilesApi.md#customProfilesListCustomProfiles) | **GET** /api/v1/library/custom-profiles | List Custom Profiles
-[**customProfilesUpdateCustomProfile**](CustomProfilesApi.md#customProfilesUpdateCustomProfile) | **PATCH** /api/v1/library/custom-profiles/{library_item_id} | Update Custom Profile
+[**createCustomProfile**](CustomProfilesApi.md#createCustomProfile) | **POST** /api/v1/library/custom-profiles | Create Custom Profile
+[**deleteCustomProfile**](CustomProfilesApi.md#deleteCustomProfile) | **DELETE** /api/v1/library/custom-profiles/{library_item_id} | Delete Custom Profile
+[**getCustomProfile**](CustomProfilesApi.md#getCustomProfile) | **GET** /api/v1/library/custom-profiles/{library_item_id} | Get Custom Profile
+[**listCustomProfiles**](CustomProfilesApi.md#listCustomProfiles) | **GET** /api/v1/library/custom-profiles | List Custom Profiles
+[**updateCustomProfile**](CustomProfilesApi.md#updateCustomProfile) | **PATCH** /api/v1/library/custom-profiles/{library_item_id} | Update Custom Profile
 
 
 
-## customProfilesCreateCustomProfile
+## createCustomProfile
 
 Create Custom Profile
 
@@ -21,7 +21,7 @@ This request allows you to create a custom profile in the Kandji library.
 ### Example
 
 ```bash
-kandji customProfilesCreateCustomProfile
+kandji createCustomProfile
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customProfilesDeleteCustomProfile
+## deleteCustomProfile
 
 Delete Custom Profile
 
@@ -61,7 +61,7 @@ Delete Custom Profile
 ### Example
 
 ```bash
-kandji customProfilesDeleteCustomProfile library_item_id=value
+kandji deleteCustomProfile library_item_id=value
 ```
 
 ### Parameters
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customProfilesGetCustomProfile
+## getCustomProfile
 
 Get Custom Profile
 
@@ -98,7 +98,7 @@ Get Custom Profile
 ### Example
 
 ```bash
-kandji customProfilesGetCustomProfile library_item_id=value
+kandji getCustomProfile library_item_id=value
 ```
 
 ### Parameters
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customProfilesListCustomProfiles
+## listCustomProfiles
 
 List Custom Profiles
 
@@ -133,7 +133,7 @@ This endpoint makes a request to retrieve a list of custom profiles from the Kan
 ### Example
 
 ```bash
-kandji customProfilesListCustomProfiles  page=value
+kandji listCustomProfiles  page=value
 ```
 
 ### Parameters
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## customProfilesUpdateCustomProfile
+## updateCustomProfile
 
 Update Custom Profile
 
@@ -170,7 +170,7 @@ Update Custom Profile
 ### Example
 
 ```bash
-kandji customProfilesUpdateCustomProfile library_item_id=value
+kandji updateCustomProfile library_item_id=value
 ```
 
 ### Parameters

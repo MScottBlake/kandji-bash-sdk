@@ -4,19 +4,19 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deviceInformationCancelLostMode**](DeviceInformationApi.md#deviceInformationCancelLostMode) | **DELETE** /api/v1/devices/{device_id}/details/lostmode | Cancel Lost Mode
-[**deviceInformationGetDeviceActivity**](DeviceInformationApi.md#deviceInformationGetDeviceActivity) | **GET** /api/v1/devices/{device_id}/activity | Get Device Activity
-[**deviceInformationGetDeviceApps**](DeviceInformationApi.md#deviceInformationGetDeviceApps) | **GET** /api/v1/devices/{device_id}/apps | Get Device Apps
-[**deviceInformationGetDeviceDetails**](DeviceInformationApi.md#deviceInformationGetDeviceDetails) | **GET** /api/v1/devices/{device_id}/details | Get Device Details
-[**deviceInformationGetDeviceLibraryItems**](DeviceInformationApi.md#deviceInformationGetDeviceLibraryItems) | **GET** /api/v1/devices/{device_id}/library-items | Get Device Library Items
-[**deviceInformationGetDeviceLostModeDetails**](DeviceInformationApi.md#deviceInformationGetDeviceLostModeDetails) | **GET** /api/v1/devices/{device_id}/details/lostmode | Get Device Lost Mode details
-[**deviceInformationGetDeviceParameters**](DeviceInformationApi.md#deviceInformationGetDeviceParameters) | **GET** /api/v1/devices/{device_id}/parameters | Get Device Parameters
-[**deviceInformationGetDeviceStatus**](DeviceInformationApi.md#deviceInformationGetDeviceStatus) | **GET** /api/v1/devices/{device_id}/status | Get Device Status
-[**deviceInformationListDevices**](DeviceInformationApi.md#deviceInformationListDevices) | **GET** /api/v1/devices | List Devices
+[**cancelLostMode**](DeviceInformationApi.md#cancelLostMode) | **DELETE** /api/v1/devices/{device_id}/details/lostmode | Cancel Lost Mode
+[**getDeviceActivity**](DeviceInformationApi.md#getDeviceActivity) | **GET** /api/v1/devices/{device_id}/activity | Get Device Activity
+[**getDeviceApps**](DeviceInformationApi.md#getDeviceApps) | **GET** /api/v1/devices/{device_id}/apps | Get Device Apps
+[**getDeviceDetails**](DeviceInformationApi.md#getDeviceDetails) | **GET** /api/v1/devices/{device_id}/details | Get Device Details
+[**getDeviceLibraryItems**](DeviceInformationApi.md#getDeviceLibraryItems) | **GET** /api/v1/devices/{device_id}/library-items | Get Device Library Items
+[**getDeviceLostModeDetails**](DeviceInformationApi.md#getDeviceLostModeDetails) | **GET** /api/v1/devices/{device_id}/details/lostmode | Get Device Lost Mode details
+[**getDeviceParameters**](DeviceInformationApi.md#getDeviceParameters) | **GET** /api/v1/devices/{device_id}/parameters | Get Device Parameters
+[**getDeviceStatus**](DeviceInformationApi.md#getDeviceStatus) | **GET** /api/v1/devices/{device_id}/status | Get Device Status
+[**listDevices**](DeviceInformationApi.md#listDevices) | **GET** /api/v1/devices | List Devices
 
 
 
-## deviceInformationCancelLostMode
+## cancelLostMode
 
 Cancel Lost Mode
 
@@ -25,7 +25,7 @@ This endpoint can be used to send a cancelation request if Lost Mode is in an er
 ### Example
 
 ```bash
-kandji deviceInformationCancelLostMode device_id=value
+kandji cancelLostMode device_id=value
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationGetDeviceActivity
+## getDeviceActivity
 
 Get Device Activity
 
@@ -60,7 +60,7 @@ This request returns the device activity for a specified Device ID.
 ### Example
 
 ```bash
-kandji deviceInformationGetDeviceActivity device_id=value  limit=value  offset=value
+kandji getDeviceActivity device_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationGetDeviceApps
+## getDeviceApps
 
 Get Device Apps
 
@@ -98,7 +98,7 @@ Get Device Apps
 ### Example
 
 ```bash
-kandji deviceInformationGetDeviceApps device_id=value
+kandji getDeviceApps device_id=value
 ```
 
 ### Parameters
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationGetDeviceDetails
+## getDeviceDetails
 
 Get Device Details
 
@@ -133,7 +133,7 @@ This request returns the device details for a specified Device ID.
 ### Example
 
 ```bash
-kandji deviceInformationGetDeviceDetails device_id=value
+kandji getDeviceDetails device_id=value
 ```
 
 ### Parameters
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationGetDeviceLibraryItems
+## getDeviceLibraryItems
 
 Get Device Library Items
 
@@ -246,7 +246,7 @@ Get Device Library Items
 ### Example
 
 ```bash
-kandji deviceInformationGetDeviceLibraryItems device_id=value
+kandji getDeviceLibraryItems device_id=value
 ```
 
 ### Parameters
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationGetDeviceLostModeDetails
+## getDeviceLostModeDetails
 
 Get Device Lost Mode details
 
@@ -282,7 +282,7 @@ Get Device Lost Mode details
 ### Example
 
 ```bash
-kandji deviceInformationGetDeviceLostModeDetails device_id=value
+kandji getDeviceLostModeDetails device_id=value
 ```
 
 ### Parameters
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationGetDeviceParameters
+## getDeviceParameters
 
 Get Device Parameters
 
@@ -362,7 +362,7 @@ Get Device Parameters
 ### Example
 
 ```bash
-kandji deviceInformationGetDeviceParameters device_id=value
+kandji getDeviceParameters device_id=value
 ```
 
 ### Parameters
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationGetDeviceStatus
+## getDeviceStatus
 
 Get Device Status
 
@@ -499,7 +499,7 @@ Get Device Status
 ### Example
 
 ```bash
-kandji deviceInformationGetDeviceStatus device_id=value
+kandji getDeviceStatus device_id=value
 ```
 
 ### Parameters
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## deviceInformationListDevices
+## listDevices
 
 List Devices
 
@@ -535,7 +535,7 @@ List Devices
 ### Example
 
 ```bash
-kandji deviceInformationListDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
+kandji listDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
 ```
 
 ### Parameters
