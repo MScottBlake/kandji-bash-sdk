@@ -168,13 +168,13 @@ Class | Method | HTTP request | Description
 *DeviceSecretsApi* | [**deviceSecretsGetFilevaultRecoveryKey**](docs/DeviceSecretsApi.md#devicesecretsgetfilevaultrecoverykey) | **GET** /api/v1/devices/{device_id}/secrets/filevaultkey | Get FileVault Recovery Key
 *DeviceSecretsApi* | [**deviceSecretsGetRecoveryLockPassword**](docs/DeviceSecretsApi.md#devicesecretsgetrecoverylockpassword) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
 *DeviceSecretsApi* | [**deviceSecretsGetUnlockPin**](docs/DeviceSecretsApi.md#devicesecretsgetunlockpin) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
-*InHouseAppsApi* | [**inHouseAppsCreateInhouseApp**](docs/InHouseAppsApi.md#inhouseappscreateinhouseapp) | **POST** /api/v1/library/ipa-apps | Create In-House App
-*InHouseAppsApi* | [**inHouseAppsDeleteInhouseApp**](docs/InHouseAppsApi.md#inhouseappsdeleteinhouseapp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
-*InHouseAppsApi* | [**inHouseAppsGetInhouseApp**](docs/InHouseAppsApi.md#inhouseappsgetinhouseapp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
-*InHouseAppsApi* | [**inHouseAppsListInhouseApps**](docs/InHouseAppsApi.md#inhouseappslistinhouseapps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
-*InHouseAppsApi* | [**inHouseAppsUpdateInhouseApp**](docs/InHouseAppsApi.md#inhouseappsupdateinhouseapp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
-*InHouseAppsApi* | [**inHouseAppsUploadInhouseApp**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseapp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
-*InHouseAppsApi* | [**inHouseAppsUploadInhouseAppStatus**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseappstatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
+*InHouseAppsApi* | [**inhouseAppsCreateInhouseApp**](docs/InHouseAppsApi.md#inhouseappscreateinhouseapp) | **POST** /api/v1/library/ipa-apps | Create In-House App
+*InHouseAppsApi* | [**inhouseAppsDeleteInhouseApp**](docs/InHouseAppsApi.md#inhouseappsdeleteinhouseapp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
+*InHouseAppsApi* | [**inhouseAppsGetInhouseApp**](docs/InHouseAppsApi.md#inhouseappsgetinhouseapp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
+*InHouseAppsApi* | [**inhouseAppsListInhouseApps**](docs/InHouseAppsApi.md#inhouseappslistinhouseapps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
+*InHouseAppsApi* | [**inhouseAppsUpdateInhouseApp**](docs/InHouseAppsApi.md#inhouseappsupdateinhouseapp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
+*InHouseAppsApi* | [**inhouseAppsUploadInhouseApp**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseapp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
+*InHouseAppsApi* | [**inhouseAppsUploadInhouseAppStatus**](docs/InHouseAppsApi.md#inhouseappsuploadinhouseappstatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
 *LibraryItemsApi* | [**libraryItemsGetLibraryItemActivity**](docs/LibraryItemsApi.md#libraryitemsgetlibraryitemactivity) | **GET** /api/v1/library/library-items/{library_item_id}/activity | Get Library Item Activity
 *LibraryItemsApi* | [**libraryItemsGetLibraryItemStatuses**](docs/LibraryItemsApi.md#libraryitemsgetlibraryitemstatuses) | **GET** /api/v1/library/library-items/{library_item_id}/status | Get Library Item Statuses
 *LostModeApi* | [**lostModeDisableLostMode**](docs/LostModeApi.md#lostmodedisablelostmode) | **POST** /api/v1/devices/{device_id}/action/disablelostmode | Disable Lost Mode

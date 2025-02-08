@@ -354,13 +354,13 @@ case $state in
             "deviceInformationListDevices[List Devices]"             "deviceSecretsGetActivationLockBypassCode[Get Activation Lock Bypass Code]" \
             "deviceSecretsGetFilevaultRecoveryKey[Get FileVault Recovery Key]" \
             "deviceSecretsGetRecoveryLockPassword[Get Recovery Lock Password]" \
-            "deviceSecretsGetUnlockPin[Get Unlock Pin]"             "inHouseAppsCreateInhouseApp[Create In-House App]" \
-            "inHouseAppsDeleteInhouseApp[Delete In-House App]" \
-            "inHouseAppsGetInhouseApp[Get In-House App]" \
-            "inHouseAppsListInhouseApps[List In-House Apps]" \
-            "inHouseAppsUpdateInhouseApp[Update In-House App]" \
-            "inHouseAppsUploadInhouseApp[Upload In-House App]" \
-            "inHouseAppsUploadInhouseAppStatus[Upload In-House App Status]"             "libraryItemsGetLibraryItemActivity[Get Library Item Activity]" \
+            "deviceSecretsGetUnlockPin[Get Unlock Pin]"             "inhouseAppsCreateInhouseApp[Create In-House App]" \
+            "inhouseAppsDeleteInhouseApp[Delete In-House App]" \
+            "inhouseAppsGetInhouseApp[Get In-House App]" \
+            "inhouseAppsListInhouseApps[List In-House Apps]" \
+            "inhouseAppsUpdateInhouseApp[Update In-House App]" \
+            "inhouseAppsUploadInhouseApp[Upload In-House App]" \
+            "inhouseAppsUploadInhouseAppStatus[Upload In-House App Status]"             "libraryItemsGetLibraryItemActivity[Get Library Item Activity]" \
             "libraryItemsGetLibraryItemStatuses[Get Library Item Statuses]"             "lostModeDisableLostMode[Disable Lost Mode]" \
             "lostModeEnableLostMode[Enable Lost Mode]" \
             "lostModePlayLostModeSound[Play Lost Mode Sound]" \
@@ -901,35 +901,35 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      inHouseAppsCreateInhouseApp)
+      inhouseAppsCreateInhouseApp)
         local -a _op_arguments
         _op_arguments=(
                               "Content-Type\::[HEADER] "
 )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      inHouseAppsDeleteInhouseApp)
+      inhouseAppsDeleteInhouseApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      inHouseAppsGetInhouseApp)
+      inhouseAppsGetInhouseApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      inHouseAppsListInhouseApps)
+      inhouseAppsListInhouseApps)
         local -a _op_arguments
         _op_arguments=(
                     "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 app records returned per request."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      inHouseAppsUpdateInhouseApp)
+      inhouseAppsUpdateInhouseApp)
         local -a _op_arguments
         _op_arguments=(
           "library_item_id=:[PATH] "
@@ -937,14 +937,14 @@ case $state in
 )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      inHouseAppsUploadInhouseApp)
+      inhouseAppsUploadInhouseApp)
         local -a _op_arguments
         _op_arguments=(
                               "Content-Type\::[HEADER] "
 )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      inHouseAppsUploadInhouseAppStatus)
+      inhouseAppsUploadInhouseAppStatus)
         local -a _op_arguments
         _op_arguments=(
           "pending_upload_id=:[PATH] "

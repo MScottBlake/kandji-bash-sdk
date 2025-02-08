@@ -134,13 +134,13 @@ _kandji()
     operations["deviceSecretsGetFilevaultRecoveryKey"]=1
     operations["deviceSecretsGetRecoveryLockPassword"]=1
     operations["deviceSecretsGetUnlockPin"]=1
-    operations["inHouseAppsCreateInhouseApp"]=1
-    operations["inHouseAppsDeleteInhouseApp"]=1
-    operations["inHouseAppsGetInhouseApp"]=1
-    operations["inHouseAppsListInhouseApps"]=1
-    operations["inHouseAppsUpdateInhouseApp"]=1
-    operations["inHouseAppsUploadInhouseApp"]=1
-    operations["inHouseAppsUploadInhouseAppStatus"]=1
+    operations["inhouseAppsCreateInhouseApp"]=1
+    operations["inhouseAppsDeleteInhouseApp"]=1
+    operations["inhouseAppsGetInhouseApp"]=1
+    operations["inhouseAppsListInhouseApps"]=1
+    operations["inhouseAppsUpdateInhouseApp"]=1
+    operations["inhouseAppsUploadInhouseApp"]=1
+    operations["inhouseAppsUploadInhouseAppStatus"]=1
     operations["libraryItemsGetLibraryItemActivity"]=1
     operations["libraryItemsGetLibraryItemStatuses"]=1
     operations["lostModeDisableLostMode"]=1
@@ -249,13 +249,13 @@ _kandji()
     operation_parameters["deviceSecretsGetFilevaultRecoveryKey"]="device_id= "
     operation_parameters["deviceSecretsGetRecoveryLockPassword"]="device_id= "
     operation_parameters["deviceSecretsGetUnlockPin"]="device_id= "
-    operation_parameters["inHouseAppsCreateInhouseApp"]="Content-Type: "
-    operation_parameters["inHouseAppsDeleteInhouseApp"]="library_item_id= "
-    operation_parameters["inHouseAppsGetInhouseApp"]="library_item_id= "
-    operation_parameters["inHouseAppsListInhouseApps"]="page= "
-    operation_parameters["inHouseAppsUpdateInhouseApp"]="library_item_id= Content-Type: "
-    operation_parameters["inHouseAppsUploadInhouseApp"]="Content-Type: "
-    operation_parameters["inHouseAppsUploadInhouseAppStatus"]="pending_upload_id= "
+    operation_parameters["inhouseAppsCreateInhouseApp"]="Content-Type: "
+    operation_parameters["inhouseAppsDeleteInhouseApp"]="library_item_id= "
+    operation_parameters["inhouseAppsGetInhouseApp"]="library_item_id= "
+    operation_parameters["inhouseAppsListInhouseApps"]="page= "
+    operation_parameters["inhouseAppsUpdateInhouseApp"]="library_item_id= Content-Type: "
+    operation_parameters["inhouseAppsUploadInhouseApp"]="Content-Type: "
+    operation_parameters["inhouseAppsUploadInhouseAppStatus"]="pending_upload_id= "
     operation_parameters["libraryItemsGetLibraryItemActivity"]="library_item_id= activity_type= user_id= user_email= limit= offset= "
     operation_parameters["libraryItemsGetLibraryItemStatuses"]="library_item_id= computer_id= limit= offset= "
     operation_parameters["lostModeDisableLostMode"]="device_id= "

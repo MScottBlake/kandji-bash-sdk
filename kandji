@@ -236,17 +236,17 @@ operation_parameters_minimum_occurrences["deviceSecretsGetActivationLockBypassCo
 operation_parameters_minimum_occurrences["deviceSecretsGetFilevaultRecoveryKey:::device_id"]=1
 operation_parameters_minimum_occurrences["deviceSecretsGetRecoveryLockPassword:::device_id"]=1
 operation_parameters_minimum_occurrences["deviceSecretsGetUnlockPin:::device_id"]=1
-operation_parameters_minimum_occurrences["inHouseAppsCreateInhouseApp:::Content-Type"]=1
-operation_parameters_minimum_occurrences["inHouseAppsCreateInhouseApp:::body"]=0
-operation_parameters_minimum_occurrences["inHouseAppsDeleteInhouseApp:::library_item_id"]=1
-operation_parameters_minimum_occurrences["inHouseAppsGetInhouseApp:::library_item_id"]=1
-operation_parameters_minimum_occurrences["inHouseAppsListInhouseApps:::page"]=0
-operation_parameters_minimum_occurrences["inHouseAppsUpdateInhouseApp:::library_item_id"]=1
-operation_parameters_minimum_occurrences["inHouseAppsUpdateInhouseApp:::Content-Type"]=1
-operation_parameters_minimum_occurrences["inHouseAppsUpdateInhouseApp:::body"]=0
-operation_parameters_minimum_occurrences["inHouseAppsUploadInhouseApp:::Content-Type"]=1
-operation_parameters_minimum_occurrences["inHouseAppsUploadInhouseApp:::body"]=0
-operation_parameters_minimum_occurrences["inHouseAppsUploadInhouseAppStatus:::pending_upload_id"]=1
+operation_parameters_minimum_occurrences["inhouseAppsCreateInhouseApp:::Content-Type"]=1
+operation_parameters_minimum_occurrences["inhouseAppsCreateInhouseApp:::body"]=0
+operation_parameters_minimum_occurrences["inhouseAppsDeleteInhouseApp:::library_item_id"]=1
+operation_parameters_minimum_occurrences["inhouseAppsGetInhouseApp:::library_item_id"]=1
+operation_parameters_minimum_occurrences["inhouseAppsListInhouseApps:::page"]=0
+operation_parameters_minimum_occurrences["inhouseAppsUpdateInhouseApp:::library_item_id"]=1
+operation_parameters_minimum_occurrences["inhouseAppsUpdateInhouseApp:::Content-Type"]=1
+operation_parameters_minimum_occurrences["inhouseAppsUpdateInhouseApp:::body"]=0
+operation_parameters_minimum_occurrences["inhouseAppsUploadInhouseApp:::Content-Type"]=1
+operation_parameters_minimum_occurrences["inhouseAppsUploadInhouseApp:::body"]=0
+operation_parameters_minimum_occurrences["inhouseAppsUploadInhouseAppStatus:::pending_upload_id"]=1
 operation_parameters_minimum_occurrences["libraryItemsGetLibraryItemActivity:::library_item_id"]=1
 operation_parameters_minimum_occurrences["libraryItemsGetLibraryItemActivity:::activity_type"]=0
 operation_parameters_minimum_occurrences["libraryItemsGetLibraryItemActivity:::user_id"]=0
@@ -533,17 +533,17 @@ operation_parameters_maximum_occurrences["deviceSecretsGetActivationLockBypassCo
 operation_parameters_maximum_occurrences["deviceSecretsGetFilevaultRecoveryKey:::device_id"]=0
 operation_parameters_maximum_occurrences["deviceSecretsGetRecoveryLockPassword:::device_id"]=0
 operation_parameters_maximum_occurrences["deviceSecretsGetUnlockPin:::device_id"]=0
-operation_parameters_maximum_occurrences["inHouseAppsCreateInhouseApp:::Content-Type"]=0
-operation_parameters_maximum_occurrences["inHouseAppsCreateInhouseApp:::body"]=0
-operation_parameters_maximum_occurrences["inHouseAppsDeleteInhouseApp:::library_item_id"]=0
-operation_parameters_maximum_occurrences["inHouseAppsGetInhouseApp:::library_item_id"]=0
-operation_parameters_maximum_occurrences["inHouseAppsListInhouseApps:::page"]=0
-operation_parameters_maximum_occurrences["inHouseAppsUpdateInhouseApp:::library_item_id"]=0
-operation_parameters_maximum_occurrences["inHouseAppsUpdateInhouseApp:::Content-Type"]=0
-operation_parameters_maximum_occurrences["inHouseAppsUpdateInhouseApp:::body"]=0
-operation_parameters_maximum_occurrences["inHouseAppsUploadInhouseApp:::Content-Type"]=0
-operation_parameters_maximum_occurrences["inHouseAppsUploadInhouseApp:::body"]=0
-operation_parameters_maximum_occurrences["inHouseAppsUploadInhouseAppStatus:::pending_upload_id"]=0
+operation_parameters_maximum_occurrences["inhouseAppsCreateInhouseApp:::Content-Type"]=0
+operation_parameters_maximum_occurrences["inhouseAppsCreateInhouseApp:::body"]=0
+operation_parameters_maximum_occurrences["inhouseAppsDeleteInhouseApp:::library_item_id"]=0
+operation_parameters_maximum_occurrences["inhouseAppsGetInhouseApp:::library_item_id"]=0
+operation_parameters_maximum_occurrences["inhouseAppsListInhouseApps:::page"]=0
+operation_parameters_maximum_occurrences["inhouseAppsUpdateInhouseApp:::library_item_id"]=0
+operation_parameters_maximum_occurrences["inhouseAppsUpdateInhouseApp:::Content-Type"]=0
+operation_parameters_maximum_occurrences["inhouseAppsUpdateInhouseApp:::body"]=0
+operation_parameters_maximum_occurrences["inhouseAppsUploadInhouseApp:::Content-Type"]=0
+operation_parameters_maximum_occurrences["inhouseAppsUploadInhouseApp:::body"]=0
+operation_parameters_maximum_occurrences["inhouseAppsUploadInhouseAppStatus:::pending_upload_id"]=0
 operation_parameters_maximum_occurrences["libraryItemsGetLibraryItemActivity:::library_item_id"]=0
 operation_parameters_maximum_occurrences["libraryItemsGetLibraryItemActivity:::activity_type"]=0
 operation_parameters_maximum_occurrences["libraryItemsGetLibraryItemActivity:::user_id"]=0
@@ -827,17 +827,17 @@ operation_parameters_collection_type["deviceSecretsGetActivationLockBypassCode::
 operation_parameters_collection_type["deviceSecretsGetFilevaultRecoveryKey:::device_id"]=""
 operation_parameters_collection_type["deviceSecretsGetRecoveryLockPassword:::device_id"]=""
 operation_parameters_collection_type["deviceSecretsGetUnlockPin:::device_id"]=""
-operation_parameters_collection_type["inHouseAppsCreateInhouseApp:::Content-Type"]=""
-operation_parameters_collection_type["inHouseAppsCreateInhouseApp:::body"]=""
-operation_parameters_collection_type["inHouseAppsDeleteInhouseApp:::library_item_id"]=""
-operation_parameters_collection_type["inHouseAppsGetInhouseApp:::library_item_id"]=""
-operation_parameters_collection_type["inHouseAppsListInhouseApps:::page"]=""
-operation_parameters_collection_type["inHouseAppsUpdateInhouseApp:::library_item_id"]=""
-operation_parameters_collection_type["inHouseAppsUpdateInhouseApp:::Content-Type"]=""
-operation_parameters_collection_type["inHouseAppsUpdateInhouseApp:::body"]=""
-operation_parameters_collection_type["inHouseAppsUploadInhouseApp:::Content-Type"]=""
-operation_parameters_collection_type["inHouseAppsUploadInhouseApp:::body"]=""
-operation_parameters_collection_type["inHouseAppsUploadInhouseAppStatus:::pending_upload_id"]=""
+operation_parameters_collection_type["inhouseAppsCreateInhouseApp:::Content-Type"]=""
+operation_parameters_collection_type["inhouseAppsCreateInhouseApp:::body"]=""
+operation_parameters_collection_type["inhouseAppsDeleteInhouseApp:::library_item_id"]=""
+operation_parameters_collection_type["inhouseAppsGetInhouseApp:::library_item_id"]=""
+operation_parameters_collection_type["inhouseAppsListInhouseApps:::page"]=""
+operation_parameters_collection_type["inhouseAppsUpdateInhouseApp:::library_item_id"]=""
+operation_parameters_collection_type["inhouseAppsUpdateInhouseApp:::Content-Type"]=""
+operation_parameters_collection_type["inhouseAppsUpdateInhouseApp:::body"]=""
+operation_parameters_collection_type["inhouseAppsUploadInhouseApp:::Content-Type"]=""
+operation_parameters_collection_type["inhouseAppsUploadInhouseApp:::body"]=""
+operation_parameters_collection_type["inhouseAppsUploadInhouseAppStatus:::pending_upload_id"]=""
 operation_parameters_collection_type["libraryItemsGetLibraryItemActivity:::library_item_id"]=""
 operation_parameters_collection_type["libraryItemsGetLibraryItemActivity:::activity_type"]=""
 operation_parameters_collection_type["libraryItemsGetLibraryItemActivity:::user_id"]=""
@@ -1472,13 +1472,13 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[inHouseApps]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}inHouseAppsCreateInhouseApp${OFF};Create In-House App (AUTH)
-  ${CYAN}inHouseAppsDeleteInhouseApp${OFF};Delete In-House App (AUTH)
-  ${CYAN}inHouseAppsGetInhouseApp${OFF};Get In-House App (AUTH)
-  ${CYAN}inHouseAppsListInhouseApps${OFF};List In-House Apps (AUTH)
-  ${CYAN}inHouseAppsUpdateInhouseApp${OFF};Update In-House App (AUTH)
-  ${CYAN}inHouseAppsUploadInhouseApp${OFF};Upload In-House App (AUTH)
-  ${CYAN}inHouseAppsUploadInhouseAppStatus${OFF};Upload In-House App Status (AUTH)
+  ${CYAN}inhouseAppsCreateInhouseApp${OFF};Create In-House App (AUTH)
+  ${CYAN}inhouseAppsDeleteInhouseApp${OFF};Delete In-House App (AUTH)
+  ${CYAN}inhouseAppsGetInhouseApp${OFF};Get In-House App (AUTH)
+  ${CYAN}inhouseAppsListInhouseApps${OFF};List In-House Apps (AUTH)
+  ${CYAN}inhouseAppsUpdateInhouseApp${OFF};Update In-House App (AUTH)
+  ${CYAN}inhouseAppsUploadInhouseApp${OFF};Upload In-House App (AUTH)
+  ${CYAN}inhouseAppsUploadInhouseAppStatus${OFF};Upload In-House App Status (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -4385,12 +4385,12 @@ print_deviceSecretsGetUnlockPin_help() {
 }
 ##############################################################################
 #
-# Print help for inHouseAppsCreateInhouseApp operation
+# Print help for inhouseAppsCreateInhouseApp operation
 #
 ##############################################################################
-print_inHouseAppsCreateInhouseApp_help() {
+print_inhouseAppsCreateInhouseApp_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}inHouseAppsCreateInhouseApp - Create In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}inhouseAppsCreateInhouseApp - Create In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>After uploading the .ipa app file to S3, this request allows you to create the In-House App in the Kandji library.</p>
 <p>You must have already generated a <code>file_key</code> via <code>Create In-House App</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload In-House App to S3</code> example.</p>
@@ -4407,12 +4407,12 @@ print_inHouseAppsCreateInhouseApp_help() {
 }
 ##############################################################################
 #
-# Print help for inHouseAppsDeleteInhouseApp operation
+# Print help for inhouseAppsDeleteInhouseApp operation
 #
 ##############################################################################
-print_inHouseAppsDeleteInhouseApp_help() {
+print_inhouseAppsDeleteInhouseApp_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}inHouseAppsDeleteInhouseApp - Delete In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}inhouseAppsDeleteInhouseApp - Delete In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific In-House App Library Item from Kandji.</p>
@@ -4430,12 +4430,12 @@ print_inHouseAppsDeleteInhouseApp_help() {
 }
 ##############################################################################
 #
-# Print help for inHouseAppsGetInhouseApp operation
+# Print help for inhouseAppsGetInhouseApp operation
 #
 ##############################################################################
-print_inHouseAppsGetInhouseApp_help() {
+print_inhouseAppsGetInhouseApp_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}inHouseAppsGetInhouseApp - Get In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}inhouseAppsGetInhouseApp - Get In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint retrieves details about a specific In-House App from the Kandji Library.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
@@ -4483,12 +4483,12 @@ print_inHouseAppsGetInhouseApp_help() {
 }
 ##############################################################################
 #
-# Print help for inHouseAppsListInhouseApps operation
+# Print help for inhouseAppsListInhouseApps operation
 #
 ##############################################################################
-print_inHouseAppsListInhouseApps_help() {
+print_inhouseAppsListInhouseApps_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}inHouseAppsListInhouseApps - List In-House Apps${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}inhouseAppsListInhouseApps - List In-House Apps${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "This endpoint makes a request to retrieve a list of In-House Apps from the Kandji library." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4504,12 +4504,12 @@ print_inHouseAppsListInhouseApps_help() {
 }
 ##############################################################################
 #
-# Print help for inHouseAppsUpdateInhouseApp operation
+# Print help for inhouseAppsUpdateInhouseApp operation
 #
 ##############################################################################
-print_inHouseAppsUpdateInhouseApp_help() {
+print_inhouseAppsUpdateInhouseApp_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}inHouseAppsUpdateInhouseApp - Update In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}inhouseAppsUpdateInhouseApp - Update In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This request allows you to update an existing In-house App in the Kandji library.</p>
 <p>Must have already generated a <code>file_key</code> via <code>Create In-House App</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload In-House App to S3</code> example.</p>
@@ -4528,12 +4528,12 @@ print_inHouseAppsUpdateInhouseApp_help() {
 }
 ##############################################################################
 #
-# Print help for inHouseAppsUploadInhouseApp operation
+# Print help for inhouseAppsUploadInhouseApp operation
 #
 ##############################################################################
-print_inHouseAppsUploadInhouseApp_help() {
+print_inhouseAppsUploadInhouseApp_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}inHouseAppsUploadInhouseApp - Upload In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}inhouseAppsUploadInhouseApp - Upload In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This request retrieves the S3 upload details needed for uploading the in-house app .ipa file to Amazon S3.</p>
 <p>Creates a pre-signed <code>post_url</code> to upload a new In-house App to S3.</p>
@@ -4584,12 +4584,12 @@ print_inHouseAppsUploadInhouseApp_help() {
 }
 ##############################################################################
 #
-# Print help for inHouseAppsUploadInhouseAppStatus operation
+# Print help for inhouseAppsUploadInhouseAppStatus operation
 #
 ##############################################################################
-print_inHouseAppsUploadInhouseAppStatus_help() {
+print_inhouseAppsUploadInhouseAppStatus_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}inHouseAppsUploadInhouseAppStatus - Upload In-House App Status${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}inhouseAppsUploadInhouseAppStatus - Upload In-House App Status${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint retrieves current upload status of an In-House App .ipa file to Amazon S3 from the <code>Upload In-House App to S3</code> endpoint</p>
 <p>The app .ipa file has successfully uploaded and is ready for the <code>Create In-House App</code> endpoint when the <code>status</code> returned is <code>VALIDATED</code></p>
@@ -9104,10 +9104,10 @@ call_deviceSecretsGetUnlockPin() {
 
 ##############################################################################
 #
-# Call inHouseAppsCreateInhouseApp operation
+# Call inhouseAppsCreateInhouseApp operation
 #
 ##############################################################################
-call_inHouseAppsCreateInhouseApp() {
+call_inhouseAppsCreateInhouseApp() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -9182,10 +9182,10 @@ call_inHouseAppsCreateInhouseApp() {
 
 ##############################################################################
 #
-# Call inHouseAppsDeleteInhouseApp operation
+# Call inhouseAppsDeleteInhouseApp operation
 #
 ##############################################################################
-call_inHouseAppsDeleteInhouseApp() {
+call_inhouseAppsDeleteInhouseApp() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(library_item_id)
@@ -9218,10 +9218,10 @@ call_inHouseAppsDeleteInhouseApp() {
 
 ##############################################################################
 #
-# Call inHouseAppsGetInhouseApp operation
+# Call inhouseAppsGetInhouseApp operation
 #
 ##############################################################################
-call_inHouseAppsGetInhouseApp() {
+call_inhouseAppsGetInhouseApp() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(library_item_id)
@@ -9254,10 +9254,10 @@ call_inHouseAppsGetInhouseApp() {
 
 ##############################################################################
 #
-# Call inHouseAppsListInhouseApps operation
+# Call inhouseAppsListInhouseApps operation
 #
 ##############################################################################
-call_inHouseAppsListInhouseApps() {
+call_inhouseAppsListInhouseApps() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -9290,10 +9290,10 @@ call_inHouseAppsListInhouseApps() {
 
 ##############################################################################
 #
-# Call inHouseAppsUpdateInhouseApp operation
+# Call inhouseAppsUpdateInhouseApp operation
 #
 ##############################################################################
-call_inHouseAppsUpdateInhouseApp() {
+call_inhouseAppsUpdateInhouseApp() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(library_item_id)
@@ -9368,10 +9368,10 @@ call_inHouseAppsUpdateInhouseApp() {
 
 ##############################################################################
 #
-# Call inHouseAppsUploadInhouseApp operation
+# Call inhouseAppsUploadInhouseApp operation
 #
 ##############################################################################
-call_inHouseAppsUploadInhouseApp() {
+call_inhouseAppsUploadInhouseApp() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -9446,10 +9446,10 @@ call_inHouseAppsUploadInhouseApp() {
 
 ##############################################################################
 #
-# Call inHouseAppsUploadInhouseAppStatus operation
+# Call inhouseAppsUploadInhouseAppStatus operation
 #
 ##############################################################################
-call_inHouseAppsUploadInhouseAppStatus() {
+call_inhouseAppsUploadInhouseAppStatus() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(pending_upload_id)
@@ -11470,26 +11470,26 @@ case $key in
     deviceSecretsGetUnlockPin)
     operation="deviceSecretsGetUnlockPin"
     ;;
-    inHouseAppsCreateInhouseApp)
-    operation="inHouseAppsCreateInhouseApp"
+    inhouseAppsCreateInhouseApp)
+    operation="inhouseAppsCreateInhouseApp"
     ;;
-    inHouseAppsDeleteInhouseApp)
-    operation="inHouseAppsDeleteInhouseApp"
+    inhouseAppsDeleteInhouseApp)
+    operation="inhouseAppsDeleteInhouseApp"
     ;;
-    inHouseAppsGetInhouseApp)
-    operation="inHouseAppsGetInhouseApp"
+    inhouseAppsGetInhouseApp)
+    operation="inhouseAppsGetInhouseApp"
     ;;
-    inHouseAppsListInhouseApps)
-    operation="inHouseAppsListInhouseApps"
+    inhouseAppsListInhouseApps)
+    operation="inhouseAppsListInhouseApps"
     ;;
-    inHouseAppsUpdateInhouseApp)
-    operation="inHouseAppsUpdateInhouseApp"
+    inhouseAppsUpdateInhouseApp)
+    operation="inhouseAppsUpdateInhouseApp"
     ;;
-    inHouseAppsUploadInhouseApp)
-    operation="inHouseAppsUploadInhouseApp"
+    inhouseAppsUploadInhouseApp)
+    operation="inhouseAppsUploadInhouseApp"
     ;;
-    inHouseAppsUploadInhouseAppStatus)
-    operation="inHouseAppsUploadInhouseAppStatus"
+    inhouseAppsUploadInhouseAppStatus)
+    operation="inhouseAppsUploadInhouseAppStatus"
     ;;
     libraryItemsGetLibraryItemActivity)
     operation="libraryItemsGetLibraryItemActivity"
@@ -11890,26 +11890,26 @@ case $operation in
     deviceSecretsGetUnlockPin)
     call_deviceSecretsGetUnlockPin
     ;;
-    inHouseAppsCreateInhouseApp)
-    call_inHouseAppsCreateInhouseApp
+    inhouseAppsCreateInhouseApp)
+    call_inhouseAppsCreateInhouseApp
     ;;
-    inHouseAppsDeleteInhouseApp)
-    call_inHouseAppsDeleteInhouseApp
+    inhouseAppsDeleteInhouseApp)
+    call_inhouseAppsDeleteInhouseApp
     ;;
-    inHouseAppsGetInhouseApp)
-    call_inHouseAppsGetInhouseApp
+    inhouseAppsGetInhouseApp)
+    call_inhouseAppsGetInhouseApp
     ;;
-    inHouseAppsListInhouseApps)
-    call_inHouseAppsListInhouseApps
+    inhouseAppsListInhouseApps)
+    call_inhouseAppsListInhouseApps
     ;;
-    inHouseAppsUpdateInhouseApp)
-    call_inHouseAppsUpdateInhouseApp
+    inhouseAppsUpdateInhouseApp)
+    call_inhouseAppsUpdateInhouseApp
     ;;
-    inHouseAppsUploadInhouseApp)
-    call_inHouseAppsUploadInhouseApp
+    inhouseAppsUploadInhouseApp)
+    call_inhouseAppsUploadInhouseApp
     ;;
-    inHouseAppsUploadInhouseAppStatus)
-    call_inHouseAppsUploadInhouseAppStatus
+    inhouseAppsUploadInhouseAppStatus)
+    call_inhouseAppsUploadInhouseAppStatus
     ;;
     libraryItemsGetLibraryItemActivity)
     call_libraryItemsGetLibraryItemActivity
