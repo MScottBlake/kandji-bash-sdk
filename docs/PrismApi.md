@@ -52,7 +52,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-(empty response body)
+**map**
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

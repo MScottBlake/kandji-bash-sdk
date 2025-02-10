@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+**map**
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

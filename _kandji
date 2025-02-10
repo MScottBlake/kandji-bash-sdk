@@ -316,20 +316,7 @@ case $state in
             "listBlueprints[List Blueprints]" \
             "listLibraryItems[List Library Items]" \
             "removeLibraryItem[Remove Library Item]" \
-            "updateBlueprint[Update Blueprint]"             "createCustomApp[Create Custom App]" \
-            "deleteCustomApp[Delete Custom App]" \
-            "getCustomApp[Get Custom App]" \
-            "listCustomApps[List Custom Apps]" \
-            "updateCustomApp[Update Custom App]" \
-            "uploadCustomApp[Upload Custom App]"             "createCustomProfile[Create Custom Profile]" \
-            "deleteCustomProfile[Delete Custom Profile]" \
-            "getCustomProfile[Get Custom Profile]" \
-            "listCustomProfiles[List Custom Profiles]" \
-            "updateCustomProfile[Update Custom Profile]"             "createCustomScript[Create Custom Script]" \
-            "deleteCustomScript[Delete Custom Script]" \
-            "getCustomScript[Get Custom Script]" \
-            "listCustomScripts[List Custom Scripts]" \
-            "updateCustomScript[Update Custom Script]"             "clearPasscode[Clear Passcode]" \
+            "updateBlueprint[Update Blueprint]"             "clearPasscode[Clear Passcode]" \
             "deleteDevice[Delete Device]" \
             "deleteUser[Delete User]" \
             "eraseDevice[Erase Device]" \
@@ -344,6 +331,7 @@ case $state in
             "shutdown[Shutdown]" \
             "unlockAccount[Unlock Account]" \
             "updateInventory[Update Inventory]"             "cancelLostMode[Cancel Lost Mode]" \
+            "getDevice[Get Device]" \
             "getDeviceActivity[Get Device Activity]" \
             "getDeviceApps[Get Device Apps]" \
             "getDeviceDetails[Get Device Details]" \
@@ -351,24 +339,12 @@ case $state in
             "getDeviceLostModeDetails[Get Device Lost Mode details]" \
             "getDeviceParameters[Get Device Parameters]" \
             "getDeviceStatus[Get Device Status]" \
-            "listDevices[List Devices]"             "getActivationLockBypassCode[Get Activation Lock Bypass Code]" \
+            "listDevices[List Devices]" \
+            "updateDevice[Update Device]"             "getActivationLockBypassCode[Get Activation Lock Bypass Code]" \
             "getFilevaultRecoveryKey[Get FileVault Recovery Key]" \
             "getRecoveryLockPassword[Get Recovery Lock Password]" \
-            "getUnlockPin[Get Unlock Pin]"             "createInhouseApp[Create In-House App]" \
-            "deleteInhouseApp[Delete In-House App]" \
-            "getInhouseApp[Get In-House App]" \
-            "listInhouseApps[List In-House Apps]" \
-            "updateInhouseApp[Update In-House App]" \
-            "uploadInhouseApp[Upload In-House App]" \
-            "uploadInhouseAppStatus[Upload In-House App Status]"             "getLibraryItemActivity[Get Library Item Activity]" \
-            "getLibraryItemStatuses[Get Library Item Statuses]"             "disableLostMode[Disable Lost Mode]" \
-            "enableLostMode[Enable Lost Mode]" \
-            "playLostModeSound[Play Lost Mode Sound]" \
-            "updateLocation[Update Location]"             "createDeviceNote[Create Device Note]" \
-            "deleteDeviceNote[Delete Device Note]" \
-            "getDeviceNotes[Get Device Notes]" \
-            "retrieveDeviceNote[Retrieve Device Note]" \
-            "updateDeviceNote[Update Device Note]"             "activationLock[Activation lock]" \
+            "getUnlockPin[Get Unlock Pin]"             "getLibraryItemActivity[Get Library Item Activity]" \
+            "getLibraryItemStatuses[Get Library Item Statuses]"             "activationLock[Activation lock]" \
             "applicationFirewall[Application firewall]" \
             "applications[Applications]" \
             "certificates[Certificates]" \
@@ -385,7 +361,7 @@ case $state in
             "requestCategoryExport[Request category export]" \
             "startupSettings[Startup settings]" \
             "systemExtensions[System Extensions]" \
-            "transparencyDatabase[Transparency database]"             "listSelfServiceCategories[List Self Service Categories]"             "licensing[Licensing]"             "createTag[Create Tag]" \
+            "transparencyDatabase[Transparency database]"             "licensing[Licensing]"             "createTag[Create Tag]" \
             "deleteTag[Delete Tag]" \
             "getTags[Get Tags]" \
             "updateTag[Update Tag]"             "getThreatDetails[Get Threat Details]"             "deleteUser[Delete User]" \
@@ -556,114 +532,6 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createCustomApp)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      deleteCustomApp)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getCustomApp)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listCustomApps)
-        local -a _op_arguments
-        _op_arguments=(
-                    "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      updateCustomApp)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      uploadCustomApp)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      createCustomProfile)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      deleteCustomProfile)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getCustomProfile)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listCustomProfiles)
-        local -a _op_arguments
-        _op_arguments=(
-                    "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      updateCustomProfile)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      createCustomScript)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      deleteCustomScript)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getCustomScript)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listCustomScripts)
-        local -a _op_arguments
-        _op_arguments=(
-                    "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      updateCustomScript)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       clearPasscode)
         local -a _op_arguments
         _op_arguments=(
@@ -778,6 +646,13 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getDevice)
+        local -a _op_arguments
+        _op_arguments=(
+          "device_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getDeviceActivity)
         local -a _op_arguments
         _op_arguments=(
@@ -873,6 +748,13 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      updateDevice)
+        local -a _op_arguments
+        _op_arguments=(
+          "device_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getActivationLockBypassCode)
         local -a _op_arguments
         _op_arguments=(
@@ -901,56 +783,6 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      createInhouseApp)
-        local -a _op_arguments
-        _op_arguments=(
-                              "Content-Type\::[HEADER] "
-)
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      deleteInhouseApp)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getInhouseApp)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listInhouseApps)
-        local -a _op_arguments
-        _op_arguments=(
-                    "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 app records returned per request."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      updateInhouseApp)
-        local -a _op_arguments
-        _op_arguments=(
-          "library_item_id=:[PATH] "
-                    "Content-Type\::[HEADER] "
-)
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      uploadInhouseApp)
-        local -a _op_arguments
-        _op_arguments=(
-                              "Content-Type\::[HEADER] "
-)
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      uploadInhouseAppStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "pending_upload_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       getLibraryItemActivity)
         local -a _op_arguments
         _op_arguments=(
@@ -971,72 +803,6 @@ case $state in
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return"
           )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      disableLostMode)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      enableLostMode)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      playLostModeSound)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      updateLocation)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      createDeviceNote)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      deleteDeviceNote)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-"note_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getDeviceNotes)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      retrieveDeviceNote)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-"note_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      updateDeviceNote)
-        local -a _op_arguments
-        _op_arguments=(
-          "device_id=:[PATH] "
-"note_id=:[PATH] "
-                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       activationLock)
@@ -1258,12 +1024,6 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
           )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      listSelfServiceCategories)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       licensing)

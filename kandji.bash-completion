@@ -90,22 +90,6 @@ _kandji()
     operations["listLibraryItems"]=1
     operations["removeLibraryItem"]=1
     operations["updateBlueprint"]=1
-    operations["createCustomApp"]=1
-    operations["deleteCustomApp"]=1
-    operations["getCustomApp"]=1
-    operations["listCustomApps"]=1
-    operations["updateCustomApp"]=1
-    operations["uploadCustomApp"]=1
-    operations["createCustomProfile"]=1
-    operations["deleteCustomProfile"]=1
-    operations["getCustomProfile"]=1
-    operations["listCustomProfiles"]=1
-    operations["updateCustomProfile"]=1
-    operations["createCustomScript"]=1
-    operations["deleteCustomScript"]=1
-    operations["getCustomScript"]=1
-    operations["listCustomScripts"]=1
-    operations["updateCustomScript"]=1
     operations["clearPasscode"]=1
     operations["deleteDevice"]=1
     operations["deleteUser"]=1
@@ -122,6 +106,7 @@ _kandji()
     operations["unlockAccount"]=1
     operations["updateInventory"]=1
     operations["cancelLostMode"]=1
+    operations["getDevice"]=1
     operations["getDeviceActivity"]=1
     operations["getDeviceApps"]=1
     operations["getDeviceDetails"]=1
@@ -130,28 +115,13 @@ _kandji()
     operations["getDeviceParameters"]=1
     operations["getDeviceStatus"]=1
     operations["listDevices"]=1
+    operations["updateDevice"]=1
     operations["getActivationLockBypassCode"]=1
     operations["getFilevaultRecoveryKey"]=1
     operations["getRecoveryLockPassword"]=1
     operations["getUnlockPin"]=1
-    operations["createInhouseApp"]=1
-    operations["deleteInhouseApp"]=1
-    operations["getInhouseApp"]=1
-    operations["listInhouseApps"]=1
-    operations["updateInhouseApp"]=1
-    operations["uploadInhouseApp"]=1
-    operations["uploadInhouseAppStatus"]=1
     operations["getLibraryItemActivity"]=1
     operations["getLibraryItemStatuses"]=1
-    operations["disableLostMode"]=1
-    operations["enableLostMode"]=1
-    operations["playLostModeSound"]=1
-    operations["updateLocation"]=1
-    operations["createDeviceNote"]=1
-    operations["deleteDeviceNote"]=1
-    operations["getDeviceNotes"]=1
-    operations["retrieveDeviceNote"]=1
-    operations["updateDeviceNote"]=1
     operations["activationLock"]=1
     operations["applicationFirewall"]=1
     operations["applications"]=1
@@ -170,7 +140,6 @@ _kandji()
     operations["startupSettings"]=1
     operations["systemExtensions"]=1
     operations["transparencyDatabase"]=1
-    operations["listSelfServiceCategories"]=1
     operations["licensing"]=1
     operations["createTag"]=1
     operations["deleteTag"]=1
@@ -205,22 +174,6 @@ _kandji()
     operation_parameters["listLibraryItems"]="blueprint_id= "
     operation_parameters["removeLibraryItem"]="blueprint_id= "
     operation_parameters["updateBlueprint"]="blueprint_id= "
-    operation_parameters["createCustomApp"]=""
-    operation_parameters["deleteCustomApp"]="library_item_id= "
-    operation_parameters["getCustomApp"]="library_item_id= "
-    operation_parameters["listCustomApps"]="page= "
-    operation_parameters["updateCustomApp"]="library_item_id= "
-    operation_parameters["uploadCustomApp"]=""
-    operation_parameters["createCustomProfile"]=""
-    operation_parameters["deleteCustomProfile"]="library_item_id= "
-    operation_parameters["getCustomProfile"]="library_item_id= "
-    operation_parameters["listCustomProfiles"]="page= "
-    operation_parameters["updateCustomProfile"]="library_item_id= "
-    operation_parameters["createCustomScript"]=""
-    operation_parameters["deleteCustomScript"]="library_item_id= "
-    operation_parameters["getCustomScript"]="library_item_id= "
-    operation_parameters["listCustomScripts"]="page= "
-    operation_parameters["updateCustomScript"]="library_item_id= "
     operation_parameters["clearPasscode"]="device_id= "
     operation_parameters["deleteDevice"]="device_id= "
     operation_parameters["deleteUser"]="device_id= "
@@ -237,6 +190,7 @@ _kandji()
     operation_parameters["unlockAccount"]="device_id= "
     operation_parameters["updateInventory"]="device_id= "
     operation_parameters["cancelLostMode"]="device_id= "
+    operation_parameters["getDevice"]="device_id= "
     operation_parameters["getDeviceActivity"]="device_id= limit= offset= "
     operation_parameters["getDeviceApps"]="device_id= "
     operation_parameters["getDeviceDetails"]="device_id= "
@@ -245,28 +199,13 @@ _kandji()
     operation_parameters["getDeviceParameters"]="device_id= "
     operation_parameters["getDeviceStatus"]="device_id= "
     operation_parameters["listDevices"]="asset_tag= blueprint_id= device_id= device_name= filevault_enabled= mac_address= model= ordering= os_version= platform= serial_number= tag_name= tag_name_in= tag_id= tag_id_in= user= user_email= user_id= user_name= limit= offset= "
+    operation_parameters["updateDevice"]="device_id= "
     operation_parameters["getActivationLockBypassCode"]="device_id= "
     operation_parameters["getFilevaultRecoveryKey"]="device_id= "
     operation_parameters["getRecoveryLockPassword"]="device_id= "
     operation_parameters["getUnlockPin"]="device_id= "
-    operation_parameters["createInhouseApp"]="Content-Type: "
-    operation_parameters["deleteInhouseApp"]="library_item_id= "
-    operation_parameters["getInhouseApp"]="library_item_id= "
-    operation_parameters["listInhouseApps"]="page= "
-    operation_parameters["updateInhouseApp"]="library_item_id= Content-Type: "
-    operation_parameters["uploadInhouseApp"]="Content-Type: "
-    operation_parameters["uploadInhouseAppStatus"]="pending_upload_id= "
     operation_parameters["getLibraryItemActivity"]="library_item_id= activity_type= user_id= user_email= limit= offset= "
     operation_parameters["getLibraryItemStatuses"]="library_item_id= computer_id= limit= offset= "
-    operation_parameters["disableLostMode"]="device_id= "
-    operation_parameters["enableLostMode"]="device_id= "
-    operation_parameters["playLostModeSound"]="device_id= "
-    operation_parameters["updateLocation"]="device_id= "
-    operation_parameters["createDeviceNote"]="device_id= "
-    operation_parameters["deleteDeviceNote"]="device_id= note_id= "
-    operation_parameters["getDeviceNotes"]="device_id= "
-    operation_parameters["retrieveDeviceNote"]="device_id= note_id= "
-    operation_parameters["updateDeviceNote"]="device_id= note_id= "
     operation_parameters["activationLock"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["applicationFirewall"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["applications"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
@@ -285,7 +224,6 @@ _kandji()
     operation_parameters["startupSettings"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["systemExtensions"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["transparencyDatabase"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
-    operation_parameters["listSelfServiceCategories"]=""
     operation_parameters["licensing"]=""
     operation_parameters["createTag"]=""
     operation_parameters["deleteTag"]="tag_id= "
