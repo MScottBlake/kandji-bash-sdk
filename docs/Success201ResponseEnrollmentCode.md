@@ -1,4 +1,4 @@
-# success_201_Response_enrollment_code
+# success201Response_enrollment_code
 
 ## Properties
 Name | Type | Description | Notes

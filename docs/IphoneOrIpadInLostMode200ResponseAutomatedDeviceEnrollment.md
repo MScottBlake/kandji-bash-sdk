@@ -1,4 +1,4 @@
-# iphoneOrIpadInLostMode_200_Response_automated_device_enrollment
+# iphoneOrIpadInLostMode200Response_automated_device_enrollment
 
 ## Properties
 Name | Type | Description | Notes

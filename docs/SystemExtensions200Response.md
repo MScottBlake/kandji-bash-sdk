@@ -1,4 +1,4 @@
-# systemExtensions_200_Response
+# systemExtensions200Response
 
 ## Properties
 Name | Type | Description | Notes

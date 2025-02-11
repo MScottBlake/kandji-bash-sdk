@@ -1,4 +1,4 @@
-# updateUserAssignment_200_Response
+# updateUserAssignment200Response
 
 ## Properties
 Name | Type | Description | Notes

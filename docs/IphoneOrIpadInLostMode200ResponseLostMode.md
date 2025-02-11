@@ -1,4 +1,4 @@
-# iphoneOrIpadInLostMode_200_Response_lost_mode
+# iphoneOrIpadInLostMode200Response_lost_mode
 
 ## Properties
 Name | Type | Description | Notes

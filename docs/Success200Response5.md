@@ -1,4 +1,4 @@
-# success_200_Response_5
+# success200Response_5
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# deviceInfoForAllIpads_200_Response
+# deviceInfoForAllIpads200Response
 
 ## Properties
 Name | Type | Description | Notes

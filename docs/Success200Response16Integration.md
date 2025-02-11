@@ -1,4 +1,4 @@
-# success_200_Response_16_integration
+# success200Response_16_integration
 
 ## Properties
 Name | Type | Description | Notes

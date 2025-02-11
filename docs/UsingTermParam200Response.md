@@ -1,4 +1,4 @@
-# usingTermParam_200_Response
+# usingTermParam200Response
 
 ## Properties
 Name | Type | Description | Notes

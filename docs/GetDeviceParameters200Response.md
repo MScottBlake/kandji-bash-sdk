@@ -1,4 +1,4 @@
-# getDeviceParameters_200_Response
+# getDeviceParameters200Response
 
 ## Properties
 Name | Type | Description | Notes

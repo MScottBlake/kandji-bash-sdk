@@ -1,4 +1,4 @@
-# iphoneOrIpadInLostMode_200_Response_activation_lock
+# iphoneOrIpadInLostMode200Response_activation_lock
 
 ## Properties
 Name | Type | Description | Notes

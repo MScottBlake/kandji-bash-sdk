@@ -1,4 +1,4 @@
-# successNoKernelExtensions_200_Response
+# successNoKernelExtensions200Response
 
 ## Properties
 Name | Type | Description | Notes

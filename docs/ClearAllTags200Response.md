@@ -1,4 +1,4 @@
-# clearAllTags_200_Response
+# clearAllTags200Response
 
 ## Properties
 Name | Type | Description | Notes

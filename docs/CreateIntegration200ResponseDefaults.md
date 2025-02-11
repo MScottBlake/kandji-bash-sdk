@@ -1,4 +1,4 @@
-# createIntegration_200_Response_defaults
+# createIntegration200Response_defaults
 
 ## Properties
 Name | Type | Description | Notes

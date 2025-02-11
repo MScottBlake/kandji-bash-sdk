@@ -1,4 +1,4 @@
-# edrStatus_200_Response_1
+# edrStatus200Response_1
 
 ## Properties
 Name | Type | Description | Notes

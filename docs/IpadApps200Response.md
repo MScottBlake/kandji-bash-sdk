@@ -1,4 +1,4 @@
-# ipadApps_200_Response
+# ipadApps200Response
 
 ## Properties
 Name | Type | Description | Notes

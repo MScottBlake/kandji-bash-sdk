@@ -1,4 +1,4 @@
-# success_200_Response_1_mdm_device
+# success200Response_1_mdm_device
 
 ## Properties
 Name | Type | Description | Notes

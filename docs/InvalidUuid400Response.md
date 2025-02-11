@@ -1,4 +1,4 @@
-# invalidUuid_400_Response
+# invalidUuid400Response
 
 ## Properties
 Name | Type | Description | Notes

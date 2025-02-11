@@ -1,4 +1,4 @@
-# badCategoryRequest_400_Response
+# badCategoryRequest400Response
 
 ## Properties
 Name | Type | Description | Notes

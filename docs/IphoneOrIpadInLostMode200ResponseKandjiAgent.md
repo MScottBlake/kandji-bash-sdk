@@ -1,4 +1,4 @@
-# iphoneOrIpadInLostMode_200_Response_kandji_agent
+# iphoneOrIpadInLostMode200Response_kandji_agent
 
 ## Properties
 Name | Type | Description | Notes

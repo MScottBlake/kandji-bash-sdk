@@ -1,4 +1,4 @@
-# userAssignedToDevice_400_Response
+# userAssignedToDevice400Response
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# getDeviceLostModeDetails_200_Response
+# getDeviceLostModeDetails200Response
 
 ## Properties
 Name | Type | Description | Notes

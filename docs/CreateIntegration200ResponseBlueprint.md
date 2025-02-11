@@ -1,4 +1,4 @@
-# createIntegration_200_Response_blueprint
+# createIntegration200Response_blueprint
 
 ## Properties
 Name | Type | Description | Notes

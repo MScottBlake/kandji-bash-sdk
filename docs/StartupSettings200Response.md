@@ -1,4 +1,4 @@
-# startupSettings_200_Response
+# startupSettings200Response
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# getIpad_200_Response
+# getIpad200Response
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# createIntegration_200_Response_device_counts
+# createIntegration200Response_device_counts
 
 ## Properties
 Name | Type | Description | Notes

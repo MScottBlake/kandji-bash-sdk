@@ -1,4 +1,4 @@
-# exampleExportStatusCheck_200_Response
+# exampleExportStatusCheck200Response
 
 ## Properties
 Name | Type | Description | Notes

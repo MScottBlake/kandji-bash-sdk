@@ -1,4 +1,4 @@
-# success_200_Response_17_limits_max_devices_per_platform
+# success200Response_17_limits_max_devices_per_platform
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# getDeviceStatus_200_Response
+# getDeviceStatus200Response
 
 ## Properties
 Name | Type | Description | Notes

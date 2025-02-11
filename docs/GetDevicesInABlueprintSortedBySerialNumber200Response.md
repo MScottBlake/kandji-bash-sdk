@@ -1,4 +1,4 @@
-# getDevicesInABlueprintSortedBySerialNumber_200_Response
+# getDevicesInABlueprintSortedBySerialNumber200Response
 
 ## Properties
 Name | Type | Description | Notes

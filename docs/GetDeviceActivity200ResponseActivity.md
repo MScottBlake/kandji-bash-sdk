@@ -1,4 +1,4 @@
-# getDeviceActivity_200_Response_activity
+# getDeviceActivity200Response_activity
 
 ## Properties
 Name | Type | Description | Notes

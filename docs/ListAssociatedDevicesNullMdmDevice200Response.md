@@ -1,4 +1,4 @@
-# listAssociatedDevicesNullMdmDevice_200_Response
+# listAssociatedDevicesNullMdmDevice200Response
 
 ## Properties
 Name | Type | Description | Notes
