@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetDeviceCommands200Response**](GetDeviceCommands200Response.md)
+[**DeviceActionsGetDeviceCommands200Response**](DeviceActionsGetDeviceCommands200Response.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Success200Response4**](Success200Response4.md)
+[**DeviceActionsLockDevice200Response**](DeviceActionsLockDevice200Response.md)
 
 ### Authorization
 
