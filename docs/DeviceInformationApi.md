@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDevice200Response**](DeviceInformationGetDevice200Response.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDeviceActivity200Response**](DeviceInformationGetDeviceActivity200Response.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDeviceApps200Response**](DeviceInformationGetDeviceApps200Response.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDeviceDetails200Response**](DeviceInformationGetDeviceDetails200Response.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDeviceLibraryItems200Response**](DeviceInformationGetDeviceLibraryItems200Response.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDeviceLostModeDetails200Response**](DeviceInformationGetDeviceLostModeDetails200Response.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDeviceParameters200Response**](DeviceInformationGetDeviceParameters200Response.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationGetDeviceStatus200Response**](DeviceInformationGetDeviceStatus200Response.md)
 
 ### Authorization
 
@@ -687,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**DeviceInformationUpdateDevice200Response**](DeviceInformationUpdateDevice200Response.md)
 
 ### Authorization
 

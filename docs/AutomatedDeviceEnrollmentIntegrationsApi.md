@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200Response**](AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200Response.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response**](AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken200Response**](AutomatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken200Response.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response**](AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response.md)
 
 ### Authorization
 

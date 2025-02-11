@@ -38,7 +38,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
 
 ### Authorization
 

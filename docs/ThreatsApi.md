@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**ThreatsGetThreatDetails200Response**](ThreatsGetThreatDetails200Response.md)
 
 ### Authorization
 

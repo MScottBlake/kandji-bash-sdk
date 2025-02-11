@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**UsersGetUser200Response**](UsersGetUser200Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**UsersListUsers200Response**](UsersListUsers200Response.md)
 
 ### Authorization
 

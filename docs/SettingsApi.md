@@ -26,7 +26,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**map**
+[**SettingsLicensing200Response**](SettingsLicensing200Response.md)
 
 ### Authorization
 

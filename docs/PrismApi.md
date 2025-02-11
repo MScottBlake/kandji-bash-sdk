@@ -52,7 +52,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismApplications200Response**](PrismApplications200Response.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ system_extensions</p> | [default to null]
 
 ### Return type
 
-**map**
+[**PrismCount200Response**](PrismCount200Response.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**PrismDeviceInformation200Response**](PrismDeviceInformation200Response.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismDeviceInformation200Response**](PrismDeviceInformation200Response.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**PrismGetCategoryExport200Response**](PrismGetCategoryExport200Response.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -502,7 +502,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -543,7 +543,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -584,7 +584,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismLocalUsers200Response**](PrismLocalUsers200Response.md)
 
 ### Authorization
 
@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**PrismRequestCategoryExport200Response**](PrismRequestCategoryExport200Response.md)
 
 ### Authorization
 
@@ -704,7 +704,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -745,7 +745,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -786,7 +786,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 

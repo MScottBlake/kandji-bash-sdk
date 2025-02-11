@@ -32,7 +32,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**TagsCreateTag201Response**](TagsCreateTag201Response.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**TagsCreateTag201Response**](TagsCreateTag201Response.md)
 
 ### Authorization
 
