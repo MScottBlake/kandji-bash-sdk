@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200Response**](AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200Response.md)
+[**CreateIntegration200Response**](CreateIntegration200Response.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response**](AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response.md)
+[**Success200Response1**](Success200Response1.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
+[**Success200Response**](Success200Response.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken200Response**](AutomatedDeviceEnrollmentIntegrationsListDevicesAssociatedToAdeToken200Response.md)
+[**ListAssociatedDevicesNullMdmDevice200Response**](ListAssociatedDevicesNullMdmDevice200Response.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response**](AutomatedDeviceEnrollmentIntegrationsGetAdeDevice200Response.md)
+[**UpdateUserAssignment200Response**](UpdateUserAssignment200Response.md)
 
 ### Authorization
 

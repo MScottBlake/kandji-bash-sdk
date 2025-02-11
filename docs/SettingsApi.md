@@ -26,7 +26,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SettingsLicensing200Response**](SettingsLicensing200Response.md)
+[**Success200Response17**](Success200Response17.md)
 
 ### Authorization
 

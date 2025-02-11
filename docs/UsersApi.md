@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsersGetUser200Response**](UsersGetUser200Response.md)
+[**Success200Response16**](Success200Response16.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsersListUsers200Response**](UsersListUsers200Response.md)
+[**Success200Response15**](Success200Response15.md)
 
 ### Authorization
 

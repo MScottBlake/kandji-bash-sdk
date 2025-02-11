@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ThreatsGetThreatDetails200Response**](ThreatsGetThreatDetails200Response.md)
+[**UsingTermParam200Response**](UsingTermParam200Response.md)
 
 ### Authorization
 

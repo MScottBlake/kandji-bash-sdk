@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDevice200Response**](DeviceInformationGetDevice200Response.md)
+[**GetIpad200Response**](GetIpad200Response.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceActivity200Response**](DeviceInformationGetDeviceActivity200Response.md)
+[**GetDeviceActivity200Response**](GetDeviceActivity200Response.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceApps200Response**](DeviceInformationGetDeviceApps200Response.md)
+[**IpadApps200Response**](IpadApps200Response.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceDetails200Response**](DeviceInformationGetDeviceDetails200Response.md)
+[**IphoneOrIpadInLostMode200Response**](IphoneOrIpadInLostMode200Response.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceLibraryItems200Response**](DeviceInformationGetDeviceLibraryItems200Response.md)
+[**EdrStatus200Response**](EdrStatus200Response.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceLostModeDetails200Response**](DeviceInformationGetDeviceLostModeDetails200Response.md)
+[**GetDeviceLostModeDetails200Response**](GetDeviceLostModeDetails200Response.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceParameters200Response**](DeviceInformationGetDeviceParameters200Response.md)
+[**GetDeviceParameters200Response**](GetDeviceParameters200Response.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceStatus200Response**](DeviceInformationGetDeviceStatus200Response.md)
+[**GetDeviceStatus200Response**](GetDeviceStatus200Response.md)
 
 ### Authorization
 
@@ -687,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationUpdateDevice200Response**](DeviceInformationUpdateDevice200Response.md)
+[**ClearAllTags200Response**](ClearAllTags200Response.md)
 
 ### Authorization
 
