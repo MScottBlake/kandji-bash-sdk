@@ -366,7 +366,11 @@ case $state in
             "getTags[Get Tags]" \
             "updateTag[Update Tag]"             "getThreatDetails[Get Threat Details]"             "deleteUser[Delete User]" \
             "getUser[Get User]" \
-            "listUsers[List Users]" \
+            "listUsers[List Users]"             "getVulnerabilityDescription[Get Vulnerability Description]" \
+            "listAffectedApplications[List Affected Applications]" \
+            "listAffectedDevices[List Affected Devices]" \
+            "listDetections[List Detections]" \
+            "listVulnerabilities[List Vulnerabilities]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -1108,6 +1112,63 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 "id=:[QUERY] Search for a user matching the provided UUID value."
 "integration_id=:[QUERY] Search for a integration matching the provided UUID value."
 "archived=:[QUERY] Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getVulnerabilityDescription)
+        local -a _op_arguments
+        _op_arguments=(
+          "cve_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listAffectedApplications)
+        local -a _op_arguments
+        _op_arguments=(
+          "cve_id=:[PATH] "
+          "page=:[QUERY] The page number of the response."
+"size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
+"sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;app_name."
+"filter=:[QUERY] Filterable columns:
+blueprint_id
+updated_at"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listAffectedDevices)
+        local -a _op_arguments
+        _op_arguments=(
+          "cve_id=:[PATH] "
+          "page=:[QUERY] The page number of the response."
+"size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
+"sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;app_name."
+"filter=:[QUERY] Filterable columns:
+blueprint_id
+updated_at"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listDetections)
+        local -a _op_arguments
+        _op_arguments=(
+                    "after=:[QUERY] Cursor token."
+"limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
+"filter=:[QUERY] Can filter on any key attribute within the response."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listVulnerabilities)
+        local -a _op_arguments
+        _op_arguments=(
+                    "page=:[QUERY] The page number of the response."
+"size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
+"sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;cve_id."
+"filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
+&lt;p&gt;cve_id
+app_name
+severity
+first_detection_date
+latest_detection_date&lt;/p&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

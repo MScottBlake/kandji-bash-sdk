@@ -183,6 +183,11 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**deleteUser**](docs/UsersApi.md#deleteuser) | **DELETE** /api/v1/users/{user_id} | Delete User
 *UsersApi* | [**getUser**](docs/UsersApi.md#getuser) | **GET** /api/v1/users/{user_id} | Get User
 *UsersApi* | [**listUsers**](docs/UsersApi.md#listusers) | **GET** /api/v1/users | List Users
+*VulnerabilitiesApi* | [**getVulnerabilityDescription**](docs/VulnerabilitiesApi.md#getvulnerabilitydescription) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id} | Get Vulnerability Description
+*VulnerabilitiesApi* | [**listAffectedApplications**](docs/VulnerabilitiesApi.md#listaffectedapplications) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications | List Affected Applications
+*VulnerabilitiesApi* | [**listAffectedDevices**](docs/VulnerabilitiesApi.md#listaffecteddevices) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/devices | List Affected Devices
+*VulnerabilitiesApi* | [**listDetections**](docs/VulnerabilitiesApi.md#listdetections) | **GET** /api/v1/vulnerability-management/detections | List Detections
+*VulnerabilitiesApi* | [**listVulnerabilities**](docs/VulnerabilitiesApi.md#listvulnerabilities) | **GET** /api/v1/vulnerability-management/vulnerabilities | List Vulnerabilities
 
 
 ## Documentation For Models
@@ -249,6 +254,9 @@ Class | Method | HTTP request | Description
  - [UsersGetUser200Response](docs/UsersGetUser200Response.md)
  - [UsersGetUser200ResponseIntegration](docs/UsersGetUser200ResponseIntegration.md)
  - [UsersListUsers200Response](docs/UsersListUsers200Response.md)
+ - [VulnerabilitiesGetVulnerabilityDescription200Response](docs/VulnerabilitiesGetVulnerabilityDescription200Response.md)
+ - [VulnerabilitiesListDetections200Response](docs/VulnerabilitiesListDetections200Response.md)
+ - [VulnerabilitiesListVulnerabilities200Response](docs/VulnerabilitiesListVulnerabilities200Response.md)
 
 
 ## Documentation For Authorization

@@ -335,6 +335,24 @@ operation_parameters_minimum_occurrences["listUsers:::email"]=0
 operation_parameters_minimum_occurrences["listUsers:::id"]=0
 operation_parameters_minimum_occurrences["listUsers:::integration_id"]=0
 operation_parameters_minimum_occurrences["listUsers:::archived"]=0
+operation_parameters_minimum_occurrences["getVulnerabilityDescription:::cve_id"]=1
+operation_parameters_minimum_occurrences["listAffectedApplications:::cve_id"]=1
+operation_parameters_minimum_occurrences["listAffectedApplications:::page"]=0
+operation_parameters_minimum_occurrences["listAffectedApplications:::size"]=0
+operation_parameters_minimum_occurrences["listAffectedApplications:::sort_by"]=0
+operation_parameters_minimum_occurrences["listAffectedApplications:::filter"]=0
+operation_parameters_minimum_occurrences["listAffectedDevices:::cve_id"]=1
+operation_parameters_minimum_occurrences["listAffectedDevices:::page"]=0
+operation_parameters_minimum_occurrences["listAffectedDevices:::size"]=0
+operation_parameters_minimum_occurrences["listAffectedDevices:::sort_by"]=0
+operation_parameters_minimum_occurrences["listAffectedDevices:::filter"]=0
+operation_parameters_minimum_occurrences["listDetections:::after"]=0
+operation_parameters_minimum_occurrences["listDetections:::limit"]=0
+operation_parameters_minimum_occurrences["listDetections:::filter"]=0
+operation_parameters_minimum_occurrences["listVulnerabilities:::page"]=0
+operation_parameters_minimum_occurrences["listVulnerabilities:::size"]=0
+operation_parameters_minimum_occurrences["listVulnerabilities:::sort_by"]=0
+operation_parameters_minimum_occurrences["listVulnerabilities:::filter"]=0
 
 ##
 # This array stores the maximum number of allowed occurrences for parameter
@@ -582,6 +600,24 @@ operation_parameters_maximum_occurrences["listUsers:::email"]=0
 operation_parameters_maximum_occurrences["listUsers:::id"]=0
 operation_parameters_maximum_occurrences["listUsers:::integration_id"]=0
 operation_parameters_maximum_occurrences["listUsers:::archived"]=0
+operation_parameters_maximum_occurrences["getVulnerabilityDescription:::cve_id"]=0
+operation_parameters_maximum_occurrences["listAffectedApplications:::cve_id"]=0
+operation_parameters_maximum_occurrences["listAffectedApplications:::page"]=0
+operation_parameters_maximum_occurrences["listAffectedApplications:::size"]=0
+operation_parameters_maximum_occurrences["listAffectedApplications:::sort_by"]=0
+operation_parameters_maximum_occurrences["listAffectedApplications:::filter"]=0
+operation_parameters_maximum_occurrences["listAffectedDevices:::cve_id"]=0
+operation_parameters_maximum_occurrences["listAffectedDevices:::page"]=0
+operation_parameters_maximum_occurrences["listAffectedDevices:::size"]=0
+operation_parameters_maximum_occurrences["listAffectedDevices:::sort_by"]=0
+operation_parameters_maximum_occurrences["listAffectedDevices:::filter"]=0
+operation_parameters_maximum_occurrences["listDetections:::after"]=0
+operation_parameters_maximum_occurrences["listDetections:::limit"]=0
+operation_parameters_maximum_occurrences["listDetections:::filter"]=0
+operation_parameters_maximum_occurrences["listVulnerabilities:::page"]=0
+operation_parameters_maximum_occurrences["listVulnerabilities:::size"]=0
+operation_parameters_maximum_occurrences["listVulnerabilities:::sort_by"]=0
+operation_parameters_maximum_occurrences["listVulnerabilities:::filter"]=0
 
 ##
 # The type of collection for specifying multiple values for parameter:
@@ -826,6 +862,24 @@ operation_parameters_collection_type["listUsers:::email"]=""
 operation_parameters_collection_type["listUsers:::id"]=""
 operation_parameters_collection_type["listUsers:::integration_id"]=""
 operation_parameters_collection_type["listUsers:::archived"]=""
+operation_parameters_collection_type["getVulnerabilityDescription:::cve_id"]=""
+operation_parameters_collection_type["listAffectedApplications:::cve_id"]=""
+operation_parameters_collection_type["listAffectedApplications:::page"]=""
+operation_parameters_collection_type["listAffectedApplications:::size"]=""
+operation_parameters_collection_type["listAffectedApplications:::sort_by"]=""
+operation_parameters_collection_type["listAffectedApplications:::filter"]=""
+operation_parameters_collection_type["listAffectedDevices:::cve_id"]=""
+operation_parameters_collection_type["listAffectedDevices:::page"]=""
+operation_parameters_collection_type["listAffectedDevices:::size"]=""
+operation_parameters_collection_type["listAffectedDevices:::sort_by"]=""
+operation_parameters_collection_type["listAffectedDevices:::filter"]=""
+operation_parameters_collection_type["listDetections:::after"]=""
+operation_parameters_collection_type["listDetections:::limit"]=""
+operation_parameters_collection_type["listDetections:::filter"]=""
+operation_parameters_collection_type["listVulnerabilities:::page"]=""
+operation_parameters_collection_type["listVulnerabilities:::size"]=""
+operation_parameters_collection_type["listVulnerabilities:::sort_by"]=""
+operation_parameters_collection_type["listVulnerabilities:::filter"]=""
 
 
 ##
@@ -1347,6 +1401,16 @@ read -r -d '' ops <<EOF
   ${CYAN}deleteUser${OFF};Delete User (AUTH)
   ${CYAN}getUser${OFF};Get User (AUTH)
   ${CYAN}listUsers${OFF};List Users (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[vulnerabilities]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}getVulnerabilityDescription${OFF};Get Vulnerability Description (AUTH)
+  ${CYAN}listAffectedApplications${OFF};List Affected Applications (AUTH)
+  ${CYAN}listAffectedDevices${OFF};List Affected Devices (AUTH)
+  ${CYAN}listDetections${OFF};List Detections (AUTH)
+  ${CYAN}listVulnerabilities${OFF};List Vulnerabilities (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -4861,6 +4925,143 @@ print_listUsers_help() {
     echo -e "  * ${GREEN}integration_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search for a integration matching the provided UUID value.${YELLOW} Specify as: integration_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}archived${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab.${YELLOW} Specify as: archived=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for getVulnerabilityDescription operation
+#
+##############################################################################
+print_getVulnerabilityDescription_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getVulnerabilityDescription - Get Vulnerability Description${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint makes a request to retrieve information about a cve and summary information about detections for a tenants fleet." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}cve_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: cve_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for listAffectedApplications operation
+#
+##############################################################################
+print_listAffectedApplications_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listAffectedApplications - List Affected Applications${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint makes a request to retrieve a list of applications impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}cve_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: cve_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The page number of the response.${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=app_name.${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filterable columns:
+blueprint_id
+updated_at${YELLOW} Specify as: filter=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for listAffectedDevices operation
+#
+##############################################################################
+print_listAffectedDevices_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listAffectedDevices - List Affected Devices${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint makes a request to retrieve a list of devices impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}cve_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: cve_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The page number of the response.${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=app_name.${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filterable columns:
+blueprint_id
+updated_at${YELLOW} Specify as: filter=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for listDetections operation
+#
+##############################################################################
+print_listDetections_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listDetections - List Detections${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint makes a request to retrieve a list of all vulnerability detections across the device fleet." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}after${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Cursor token.${YELLOW} Specify as: after=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper <code>limit</code> is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: limit=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Can filter on any key attribute within the response.${YELLOW} Specify as: filter=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for listVulnerabilities operation
+#
+##############################################################################
+print_listVulnerabilities_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listVulnerabilities - List Vulnerabilities${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint makes a request to retrieve a list of all vulnerabilities grouped by cve." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The page number of the response.${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=cve_id.${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
+<p>cve_id
+app_name
+severity
+first_detection_date
+latest_detection_date</p>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -8427,6 +8628,186 @@ call_listUsers() {
     fi
 }
 
+##############################################################################
+#
+# Call getVulnerabilityDescription operation
+#
+##############################################################################
+call_getVulnerabilityDescription() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(cve_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities/{cve_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listAffectedApplications operation
+#
+##############################################################################
+call_listAffectedApplications() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(cve_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(page size sort_by filter  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listAffectedDevices operation
+#
+##############################################################################
+call_listAffectedDevices() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(cve_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(page size sort_by filter  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities/{cve_id}/devices" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listDetections operation
+#
+##############################################################################
+call_listDetections() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(after limit filter  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/vulnerability-management/detections" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listVulnerabilities operation
+#
+##############################################################################
+call_listVulnerabilities() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(page size sort_by filter  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
 
 
 ##############################################################################
@@ -8764,6 +9145,21 @@ case $key in
     listUsers)
     operation="listUsers"
     ;;
+    getVulnerabilityDescription)
+    operation="getVulnerabilityDescription"
+    ;;
+    listAffectedApplications)
+    operation="listAffectedApplications"
+    ;;
+    listAffectedDevices)
+    operation="listAffectedDevices"
+    ;;
+    listDetections)
+    operation="listDetections"
+    ;;
+    listVulnerabilities)
+    operation="listVulnerabilities"
+    ;;
     *==*)
     # Parse body arguments and convert them into top level
     # JSON properties passed in the body content as strings
@@ -9090,6 +9486,21 @@ case $operation in
     ;;
     listUsers)
     call_listUsers
+    ;;
+    getVulnerabilityDescription)
+    call_getVulnerabilityDescription
+    ;;
+    listAffectedApplications)
+    call_listAffectedApplications
+    ;;
+    listAffectedDevices)
+    call_listAffectedDevices
+    ;;
+    listDetections)
+    call_listDetections
+    ;;
+    listVulnerabilities)
+    call_listVulnerabilities
     ;;
     *)
     ERROR_MSG="ERROR: Unknown operation: $operation"

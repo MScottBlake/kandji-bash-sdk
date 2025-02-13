@@ -74,5 +74,9 @@ docs/UsersApi.md
 docs/UsersGetUser200Response.md
 docs/UsersGetUser200ResponseIntegration.md
 docs/UsersListUsers200Response.md
+docs/VulnerabilitiesApi.md
+docs/VulnerabilitiesGetVulnerabilityDescription200Response.md
+docs/VulnerabilitiesListDetections200Response.md
+docs/VulnerabilitiesListVulnerabilities200Response.md
 kandji
 kandji.bash-completion
