@@ -33,7 +33,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VulnerabilitiesGetVulnerabilityDescription200Response**](VulnerabilitiesGetVulnerabilityDescription200Response.md)
+[**InlineObject35**](InlineObject35.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VulnerabilitiesListDetections200Response**](VulnerabilitiesListDetections200Response.md)
+[**InlineObject33**](InlineObject33.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ latest_detection_date</p> | [optional] [default to null]
 
 ### Return type
 
-[**VulnerabilitiesListVulnerabilities200Response**](VulnerabilitiesListVulnerabilities200Response.md)
+[**InlineObject34**](InlineObject34.md)
 
 ### Authorization
 

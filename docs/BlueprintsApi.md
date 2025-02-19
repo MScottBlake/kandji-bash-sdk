@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BlueprintsCreateBlueprint201Response**](BlueprintsCreateBlueprint201Response.md)
+[**InlineObject5**](InlineObject5.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BlueprintsGetBlueprint200Response**](BlueprintsGetBlueprint200Response.md)
+[**InlineObject6**](InlineObject6.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
+[**InlineObject2**](InlineObject2.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
+[**InlineObject2**](InlineObject2.md)
 
 ### Authorization
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BlueprintsUpdateBlueprint200Response**](BlueprintsUpdateBlueprint200Response.md)
+[**InlineObject7**](InlineObject7.md)
 
 ### Authorization
 

@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDevice200Response**](DeviceInformationGetDevice200Response.md)
+[**InlineObject8**](InlineObject8.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceActivity200Response**](DeviceInformationGetDeviceActivity200Response.md)
+[**InlineObject12**](InlineObject12.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceApps200Response**](DeviceInformationGetDeviceApps200Response.md)
+[**InlineObject13**](InlineObject13.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceDetails200Response**](DeviceInformationGetDeviceDetails200Response.md)
+[**InlineObject10**](InlineObject10.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceLibraryItems200Response**](DeviceInformationGetDeviceLibraryItems200Response.md)
+[**InlineObject14**](InlineObject14.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceLostModeDetails200Response**](DeviceInformationGetDeviceLostModeDetails200Response.md)
+[**InlineObject11**](InlineObject11.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceParameters200Response**](DeviceInformationGetDeviceParameters200Response.md)
+[**InlineObject15**](InlineObject15.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationGetDeviceStatus200Response**](DeviceInformationGetDeviceStatus200Response.md)
+[**InlineObject16**](InlineObject16.md)
 
 ### Authorization
 
@@ -687,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInformationUpdateDevice200Response**](DeviceInformationUpdateDevice200Response.md)
+[**InlineObject9**](InlineObject9.md)
 
 ### Authorization
 

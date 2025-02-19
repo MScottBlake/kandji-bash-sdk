@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ThreatsGetThreatDetails200Response**](ThreatsGetThreatDetails200Response.md)
+[**InlineObject32**](InlineObject32.md)
 
 ### Authorization
 
