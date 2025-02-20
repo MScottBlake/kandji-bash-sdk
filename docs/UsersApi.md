@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineObject37**](InlineObject37.md)
+[**UsersGetUser200Response**](UsersGetUser200Response.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineObject36**](InlineObject36.md)
+[**UsersListUsers200Response**](UsersListUsers200Response.md)
 
 ### Authorization
 

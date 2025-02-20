@@ -26,7 +26,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineObject38**](InlineObject38.md)
+[**SettingsLicensing200Response**](SettingsLicensing200Response.md)
 
 ### Authorization
 

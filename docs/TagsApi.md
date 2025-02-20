@@ -32,7 +32,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineObject31**](InlineObject31.md)
+[**TagsCreateTag201Response**](TagsCreateTag201Response.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineObject2**](InlineObject2.md)
+[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineObject31**](InlineObject31.md)
+[**TagsCreateTag201Response**](TagsCreateTag201Response.md)
 
 ### Authorization
 
