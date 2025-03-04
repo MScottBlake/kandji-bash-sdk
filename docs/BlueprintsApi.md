@@ -116,11 +116,11 @@ kandji createBlueprint
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string** | (required) Set the name of the Blueprint. The name provided must be unique. | [default to null]
- **enrollmentCodePeriodisActive** | **string** | (required) Enable or Disable the Blueprint for manual device enrollment from the enrollment portal | [default to null]
  **enrollmentCodePeriodcode** | **string** | Optionally, set the enrollment code of the Blueprint. This key is not required. If an enrollment code is not supplied in the payload body, it will be randomly generated. The enrollment code will be returned in the response and visible in the Web app. | [default to null]
- **sourcePeriodtype** | **string** | Set the source to create the blueprint from. Possible options: <code>template</code> and <code>blueprint</code>. | [default to null]
+ **enrollmentCodePeriodisActive** | **string** | (required) Enable or Disable the Blueprint for manual device enrollment from the enrollment portal | [default to null]
+ **name** | **string** | (required) Set the name of the Blueprint. The name provided must be unique. | [default to null]
  **sourcePeriodid** | **string** | Set either the source template ID, or the source Blueprint ID to clone an existing template or blueprint. | [default to null]
+ **sourcePeriodtype** | **string** | Set the source to create the blueprint from. Possible options: <code>template</code> and <code>blueprint</code>. | [default to null]
  **type** | **string** | Choose the type of blueprint to create. Options: <code>classic</code> or <code>map</code> | [default to null]
 
 ### Return type
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
+[**BlueprintsListBlueprints200Response**](BlueprintsListBlueprints200Response.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
+[**BlueprintsListBlueprints200Response**](BlueprintsListBlueprints200Response.md)
 
 ### Authorization
 
@@ -486,10 +486,10 @@ kandji updateBlueprint blueprint_id=value
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blueprintId** | **string** |  | [default to null]
- **name** | **string** | Update the name of the Blueprint | [default to null]
  **description** | **string** | Update the description of the Blueprint | [default to null]
  **enrollmentCodePeriodcode** | **string** | Update the enrollment code of the Blueprint | [default to null]
  **enrollmentCodePeriodisActive** | **string** | Disable the Blueprint for manual device enrollment from the enrollment portal. | [default to null]
+ **name** | **string** | Update the name of the Blueprint | [default to null]
 
 ### Return type
 

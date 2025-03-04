@@ -37,9 +37,9 @@ kandji createAdeIntegration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blueprintId** | **string** |  | [default to null]
- **phone** | **string** |  | [default to null]
  **email** | **string** |  | [default to null]
  **file** | **binary** | This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API. | [default to null]
+ **phone** | **string** |  | [default to null]
 
 ### Return type
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response**](AutomatedDeviceEnrollmentIntegrationsListAdeDevices200Response.md)
+[**BlueprintsListBlueprints200Response**](BlueprintsListBlueprints200Response.md)
 
 ### Authorization
 
@@ -331,9 +331,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **adeTokenId** | **string** |  | [default to null]
  **blueprintId** | **string** |  | [default to null]
- **phone** | **string** |  | [default to null]
  **email** | **string** |  | [default to null]
  **file** | **binary** | This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API. | [default to null]
+ **phone** | **string** |  | [default to null]
 
 ### Return type
 
