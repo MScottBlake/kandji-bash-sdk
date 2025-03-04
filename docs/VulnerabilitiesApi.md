@@ -5,7 +5,7 @@ All URIs are relative to **
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getVulnerabilityDescription**](VulnerabilitiesApi.md#getVulnerabilityDescription) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id} | Get Vulnerability Description
-[**listAffectedApplications**](VulnerabilitiesApi.md#listAffectedApplications) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications | List Affected Applications
+[**listAffectedApps**](VulnerabilitiesApi.md#listAffectedApps) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications | List Affected Apps
 [**listAffectedDevices**](VulnerabilitiesApi.md#listAffectedDevices) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/devices | List Affected Devices
 [**listDetections**](VulnerabilitiesApi.md#listDetections) | **GET** /api/v1/vulnerability-management/detections | List Detections
 [**listVulnerabilities**](VulnerabilitiesApi.md#listVulnerabilities) | **GET** /api/v1/vulnerability-management/vulnerabilities | List Vulnerabilities
@@ -47,16 +47,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## listAffectedApplications
+## listAffectedApps
 
-List Affected Applications
+List Affected Apps
 
 This endpoint makes a request to retrieve a list of applications impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet.
 
 ### Example
 
 ```bash
-kandji listAffectedApplications cve_id=value  page=value  size=value  sort_by=value  filter=value
+kandji listAffectedApps cve_id=value  page=value  size=value  sort_by=value  filter=value
 ```
 
 ### Parameters

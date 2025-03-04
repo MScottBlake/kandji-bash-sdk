@@ -336,11 +336,11 @@ operation_parameters_minimum_occurrences["listUsers:::id"]=0
 operation_parameters_minimum_occurrences["listUsers:::integration_id"]=0
 operation_parameters_minimum_occurrences["listUsers:::archived"]=0
 operation_parameters_minimum_occurrences["getVulnerabilityDescription:::cve_id"]=1
-operation_parameters_minimum_occurrences["listAffectedApplications:::cve_id"]=1
-operation_parameters_minimum_occurrences["listAffectedApplications:::page"]=0
-operation_parameters_minimum_occurrences["listAffectedApplications:::size"]=0
-operation_parameters_minimum_occurrences["listAffectedApplications:::sort_by"]=0
-operation_parameters_minimum_occurrences["listAffectedApplications:::filter"]=0
+operation_parameters_minimum_occurrences["listAffectedApps:::cve_id"]=1
+operation_parameters_minimum_occurrences["listAffectedApps:::page"]=0
+operation_parameters_minimum_occurrences["listAffectedApps:::size"]=0
+operation_parameters_minimum_occurrences["listAffectedApps:::sort_by"]=0
+operation_parameters_minimum_occurrences["listAffectedApps:::filter"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::cve_id"]=1
 operation_parameters_minimum_occurrences["listAffectedDevices:::page"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::size"]=0
@@ -601,11 +601,11 @@ operation_parameters_maximum_occurrences["listUsers:::id"]=0
 operation_parameters_maximum_occurrences["listUsers:::integration_id"]=0
 operation_parameters_maximum_occurrences["listUsers:::archived"]=0
 operation_parameters_maximum_occurrences["getVulnerabilityDescription:::cve_id"]=0
-operation_parameters_maximum_occurrences["listAffectedApplications:::cve_id"]=0
-operation_parameters_maximum_occurrences["listAffectedApplications:::page"]=0
-operation_parameters_maximum_occurrences["listAffectedApplications:::size"]=0
-operation_parameters_maximum_occurrences["listAffectedApplications:::sort_by"]=0
-operation_parameters_maximum_occurrences["listAffectedApplications:::filter"]=0
+operation_parameters_maximum_occurrences["listAffectedApps:::cve_id"]=0
+operation_parameters_maximum_occurrences["listAffectedApps:::page"]=0
+operation_parameters_maximum_occurrences["listAffectedApps:::size"]=0
+operation_parameters_maximum_occurrences["listAffectedApps:::sort_by"]=0
+operation_parameters_maximum_occurrences["listAffectedApps:::filter"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::cve_id"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::page"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::size"]=0
@@ -863,11 +863,11 @@ operation_parameters_collection_type["listUsers:::id"]=""
 operation_parameters_collection_type["listUsers:::integration_id"]=""
 operation_parameters_collection_type["listUsers:::archived"]=""
 operation_parameters_collection_type["getVulnerabilityDescription:::cve_id"]=""
-operation_parameters_collection_type["listAffectedApplications:::cve_id"]=""
-operation_parameters_collection_type["listAffectedApplications:::page"]=""
-operation_parameters_collection_type["listAffectedApplications:::size"]=""
-operation_parameters_collection_type["listAffectedApplications:::sort_by"]=""
-operation_parameters_collection_type["listAffectedApplications:::filter"]=""
+operation_parameters_collection_type["listAffectedApps:::cve_id"]=""
+operation_parameters_collection_type["listAffectedApps:::page"]=""
+operation_parameters_collection_type["listAffectedApps:::size"]=""
+operation_parameters_collection_type["listAffectedApps:::sort_by"]=""
+operation_parameters_collection_type["listAffectedApps:::filter"]=""
 operation_parameters_collection_type["listAffectedDevices:::cve_id"]=""
 operation_parameters_collection_type["listAffectedDevices:::page"]=""
 operation_parameters_collection_type["listAffectedDevices:::size"]=""
@@ -1407,7 +1407,7 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[vulnerabilities]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}getVulnerabilityDescription${OFF};Get Vulnerability Description (AUTH)
-  ${CYAN}listAffectedApplications${OFF};List Affected Applications (AUTH)
+  ${CYAN}listAffectedApps${OFF};List Affected Apps (AUTH)
   ${CYAN}listAffectedDevices${OFF};List Affected Devices (AUTH)
   ${CYAN}listDetections${OFF};List Detections (AUTH)
   ${CYAN}listVulnerabilities${OFF};List Vulnerabilities (AUTH)
@@ -4955,12 +4955,12 @@ print_getVulnerabilityDescription_help() {
 }
 ##############################################################################
 #
-# Print help for listAffectedApplications operation
+# Print help for listAffectedApps operation
 #
 ##############################################################################
-print_listAffectedApplications_help() {
+print_listAffectedApps_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}listAffectedApplications - List Affected Applications${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}listAffectedApps - List Affected Apps${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "This endpoint makes a request to retrieve a list of applications impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -8666,10 +8666,10 @@ call_getVulnerabilityDescription() {
 
 ##############################################################################
 #
-# Call listAffectedApplications operation
+# Call listAffectedApps operation
 #
 ##############################################################################
-call_listAffectedApplications() {
+call_listAffectedApps() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(cve_id)
@@ -9148,8 +9148,8 @@ case $key in
     getVulnerabilityDescription)
     operation="getVulnerabilityDescription"
     ;;
-    listAffectedApplications)
-    operation="listAffectedApplications"
+    listAffectedApps)
+    operation="listAffectedApps"
     ;;
     listAffectedDevices)
     operation="listAffectedDevices"
@@ -9490,8 +9490,8 @@ case $operation in
     getVulnerabilityDescription)
     call_getVulnerabilityDescription
     ;;
-    listAffectedApplications)
-    call_listAffectedApplications
+    listAffectedApps)
+    call_listAffectedApps
     ;;
     listAffectedDevices)
     call_listAffectedDevices

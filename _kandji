@@ -367,7 +367,7 @@ case $state in
             "updateTag[Update Tag]"             "getThreatDetails[Get Threat Details]"             "deleteUser[Delete User]" \
             "getUser[Get User]" \
             "listUsers[List Users]"             "getVulnerabilityDescription[Get Vulnerability Description]" \
-            "listAffectedApplications[List Affected Applications]" \
+            "listAffectedApps[List Affected Apps]" \
             "listAffectedDevices[List Affected Devices]" \
             "listDetections[List Detections]" \
             "listVulnerabilities[List Vulnerabilities]" \
@@ -1122,7 +1122,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listAffectedApplications)
+      listAffectedApps)
         local -a _op_arguments
         _op_arguments=(
           "cve_id=:[PATH] "

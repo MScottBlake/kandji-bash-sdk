@@ -184,7 +184,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**getUser**](docs/UsersApi.md#getuser) | **GET** /api/v1/users/{user_id} | Get User
 *UsersApi* | [**listUsers**](docs/UsersApi.md#listusers) | **GET** /api/v1/users | List Users
 *VulnerabilitiesApi* | [**getVulnerabilityDescription**](docs/VulnerabilitiesApi.md#getvulnerabilitydescription) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id} | Get Vulnerability Description
-*VulnerabilitiesApi* | [**listAffectedApplications**](docs/VulnerabilitiesApi.md#listaffectedapplications) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications | List Affected Applications
+*VulnerabilitiesApi* | [**listAffectedApps**](docs/VulnerabilitiesApi.md#listaffectedapps) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications | List Affected Apps
 *VulnerabilitiesApi* | [**listAffectedDevices**](docs/VulnerabilitiesApi.md#listaffecteddevices) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/devices | List Affected Devices
 *VulnerabilitiesApi* | [**listDetections**](docs/VulnerabilitiesApi.md#listdetections) | **GET** /api/v1/vulnerability-management/detections | List Detections
 *VulnerabilitiesApi* | [**listVulnerabilities**](docs/VulnerabilitiesApi.md#listvulnerabilities) | **GET** /api/v1/vulnerability-management/vulnerabilities | List Vulnerabilities
