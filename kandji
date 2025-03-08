@@ -347,7 +347,7 @@ operation_parameters_minimum_occurrences["listAffectedDevices:::size"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::sort_by"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::filter"]=0
 operation_parameters_minimum_occurrences["listDetections:::after"]=0
-operation_parameters_minimum_occurrences["listDetections:::limit"]=0
+operation_parameters_minimum_occurrences["listDetections:::size"]=0
 operation_parameters_minimum_occurrences["listDetections:::filter"]=0
 operation_parameters_minimum_occurrences["listVulnerabilities:::page"]=0
 operation_parameters_minimum_occurrences["listVulnerabilities:::size"]=0
@@ -612,7 +612,7 @@ operation_parameters_maximum_occurrences["listAffectedDevices:::size"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::sort_by"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::filter"]=0
 operation_parameters_maximum_occurrences["listDetections:::after"]=0
-operation_parameters_maximum_occurrences["listDetections:::limit"]=0
+operation_parameters_maximum_occurrences["listDetections:::size"]=0
 operation_parameters_maximum_occurrences["listDetections:::filter"]=0
 operation_parameters_maximum_occurrences["listVulnerabilities:::page"]=0
 operation_parameters_maximum_occurrences["listVulnerabilities:::size"]=0
@@ -874,7 +874,7 @@ operation_parameters_collection_type["listAffectedDevices:::size"]=""
 operation_parameters_collection_type["listAffectedDevices:::sort_by"]=""
 operation_parameters_collection_type["listAffectedDevices:::filter"]=""
 operation_parameters_collection_type["listDetections:::after"]=""
-operation_parameters_collection_type["listDetections:::limit"]=""
+operation_parameters_collection_type["listDetections:::size"]=""
 operation_parameters_collection_type["listDetections:::filter"]=""
 operation_parameters_collection_type["listVulnerabilities:::page"]=""
 operation_parameters_collection_type["listVulnerabilities:::size"]=""
@@ -5027,7 +5027,7 @@ print_listDetections_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}after${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Cursor token.${YELLOW} Specify as: after=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper <code>limit</code> is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: limit=value${OFF}" \
+    echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper <code>limit</code> is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Can filter on any key attribute within the response.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -8747,7 +8747,7 @@ call_listDetections() {
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(after limit filter  )
+    local query_parameter_names=(after size filter  )
     local path
 
     if ! path=$(build_request_path "/api/v1/vulnerability-management/detections" path_parameter_names query_parameter_names); then

@@ -1152,7 +1152,7 @@ updated_at"
         local -a _op_arguments
         _op_arguments=(
                     "after=:[QUERY] Cursor token."
-"limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
+"size=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
 "filter=:[QUERY] Can filter on any key attribute within the response."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0

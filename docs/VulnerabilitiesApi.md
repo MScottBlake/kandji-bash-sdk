@@ -138,7 +138,7 @@ This endpoint makes a request to retrieve a list of all vulnerability detections
 ### Example
 
 ```bash
-kandji listDetections  after=value  limit=value  filter=value
+kandji listDetections  after=value  size=value  filter=value
 ```
 
 ### Parameters
@@ -147,7 +147,7 @@ kandji listDetections  after=value  limit=value  filter=value
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **after** | **string** | Cursor token. | [optional] [default to null]
- **limit** | **string** | A hard upper <code>limit</code> is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
+ **size** | **string** | A hard upper <code>limit</code> is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
  **filter** | **string** | Can filter on any key attribute within the response. | [optional] [default to null]
 
 ### Return type
