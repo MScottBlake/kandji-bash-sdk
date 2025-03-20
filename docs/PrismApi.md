@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**activationLock**](PrismApi.md#activationLock) | **GET** /api/v1/prism/activation_lock | Activation lock
 [**applicationFirewall**](PrismApi.md#applicationFirewall) | **GET** /api/v1/prism/application_firewall | Application firewall
 [**applications**](PrismApi.md#applications) | **GET** /api/v1/prism/apps | Applications
+[**cellular**](PrismApi.md#cellular) | **GET** /api/v1/prism/cellular | Cellular
 [**certificates**](PrismApi.md#certificates) | **GET** /api/v1/prism/certificates | Certificates
 [**count**](PrismApi.md#count) | **GET** /api/v1/prism/count | Count
 [**desktopAndScreensaver**](PrismApi.md#desktopAndScreensaver) | **GET** /api/v1/prism/desktop_and_screensaver | Desktop and Screensaver
@@ -135,6 +136,47 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 ### Return type
 
 [**PrismApplications200Response**](PrismApplications200Response.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## cellular
+
+Cellular
+
+Get Cellular attributes for devices.
+
+### Example
+
+```bash
+kandji cellular  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
+ **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
+ **filter** | **string** | JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+ **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
+ **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
+ **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
+
+### Return type
+
+**map**
 
 ### Authorization
 

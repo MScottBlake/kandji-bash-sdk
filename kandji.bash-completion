@@ -125,6 +125,7 @@ _kandji()
     operations["activationLock"]=1
     operations["applicationFirewall"]=1
     operations["applications"]=1
+    operations["cellular"]=1
     operations["certificates"]=1
     operations["count"]=1
     operations["desktopAndScreensaver"]=1
@@ -145,6 +146,7 @@ _kandji()
     operations["deleteTag"]=1
     operations["getTags"]=1
     operations["updateTag"]=1
+    operations["getBehavioralDetections"]=1
     operations["getThreatDetails"]=1
     operations["deleteUser"]=1
     operations["getUser"]=1
@@ -214,6 +216,7 @@ _kandji()
     operation_parameters["activationLock"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["applicationFirewall"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["applications"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
+    operation_parameters["cellular"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["certificates"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["count"]="category= "
     operation_parameters["desktopAndScreensaver"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
@@ -234,6 +237,7 @@ _kandji()
     operation_parameters["deleteTag"]="tag_id= "
     operation_parameters["getTags"]="search= "
     operation_parameters["updateTag"]="tag_id= "
+    operation_parameters["getBehavioralDetections"]="threat_id= classification= status= date_range= detection_date= device_id= malware_family= parent_process_name= target_process_name= informational_tags= term= sort_by= limit= offset= "
     operation_parameters["getThreatDetails"]="classification= date_range= device_id= status= sort_by= term= limit= offset= "
     operation_parameters["deleteUser"]="user_id= "
     operation_parameters["getUser"]="user_id= "

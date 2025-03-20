@@ -240,6 +240,12 @@ operation_parameters_minimum_occurrences["applications:::filter"]=0
 operation_parameters_minimum_occurrences["applications:::sort_by"]=0
 operation_parameters_minimum_occurrences["applications:::limit"]=0
 operation_parameters_minimum_occurrences["applications:::offset"]=0
+operation_parameters_minimum_occurrences["cellular:::blueprint_ids"]=0
+operation_parameters_minimum_occurrences["cellular:::device_families"]=0
+operation_parameters_minimum_occurrences["cellular:::filter"]=0
+operation_parameters_minimum_occurrences["cellular:::sort_by"]=0
+operation_parameters_minimum_occurrences["cellular:::limit"]=0
+operation_parameters_minimum_occurrences["cellular:::offset"]=0
 operation_parameters_minimum_occurrences["certificates:::blueprint_ids"]=0
 operation_parameters_minimum_occurrences["certificates:::device_families"]=0
 operation_parameters_minimum_occurrences["certificates:::filter"]=0
@@ -321,6 +327,20 @@ operation_parameters_minimum_occurrences["deleteTag:::tag_id"]=1
 operation_parameters_minimum_occurrences["getTags:::search"]=1
 operation_parameters_minimum_occurrences["updateTag:::tag_id"]=1
 operation_parameters_minimum_occurrences["updateTag:::body"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::threat_id"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::classification"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::status"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::date_range"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::detection_date"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::device_id"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::malware_family"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::parent_process_name"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::target_process_name"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::informational_tags"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::term"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::sort_by"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::limit"]=0
+operation_parameters_minimum_occurrences["getBehavioralDetections:::offset"]=0
 operation_parameters_minimum_occurrences["getThreatDetails:::classification"]=0
 operation_parameters_minimum_occurrences["getThreatDetails:::date_range"]=0
 operation_parameters_minimum_occurrences["getThreatDetails:::device_id"]=0
@@ -505,6 +525,12 @@ operation_parameters_maximum_occurrences["applications:::filter"]=0
 operation_parameters_maximum_occurrences["applications:::sort_by"]=0
 operation_parameters_maximum_occurrences["applications:::limit"]=0
 operation_parameters_maximum_occurrences["applications:::offset"]=0
+operation_parameters_maximum_occurrences["cellular:::blueprint_ids"]=0
+operation_parameters_maximum_occurrences["cellular:::device_families"]=0
+operation_parameters_maximum_occurrences["cellular:::filter"]=0
+operation_parameters_maximum_occurrences["cellular:::sort_by"]=0
+operation_parameters_maximum_occurrences["cellular:::limit"]=0
+operation_parameters_maximum_occurrences["cellular:::offset"]=0
 operation_parameters_maximum_occurrences["certificates:::blueprint_ids"]=0
 operation_parameters_maximum_occurrences["certificates:::device_families"]=0
 operation_parameters_maximum_occurrences["certificates:::filter"]=0
@@ -586,6 +612,20 @@ operation_parameters_maximum_occurrences["deleteTag:::tag_id"]=0
 operation_parameters_maximum_occurrences["getTags:::search"]=0
 operation_parameters_maximum_occurrences["updateTag:::tag_id"]=0
 operation_parameters_maximum_occurrences["updateTag:::body"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::threat_id"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::classification"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::status"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::date_range"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::detection_date"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::device_id"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::malware_family"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::parent_process_name"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::target_process_name"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::informational_tags"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::term"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::sort_by"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::limit"]=0
+operation_parameters_maximum_occurrences["getBehavioralDetections:::offset"]=0
 operation_parameters_maximum_occurrences["getThreatDetails:::classification"]=0
 operation_parameters_maximum_occurrences["getThreatDetails:::date_range"]=0
 operation_parameters_maximum_occurrences["getThreatDetails:::device_id"]=0
@@ -767,6 +807,12 @@ operation_parameters_collection_type["applications:::filter"]=""
 operation_parameters_collection_type["applications:::sort_by"]=""
 operation_parameters_collection_type["applications:::limit"]=""
 operation_parameters_collection_type["applications:::offset"]=""
+operation_parameters_collection_type["cellular:::blueprint_ids"]=""
+operation_parameters_collection_type["cellular:::device_families"]=""
+operation_parameters_collection_type["cellular:::filter"]=""
+operation_parameters_collection_type["cellular:::sort_by"]=""
+operation_parameters_collection_type["cellular:::limit"]=""
+operation_parameters_collection_type["cellular:::offset"]=""
 operation_parameters_collection_type["certificates:::blueprint_ids"]=""
 operation_parameters_collection_type["certificates:::device_families"]=""
 operation_parameters_collection_type["certificates:::filter"]=""
@@ -848,6 +894,20 @@ operation_parameters_collection_type["deleteTag:::tag_id"]=""
 operation_parameters_collection_type["getTags:::search"]=""
 operation_parameters_collection_type["updateTag:::tag_id"]=""
 operation_parameters_collection_type["updateTag:::body"]=""
+operation_parameters_collection_type["getBehavioralDetections:::threat_id"]=""
+operation_parameters_collection_type["getBehavioralDetections:::classification"]=""
+operation_parameters_collection_type["getBehavioralDetections:::status"]=""
+operation_parameters_collection_type["getBehavioralDetections:::date_range"]=""
+operation_parameters_collection_type["getBehavioralDetections:::detection_date"]=""
+operation_parameters_collection_type["getBehavioralDetections:::device_id"]=""
+operation_parameters_collection_type["getBehavioralDetections:::malware_family"]=""
+operation_parameters_collection_type["getBehavioralDetections:::parent_process_name"]=""
+operation_parameters_collection_type["getBehavioralDetections:::target_process_name"]=""
+operation_parameters_collection_type["getBehavioralDetections:::informational_tags"]=""
+operation_parameters_collection_type["getBehavioralDetections:::term"]=""
+operation_parameters_collection_type["getBehavioralDetections:::sort_by"]=""
+operation_parameters_collection_type["getBehavioralDetections:::limit"]=""
+operation_parameters_collection_type["getBehavioralDetections:::offset"]=""
 operation_parameters_collection_type["getThreatDetails:::classification"]=""
 operation_parameters_collection_type["getThreatDetails:::date_range"]=""
 operation_parameters_collection_type["getThreatDetails:::device_id"]=""
@@ -1357,6 +1417,7 @@ read -r -d '' ops <<EOF
   ${CYAN}activationLock${OFF};Activation lock (AUTH)
   ${CYAN}applicationFirewall${OFF};Application firewall (AUTH)
   ${CYAN}applications${OFF};Applications (AUTH)
+  ${CYAN}cellular${OFF};Cellular (AUTH)
   ${CYAN}certificates${OFF};Certificates (AUTH)
   ${CYAN}count${OFF};Count (AUTH)
   ${CYAN}desktopAndScreensaver${OFF};Desktop and Screensaver (AUTH)
@@ -1392,6 +1453,7 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[threats]${OFF}"
 read -r -d '' ops <<EOF
+  ${CYAN}getBehavioralDetections${OFF};Get Behavioral Detections (AUTH)
   ${CYAN}getThreatDetails${OFF};Get Threat Details (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -3936,6 +3998,60 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 }
 ##############################################################################
 #
+# Print help for cellular operation
+#
+##############################################################################
+print_cellular_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}cellular - Cellular${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Get Cellular attributes for devices." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}blueprint_ids${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more blueprint IDs separated by commas.${YELLOW} Specify as: blueprint_ids=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.${YELLOW} Specify as: limit=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}offset${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Specify the starting record to return.${YELLOW} Specify as: offset=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Limit-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for certificates operation
 #
 ##############################################################################
@@ -4798,6 +4914,63 @@ print_updateTag_help() {
     echo -e "  * ${GREEN}tag_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: tag_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for getBehavioralDetections operation
+#
+##############################################################################
+print_getBehavioralDetections_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getBehavioralDetections - Get Behavioral Detections${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Get Behavioral Detections." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}threat_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by a specific threat ID (threat_id=Kandji_BD_0096).${YELLOW} Specify as: threat_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}classification${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by threat classification (classification=malicious).${YELLOW} Specify as: classification=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}status${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by threat status (threat_status=blocked)${YELLOW} Specify as: status=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}date_range${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all records within a specified number of days (Int)${YELLOW} Specify as: date_range=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}detection_date${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - two query params detection_date_from and detection_date_to${YELLOW} Specify as: detection_date=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search for a specific device by the device id (uuid).${YELLOW} Specify as: device_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}malware_family${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by malware family (malware_family=TrickBot).${YELLOW} Specify as: malware_family=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}parent_process_name${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by parent process (parent_process_name=bash).${YELLOW} Specify as: parent_process_name=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}target_process_name${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by target process (target_process_name=python).${YELLOW} Specify as: target_process_name=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}informational_tags${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by tags (informational_tags=exploit,privilege_escalation).${YELLOW} Specify as: informational_tags=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}term${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search term to filter threat results. Device name, file hash, image path${YELLOW} Specify as: term=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Detections can be sorted by any of the following keys. Prepending a dash (-) to the parameter value will reverse the order of the returned results. ?sort_by=-device_name will order the response by device_name in descending order.</p>
+<ul>
+<li>threat_id</li>
+<li>classification</li>
+<li>device_name</li>
+<li>parent_process_name</li>
+<li>target_process_name</li>
+<li>detection_date</li>
+<li>status</li>
+</ul>${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper <code>limit</code> is set at 1000 records returned per request. If more records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. 
+Additionally, parameter queries can be added to a request to limit the results.${YELLOW} Specify as: limit=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}offset${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Specify the starting record to return.${YELLOW} Specify as: offset=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -7598,6 +7771,42 @@ call_applications() {
 
 ##############################################################################
 #
+# Call cellular operation
+#
+##############################################################################
+call_cellular() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(blueprint_ids device_families filter sort_by limit offset  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/prism/cellular" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call certificates operation
 #
 ##############################################################################
@@ -8486,6 +8695,42 @@ call_updateTag() {
 
 ##############################################################################
 #
+# Call getBehavioralDetections operation
+#
+##############################################################################
+call_getBehavioralDetections() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(threat_id classification status date_range detection_date device_id malware_family parent_process_name target_process_name informational_tags term sort_by limit offset  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/behavioral-detections" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getThreatDetails operation
 #
 ##############################################################################
@@ -9073,6 +9318,9 @@ case $key in
     applications)
     operation="applications"
     ;;
+    cellular)
+    operation="cellular"
+    ;;
     certificates)
     operation="certificates"
     ;;
@@ -9132,6 +9380,9 @@ case $key in
     ;;
     updateTag)
     operation="updateTag"
+    ;;
+    getBehavioralDetections)
+    operation="getBehavioralDetections"
     ;;
     getThreatDetails)
     operation="getThreatDetails"
@@ -9415,6 +9666,9 @@ case $operation in
     applications)
     call_applications
     ;;
+    cellular)
+    call_cellular
+    ;;
     certificates)
     call_certificates
     ;;
@@ -9474,6 +9728,9 @@ case $operation in
     ;;
     updateTag)
     call_updateTag
+    ;;
+    getBehavioralDetections)
+    call_getBehavioralDetections
     ;;
     getThreatDetails)
     call_getThreatDetails

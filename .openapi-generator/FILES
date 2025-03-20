@@ -69,6 +69,7 @@ docs/SettingsLicensing200ResponseLimitsMaxDevicesPerPlatform.md
 docs/TagsApi.md
 docs/TagsCreateTag201Response.md
 docs/ThreatsApi.md
+docs/ThreatsGetBehavioralDetections200Response.md
 docs/ThreatsGetThreatDetails200Response.md
 docs/UsersApi.md
 docs/UsersGetUser200Response.md

@@ -347,6 +347,7 @@ case $state in
             "getLibraryItemStatuses[Get Library Item Statuses]"             "activationLock[Activation lock]" \
             "applicationFirewall[Application firewall]" \
             "applications[Applications]" \
+            "cellular[Cellular]" \
             "certificates[Certificates]" \
             "count[Count]" \
             "desktopAndScreensaver[Desktop and Screensaver]" \
@@ -364,7 +365,8 @@ case $state in
             "transparencyDatabase[Transparency database]"             "licensing[Licensing]"             "createTag[Create Tag]" \
             "deleteTag[Delete Tag]" \
             "getTags[Get Tags]" \
-            "updateTag[Update Tag]"             "getThreatDetails[Get Threat Details]"             "deleteUser[Delete User]" \
+            "updateTag[Update Tag]"             "getBehavioralDetections[Get Behavioral Detections]" \
+            "getThreatDetails[Get Threat Details]"             "deleteUser[Delete User]" \
             "getUser[Get User]" \
             "listUsers[List Users]"             "getVulnerabilityDescription[Get Vulnerability Description]" \
             "listAffectedApps[List Affected Apps]" \
@@ -848,6 +850,19 @@ Note: For detailed information on fiters, see the Filters section at the beginin
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      cellular)
+        local -a _op_arguments
+        _op_arguments=(
+                    "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
+"device_families=:[QUERY] Filter results by one or more device families separate by commas."
+"filter=:[QUERY] JSON schema object containing one or more key value pairs.
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+"sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
+"limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
+"offset=:[QUERY] Specify the starting record to return."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       certificates)
         local -a _op_arguments
         _op_arguments=(
@@ -1061,6 +1076,36 @@ Note: For detailed information on fiters, see the Filters section at the beginin
         _op_arguments=(
           "tag_id=:[PATH] "
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getBehavioralDetections)
+        local -a _op_arguments
+        _op_arguments=(
+                    "threat_id=:[QUERY] Filter by a specific threat ID (threat_id&#x3D;Kandji_BD_0096)."
+"classification=:[QUERY] Filter by threat classification (classification&#x3D;malicious)."
+"status=:[QUERY] Filter by threat status (threat_status&#x3D;blocked)"
+"date_range=:[QUERY] Return all records within a specified number of days (Int)"
+"detection_date=:[QUERY] two query params detection_date_from and detection_date_to"
+"device_id=:[QUERY] Search for a specific device by the device id (uuid)."
+"malware_family=:[QUERY] Filter by malware family (malware_family&#x3D;TrickBot)."
+"parent_process_name=:[QUERY] Filter by parent process (parent_process_name&#x3D;bash)."
+"target_process_name=:[QUERY] Filter by target process (target_process_name&#x3D;python)."
+"informational_tags=:[QUERY] Filter by tags (informational_tags&#x3D;exploit,privilege_escalation)."
+"term=:[QUERY] Search term to filter threat results. Device name, file hash, image path"
+"sort_by=:[QUERY] &lt;p&gt;Detections can be sorted by any of the following keys. Prepending a dash (-) to the parameter value will reverse the order of the returned results. ?sort_by&#x3D;-device_name will order the response by device_name in descending order.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;threat_id&lt;/li&gt;
+&lt;li&gt;classification&lt;/li&gt;
+&lt;li&gt;device_name&lt;/li&gt;
+&lt;li&gt;parent_process_name&lt;/li&gt;
+&lt;li&gt;target_process_name&lt;/li&gt;
+&lt;li&gt;detection_date&lt;/li&gt;
+&lt;li&gt;status&lt;/li&gt;
+&lt;/ul&gt;"
+"limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 1000 records returned per request. If more records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. 
+Additionally, parameter queries can be added to a request to limit the results."
+"offset=:[QUERY] Specify the starting record to return."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getThreatDetails)
