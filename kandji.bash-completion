@@ -241,7 +241,7 @@ _kandji()
     operation_parameters["getThreatDetails"]="classification= date_range= device_id= status= sort_by= term= limit= offset= "
     operation_parameters["deleteUser"]="user_id= "
     operation_parameters["getUser"]="user_id= "
-    operation_parameters["listUsers"]="email= id= integration_id= archived= "
+    operation_parameters["listUsers"]="email= id= integration_id= archived= cursor= "
     operation_parameters["getVulnerabilityDescription"]="cve_id= "
     operation_parameters["listAffectedApps"]="cve_id= page= size= sort_by= filter= "
     operation_parameters["listAffectedDevices"]="cve_id= page= size= sort_by= filter= "

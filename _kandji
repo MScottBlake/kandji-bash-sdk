@@ -1157,6 +1157,7 @@ Additionally, parameter queries can be added to a request to limit the results."
 "id=:[QUERY] Search for a user matching the provided UUID value."
 "integration_id=:[QUERY] Search for a integration matching the provided UUID value."
 "archived=:[QUERY] Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab."
+"cursor=:[QUERY] Cursor for the next or previous page or results. Can also store the URL from the next and previous fields in the response."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

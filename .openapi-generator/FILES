@@ -53,9 +53,8 @@ docs/DeviceSecretsGetUnlockPin200Response.md
 docs/LibraryItemsApi.md
 docs/PrismActivationLock200Response.md
 docs/PrismApi.md
-docs/PrismApplications200Response.md
+docs/PrismApplicationFirewall200Response.md
 docs/PrismCount200Response.md
-docs/PrismDeviceInformation200Response.md
 docs/PrismGetCategoryExport200Response.md
 docs/PrismLocalUsers200Response.md
 docs/PrismRequestCategoryExport200Response.md

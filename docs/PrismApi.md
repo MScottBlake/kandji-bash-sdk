@@ -94,7 +94,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
+[**PrismApplicationFirewall200Response**](PrismApplicationFirewall200Response.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-[**PrismApplications200Response**](PrismApplications200Response.md)
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-**map**
+[**PrismApplicationFirewall200Response**](PrismApplicationFirewall200Response.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
+[**PrismApplicationFirewall200Response**](PrismApplicationFirewall200Response.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PrismDeviceInformation200Response**](PrismDeviceInformation200Response.md)
+[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-[**PrismDeviceInformation200Response**](PrismDeviceInformation200Response.md)
+[**PrismApplicationFirewall200Response**](PrismApplicationFirewall200Response.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ Note: For detailed information on fiters, see the Filters section at the beginin
 
 ### Return type
 
-[**PrismActivationLock200Response**](PrismActivationLock200Response.md)
+[**PrismApplicationFirewall200Response**](PrismApplicationFirewall200Response.md)
 
 ### Authorization
 
