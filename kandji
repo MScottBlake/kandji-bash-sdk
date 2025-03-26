@@ -1814,7 +1814,7 @@ print_listAdeDevices_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;containing&quot; the specified blueprint id${YELLOW} Specify as: blueprint_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on kandji user ID number${YELLOW} Specify as: user_id=value${OFF}" \
+    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on kandji user ID value (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)${YELLOW} Specify as: user_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}dep_account${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The ADE token UUID${YELLOW} Specify as: dep_account=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3496,7 +3496,7 @@ print_listDevices_help() {
 <p>Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.</p>
 <p><code>?ordering=serial_number,platform</code></p>${YELLOW} Specify as: ordering=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}os_version${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all device records with the specified OS version${YELLOW} Specify as: os_version=value${OFF}" \
+    echo -e "  * ${GREEN}os_version${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all device records containing the specified OS version${YELLOW} Specify as: os_version=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}platform${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all records matching a specific platform. Possible values:<code>Mac</code>, <code>iPad</code>, <code>iPhone</code>, <code>AppleTV</code>${YELLOW} Specify as: platform=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3514,7 +3514,7 @@ print_listDevices_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}user_email${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;containing&quot; search on email address${YELLOW} Specify as: user_email=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on kandji user ID number${YELLOW} Specify as: user_id=value${OFF}" \
+    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)${YELLOW} Specify as: user_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}user_name${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;containing&quot; the assigned user Display Name${YELLOW} Specify as: user_name=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'

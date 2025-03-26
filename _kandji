@@ -417,7 +417,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_id=:[QUERY] Return results &amp;quot;containing&amp;quot; the specified blueprint id"
-"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on kandji user ID number"
+"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on kandji user ID value (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)"
 "dep_account=:[QUERY] The ADE token UUID"
 "device_family=:[QUERY] Mac, iPhone, iPad, AppleTV, iPod"
 "model=:[QUERY] Return model results &amp;quot;containing&amp;quot; the specified model string. - &amp;quot;iPad (8th Generation)&amp;quot;, &amp;quot;MacBook Air&amp;quot;"
@@ -738,7 +738,7 @@ case $state in
 &lt;/ul&gt;
 &lt;p&gt;Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;?ordering&#x3D;serial_number,platform&lt;/code&gt;&lt;/p&gt;"
-"os_version=:[QUERY] Return all device records with the specified OS version"
+"os_version=:[QUERY] Return all device records containing the specified OS version"
 "platform=:[QUERY] Return all records matching a specific platform. Possible values:&lt;code&gt;Mac&lt;/code&gt;, &lt;code&gt;iPad&lt;/code&gt;, &lt;code&gt;iPhone&lt;/code&gt;, &lt;code&gt;AppleTV&lt;/code&gt;"
 "serial_number=:[QUERY] Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned."
 "tag_name=:[QUERY] Return results for given tag name. Case sensitive."
@@ -747,7 +747,7 @@ case $state in
 "tag_id_in=:[QUERY] Return results for given tag IDs separated by commas. Case sensitive."
 "user=:[QUERY] Return results &amp;quot;containing&amp;quot; the user name"
 "user_email=:[QUERY] Return results &amp;quot;containing&amp;quot; search on email address"
-"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on kandji user ID number"
+"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)"
 "user_name=:[QUERY] Return results &amp;quot;containing&amp;quot; the assigned user Display Name"
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return"

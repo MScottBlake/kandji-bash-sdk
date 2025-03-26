@@ -216,7 +216,7 @@ kandji listAdeDevices  blueprint_id=value  user_id=value  dep_account=value  dev
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blueprintId** | **string** | Return results &quot;containing&quot; the specified blueprint id | [optional] [default to null]
- **userId** | **string** | &quot;exact&quot; match on kandji user ID number | [optional] [default to null]
+ **userId** | **string** | &quot;exact&quot; match on kandji user ID value (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a) | [optional] [default to null]
  **depAccount** | **string** | The ADE token UUID | [optional] [default to null]
  **deviceFamily** | **string** | Mac, iPhone, iPad, AppleTV, iPod | [optional] [default to null]
  **model** | **string** | Return model results &quot;containing&quot; the specified model string. - &quot;iPad (8th Generation)&quot;, &quot;MacBook Air&quot; | [optional] [default to null]

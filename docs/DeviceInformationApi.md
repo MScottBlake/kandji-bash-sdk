@@ -606,7 +606,7 @@ Name | Type | Description  | Notes
 </ul>
 <p>Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.</p>
 <p><code>?ordering=serial_number,platform</code></p> | [optional] [default to null]
- **osVersion** | **string** | Return all device records with the specified OS version | [optional] [default to null]
+ **osVersion** | **string** | Return all device records containing the specified OS version | [optional] [default to null]
  **platform** | **string** | Return all records matching a specific platform. Possible values:<code>Mac</code>, <code>iPad</code>, <code>iPhone</code>, <code>AppleTV</code> | [optional] [default to null]
  **serialNumber** | **string** | Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned. | [optional] [default to null]
  **tagName** | **string** | Return results for given tag name. Case sensitive. | [optional] [default to null]
@@ -615,7 +615,7 @@ Name | Type | Description  | Notes
  **tagIdIn** | **string** | Return results for given tag IDs separated by commas. Case sensitive. | [optional] [default to null]
  **user** | **string** | Return results &quot;containing&quot; the user name | [optional] [default to null]
  **userEmail** | **string** | Return results &quot;containing&quot; search on email address | [optional] [default to null]
- **userId** | **string** | &quot;exact&quot; match on kandji user ID number | [optional] [default to null]
+ **userId** | **string** | &quot;exact&quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a) | [optional] [default to null]
  **userName** | **string** | Return results &quot;containing&quot; the assigned user Display Name | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
 
