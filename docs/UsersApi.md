@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UsersListUsers200Response**](UsersListUsers200Response.md)
+[**AuditLogListAuditEvents200Response**](AuditLogListAuditEvents200Response.md)
 
 ### Authorization
 

@@ -297,7 +297,7 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "createAdeIntegration[Create ADE integration]" \
+            "listAuditEvents[List audit events]"             "createAdeIntegration[Create ADE integration]" \
             "deleteAdeIntegration[Delete ADE integration]" \
             "downloadAdePublicKey[Download ADE public key]" \
             "getAdeDevice[Get ADE device]" \
@@ -380,6 +380,17 @@ case $state in
     ;;
   args)
     case $line[1] in
+      listAuditEvents)
+        local -a _op_arguments
+        _op_arguments=(
+                    "limit=:[QUERY] A max upper &lt;code&gt;limit&lt;/code&gt; is set at 500 records returned per request. Pagination should be used using the cursor in the &lt;code&gt;next&lt;/code&gt; key to request more results. Additionally, parameter queries can be added to a request to filter the results."
+"sort_by=:[QUERY] Sort results by &lt;code&gt;occurred_at&lt;/code&gt;, &lt;code&gt;id&lt;/code&gt; either ascending (default behavior) or descending(-) order."
+"start_date=:[QUERY] Filter by start date in datetime or year-month-day (2024-11-26) formats"
+"end_date=:[QUERY] Filter by start date in datetime or year-month-day (2024-12-06) formats"
+"cursor=:[QUERY] You can pass the next cursor as a parameter or use the URL in the next key to get the next page of results or to start from where you left off last."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       createAdeIntegration)
         local -a _op_arguments
         _op_arguments=(

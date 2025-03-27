@@ -96,6 +96,11 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 # 0 - optional
 # 1 - required
 declare -A operation_parameters_minimum_occurrences
+operation_parameters_minimum_occurrences["listAuditEvents:::limit"]=1
+operation_parameters_minimum_occurrences["listAuditEvents:::sort_by"]=1
+operation_parameters_minimum_occurrences["listAuditEvents:::start_date"]=0
+operation_parameters_minimum_occurrences["listAuditEvents:::end_date"]=0
+operation_parameters_minimum_occurrences["listAuditEvents:::cursor"]=0
 operation_parameters_minimum_occurrences["createAdeIntegration:::blueprint_id"]=1
 operation_parameters_minimum_occurrences["createAdeIntegration:::email"]=1
 operation_parameters_minimum_occurrences["createAdeIntegration:::file"]=1
@@ -382,6 +387,11 @@ operation_parameters_minimum_occurrences["listVulnerabilities:::filter"]=0
 # N - N values
 # 0 - unlimited
 declare -A operation_parameters_maximum_occurrences
+operation_parameters_maximum_occurrences["listAuditEvents:::limit"]=0
+operation_parameters_maximum_occurrences["listAuditEvents:::sort_by"]=0
+operation_parameters_maximum_occurrences["listAuditEvents:::start_date"]=0
+operation_parameters_maximum_occurrences["listAuditEvents:::end_date"]=0
+operation_parameters_maximum_occurrences["listAuditEvents:::cursor"]=0
 operation_parameters_maximum_occurrences["createAdeIntegration:::blueprint_id"]=0
 operation_parameters_maximum_occurrences["createAdeIntegration:::email"]=0
 operation_parameters_maximum_occurrences["createAdeIntegration:::file"]=0
@@ -665,6 +675,11 @@ operation_parameters_maximum_occurrences["listVulnerabilities:::filter"]=0
 # The type of collection for specifying multiple values for parameter:
 # - multi, csv, ssv, tsv
 declare -A operation_parameters_collection_type
+operation_parameters_collection_type["listAuditEvents:::limit"]=""
+operation_parameters_collection_type["listAuditEvents:::sort_by"]=""
+operation_parameters_collection_type["listAuditEvents:::start_date"]=""
+operation_parameters_collection_type["listAuditEvents:::end_date"]=""
+operation_parameters_collection_type["listAuditEvents:::cursor"]=""
 operation_parameters_collection_type["createAdeIntegration:::blueprint_id"]=""
 operation_parameters_collection_type["createAdeIntegration:::email"]=""
 operation_parameters_collection_type["createAdeIntegration:::file"]=""
@@ -1332,6 +1347,12 @@ EOF
     echo ""
     echo -e "${BOLD}${WHITE}Operations (grouped by tags)${OFF}"
     echo ""
+    echo -e "${BOLD}${WHITE}[auditLog]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}listAuditEvents${OFF};List audit events (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[automatedDeviceEnrollmentIntegrations]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}createAdeIntegration${OFF};Create ADE integration (AUTH)
@@ -1661,6 +1682,50 @@ print_version() {
     echo ""
 }
 
+##############################################################################
+#
+# Print help for listAuditEvents operation
+#
+##############################################################################
+print_listAuditEvents_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listAuditEvents - List audit events${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "<p>List Audit log events from the Kandji Activity module.</p>
+<p>Returns events related to</p>
+<ul>
+<li><p>Blueprint CUD, Library Item CUD</p>
+</li>
+<li><p>When some sensitive data is viewed (e.g., FileVault keys, recovery keys)</p>
+</li>
+<li><p>Device deleted, enrolled, mdm removed, changed blueprint</p>
+</li>
+<li><p>User directory events (e.g., directory user deletions)</p>
+</li>
+<li><p>API actions, Kandji tenant owner updates, API token CUD, Kandji admin user management CUD</p>
+</li>
+<li><p>Vulnerability management customers can see events detections and remediations.</p>
+</li>
+</ul>" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - A max upper <code>limit</code> is set at 500 records returned per request. Pagination should be used using the cursor in the <code>next</code> key to request more results. Additionally, parameter queries can be added to a request to filter the results.${YELLOW} Specify as: limit=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - Sort results by <code>occurred_at</code>, <code>id</code> either ascending (default behavior) or descending(-) order.${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}start_date${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by start date in datetime or year-month-day (2024-11-26) formats${YELLOW} Specify as: start_date=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}end_date${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by start date in datetime or year-month-day (2024-12-06) formats${YELLOW} Specify as: end_date=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}cursor${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - You can pass the next cursor as a parameter or use the URL in the next key to get the next page of results or to start from where you left off last.${YELLOW} Specify as: cursor=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
 ##############################################################################
 #
 # Print help for createAdeIntegration operation
@@ -5249,6 +5314,42 @@ latest_detection_date</p>${YELLOW} Specify as: filter=value${OFF}" \
         echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 
+
+##############################################################################
+#
+# Call listAuditEvents operation
+#
+##############################################################################
+call_listAuditEvents() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(limit sort_by start_date end_date cursor  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/audit/events" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
 
 ##############################################################################
 #
@@ -9155,6 +9256,9 @@ case $key in
         OFF=""
         result_color_table=( "" "" "" "" "" "" "" )
     ;;
+    listAuditEvents)
+    operation="listAuditEvents"
+    ;;
     createAdeIntegration)
     operation="createAdeIntegration"
     ;;
@@ -9503,6 +9607,9 @@ fi
 
 # Run cURL command based on the operation ID
 case $operation in
+    listAuditEvents)
+    call_listAuditEvents
+    ;;
     createAdeIntegration)
     call_createAdeIntegration
     ;;

@@ -69,6 +69,7 @@ _kandji()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
+    operations["listAuditEvents"]=1
     operations["createAdeIntegration"]=1
     operations["deleteAdeIntegration"]=1
     operations["downloadAdePublicKey"]=1
@@ -160,6 +161,7 @@ _kandji()
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
+    operation_parameters["listAuditEvents"]="limit= sort_by= start_date= end_date= cursor= "
     operation_parameters["createAdeIntegration"]=""
     operation_parameters["deleteAdeIntegration"]="ade_token_id= "
     operation_parameters["downloadAdePublicKey"]=""

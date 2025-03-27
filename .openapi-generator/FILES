@@ -1,6 +1,8 @@
 Dockerfile
 README.md
 _kandji
+docs/AuditLogApi.md
+docs/AuditLogListAuditEvents200Response.md
 docs/AutomatedDeviceEnrollmentIntegrationsApi.md
 docs/AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200Response.md
 docs/AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200ResponseBlueprint.md
@@ -73,7 +75,6 @@ docs/ThreatsGetThreatDetails200Response.md
 docs/UsersApi.md
 docs/UsersGetUser200Response.md
 docs/UsersGetUser200ResponseIntegration.md
-docs/UsersListUsers200Response.md
 docs/VulnerabilitiesApi.md
 docs/VulnerabilitiesGetVulnerabilityDescription200Response.md
 docs/VulnerabilitiesListDetections200Response.md

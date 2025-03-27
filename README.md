@@ -103,6 +103,7 @@ All URIs are relative to **
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AuditLogApi* | [**listAuditEvents**](docs/AuditLogApi.md#listauditevents) | **GET** /api/v1/audit/events | List audit events
 *AutomatedDeviceEnrollmentIntegrationsApi* | [**createAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#createadeintegration) | **POST** /api/v1/integrations/apple/ade/ | Create ADE integration
 *AutomatedDeviceEnrollmentIntegrationsApi* | [**deleteAdeIntegration**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#deleteadeintegration) | **DELETE** /api/v1/integrations/apple/ade/{ade_token_id} | Delete ADE integration
 *AutomatedDeviceEnrollmentIntegrationsApi* | [**downloadAdePublicKey**](docs/AutomatedDeviceEnrollmentIntegrationsApi.md#downloadadepublickey) | **GET** /api/v1/integrations/apple/ade/public_key/ | Download ADE public key
@@ -194,6 +195,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AuditLogListAuditEvents200Response](docs/AuditLogListAuditEvents200Response.md)
  - [AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200Response](docs/AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200Response.md)
  - [AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200ResponseBlueprint](docs/AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200ResponseBlueprint.md)
  - [AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200ResponseDefaults](docs/AutomatedDeviceEnrollmentIntegrationsCreateAdeIntegration200ResponseDefaults.md)
@@ -255,7 +257,6 @@ Class | Method | HTTP request | Description
  - [ThreatsGetThreatDetails200Response](docs/ThreatsGetThreatDetails200Response.md)
  - [UsersGetUser200Response](docs/UsersGetUser200Response.md)
  - [UsersGetUser200ResponseIntegration](docs/UsersGetUser200ResponseIntegration.md)
- - [UsersListUsers200Response](docs/UsersListUsers200Response.md)
  - [VulnerabilitiesGetVulnerabilityDescription200Response](docs/VulnerabilitiesGetVulnerabilityDescription200Response.md)
  - [VulnerabilitiesListDetections200Response](docs/VulnerabilitiesListDetections200Response.md)
  - [VulnerabilitiesListVulnerabilities200Response](docs/VulnerabilitiesListVulnerabilities200Response.md)
