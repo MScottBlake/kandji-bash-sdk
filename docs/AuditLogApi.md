@@ -15,17 +15,19 @@ List audit events
 <p>List Audit log events from the Kandji Activity module.</p>
 <p>Returns events related to</p>
 <ul>
-<li><p>Blueprint CUD, Library Item CUD</p>
+<li><p>Blueprint and Library Item creation, updates, and deletions (CUD)</p>
 </li>
-<li><p>When some sensitive data is viewed (e.g., FileVault keys, recovery keys)</p>
+<li><p>Access to sensitive data (such as FileVault keys and recovery keys)</p>
 </li>
-<li><p>Device deleted, enrolled, mdm removed, changed blueprint</p>
+<li><p>Device lifecycle events (enrollment, deletion, MDM removal, blueprint changes)</p>
 </li>
-<li><p>User directory events (e.g., directory user deletions)</p>
+<li><p>User directory events (including directory user deletions)</p>
 </li>
-<li><p>API actions, Kandji tenant owner updates, API token CUD, Kandji admin user management CUD</p>
+<li><p>Administrative actions (tenant owner updates, API token management (CUD))</p>
 </li>
-<li><p>Vulnerability management customers can see events detections and remediations.</p>
+<li><p>Admin user management activities</p>
+</li>
+<li><p>Vulnerability management detections and remediations (for customers with this feature)</p>
 </li>
 </ul>
 
