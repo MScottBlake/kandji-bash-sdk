@@ -128,8 +128,6 @@ operation_parameters_minimum_occurrences["updateAdeDevice:::device_id"]=1
 operation_parameters_minimum_occurrences["updateAdeDevice:::body"]=0
 operation_parameters_minimum_occurrences["updateAdeIntegration:::ade_token_id"]=1
 operation_parameters_minimum_occurrences["updateAdeIntegration:::body"]=0
-operation_parameters_minimum_occurrences["assignLibraryItem:::blueprint_id"]=1
-operation_parameters_minimum_occurrences["assignLibraryItem:::body"]=0
 operation_parameters_minimum_occurrences["createBlueprint:::enrollment_code.code"]=1
 operation_parameters_minimum_occurrences["createBlueprint:::enrollment_code.is_active"]=1
 operation_parameters_minimum_occurrences["createBlueprint:::name"]=1
@@ -419,8 +417,6 @@ operation_parameters_maximum_occurrences["updateAdeDevice:::device_id"]=0
 operation_parameters_maximum_occurrences["updateAdeDevice:::body"]=0
 operation_parameters_maximum_occurrences["updateAdeIntegration:::ade_token_id"]=0
 operation_parameters_maximum_occurrences["updateAdeIntegration:::body"]=0
-operation_parameters_maximum_occurrences["assignLibraryItem:::blueprint_id"]=0
-operation_parameters_maximum_occurrences["assignLibraryItem:::body"]=0
 operation_parameters_maximum_occurrences["createBlueprint:::enrollment_code.code"]=0
 operation_parameters_maximum_occurrences["createBlueprint:::enrollment_code.is_active"]=0
 operation_parameters_maximum_occurrences["createBlueprint:::name"]=0
@@ -707,8 +703,6 @@ operation_parameters_collection_type["updateAdeDevice:::device_id"]=""
 operation_parameters_collection_type["updateAdeDevice:::body"]=""
 operation_parameters_collection_type["updateAdeIntegration:::ade_token_id"]=""
 operation_parameters_collection_type["updateAdeIntegration:::body"]=""
-operation_parameters_collection_type["assignLibraryItem:::blueprint_id"]=""
-operation_parameters_collection_type["assignLibraryItem:::body"]=""
 operation_parameters_collection_type["createBlueprint:::enrollment_code.code"]=""
 operation_parameters_collection_type["createBlueprint:::enrollment_code.is_active"]=""
 operation_parameters_collection_type["createBlueprint:::name"]=""
@@ -1371,7 +1365,6 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[blueprints]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}assignLibraryItem${OFF};Assign Library Item (AUTH)
   ${CYAN}createBlueprint${OFF};Create Blueprint (AUTH)
   ${CYAN}deleteBlueprint${OFF};Delete Blueprint (AUTH)
   ${CYAN}getBlueprint${OFF};Get Blueprint (AUTH)
@@ -2028,83 +2021,6 @@ print_updateAdeIntegration_help() {
 }
 ##############################################################################
 #
-# Print help for assignLibraryItem operation
-#
-##############################################################################
-print_assignLibraryItem_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}assignLibraryItem - Assign Library Item${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "<p>This endpoint allows assigning a library item to a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
-<h3 id=&quot;request-body&quot;>Request Body</h3>
-<ul>
-<li><p><code>library_item_id</code> (string, required)</p>
-</li>
-<li><p><code>assignment_node_id</code> (string, required for maps)</p>
-<ul>
-<li>Note: To find the assignment_node_id, view the map in a browser. Then, on your keyboard, press and hold the Option ⌥ key. Each node ID remains fixed for the lifespan of the node on the map.</li>
-</ul>
-</li>
-</ul>
-<h3 id=&quot;error-responses&quot;>Error responses</h3>
-<div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
-<thead>
-<tr>
-<th><strong>Code</strong></th>
-<th><strong>Body</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>400 - Bad Request</td>
-<td>Bad Request</td>
-</tr>
-<tr>
-<td></td>
-<td>&quot;Library Item already exists on Blueprint&quot;</td>
-</tr>
-<tr>
-<td></td>
-<td>&quot;Library Item already exists in Assignment Node&quot;</td>
-</tr>
-<tr>
-<td></td>
-<td>&quot;assignment_node_id cannot be provided for Classic Blueprint&quot;</td>
-</tr>
-<tr>
-<td></td>
-<td>&quot;Must provide assignment_node_id for Assignment Map Blueprint&quot;</td>
-</tr>
-</tbody>
-</table>
-</div>" | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-}
-##############################################################################
-#
 # Print help for createBlueprint operation
 #
 ##############################################################################
@@ -2139,9 +2055,7 @@ print_deleteBlueprint_help() {
     echo -e ""
     echo -e "<h1 id=&quot;warning&quot;><strong>WARNING!</strong></h1>
 <p>This is a HIGHLY destructive action.</p>
-<p>Deleting a Blueprint will un-manage ALL devices assigned to the Blueprint.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
+<p>Deleting a Blueprint will un-manage ALL devices assigned to the Blueprint.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2159,9 +2073,7 @@ print_getBlueprint_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getBlueprint - Get Blueprint${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns information about a specific blueprint based on blueprint ID.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
+    echo -e "This request returns information about a specific blueprint based on blueprint ID." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2222,9 +2134,7 @@ print_getManualEnrollmentProfile_help() {
 <li><p><code>Content-Disposition</code> = <code>attachment;filename=kandji-enroll.mobileconfig</code></p>
 </li>
 </ul>
-<p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
+<p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2320,8 +2230,6 @@ print_listLibraryItems_help() {
     echo -e "${BOLD}${WHITE}listLibraryItems - List Library Items${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This API endpoint retrieves a list of library items associated with a specific blueprint. (classic and maps). Requires that the blueprint ID is passed as a path parameter in the URL.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
 <h3 id=&quot;response-fields&quot;>Response fields</h3>
 <ul>
 <li><p><code>count</code> (int): The total count of library items.</p>
@@ -2389,13 +2297,14 @@ print_removeLibraryItem_help() {
     echo -e "${BOLD}${WHITE}removeLibraryItem - Remove Library Item${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint allows removing a library item from a specific blueprint (classic and maps). The response will include a list of library item IDs assigned to the blueprint.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
 <h3 id=&quot;request-body&quot;>Request Body</h3>
 <ul>
 <li><p><code>library_item_id</code> (string, required)</p>
 </li>
-<li><p><code>assignment_node_id</code> (string, required for maps)</p>
+<li><p><code>assignment_node_id</code> (string, for maps)</p>
+<ul>
+<li>NOT required for assigning to assignment maps if the map does not have conditional logic.</li>
+</ul>
 </li>
 </ul>
 <h3 id=&quot;error-responses&quot;>Error responses</h3>
@@ -2462,9 +2371,7 @@ print_updateBlueprint_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateBlueprint - Update Blueprint${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint.</p>
-<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
-<p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
+    echo -e "This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: blueprint_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5837,84 +5744,6 @@ call_updateAdeIntegration() {
 
 ##############################################################################
 #
-# Call assignLibraryItem operation
-#
-##############################################################################
-call_assignLibraryItem() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(blueprint_id)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v1/blueprints/{blueprint_id}/assign-library-item" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    local body_json_curl=""
-
-    #
-    # Check if the user provided 'Content-type' headers in the
-    # command line. If not try to set them based on the OpenAPI specification
-    # if values produces and consumes are defined unambiguously
-    #
-    if [[ -z $header_content_type ]]; then
-        header_content_type="application/json"
-    fi
-
-
-    if [[ -z $header_content_type && "$force" = false ]]; then
-        :
-        echo "ERROR: Request's content-type not specified!!!"
-        echo "This operation expects content-type in one of the following formats:"
-        echo -e "\\t- application/json"
-        echo ""
-        echo "Use '--content-type' to set proper content type"
-        exit 1
-    else
-        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
-    fi
-
-
-    #
-    # If we have received some body content over pipe, pass it from the
-    # temporary file to cURL
-    #
-    if [[ -n $body_content_temp_file ]]; then
-        if [[ "$print_curl" = true ]]; then
-            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        else
-            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
-        fi
-        rm "${body_content_temp_file}"
-    #
-    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
-    #
-    else
-        body_json_curl=$(body_parameters_to_json)
-        if [[ "$print_curl" = true ]]; then
-            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        else
-            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
-        fi
-    fi
-}
-
-##############################################################################
-#
 # Call createBlueprint operation
 #
 ##############################################################################
@@ -6180,7 +6009,7 @@ call_removeLibraryItem() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/blueprints/{blueprint_id}/remove-library-item" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v1/blueprints/{blueprint_id}/assign-library-item" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9294,9 +9123,6 @@ case $key in
     updateAdeIntegration)
     operation="updateAdeIntegration"
     ;;
-    assignLibraryItem)
-    operation="assignLibraryItem"
-    ;;
     createBlueprint)
     operation="createBlueprint"
     ;;
@@ -9644,9 +9470,6 @@ case $operation in
     ;;
     updateAdeIntegration)
     call_updateAdeIntegration
-    ;;
-    assignLibraryItem)
-    call_assignLibraryItem
     ;;
     createBlueprint)
     call_createBlueprint

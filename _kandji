@@ -307,8 +307,7 @@ case $state in
             "listDevicesAssociatedToAdeToken[List devices associated to ADE token]" \
             "renewAdeIntegration[Renew ADE integration]" \
             "updateAdeDevice[Update ADE device]" \
-            "updateAdeIntegration[Update ADE integration]"             "assignLibraryItem[Assign Library Item]" \
-            "createBlueprint[Create Blueprint]" \
+            "updateAdeIntegration[Update ADE integration]"             "createBlueprint[Create Blueprint]" \
             "deleteBlueprint[Delete Blueprint]" \
             "getBlueprint[Get Blueprint]" \
             "getBlueprintTemplates[Get Blueprint Templates]" \
@@ -471,13 +470,6 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "ade_token_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      assignLibraryItem)
-        local -a _op_arguments
-        _op_arguments=(
-          "blueprint_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

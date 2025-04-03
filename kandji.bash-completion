@@ -81,7 +81,6 @@ _kandji()
     operations["renewAdeIntegration"]=1
     operations["updateAdeDevice"]=1
     operations["updateAdeIntegration"]=1
-    operations["assignLibraryItem"]=1
     operations["createBlueprint"]=1
     operations["deleteBlueprint"]=1
     operations["getBlueprint"]=1
@@ -173,7 +172,6 @@ _kandji()
     operation_parameters["renewAdeIntegration"]="ade_token_id= "
     operation_parameters["updateAdeDevice"]="device_id= "
     operation_parameters["updateAdeIntegration"]="ade_token_id= "
-    operation_parameters["assignLibraryItem"]="blueprint_id= "
     operation_parameters["createBlueprint"]=""
     operation_parameters["deleteBlueprint"]="blueprint_id= "
     operation_parameters["getBlueprint"]="blueprint_id= "
