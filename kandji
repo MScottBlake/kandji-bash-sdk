@@ -1878,11 +1878,11 @@ print_listAdeDevices_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}dep_account${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The ADE token UUID${YELLOW} Specify as: dep_account=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}device_family${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Mac, iPhone, iPad, AppleTV, iPod${YELLOW} Specify as: device_family=value${OFF}" \
+    echo -e "  * ${GREEN}device_family${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - iPad, iPhone, iPod, Mac, AppleTV, or Vision${YELLOW} Specify as: device_family=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return model results &quot;containing&quot; the specified model string. - &quot;iPad (8th Generation)&quot;, &quot;MacBook Air&quot;${YELLOW} Specify as: model=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}os${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - OSX, iOS, tvOS${YELLOW} Specify as: os=value${OFF}" \
+    echo -e "  * ${GREEN}os${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - iOS, iPadOS, OSX, tvOS, or visionOS${YELLOW} Specify as: os=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}profile_status${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The automated device enrollment profile assignment status - assigned, empty, pushed, removed${YELLOW} Specify as: profile_status=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
