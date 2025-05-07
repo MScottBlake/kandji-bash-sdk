@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get Vulnerability Description
 
-This endpoint makes a request to retrieve information about a cve and summary information about detections for a tenants fleet.
+Retrieve information about a CVE.
 
 ### Example
 
@@ -68,13 +68,15 @@ Name | Type | Description  | Notes
  **page** | **string** | The page number of the response. | [optional] [default to null]
  **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
  **sortBy** | **string** | Field to sort by. Example: sort_by=app_name. | [optional] [default to null]
- **filter** | **string** | Filterable columns:
-blueprint_id
-updated_at | [optional] [default to null]
+ **filter** | **string** | <p>Filterable columns:</p>
+<ul>
+<li>blueprint_id</li>
+<li>updated_at</li>
+</ul> | [optional] [default to null]
 
 ### Return type
 
-**map**
+[**VulnerabilitiesListAffectedApps200Response**](VulnerabilitiesListAffectedApps200Response.md)
 
 ### Authorization
 
@@ -92,7 +94,7 @@ updated_at | [optional] [default to null]
 
 List Affected Devices
 
-This endpoint makes a request to retrieve a list of devices impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet.
+Retrieve a list of devices impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet.
 
 ### Example
 
@@ -109,13 +111,15 @@ Name | Type | Description  | Notes
  **page** | **string** | The page number of the response. | [optional] [default to null]
  **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
  **sortBy** | **string** | Field to sort by. Example: sort_by=app_name. | [optional] [default to null]
- **filter** | **string** | Filterable columns:
-blueprint_id
-updated_at | [optional] [default to null]
+ **filter** | **string** | <p>Filterable columns:</p>
+<ul>
+<li>blueprint_id</li>
+<li>updated_at</li>
+</ul> | [optional] [default to null]
 
 ### Return type
 
-**map**
+[**VulnerabilitiesListAffectedApps200Response**](VulnerabilitiesListAffectedApps200Response.md)
 
 ### Authorization
 
@@ -133,7 +137,7 @@ updated_at | [optional] [default to null]
 
 List Detections
 
-This endpoint makes a request to retrieve a list of all vulnerability detections across the device fleet.
+Retrieve a list of all vulnerability detections across the device fleet.
 
 ### Example
 
@@ -148,7 +152,28 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **after** | **string** | Cursor token. | [optional] [default to null]
  **size** | **string** | A hard upper <code>limit</code> is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
- **filter** | **string** | Can filter on any key attribute within the response. | [optional] [default to null]
+ **filter** | **string** | <p>Filter on any key attribute within the response.</p>
+<ul>
+<li>device_id</li>
+<li>device_name</li>
+<li>device_serial_number</li>
+<li>device_model</li>
+<li>device_os_version</li>
+<li>blueprint_id</li>
+<li>blueprint_name</li>
+<li>name</li>
+<li>path</li>
+<li>version</li>
+<li>bundle_id</li>
+<li>cve_id</li>
+<li>cve_description</li>
+<li>cve_link</li>
+<li>cvss_score</li>
+<li>cvss_severity</li>
+<li>detection_datetime</li>
+<li>cve_published_at</li>
+<li>cve_modified_at</li>
+</ul> | [optional] [default to null]
 
 ### Return type
 
@@ -170,7 +195,7 @@ Name | Type | Description  | Notes
 
 List Vulnerabilities
 
-This endpoint makes a request to retrieve a list of all vulnerabilities grouped by cve.
+Retrieve a list of all vulnerabilities grouped by cve.
 
 ### Example
 
@@ -185,17 +210,26 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **string** | The page number of the response. | [optional] [default to null]
  **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
- **sortBy** | **string** | Field to sort by. Example: sort_by=cve_id. | [optional] [default to null]
- **filter** | **string** | <p>Filterable columns:</p>
-<p>cve_id
-app_name
-severity
-first_detection_date
-latest_detection_date</p> | [optional] [default to null]
+ **sortBy** | **string** | <p>Field to sort by.</p>
+<ul>
+<li>cve_id</li>
+<li>software (the name of the software)</li>
+<li>cvss_severity</li>
+<li>first_detection_date</li>
+<li>latest_detection_date</li>
+</ul> | [optional] [default to null]
+ **filter** | **string** | <p>Filterable columns</p>
+<ul>
+<li>cve_id</li>
+<li>app_name</li>
+<li>severity</li>
+<li>first_detection_date</li>
+<li>latest_detection_date</li>
+</ul> | [optional] [default to null]
 
 ### Return type
 
-[**VulnerabilitiesListVulnerabilities200Response**](VulnerabilitiesListVulnerabilities200Response.md)
+**map**
 
 ### Authorization
 

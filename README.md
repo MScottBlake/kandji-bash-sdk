@@ -257,8 +257,8 @@ Class | Method | HTTP request | Description
  - [UsersGetUser200Response](docs/UsersGetUser200Response.md)
  - [UsersGetUser200ResponseIntegration](docs/UsersGetUser200ResponseIntegration.md)
  - [VulnerabilitiesGetVulnerabilityDescription200Response](docs/VulnerabilitiesGetVulnerabilityDescription200Response.md)
+ - [VulnerabilitiesListAffectedApps200Response](docs/VulnerabilitiesListAffectedApps200Response.md)
  - [VulnerabilitiesListDetections200Response](docs/VulnerabilitiesListDetections200Response.md)
- - [VulnerabilitiesListVulnerabilities200Response](docs/VulnerabilitiesListVulnerabilities200Response.md)
 
 
 ## Documentation For Authorization

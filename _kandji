@@ -1178,9 +1178,11 @@ Additionally, parameter queries can be added to a request to limit the results."
           "page=:[QUERY] The page number of the response."
 "size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
 "sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;app_name."
-"filter=:[QUERY] Filterable columns:
-blueprint_id
-updated_at"
+"filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;blueprint_id&lt;/li&gt;
+&lt;li&gt;updated_at&lt;/li&gt;
+&lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1191,9 +1193,11 @@ updated_at"
           "page=:[QUERY] The page number of the response."
 "size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
 "sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;app_name."
-"filter=:[QUERY] Filterable columns:
-blueprint_id
-updated_at"
+"filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;blueprint_id&lt;/li&gt;
+&lt;li&gt;updated_at&lt;/li&gt;
+&lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1202,7 +1206,28 @@ updated_at"
         _op_arguments=(
                     "after=:[QUERY] Cursor token."
 "size=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
-"filter=:[QUERY] Can filter on any key attribute within the response."
+"filter=:[QUERY] &lt;p&gt;Filter on any key attribute within the response.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;device_id&lt;/li&gt;
+&lt;li&gt;device_name&lt;/li&gt;
+&lt;li&gt;device_serial_number&lt;/li&gt;
+&lt;li&gt;device_model&lt;/li&gt;
+&lt;li&gt;device_os_version&lt;/li&gt;
+&lt;li&gt;blueprint_id&lt;/li&gt;
+&lt;li&gt;blueprint_name&lt;/li&gt;
+&lt;li&gt;name&lt;/li&gt;
+&lt;li&gt;path&lt;/li&gt;
+&lt;li&gt;version&lt;/li&gt;
+&lt;li&gt;bundle_id&lt;/li&gt;
+&lt;li&gt;cve_id&lt;/li&gt;
+&lt;li&gt;cve_description&lt;/li&gt;
+&lt;li&gt;cve_link&lt;/li&gt;
+&lt;li&gt;cvss_score&lt;/li&gt;
+&lt;li&gt;cvss_severity&lt;/li&gt;
+&lt;li&gt;detection_datetime&lt;/li&gt;
+&lt;li&gt;cve_published_at&lt;/li&gt;
+&lt;li&gt;cve_modified_at&lt;/li&gt;
+&lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1211,13 +1236,22 @@ updated_at"
         _op_arguments=(
                     "page=:[QUERY] The page number of the response."
 "size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
-"sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;cve_id."
-"filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
-&lt;p&gt;cve_id
-app_name
-severity
-first_detection_date
-latest_detection_date&lt;/p&gt;"
+"sort_by=:[QUERY] &lt;p&gt;Field to sort by.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cve_id&lt;/li&gt;
+&lt;li&gt;software (the name of the software)&lt;/li&gt;
+&lt;li&gt;cvss_severity&lt;/li&gt;
+&lt;li&gt;first_detection_date&lt;/li&gt;
+&lt;li&gt;latest_detection_date&lt;/li&gt;
+&lt;/ul&gt;"
+"filter=:[QUERY] &lt;p&gt;Filterable columns&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cve_id&lt;/li&gt;
+&lt;li&gt;app_name&lt;/li&gt;
+&lt;li&gt;severity&lt;/li&gt;
+&lt;li&gt;first_detection_date&lt;/li&gt;
+&lt;li&gt;latest_detection_date&lt;/li&gt;
+&lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

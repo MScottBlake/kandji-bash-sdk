@@ -5094,7 +5094,7 @@ print_getVulnerabilityDescription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getVulnerabilityDescription - Get Vulnerability Description${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint makes a request to retrieve information about a cve and summary information about detections for a tenants fleet." | paste -sd' ' | fold -sw 80
+    echo -e "Retrieve information about a CVE." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}cve_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: cve_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5124,9 +5124,11 @@ print_listAffectedApps_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=app_name.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filterable columns:
-blueprint_id
-updated_at${YELLOW} Specify as: filter=value${OFF}" \
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
+<ul>
+<li>blueprint_id</li>
+<li>updated_at</li>
+</ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5144,7 +5146,7 @@ print_listAffectedDevices_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listAffectedDevices - List Affected Devices${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint makes a request to retrieve a list of devices impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet." | paste -sd' ' | fold -sw 80
+    echo -e "Retrieve a list of devices impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}cve_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: cve_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5154,9 +5156,11 @@ print_listAffectedDevices_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=app_name.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filterable columns:
-blueprint_id
-updated_at${YELLOW} Specify as: filter=value${OFF}" \
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
+<ul>
+<li>blueprint_id</li>
+<li>updated_at</li>
+</ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5174,14 +5178,35 @@ print_listDetections_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listDetections - List Detections${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint makes a request to retrieve a list of all vulnerability detections across the device fleet." | paste -sd' ' | fold -sw 80
+    echo -e "Retrieve a list of all vulnerability detections across the device fleet." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}after${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Cursor token.${YELLOW} Specify as: after=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper <code>limit</code> is set at 300  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Can filter on any key attribute within the response.${YELLOW} Specify as: filter=value${OFF}" \
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filter on any key attribute within the response.</p>
+<ul>
+<li>device_id</li>
+<li>device_name</li>
+<li>device_serial_number</li>
+<li>device_model</li>
+<li>device_os_version</li>
+<li>blueprint_id</li>
+<li>blueprint_name</li>
+<li>name</li>
+<li>path</li>
+<li>version</li>
+<li>bundle_id</li>
+<li>cve_id</li>
+<li>cve_description</li>
+<li>cve_link</li>
+<li>cvss_score</li>
+<li>cvss_severity</li>
+<li>detection_datetime</li>
+<li>cve_published_at</li>
+<li>cve_modified_at</li>
+</ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5199,21 +5224,30 @@ print_listVulnerabilities_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listVulnerabilities - List Vulnerabilities${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint makes a request to retrieve a list of all vulnerabilities grouped by cve." | paste -sd' ' | fold -sw 80
+    echo -e "Retrieve a list of all vulnerabilities grouped by cve." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The page number of the response.${YELLOW} Specify as: page=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=cve_id.${YELLOW} Specify as: sort_by=value${OFF}" \
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Field to sort by.</p>
+<ul>
+<li>cve_id</li>
+<li>software (the name of the software)</li>
+<li>cvss_severity</li>
+<li>first_detection_date</li>
+<li>latest_detection_date</li>
+</ul>${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
-<p>cve_id
-app_name
-severity
-first_detection_date
-latest_detection_date</p>${YELLOW} Specify as: filter=value${OFF}" \
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns</p>
+<ul>
+<li>cve_id</li>
+<li>app_name</li>
+<li>severity</li>
+<li>first_detection_date</li>
+<li>latest_detection_date</li>
+</ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
