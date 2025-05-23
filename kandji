@@ -206,6 +206,7 @@ operation_parameters_minimum_occurrences["listDevices:::tag_id"]=0
 operation_parameters_minimum_occurrences["listDevices:::tag_id_in"]=0
 operation_parameters_minimum_occurrences["listDevices:::user"]=0
 operation_parameters_minimum_occurrences["listDevices:::user_email"]=0
+operation_parameters_minimum_occurrences["listDevices:::user_email_exact"]=0
 operation_parameters_minimum_occurrences["listDevices:::user_id"]=0
 operation_parameters_minimum_occurrences["listDevices:::user_name"]=0
 operation_parameters_minimum_occurrences["listDevices:::offset"]=0
@@ -495,6 +496,7 @@ operation_parameters_maximum_occurrences["listDevices:::tag_id"]=0
 operation_parameters_maximum_occurrences["listDevices:::tag_id_in"]=0
 operation_parameters_maximum_occurrences["listDevices:::user"]=0
 operation_parameters_maximum_occurrences["listDevices:::user_email"]=0
+operation_parameters_maximum_occurrences["listDevices:::user_email_exact"]=0
 operation_parameters_maximum_occurrences["listDevices:::user_id"]=0
 operation_parameters_maximum_occurrences["listDevices:::user_name"]=0
 operation_parameters_maximum_occurrences["listDevices:::offset"]=0
@@ -781,6 +783,7 @@ operation_parameters_collection_type["listDevices:::tag_id"]=""
 operation_parameters_collection_type["listDevices:::tag_id_in"]=""
 operation_parameters_collection_type["listDevices:::user"]=""
 operation_parameters_collection_type["listDevices:::user_email"]=""
+operation_parameters_collection_type["listDevices:::user_email_exact"]=""
 operation_parameters_collection_type["listDevices:::user_id"]=""
 operation_parameters_collection_type["listDevices:::user_name"]=""
 operation_parameters_collection_type["listDevices:::offset"]=""
@@ -3487,6 +3490,8 @@ print_listDevices_help() {
     echo -e "  * ${GREEN}user${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;containing&quot; the user name${YELLOW} Specify as: user=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}user_email${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;containing&quot; search on email address${YELLOW} Specify as: user_email=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}user_email_exact${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;matching&quot; the specified email address${YELLOW} Specify as: user_email_exact=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)${YELLOW} Specify as: user_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -7313,7 +7318,7 @@ call_listDevices() {
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(asset_tag blueprint_id device_id device_name filevault_enabled mac_address model ordering os_version platform serial_number tag_name tag_name_in tag_id tag_id_in user user_email user_id user_name limit offset  )
+    local query_parameter_names=(asset_tag blueprint_id device_id device_name filevault_enabled mac_address model ordering os_version platform serial_number tag_name tag_name_in tag_id tag_id_in user user_email user_email_exact user_id user_name limit offset  )
     local path
 
     if ! path=$(build_request_path "/api/v1/devices" path_parameter_names query_parameter_names); then

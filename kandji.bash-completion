@@ -205,7 +205,7 @@ _kandji()
     operation_parameters["getDeviceLostModeDetails"]="device_id= "
     operation_parameters["getDeviceParameters"]="device_id= "
     operation_parameters["getDeviceStatus"]="device_id= "
-    operation_parameters["listDevices"]="asset_tag= blueprint_id= device_id= device_name= filevault_enabled= mac_address= model= ordering= os_version= platform= serial_number= tag_name= tag_name_in= tag_id= tag_id_in= user= user_email= user_id= user_name= limit= offset= "
+    operation_parameters["listDevices"]="asset_tag= blueprint_id= device_id= device_name= filevault_enabled= mac_address= model= ordering= os_version= platform= serial_number= tag_name= tag_name_in= tag_id= tag_id_in= user= user_email= user_email_exact= user_id= user_name= limit= offset= "
     operation_parameters["updateDevice"]="device_id= "
     operation_parameters["getActivationLockBypassCode"]="device_id= "
     operation_parameters["getFilevaultRecoveryKey"]="device_id= "

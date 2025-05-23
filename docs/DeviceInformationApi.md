@@ -572,7 +572,7 @@ List Devices
 ### Example
 
 ```bash
-kandji listDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
+kandji listDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_email_exact=value  user_id=value  user_name=value  offset=value
 ```
 
 ### Parameters
@@ -615,6 +615,7 @@ Name | Type | Description  | Notes
  **tagIdIn** | **string** | Return results for given tag IDs separated by commas. Case sensitive. | [optional] [default to null]
  **user** | **string** | Return results &quot;containing&quot; the user name | [optional] [default to null]
  **userEmail** | **string** | Return results &quot;containing&quot; search on email address | [optional] [default to null]
+ **userEmailExact** | **string** | Return results &quot;matching&quot; the specified email address | [optional] [default to null]
  **userId** | **string** | &quot;exact&quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a) | [optional] [default to null]
  **userName** | **string** | Return results &quot;containing&quot; the assigned user Display Name | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
