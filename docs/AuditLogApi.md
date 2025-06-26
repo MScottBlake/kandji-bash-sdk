@@ -15,7 +15,7 @@ List audit events
 <p>List audit log events from the Kandji Activity module.</p>
 <p>Returns events related to</p>
 <ul>
-<li><p>Blueprint and Library Item creation, updates, and deletions (CUD)</p>
+<li><p>Blueprint and Library Item creation, updates, and deletions (Create, Update, Delete)</p>
 </li>
 <li><p>Access to sensitive data (such as FileVault keys and recovery keys)</p>
 </li>
@@ -23,11 +23,13 @@ List audit events
 </li>
 <li><p>User directory events (including directory user deletions)</p>
 </li>
-<li><p>Administrative actions (tenant owner updates, API token management (CUD))</p>
+<li><p>Administrative actions (tenant owner updates, API token management (Create, Update, Delete))</p>
 </li>
 <li><p>Admin user management activities</p>
 </li>
-<li><p>Vulnerability management detections and remediations (for customers with this feature)</p>
+<li><p>Vulnerability management events for detections and remediations (for customers with this feature)</p>
+</li>
+<li><p>Endpoint Detection and Response events for detections, remediations, and admin actions (for customers with this feature)</p>
 </li>
 </ul>
 
