@@ -1182,7 +1182,7 @@ Additionally, parameter queries can be added to a request to limit the results."
 "filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;blueprint_id&lt;/li&gt;
-&lt;li&gt;updated_at&lt;/li&gt;
+&lt;li&gt;created_at&lt;/li&gt;
 &lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -1197,7 +1197,7 @@ Additionally, parameter queries can be added to a request to limit the results."
 "filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;blueprint_id&lt;/li&gt;
-&lt;li&gt;updated_at&lt;/li&gt;
+&lt;li&gt;detection_datetime&lt;/li&gt;
 &lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0

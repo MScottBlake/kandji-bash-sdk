@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
  **filter** | **string** | <p>Filterable columns:</p>
 <ul>
 <li>blueprint_id</li>
-<li>updated_at</li>
+<li>created_at</li>
 </ul> | [optional] [default to null]
 
 ### Return type
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
  **filter** | **string** | <p>Filterable columns:</p>
 <ul>
 <li>blueprint_id</li>
-<li>updated_at</li>
+<li>detection_datetime</li>
 </ul> | [optional] [default to null]
 
 ### Return type

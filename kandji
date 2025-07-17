@@ -5134,7 +5134,7 @@ print_listAffectedApps_help() {
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
 <ul>
 <li>blueprint_id</li>
-<li>updated_at</li>
+<li>created_at</li>
 </ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -5166,7 +5166,7 @@ print_listAffectedDevices_help() {
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
 <ul>
 <li>blueprint_id</li>
-<li>updated_at</li>
+<li>detection_datetime</li>
 </ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
