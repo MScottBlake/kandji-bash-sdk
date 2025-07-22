@@ -5083,7 +5083,7 @@ print_listUsers_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}archived${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab.${YELLOW} Specify as: archived=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}cursor${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Cursor for the next or previous page or results. Can also store the URL from the next and previous fields in the response.${YELLOW} Specify as: cursor=value${OFF}" \
+    echo -e "  * ${GREEN}cursor${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Cursor for the next or previous page of results. Can also store the URL in the next and previous fields in the response.${YELLOW} Specify as: cursor=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"

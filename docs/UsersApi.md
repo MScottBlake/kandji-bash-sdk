@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **id** | **string** | Search for a user matching the provided UUID value. | [optional] [default to null]
  **integrationId** | **string** | Search for a integration matching the provided UUID value. | [optional] [default to null]
  **archived** | **string** | Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab. | [optional] [default to null]
- **cursor** | **string** | Cursor for the next or previous page or results. Can also store the URL from the next and previous fields in the response. | [optional] [default to null]
+ **cursor** | **string** | Cursor for the next or previous page of results. Can also store the URL in the next and previous fields in the response. | [optional] [default to null]
 
 ### Return type
 
