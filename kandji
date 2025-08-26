@@ -5129,12 +5129,17 @@ print_listAffectedApps_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=app_name.${YELLOW} Specify as: sort_by=value${OFF}" \
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Field to sort by.</p>
+<ul>
+<li>software (software name)</li>
+<li>detection_datetime</li>
+</ul>${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filter results. Similar to prism filters.
+Filterable columns</p>
 <ul>
 <li>blueprint_id</li>
-<li>created_at</li>
+<li>detection_datetime</li>
 </ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -5161,11 +5166,15 @@ print_listAffectedDevices_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Field to sort by. Example: sort_by=app_name.${YELLOW} Specify as: sort_by=value${OFF}" \
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Field to sort by.</p>
+<ul>
+<li>name (device name)</li>
+<li>detection_datetime</li>
+</ul>${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
 <ul>
-<li>blueprint_id</li>
+<li>name</li>
 <li>detection_datetime</li>
 </ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5231,7 +5240,7 @@ print_listVulnerabilities_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listVulnerabilities - List Vulnerabilities${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Retrieve a list of all vulnerabilities grouped by cve." | paste -sd' ' | fold -sw 80
+    echo -e "Retrieve a list of all vulnerabilities grouped by CVE." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The page number of the response.${YELLOW} Specify as: page=value${OFF}" \
@@ -5240,20 +5249,32 @@ print_listVulnerabilities_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Field to sort by.</p>
 <ul>
-<li>cve_id</li>
-<li>software (the name of the software)</li>
-<li>cvss_severity</li>
-<li>first_detection_date</li>
-<li>latest_detection_date</li>
+<li><p>age</p>
+</li>
+<li><p>cve_id</p>
+</li>
+<li><p>cvss_score</p>
+</li>
+<li><p>device_count</p>
+</li>
+<li><p>known_exploit</p>
+</li>
+<li><p>software (software name)</p>
+</li>
+<li><p>severity</p>
+</li>
+<li><p>status</p>
+</li>
 </ul>${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns</p>
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filter results. Similar to prism filters.
+Filterable columns</p>
 <ul>
 <li>cve_id</li>
-<li>app_name</li>
+<li>software</li>
 <li>severity</li>
 <li>first_detection_date</li>
-<li>latest_detection_date</li>
+<li>status</li>
 </ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""

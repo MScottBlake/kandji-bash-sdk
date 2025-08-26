@@ -67,11 +67,16 @@ Name | Type | Description  | Notes
  **cveId** | **string** |  | [default to null]
  **page** | **string** | The page number of the response. | [optional] [default to null]
  **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
- **sortBy** | **string** | Field to sort by. Example: sort_by=app_name. | [optional] [default to null]
- **filter** | **string** | <p>Filterable columns:</p>
+ **sortBy** | **string** | <p>Field to sort by.</p>
+<ul>
+<li>software (software name)</li>
+<li>detection_datetime</li>
+</ul> | [optional] [default to null]
+ **filter** | **string** | <p>Filter results. Similar to prism filters.
+Filterable columns</p>
 <ul>
 <li>blueprint_id</li>
-<li>created_at</li>
+<li>detection_datetime</li>
 </ul> | [optional] [default to null]
 
 ### Return type
@@ -110,10 +115,14 @@ Name | Type | Description  | Notes
  **cveId** | **string** |  | [default to null]
  **page** | **string** | The page number of the response. | [optional] [default to null]
  **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
- **sortBy** | **string** | Field to sort by. Example: sort_by=app_name. | [optional] [default to null]
+ **sortBy** | **string** | <p>Field to sort by.</p>
+<ul>
+<li>name (device name)</li>
+<li>detection_datetime</li>
+</ul> | [optional] [default to null]
  **filter** | **string** | <p>Filterable columns:</p>
 <ul>
-<li>blueprint_id</li>
+<li>name</li>
 <li>detection_datetime</li>
 </ul> | [optional] [default to null]
 
@@ -195,7 +204,7 @@ Name | Type | Description  | Notes
 
 List Vulnerabilities
 
-Retrieve a list of all vulnerabilities grouped by cve.
+Retrieve a list of all vulnerabilities grouped by CVE.
 
 ### Example
 
@@ -212,24 +221,36 @@ Name | Type | Description  | Notes
  **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
  **sortBy** | **string** | <p>Field to sort by.</p>
 <ul>
-<li>cve_id</li>
-<li>software (the name of the software)</li>
-<li>cvss_severity</li>
-<li>first_detection_date</li>
-<li>latest_detection_date</li>
+<li><p>age</p>
+</li>
+<li><p>cve_id</p>
+</li>
+<li><p>cvss_score</p>
+</li>
+<li><p>device_count</p>
+</li>
+<li><p>known_exploit</p>
+</li>
+<li><p>software (software name)</p>
+</li>
+<li><p>severity</p>
+</li>
+<li><p>status</p>
+</li>
 </ul> | [optional] [default to null]
- **filter** | **string** | <p>Filterable columns</p>
+ **filter** | **string** | <p>Filter results. Similar to prism filters.
+Filterable columns</p>
 <ul>
 <li>cve_id</li>
-<li>app_name</li>
+<li>software</li>
 <li>severity</li>
 <li>first_detection_date</li>
-<li>latest_detection_date</li>
+<li>status</li>
 </ul> | [optional] [default to null]
 
 ### Return type
 
-**map**
+[**VulnerabilitiesListVulnerabilities200Response**](VulnerabilitiesListVulnerabilities200Response.md)
 
 ### Authorization
 

@@ -259,6 +259,7 @@ Class | Method | HTTP request | Description
  - [VulnerabilitiesGetVulnerabilityDescription200Response](docs/VulnerabilitiesGetVulnerabilityDescription200Response.md)
  - [VulnerabilitiesListAffectedApps200Response](docs/VulnerabilitiesListAffectedApps200Response.md)
  - [VulnerabilitiesListDetections200Response](docs/VulnerabilitiesListDetections200Response.md)
+ - [VulnerabilitiesListVulnerabilities200Response](docs/VulnerabilitiesListVulnerabilities200Response.md)
 
 
 ## Documentation For Authorization

@@ -1178,11 +1178,16 @@ Additionally, parameter queries can be added to a request to limit the results."
           "cve_id=:[PATH] "
           "page=:[QUERY] The page number of the response."
 "size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
-"sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;app_name."
-"filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
+"sort_by=:[QUERY] &lt;p&gt;Field to sort by.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;software (software name)&lt;/li&gt;
+&lt;li&gt;detection_datetime&lt;/li&gt;
+&lt;/ul&gt;"
+"filter=:[QUERY] &lt;p&gt;Filter results. Similar to prism filters.
+Filterable columns&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;blueprint_id&lt;/li&gt;
-&lt;li&gt;created_at&lt;/li&gt;
+&lt;li&gt;detection_datetime&lt;/li&gt;
 &lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -1193,10 +1198,14 @@ Additionally, parameter queries can be added to a request to limit the results."
           "cve_id=:[PATH] "
           "page=:[QUERY] The page number of the response."
 "size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
-"sort_by=:[QUERY] Field to sort by. Example: sort_by&#x3D;app_name."
+"sort_by=:[QUERY] &lt;p&gt;Field to sort by.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;name (device name)&lt;/li&gt;
+&lt;li&gt;detection_datetime&lt;/li&gt;
+&lt;/ul&gt;"
 "filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;blueprint_id&lt;/li&gt;
+&lt;li&gt;name&lt;/li&gt;
 &lt;li&gt;detection_datetime&lt;/li&gt;
 &lt;/ul&gt;"
           )
@@ -1239,19 +1248,31 @@ Additionally, parameter queries can be added to a request to limit the results."
 "size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
 "sort_by=:[QUERY] &lt;p&gt;Field to sort by.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;cve_id&lt;/li&gt;
-&lt;li&gt;software (the name of the software)&lt;/li&gt;
-&lt;li&gt;cvss_severity&lt;/li&gt;
-&lt;li&gt;first_detection_date&lt;/li&gt;
-&lt;li&gt;latest_detection_date&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;age&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cve_id&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cvss_score&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;device_count&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;known_exploit&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;software (software name)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;severity&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;status&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;"
-"filter=:[QUERY] &lt;p&gt;Filterable columns&lt;/p&gt;
+"filter=:[QUERY] &lt;p&gt;Filter results. Similar to prism filters.
+Filterable columns&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;cve_id&lt;/li&gt;
-&lt;li&gt;app_name&lt;/li&gt;
+&lt;li&gt;software&lt;/li&gt;
 &lt;li&gt;severity&lt;/li&gt;
 &lt;li&gt;first_detection_date&lt;/li&gt;
-&lt;li&gt;latest_detection_date&lt;/li&gt;
+&lt;li&gt;status&lt;/li&gt;
 &lt;/ul&gt;"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
