@@ -5,8 +5,8 @@ All URIs are relative to **
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getVulnerabilityDescription**](VulnerabilitiesApi.md#getVulnerabilityDescription) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id} | Get Vulnerability Description
-[**listAffectedApps**](VulnerabilitiesApi.md#listAffectedApps) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications | List Affected Apps
 [**listAffectedDevices**](VulnerabilitiesApi.md#listAffectedDevices) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/devices | List Affected Devices
+[**listAffectedSoftware**](VulnerabilitiesApi.md#listAffectedSoftware) | **GET** /api/v1/vulnerability-management/vulnerabilities/{cve_id}/software | List Affected Software
 [**listDetections**](VulnerabilitiesApi.md#listDetections) | **GET** /api/v1/vulnerability-management/detections | List Detections
 [**listVulnerabilities**](VulnerabilitiesApi.md#listVulnerabilities) | **GET** /api/v1/vulnerability-management/vulnerabilities | List Vulnerabilities
 
@@ -34,54 +34,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**VulnerabilitiesGetVulnerabilityDescription200Response**](VulnerabilitiesGetVulnerabilityDescription200Response.md)
-
-### Authorization
-
-[bearer](../README.md#bearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## listAffectedApps
-
-List Affected Apps
-
-This endpoint makes a request to retrieve a list of applications impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet.
-
-### Example
-
-```bash
-kandji listAffectedApps cve_id=value  page=value  size=value  sort_by=value  filter=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cveId** | **string** |  | [default to null]
- **page** | **string** | The page number of the response. | [optional] [default to null]
- **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
- **sortBy** | **string** | <p>Field to sort by.</p>
-<ul>
-<li>software (software name)</li>
-<li>detection_datetime</li>
-</ul> | [optional] [default to null]
- **filter** | **string** | <p>Filter results. Similar to prism filters.
-Filterable columns</p>
-<ul>
-<li>blueprint_id</li>
-<li>detection_datetime</li>
-</ul> | [optional] [default to null]
-
-### Return type
-
-[**VulnerabilitiesListAffectedApps200Response**](VulnerabilitiesListAffectedApps200Response.md)
 
 ### Authorization
 
@@ -128,7 +80,55 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VulnerabilitiesListAffectedApps200Response**](VulnerabilitiesListAffectedApps200Response.md)
+[**VulnerabilitiesListAffectedDevices200Response**](VulnerabilitiesListAffectedDevices200Response.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## listAffectedSoftware
+
+List Affected Software
+
+This endpoint makes a request to retrieve a list of software impacted by a specified <code>cve_id</code> vulnerability for a tenant's fleet.
+
+### Example
+
+```bash
+kandji listAffectedSoftware cve_id=value  page=value  size=value  sort_by=value  filter=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cveId** | **string** |  | [default to null]
+ **page** | **string** | The page number of the response. | [optional] [default to null]
+ **size** | **string** | A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results. | [optional] [default to null]
+ **sortBy** | **string** | <p>Field to sort by.</p>
+<ul>
+<li>software (software name)</li>
+<li>detection_datetime</li>
+</ul> | [optional] [default to null]
+ **filter** | **string** | <p>Filter results. Similar to prism filters.
+Filterable columns</p>
+<ul>
+<li>blueprint_id</li>
+<li>detection_datetime</li>
+</ul> | [optional] [default to null]
+
+### Return type
+
+[**VulnerabilitiesListAffectedDevices200Response**](VulnerabilitiesListAffectedDevices200Response.md)
 
 ### Authorization
 

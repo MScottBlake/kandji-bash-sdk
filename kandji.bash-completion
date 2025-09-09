@@ -152,8 +152,8 @@ _kandji()
     operations["getUser"]=1
     operations["listUsers"]=1
     operations["getVulnerabilityDescription"]=1
-    operations["listAffectedApps"]=1
     operations["listAffectedDevices"]=1
+    operations["listAffectedSoftware"]=1
     operations["listDetections"]=1
     operations["listVulnerabilities"]=1
 
@@ -243,8 +243,8 @@ _kandji()
     operation_parameters["getUser"]="user_id= "
     operation_parameters["listUsers"]="email= id= integration_id= archived= cursor= "
     operation_parameters["getVulnerabilityDescription"]="cve_id= "
-    operation_parameters["listAffectedApps"]="cve_id= page= size= sort_by= filter= "
     operation_parameters["listAffectedDevices"]="cve_id= page= size= sort_by= filter= "
+    operation_parameters["listAffectedSoftware"]="cve_id= page= size= sort_by= filter= "
     operation_parameters["listDetections"]="after= size= filter= "
     operation_parameters["listVulnerabilities"]="page= size= sort_by= filter= "
 

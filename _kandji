@@ -368,8 +368,8 @@ case $state in
             "getThreatDetails[Get Threat Details]"             "deleteUser[Delete User]" \
             "getUser[Get User]" \
             "listUsers[List Users]"             "getVulnerabilityDescription[Get Vulnerability Description]" \
-            "listAffectedApps[List Affected Apps]" \
             "listAffectedDevices[List Affected Devices]" \
+            "listAffectedSoftware[List Affected Software]" \
             "listDetections[List Detections]" \
             "listVulnerabilities[List Vulnerabilities]" \
 
@@ -1172,26 +1172,6 @@ Additionally, parameter queries can be added to a request to limit the results."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      listAffectedApps)
-        local -a _op_arguments
-        _op_arguments=(
-          "cve_id=:[PATH] "
-          "page=:[QUERY] The page number of the response."
-"size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
-"sort_by=:[QUERY] &lt;p&gt;Field to sort by.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;software (software name)&lt;/li&gt;
-&lt;li&gt;detection_datetime&lt;/li&gt;
-&lt;/ul&gt;"
-"filter=:[QUERY] &lt;p&gt;Filter results. Similar to prism filters.
-Filterable columns&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;blueprint_id&lt;/li&gt;
-&lt;li&gt;detection_datetime&lt;/li&gt;
-&lt;/ul&gt;"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       listAffectedDevices)
         local -a _op_arguments
         _op_arguments=(
@@ -1206,6 +1186,26 @@ Filterable columns&lt;/p&gt;
 "filter=:[QUERY] &lt;p&gt;Filterable columns:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;name&lt;/li&gt;
+&lt;li&gt;detection_datetime&lt;/li&gt;
+&lt;/ul&gt;"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listAffectedSoftware)
+        local -a _op_arguments
+        _op_arguments=(
+          "cve_id=:[PATH] "
+          "page=:[QUERY] The page number of the response."
+"size=:[QUERY] A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results."
+"sort_by=:[QUERY] &lt;p&gt;Field to sort by.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;software (software name)&lt;/li&gt;
+&lt;li&gt;detection_datetime&lt;/li&gt;
+&lt;/ul&gt;"
+"filter=:[QUERY] &lt;p&gt;Filter results. Similar to prism filters.
+Filterable columns&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;blueprint_id&lt;/li&gt;
 &lt;li&gt;detection_datetime&lt;/li&gt;
 &lt;/ul&gt;"
           )

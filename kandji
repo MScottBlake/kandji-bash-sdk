@@ -361,16 +361,16 @@ operation_parameters_minimum_occurrences["listUsers:::integration_id"]=0
 operation_parameters_minimum_occurrences["listUsers:::archived"]=0
 operation_parameters_minimum_occurrences["listUsers:::cursor"]=0
 operation_parameters_minimum_occurrences["getVulnerabilityDescription:::cve_id"]=1
-operation_parameters_minimum_occurrences["listAffectedApps:::cve_id"]=1
-operation_parameters_minimum_occurrences["listAffectedApps:::page"]=0
-operation_parameters_minimum_occurrences["listAffectedApps:::size"]=0
-operation_parameters_minimum_occurrences["listAffectedApps:::sort_by"]=0
-operation_parameters_minimum_occurrences["listAffectedApps:::filter"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::cve_id"]=1
 operation_parameters_minimum_occurrences["listAffectedDevices:::page"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::size"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::sort_by"]=0
 operation_parameters_minimum_occurrences["listAffectedDevices:::filter"]=0
+operation_parameters_minimum_occurrences["listAffectedSoftware:::cve_id"]=1
+operation_parameters_minimum_occurrences["listAffectedSoftware:::page"]=0
+operation_parameters_minimum_occurrences["listAffectedSoftware:::size"]=0
+operation_parameters_minimum_occurrences["listAffectedSoftware:::sort_by"]=0
+operation_parameters_minimum_occurrences["listAffectedSoftware:::filter"]=0
 operation_parameters_minimum_occurrences["listDetections:::after"]=0
 operation_parameters_minimum_occurrences["listDetections:::size"]=0
 operation_parameters_minimum_occurrences["listDetections:::filter"]=0
@@ -651,16 +651,16 @@ operation_parameters_maximum_occurrences["listUsers:::integration_id"]=0
 operation_parameters_maximum_occurrences["listUsers:::archived"]=0
 operation_parameters_maximum_occurrences["listUsers:::cursor"]=0
 operation_parameters_maximum_occurrences["getVulnerabilityDescription:::cve_id"]=0
-operation_parameters_maximum_occurrences["listAffectedApps:::cve_id"]=0
-operation_parameters_maximum_occurrences["listAffectedApps:::page"]=0
-operation_parameters_maximum_occurrences["listAffectedApps:::size"]=0
-operation_parameters_maximum_occurrences["listAffectedApps:::sort_by"]=0
-operation_parameters_maximum_occurrences["listAffectedApps:::filter"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::cve_id"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::page"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::size"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::sort_by"]=0
 operation_parameters_maximum_occurrences["listAffectedDevices:::filter"]=0
+operation_parameters_maximum_occurrences["listAffectedSoftware:::cve_id"]=0
+operation_parameters_maximum_occurrences["listAffectedSoftware:::page"]=0
+operation_parameters_maximum_occurrences["listAffectedSoftware:::size"]=0
+operation_parameters_maximum_occurrences["listAffectedSoftware:::sort_by"]=0
+operation_parameters_maximum_occurrences["listAffectedSoftware:::filter"]=0
 operation_parameters_maximum_occurrences["listDetections:::after"]=0
 operation_parameters_maximum_occurrences["listDetections:::size"]=0
 operation_parameters_maximum_occurrences["listDetections:::filter"]=0
@@ -938,16 +938,16 @@ operation_parameters_collection_type["listUsers:::integration_id"]=""
 operation_parameters_collection_type["listUsers:::archived"]=""
 operation_parameters_collection_type["listUsers:::cursor"]=""
 operation_parameters_collection_type["getVulnerabilityDescription:::cve_id"]=""
-operation_parameters_collection_type["listAffectedApps:::cve_id"]=""
-operation_parameters_collection_type["listAffectedApps:::page"]=""
-operation_parameters_collection_type["listAffectedApps:::size"]=""
-operation_parameters_collection_type["listAffectedApps:::sort_by"]=""
-operation_parameters_collection_type["listAffectedApps:::filter"]=""
 operation_parameters_collection_type["listAffectedDevices:::cve_id"]=""
 operation_parameters_collection_type["listAffectedDevices:::page"]=""
 operation_parameters_collection_type["listAffectedDevices:::size"]=""
 operation_parameters_collection_type["listAffectedDevices:::sort_by"]=""
 operation_parameters_collection_type["listAffectedDevices:::filter"]=""
+operation_parameters_collection_type["listAffectedSoftware:::cve_id"]=""
+operation_parameters_collection_type["listAffectedSoftware:::page"]=""
+operation_parameters_collection_type["listAffectedSoftware:::size"]=""
+operation_parameters_collection_type["listAffectedSoftware:::sort_by"]=""
+operation_parameters_collection_type["listAffectedSoftware:::filter"]=""
 operation_parameters_collection_type["listDetections:::after"]=""
 operation_parameters_collection_type["listDetections:::size"]=""
 operation_parameters_collection_type["listDetections:::filter"]=""
@@ -1489,8 +1489,8 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[vulnerabilities]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}getVulnerabilityDescription${OFF};Get Vulnerability Description (AUTH)
-  ${CYAN}listAffectedApps${OFF};List Affected Apps (AUTH)
   ${CYAN}listAffectedDevices${OFF};List Affected Devices (AUTH)
+  ${CYAN}listAffectedSoftware${OFF};List Affected Software (AUTH)
   ${CYAN}listDetections${OFF};List Detections (AUTH)
   ${CYAN}listVulnerabilities${OFF};List Vulnerabilities (AUTH)
 EOF
@@ -5114,43 +5114,6 @@ print_getVulnerabilityDescription_help() {
 }
 ##############################################################################
 #
-# Print help for listAffectedApps operation
-#
-##############################################################################
-print_listAffectedApps_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}listAffectedApps - List Affected Apps${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "This endpoint makes a request to retrieve a list of applications impacted by a specified <code>cve_id</code> vulnerability for a tenants fleet." | paste -sd' ' | fold -sw 80
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}cve_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: cve_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The page number of the response.${YELLOW} Specify as: page=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Field to sort by.</p>
-<ul>
-<li>software (software name)</li>
-<li>detection_datetime</li>
-</ul>${YELLOW} Specify as: sort_by=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filter results. Similar to prism filters.
-Filterable columns</p>
-<ul>
-<li>blueprint_id</li>
-<li>detection_datetime</li>
-</ul>${YELLOW} Specify as: filter=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-}
-##############################################################################
-#
 # Print help for listAffectedDevices operation
 #
 ##############################################################################
@@ -5175,6 +5138,43 @@ print_listAffectedDevices_help() {
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filterable columns:</p>
 <ul>
 <li>name</li>
+<li>detection_datetime</li>
+</ul>${YELLOW} Specify as: filter=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for listAffectedSoftware operation
+#
+##############################################################################
+print_listAffectedSoftware_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listAffectedSoftware - List Affected Software${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint makes a request to retrieve a list of software impacted by a specified <code>cve_id</code> vulnerability for a tenant's fleet." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}cve_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: cve_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The page number of the response.${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}size${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - A hard upper limit is set at 50  records returned per request. If more records are expected, pagination should be used using the URL value returned in the next attribute. Additionally, filters can be added to a request to limit the results.${YELLOW} Specify as: size=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Field to sort by.</p>
+<ul>
+<li>software (software name)</li>
+<li>detection_datetime</li>
+</ul>${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Filter results. Similar to prism filters.
+Filterable columns</p>
+<ul>
+<li>blueprint_id</li>
 <li>detection_datetime</li>
 </ul>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -8910,10 +8910,10 @@ call_getVulnerabilityDescription() {
 
 ##############################################################################
 #
-# Call listAffectedApps operation
+# Call listAffectedDevices operation
 #
 ##############################################################################
-call_listAffectedApps() {
+call_listAffectedDevices() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(cve_id)
@@ -8922,7 +8922,7 @@ call_listAffectedApps() {
     local query_parameter_names=(page size sort_by filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities/{cve_id}/applications" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities/{cve_id}/devices" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -8946,10 +8946,10 @@ call_listAffectedApps() {
 
 ##############################################################################
 #
-# Call listAffectedDevices operation
+# Call listAffectedSoftware operation
 #
 ##############################################################################
-call_listAffectedDevices() {
+call_listAffectedSoftware() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(cve_id)
@@ -8958,7 +8958,7 @@ call_listAffectedDevices() {
     local query_parameter_names=(page size sort_by filter  )
     local path
 
-    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities/{cve_id}/devices" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v1/vulnerability-management/vulnerabilities/{cve_id}/software" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9398,11 +9398,11 @@ case $key in
     getVulnerabilityDescription)
     operation="getVulnerabilityDescription"
     ;;
-    listAffectedApps)
-    operation="listAffectedApps"
-    ;;
     listAffectedDevices)
     operation="listAffectedDevices"
+    ;;
+    listAffectedSoftware)
+    operation="listAffectedSoftware"
     ;;
     listDetections)
     operation="listDetections"
@@ -9746,11 +9746,11 @@ case $operation in
     getVulnerabilityDescription)
     call_getVulnerabilityDescription
     ;;
-    listAffectedApps)
-    call_listAffectedApps
-    ;;
     listAffectedDevices)
     call_listAffectedDevices
+    ;;
+    listAffectedSoftware)
+    call_listAffectedSoftware
     ;;
     listDetections)
     call_listDetections
