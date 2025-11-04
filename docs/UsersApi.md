@@ -16,7 +16,7 @@ Delete User
 
 <p>This endpoint makes a request to delete a specified user directory integration user by id (uuid).</p>
 <h3 id=&quot;user-still-assigned-to-device&quot;>User still assigned to device</h3>
-<p>You will see the following response (400 bad request), if a user is still assigned to one or more devices in Kandji. The user will need to be unassigned from the device either manually through the Kandji tenant or programatically using the Update device API endpoint.</p>
+<p>You will see the following response (400 bad request), if a user is still assigned to one or more devices. The user will need to be unassigned from the device either manually through the UI in the web app or programatically using the Update device API endpoint.</p>
 <pre class=&quot;click-to-expand-wrapper is-snippet-wrapper&quot;><code class=&quot;language-json&quot;>{
     &quot;detail&quot;: &quot;User still assigned to one or more devices.&quot;
 }
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
  **email** | **string** | Returns users with email addresses containing the provided string. | [optional] [default to null]
  **id** | **string** | Search for a user matching the provided UUID value. | [optional] [default to null]
  **integrationId** | **string** | Search for a integration matching the provided UUID value. | [optional] [default to null]
- **archived** | **string** | Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab. | [optional] [default to null]
+ **archived** | **string** | Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Users module under the Archived tab. | [optional] [default to null]
  **cursor** | **string** | Cursor for the next or previous page of results. Can also store the URL in the next and previous fields in the response. | [optional] [default to null]
 
 ### Return type

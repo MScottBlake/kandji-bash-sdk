@@ -321,6 +321,7 @@ case $state in
             "eraseDevice[Erase Device]" \
             "getDeviceCommands[Get Device Commands]" \
             "lockDevice[Lock Device]" \
+            "performDailyCheckin[Perform Daily Check-in]" \
             "reinstallAgent[Reinstall Agent]" \
             "remoteDesktop[Remote Desktop]" \
             "renewMdmProfile[Renew MDM Profile]" \
@@ -427,7 +428,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                     "blueprint_id=:[QUERY] Return results &amp;quot;containing&amp;quot; the specified blueprint id"
-"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on kandji user ID value (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)"
+"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on user ID value (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)"
 "dep_account=:[QUERY] The ADE token UUID"
 "device_family=:[QUERY] iPad, iPhone, iPod, Mac, AppleTV, or Vision"
 "model=:[QUERY] Return model results &amp;quot;containing&amp;quot; the specified model string. - &amp;quot;iPad (8th Generation)&amp;quot;, &amp;quot;MacBook Air&amp;quot;"
@@ -579,6 +580,13 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       lockDevice)
+        local -a _op_arguments
+        _op_arguments=(
+          "device_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      performDailyCheckin)
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
@@ -742,7 +750,7 @@ case $state in
 &lt;p&gt;Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;?ordering&#x3D;serial_number,platform&lt;/code&gt;&lt;/p&gt;"
 "os_version=:[QUERY] Return all device records containing the specified OS version"
-"platform=:[QUERY] Return all records matching a specific platform. Possible values:&lt;code&gt;Mac&lt;/code&gt;, &lt;code&gt;iPad&lt;/code&gt;, &lt;code&gt;iPhone&lt;/code&gt;, &lt;code&gt;AppleTV&lt;/code&gt;"
+"platform=:[QUERY] Return all records matching a specific platform. Possible values:&lt;code&gt;Mac&lt;/code&gt;, &lt;code&gt;iPad&lt;/code&gt;, &lt;code&gt;iPhone&lt;/code&gt;, &lt;code&gt;AppleTV&lt;/code&gt;, &lt;code&gt;Android&lt;/code&gt;, &lt;code&gt;Windows&lt;/code&gt;"
 "serial_number=:[QUERY] Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned."
 "tag_name=:[QUERY] Return results for given tag name. Case sensitive."
 "tag_name_in=:[QUERY] Return results for given tag names separate by commas. Case sensitive."
@@ -751,7 +759,7 @@ case $state in
 "user=:[QUERY] Return results &amp;quot;containing&amp;quot; the user name"
 "user_email=:[QUERY] Return results &amp;quot;containing&amp;quot; search on email address"
 "user_email_exact=:[QUERY] Return results &amp;quot;matching&amp;quot; the specified email address"
-"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)"
+"user_id=:[QUERY] &amp;quot;exact&amp;quot; match on user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)"
 "user_name=:[QUERY] Return results &amp;quot;containing&amp;quot; the assigned user Display Name"
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return"
@@ -1160,7 +1168,7 @@ Additionally, parameter queries can be added to a request to limit the results."
                     "email=:[QUERY] Returns users with email addresses containing the provided string."
 "id=:[QUERY] Search for a user matching the provided UUID value."
 "integration_id=:[QUERY] Search for a integration matching the provided UUID value."
-"archived=:[QUERY] Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab."
+"archived=:[QUERY] Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Users module under the Archived tab."
 "cursor=:[QUERY] Cursor for the next or previous page of results. Can also store the URL in the next and previous fields in the response."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0

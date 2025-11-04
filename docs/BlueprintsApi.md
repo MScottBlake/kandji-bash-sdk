@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 Create Blueprint
 
-<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>
+<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the tenant.</p>
 <p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>
 <p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 List Blueprints
 
-This request returns a list of a blueprint records in the Kandji tenant. Optional query parameters can be specified to filter the results.
+This request returns a list of a Blueprints. Optional query parameters can be specified to filter the results.
 
 ### Example
 

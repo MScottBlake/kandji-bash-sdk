@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get Activation Lock Bypass Code
 
-<p>This request allows you to retrieve the Activation Lock Bypass code.</p>
+<p>This request allows you to retrieve the Activation Lock Bypass code for Apple devices.</p>
 <p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>
 <p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 Get FileVault Recovery Key
 
-<p>This request allows you to retrieve the FileVault Recovery key for a macOS device.</p>
+<p>This request allows you to retrieve the FileVault Recovery key for a Mac.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 Get Unlock Pin
 
-<p>This request allows you to retrieve the device unlock pin for a macOS device.</p>
+<p>This request allows you to retrieve the device unlock pin for a Mac.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 

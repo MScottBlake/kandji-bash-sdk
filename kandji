@@ -13,7 +13,7 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #
-# This is a Bash client for Kandji API.
+# This is a Bash client for Iru Endpoint Management API.
 #
 # LICENSE:
 # 
@@ -164,6 +164,7 @@ operation_parameters_minimum_occurrences["getDeviceCommands:::limit"]=1
 operation_parameters_minimum_occurrences["getDeviceCommands:::offset"]=0
 operation_parameters_minimum_occurrences["lockDevice:::device_id"]=1
 operation_parameters_minimum_occurrences["lockDevice:::body"]=0
+operation_parameters_minimum_occurrences["performDailyCheckin:::device_id"]=1
 operation_parameters_minimum_occurrences["reinstallAgent:::device_id"]=1
 operation_parameters_minimum_occurrences["remoteDesktop:::device_id"]=1
 operation_parameters_minimum_occurrences["remoteDesktop:::body"]=0
@@ -454,6 +455,7 @@ operation_parameters_maximum_occurrences["getDeviceCommands:::limit"]=0
 operation_parameters_maximum_occurrences["getDeviceCommands:::offset"]=0
 operation_parameters_maximum_occurrences["lockDevice:::device_id"]=0
 operation_parameters_maximum_occurrences["lockDevice:::body"]=0
+operation_parameters_maximum_occurrences["performDailyCheckin:::device_id"]=0
 operation_parameters_maximum_occurrences["reinstallAgent:::device_id"]=0
 operation_parameters_maximum_occurrences["remoteDesktop:::device_id"]=0
 operation_parameters_maximum_occurrences["remoteDesktop:::body"]=0
@@ -741,6 +743,7 @@ operation_parameters_collection_type["getDeviceCommands:::limit"]=""
 operation_parameters_collection_type["getDeviceCommands:::offset"]=""
 operation_parameters_collection_type["lockDevice:::device_id"]=""
 operation_parameters_collection_type["lockDevice:::body"]=""
+operation_parameters_collection_type["performDailyCheckin:::device_id"]=""
 operation_parameters_collection_type["reinstallAgent:::device_id"]=""
 operation_parameters_collection_type["remoteDesktop:::device_id"]=""
 operation_parameters_collection_type["remoteDesktop:::body"]=""
@@ -1312,7 +1315,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}Kandji API command line client (API version 1.0.0)${OFF}
+${BOLD}${WHITE}Iru Endpoint Management API command line client (API version 1.0.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1388,6 +1391,7 @@ read -r -d '' ops <<EOF
   ${CYAN}eraseDevice${OFF};Erase Device (AUTH)
   ${CYAN}getDeviceCommands${OFF};Get Device Commands (AUTH)
   ${CYAN}lockDevice${OFF};Lock Device (AUTH)
+  ${CYAN}performDailyCheckin${OFF};Perform Daily Check-in (AUTH)
   ${CYAN}reinstallAgent${OFF};Reinstall Agent (AUTH)
   ${CYAN}remoteDesktop${OFF};Remote Desktop (AUTH)
   ${CYAN}renewMdmProfile${OFF};Renew MDM Profile (AUTH)
@@ -1522,14 +1526,15 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://&lt;sub_domain&gt;.api.kandji.
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}Kandji API command line client (API version 1.0.0)${OFF}"
+    echo -e "${BOLD}${WHITE}Iru Endpoint Management API command line client (API version 1.0.0)${OFF}"
     echo ""
     echo -e "License: MIT License"
     echo -e "Contact: mitchelsblake@gmail.com"
     echo ""
 read -r -d '' appdescription <<EOF
 
-<html><head></head><body><h1 id=&quot;welcome-to-the-kandji-api-documentation&quot;>Welcome to the Kandji API Documentation</h1>
+<html><head></head><body><h1 id=&quot;welcome-to-the-iru-endpoint-management-api-documentation&quot;>Welcome to the Iru Endpoint Management API Documentation</h1>
+<p><strong>Note:</strong> Kandji is now Iru, but many URLs and notes within this documentation will continue to reference Kandji for some time.</p>
 <p>You can find your API URL in Settings &gt; Access. The API URL will follow the below formats.</p>
 <ul>
 <li><p>US - <code>https://SubDomain.api.kandji.io</code></p>
@@ -1540,9 +1545,9 @@ read -r -d '' appdescription <<EOF
 <p>For information on how to obtain an API token, please refer to the following support article.</p>
 <p><a href=&quot;https://support.kandji.io/api&quot;>https://support.kandji.io/api</a></p>
 <h4 id=&quot;rate-limit&quot;>Rate Limit</h4>
-<p>The Kandji API currently has an API rate limit of 10,000 requests per hour per customer.</p>
+<p>The Iru Endpoint Management API currently has an API rate limit of 10,000 requests per hour per customer.</p>
 <h4 id=&quot;request-methods&quot;>Request Methods</h4>
-<p>HTTP request methods supported by the Kandji API.</p>
+<p>HTTP request methods supported by the API.</p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
 <tr>
@@ -1633,7 +1638,7 @@ read -r -d '' appdescription <<EOF
 </tr>
 <tr>
 <td></td>
-<td>Unable to locate the resource in the Kandji tenant.</td>
+<td>Unable to locate the resource in the Iru tenant.</td>
 </tr>
 <tr>
 <td>415</td>
@@ -1660,7 +1665,7 @@ read -r -d '' appdescription <<EOF
 </div><h4 id=&quot;data-structure&quot;>Data structure</h4>
 <p>The API returns all structured responses in JSON schema format.</p>
 <h4 id=&quot;examples&quot;>Examples</h4>
-<p>Code examples using the API can be found in the Kandji support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools&quot;>GitHub</a>.</p>
+<p>Code examples using the API can be found in the Iru Endpoint Management support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools&quot;>GitHub</a>.</p>
 </body></html>
 EOF
 echo "$appdescription" | paste -sd' ' - | fold -sw 80
@@ -1674,7 +1679,7 @@ echo "$appdescription" | paste -sd' ' - | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}Kandji API command line client (API version 1.0.0)${OFF}"
+    echo -e "${BOLD}Iru Endpoint Management API command line client (API version 1.0.0)${OFF}"
     echo ""
 }
 
@@ -1687,7 +1692,7 @@ print_listAuditEvents_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listAuditEvents - List audit events${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>List audit log events from the Kandji Activity module.</p>
+    echo -e "<p>List audit log events from the Activity module.</p>
 <p>Returns events related to</p>
 <ul>
 <li><p>Blueprint and Library Item creation, updates, and deletions (Create, Update, Delete)</p>
@@ -1770,7 +1775,7 @@ print_deleteAdeIntegration_help() {
     echo -e ""
     echo -e "<h1 id=&quot;warning&quot;><strong>WARNING!</strong></h1>
 <p>This is a HIGHLY destructive action.</p>
-<p>Deleting an ADE token will unassign the associated device records from Kandji. For currently enrolled devices that were assigned to Kandji via the delete ADE integration will not be impacted until they are wiped and reprovisioned. This action is essentially the same as removing an ADE token from MDM and then adding it back.</p>
+<p>Deleting an ADE token will unassign the associated device records. For currently enrolled devices that were assigned via the delete ADE integration will not be impacted until they are wiped and reprovisioned. This action is essentially the same as removing an ADE token from MDM and then adding it back.</p>
 <p>If applicable, be sure to reassign the device records in ABM.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -1879,7 +1884,7 @@ print_listAdeDevices_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}blueprint_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;containing&quot; the specified blueprint id${YELLOW} Specify as: blueprint_id=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on kandji user ID value (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)${YELLOW} Specify as: user_id=value${OFF}" \
+    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on user ID value (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)${YELLOW} Specify as: user_id=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}dep_account${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The ADE token UUID${YELLOW} Specify as: dep_account=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -1932,7 +1937,7 @@ print_listDevicesAssociatedToAdeToken_help() {
     echo -e "${BOLD}${WHITE}listDevicesAssociatedToAdeToken - List devices associated to ADE token${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>
-<p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>
+<p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment.</p>
 <p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -2033,7 +2038,7 @@ print_createBlueprint_help() {
     echo ""
     echo -e "${BOLD}${WHITE}createBlueprint - Create Blueprint${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>
+    echo -e "<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the tenant.</p>
 <p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>
 <p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
@@ -2192,7 +2197,7 @@ print_listBlueprints_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listBlueprints - List Blueprints${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This request returns a list of a blueprint records in the Kandji tenant. Optional query parameters can be specified to filter the results." | paste -sd' ' - | fold -sw 80
+    echo -e "This request returns a list of a Blueprints. Optional query parameters can be specified to filter the results." | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Look up a specific Blueprint by its ID${YELLOW} Specify as: id=value${OFF}" \
@@ -2441,7 +2446,8 @@ print_deleteDevice_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteDevice - Delete Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint sends an MDM command to delete a device. This will remove the device record from Kandji and send a Remove Management command. For macOS devices, it will also send an uninstall command to the Kandji Agent at the next agent checkin." | paste -sd' ' - | fold -sw 80
+    echo -e "<p>This endpoint deletes a device, which will remove the device record and unenroll the device from MDM.</p>
+<p>For macOS and Windows devices, the agent will automatically uninstall on the next agent checkin.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -2484,8 +2490,7 @@ print_eraseDevice_help() {
     echo ""
     echo -e "${BOLD}${WHITE}eraseDevice - Erase Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to erase the device.</p>
-<p>iOS 4.0+, iPadOS 4.0+, macOS 10.7+, tvOS 10.2+</p>
+    echo -e "<p>This endpoint sends an MDM command to erase a device.</p>
 <p><strong>Request Body Parameters: application/json</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
@@ -2526,6 +2531,16 @@ print_eraseDevice_help() {
 <td><code>string</code></td>
 <td>Profile ID value associated with a Wi-Fi profile payload. This is required when the device doesn’t have ethernet access.</td>
 </tr>
+<tr>
+<td><code>erase_mode</code></td>
+<td><code>string</code></td>
+<td>For Windows devices, the following modes are supported:  <br />  <br /><code>WIPE</code> - Equivalent to running Reset this PC &gt; Remove everything from the Settings app, with Clean Data set to No and Delete Files set to Yes.  <br />  <br /><code>WIPE_CLOUD</code> - Perform a cloud-based remote wipe on the device.  <br />  <br /><code>WIPE_PROTECTED</code> - Performs a remote wipe on the device and fully cleans the internal drive. In some device configurations, this command may leave the device unable to boot. This is similar to WIPE but cannot be circumvented by power cycling the device.</td>
+</tr>
+<tr>
+<td><code>erase_flags</code></td>
+<td><code>string</code></td>
+<td>Optional erase options for Android devices, provided as a single comma separated list of the following strings:  <br />  <br /><code>WIPE_EXTERNAL_STORAGE</code> - Additionally wipe the device's external storage (such as SD cards).  <br />  <br /><code>WIPE_ESIMS</code> - For company-owned devices, this removes all eSIMs from the device when the device is wiped.  <br />  <br />Example value:  <br /><code>WIPE_EXTERNAL_STORAGE,WIPE_ESIMS</code></td>
+</tr>
 </tbody>
 </table>
 </div>" | paste -sd' ' - | fold -sw 80
@@ -2552,14 +2567,19 @@ print_getDeviceCommands_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getDeviceCommands - Get Device Commands${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends a request to get information about the commands sent to a given device ID.</p>
+    echo -e "<p>This endpoint sends a request to get information about the commands sent to a given Apple device.</p>
 <h3 id=&quot;mdm-status-codes&quot;>MDM Status Codes</h3>
 <ul>
-<li>1 : Command is Pending</li>
-<li>2 : Command is running</li>
-<li>3 : Command completed</li>
-<li>4 : Command failed</li>
-<li>5 : Command received &quot;Not Now&quot; response</li>
+<li><p>1 : Command is Pending</p>
+</li>
+<li><p>2 : Command is running</p>
+</li>
+<li><p>3 : Command completed</p>
+</li>
+<li><p>4 : Command failed</p>
+</li>
+<li><p>5 : Command received &quot;Not Now&quot; response</p>
+</li>
 </ul>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -2584,12 +2604,12 @@ print_lockDevice_help() {
     echo ""
     echo -e "${BOLD}${WHITE}lockDevice - Lock Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to remotely lock a device.</p>
+    echo -e "<p>This endpoint sends an MDM command to remotely lock an Apple or Android device.</p>
 <p>For macOS clients, an unlock PIN will be created, and returned in the response.</p>
 <blockquote>
-<p><strong>Caution !!!</strong><br /><em>For a Mac with Apple silicon running a version of macOS before 11.5 will deactivate the Mac. To reactivate, the Mac requires a network connection and authentication by a Secure Token enabled local administrator.</em></p>
+<p><strong>Caution !!!</strong><br /><em>For a Mac with Apple silicon running a version of macOS before 11.5 will deactivate the Mac. To reactivate, the Mac requires a network connection and authentication by a Secure Token enabled local administrator.</em> </p>
 </blockquote>
-<p>Optionally, a JSON payload can be sent in the request to set a lock message and phone number on the target device.</p>
+<p>Optionally, a JSON payload can be sent in the request to set a lock message and phone number on the target Mac.</p>
 <p><strong>Note:</strong> For macOS, although the lock message is displayed on all types of Mac computers, the phone number is displayed only on a Mac with Apple silicon.</p>
 <h4 id=&quot;response-properties&quot;>Response properties</h4>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
@@ -2653,6 +2673,38 @@ print_lockDevice_help() {
 }
 ##############################################################################
 #
+# Print help for performDailyCheckin operation
+#
+##############################################################################
+print_performDailyCheckin_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}performDailyCheckin - Perform Daily Check-in${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint runs the daily MDM commands and MDM logic for Apple devices and initiates a full daily CSP sync for Windows devices." | paste -sd' ' - | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' - | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for reinstallAgent operation
 #
 ##############################################################################
@@ -2660,7 +2712,7 @@ print_reinstallAgent_help() {
     echo ""
     echo -e "${BOLD}${WHITE}reinstallAgent - Reinstall Agent${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint sends an MDM command reinstall the Kandji Agent. Available for macOS devices." | paste -sd' ' - | fold -sw 80
+    echo -e "This endpoint sends an MDM command reinstall the Kandji Agent on macOS devices." | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -2715,7 +2767,7 @@ print_renewMdmProfile_help() {
     echo ""
     echo -e "${BOLD}${WHITE}renewMdmProfile - Renew MDM Profile${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint sends an MDM command to re-install the existing root MDM profile for a given device ID. This command will not impact any existing configurations, apps, or profiles." | paste -sd' ' - | fold -sw 80
+    echo -e "This endpoint sends an MDM command to re-install the existing root MDM profile for a given Apple device. This command will not impact any existing configurations, apps, or profiles." | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -2733,7 +2785,7 @@ print_restartDevice_help() {
     echo ""
     echo -e "${BOLD}${WHITE}restartDevice - Restart Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to remotely restart a device.</p>
+    echo -e "<p>This endpoint sends an MDM command to remotely restart an iPhone, iPad, Apple TV, or Mac.</p>
 <ul>
 <li><p><code>RebuildKernelCache</code> - If <code>true</code>, the system rebuilds the kernel cache during a device restart. If <code>BootstrapTokenAllowedForAuthentication</code> is <code>true</code> inSecurityInfoResponse.SecurityInfo, the device requests the bootstrap token from MDM before executing this command. This value is available in macOS 11 and later. Default: false</p>
 </li>
@@ -2773,7 +2825,7 @@ print_sendBlankpush_help() {
     echo ""
     echo -e "${BOLD}${WHITE}sendBlankpush - Send Blankpush${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to initiate a blank push.</p>
+    echo -e "<p>This endpoint sends an MDM command to initiate a blank push for an Apple device.</p>
 <p><a href=&quot;https://support.kandji.io/what-is-a-blank-push&quot;>Using the Blank Push command</a></p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -2806,7 +2858,7 @@ print_setName_help() {
     echo ""
     echo -e "${BOLD}${WHITE}setName - Set Name${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to set the device name.</p>
+    echo -e "<p>This endpoint sends an MDM command to set the device name for an Apple device.</p>
 <p><strong>Request Body Parameters</strong>: application/json</p>
 <hr />
 <p><code>DeviceName</code> - <code>string</code></p>" | paste -sd' ' - | fold -sw 80
@@ -2843,7 +2895,7 @@ print_shutdown_help() {
     echo ""
     echo -e "${BOLD}${WHITE}shutdown - Shutdown${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint sends an MDM command to shutdown a device." | paste -sd' ' - | fold -sw 80
+    echo -e "This endpoint sends an MDM command to shutdown an iPhone, iPad, or Mac." | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -2875,7 +2927,7 @@ print_unlockAccount_help() {
     echo ""
     echo -e "${BOLD}${WHITE}unlockAccount - Unlock Account${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This endpoint sends an MDM command to unlock a user account that locked by the system because of too many failed password attempts. Available for macOS.</p>
+    echo -e "<p>This endpoint sends an MDM command to unlock a user account that locked by the system because of too many failed password attempts. Available for Mac.</p>
 <p><strong>Request Body Parameters</strong>: application/json</p>
 <hr />
 <p><code>UserName</code> - <code>string</code></p>" | paste -sd' ' - | fold -sw 80
@@ -2912,7 +2964,8 @@ print_updateInventory_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateInventory - Update Inventory${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This endpoint sends an MDM command to start a check-in for a device, initiating the daily MDM commands and MDM logic." | paste -sd' ' - | fold -sw 80
+    echo -e "<p>This endpoint runs the daily MDM commands and MDM logic for Apple devices.</p>
+<p><strong>Note:</strong> The newer <code>dailycheckin</code> endpoint can be used instead and also supports Windows devices.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -2962,7 +3015,8 @@ print_getDevice_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getDevice - Get Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This request returns the high-level information for a specified Device ID." | paste -sd' ' - | fold -sw 80
+    echo -e "<p>This request returns the high-level information for a specified Device ID.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, additional fields will be returned in the response. All visible fields based on platform enablement status will be present for all device types, but values will be blank for non-applicable devices. For example, <code>lost_mode_status</code> only applies to iOS and iPadOS devices and will be blank for other platforms.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -2995,7 +3049,8 @@ print_getDeviceActivity_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getDeviceActivity - Get Device Activity${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This request returns the device activity for a specified Device ID." | paste -sd' ' - | fold -sw 80
+    echo -e "<p>This request returns the device activity for a specified Device ID.</p>
+<p>If Windows or Android management is turned on, additonal keys may be present in activity entries.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -3033,7 +3088,8 @@ print_getDeviceApps_help() {
     echo -e "${BOLD}${WHITE}getDeviceApps - Get Device Apps${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This request returns a list of all installed apps for a specified Device ID.</p>
-<p>For iPhone and iPad, the preinstalled Apple apps are not reported.</p>" | paste -sd' ' - | fold -sw 80
+<p>For iPhone and iPad, the preinstalled Apple apps are not reported.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, the response will be tailored to the specific device family.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -3069,7 +3125,8 @@ print_getDeviceDetails_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getDeviceDetails - Get Device Details${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "This request returns the device details for a specified Device ID." | paste -sd' ' - | fold -sw 80
+    echo -e "<p>This request returns the device details for a specified Device ID.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, the response will be tailored to the specific device family.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -3078,7 +3135,20 @@ print_getDeviceDetails_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' - | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3223,8 +3293,7 @@ print_getDeviceParameters_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getDeviceParameters - Get Device Parameters${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns the parameters and their statuses for a specified Device ID</p>
-<p>This endpoint is only applicable to macOS clients.</p>
+    echo -e "<p>This request returns the parameters and their statuses for a specified Device ID, and is only applicable to Mac.</p>
 <p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
 <p><strong>Possible parameter status values</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
@@ -3436,8 +3505,9 @@ print_listDevices_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listDevices - List Devices${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request returns a list of devices in a Kandji tenant. Optionally. query parameters can be used to filter results.</p>
-<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Kandji support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools/code-examples&quot;>GitHub</a>.</p>" | paste -sd' ' - | fold -sw 80
+    echo -e "<p>This request returns a list of devices in an Iru Endpoint Management tenant. Optionally, query parameters can be used to filter results.</p>
+<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Iru support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools/code-examples&quot;>GitHub</a>.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, additional fields will be returned in the response. All visible fields based on platform enablement status will be present for all device types, but values will be blank for non-applicable devices. For example, <code>lost_mode_status</code> only applies to iOS and iPadOS devices and will be blank for other platforms.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}limit${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results.${YELLOW} Specify as: limit=value${OFF}" \
@@ -3477,7 +3547,7 @@ print_listDevices_help() {
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}os_version${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all device records containing the specified OS version${YELLOW} Specify as: os_version=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}platform${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all records matching a specific platform. Possible values:<code>Mac</code>, <code>iPad</code>, <code>iPhone</code>, <code>AppleTV</code>${YELLOW} Specify as: platform=value${OFF}" \
+    echo -e "  * ${GREEN}platform${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all records matching a specific platform. Possible values:<code>Mac</code>, <code>iPad</code>, <code>iPhone</code>, <code>AppleTV</code>, <code>Android</code>, <code>Windows</code>${YELLOW} Specify as: platform=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}serial_number${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned.${YELLOW} Specify as: serial_number=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -3495,7 +3565,7 @@ print_listDevices_help() {
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}user_email_exact${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;matching&quot; the specified email address${YELLOW} Specify as: user_email_exact=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)${YELLOW} Specify as: user_id=value${OFF}" \
+    echo -e "  * ${GREEN}user_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - &quot;exact&quot; match on user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a)${YELLOW} Specify as: user_id=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}user_name${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return results &quot;containing&quot; the assigned user Display Name${YELLOW} Specify as: user_name=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -3569,7 +3639,7 @@ print_getActivationLockBypassCode_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getActivationLockBypassCode - Get Activation Lock Bypass Code${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to retrieve the Activation Lock Bypass code.</p>
+    echo -e "<p>This request allows you to retrieve the Activation Lock Bypass code for Apple devices.</p>
 <p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>
 <p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
@@ -3606,7 +3676,7 @@ print_getFilevaultRecoveryKey_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getFilevaultRecoveryKey - Get FileVault Recovery Key${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to retrieve the FileVault Recovery key for a macOS device.</p>
+    echo -e "<p>This request allows you to retrieve the FileVault Recovery key for a Mac.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
@@ -3677,7 +3747,7 @@ print_getUnlockPin_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getUnlockPin - Get Unlock Pin${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "<p>This request allows you to retrieve the device unlock pin for a macOS device.</p>
+    echo -e "<p>This request allows you to retrieve the device unlock pin for a Mac.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' - | fold -sw 80
     echo -e ""
@@ -4810,7 +4880,7 @@ print_licensing_help() {
     echo ""
     echo -e "${BOLD}${WHITE}licensing - Licensing${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Returns Kandji tenant licensing and utilization information." | paste -sd' ' - | fold -sw 80
+    echo -e "Returns tenant licensing and utilization information." | paste -sd' ' - | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5022,7 +5092,7 @@ print_deleteUser_help() {
     echo -e ""
     echo -e "<p>This endpoint makes a request to delete a specified user directory integration user by id (uuid).</p>
 <h3 id=&quot;user-still-assigned-to-device&quot;>User still assigned to device</h3>
-<p>You will see the following response (400 bad request), if a user is still assigned to one or more devices in Kandji. The user will need to be unassigned from the device either manually through the Kandji tenant or programatically using the Update device API endpoint.</p>
+<p>You will see the following response (400 bad request), if a user is still assigned to one or more devices. The user will need to be unassigned from the device either manually through the UI in the web app or programatically using the Update device API endpoint.</p>
 <pre class=&quot;click-to-expand-wrapper is-snippet-wrapper&quot;><code class=&quot;language-json&quot;>{
     &quot;detail&quot;: &quot;User still assigned to one or more devices.&quot;
 }
@@ -5081,7 +5151,7 @@ print_listUsers_help() {
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}integration_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search for a integration matching the provided UUID value.${YELLOW} Specify as: integration_id=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}archived${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Kandji Users module under the Archived tab.${YELLOW} Specify as: archived=value${OFF}" \
+    echo -e "  * ${GREEN}archived${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return only users that are either archived (true) or not archived (false). Archived users are users that appear in the Users module under the Archived tab.${YELLOW} Specify as: archived=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}cursor${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Cursor for the next or previous page of results. Can also store the URL in the next and previous fields in the response.${YELLOW} Specify as: cursor=value${OFF}" \
         | paste -sd' ' - | fold -sw 80 | sed '2,$s/^/    /'
@@ -6511,6 +6581,42 @@ call_lockDevice() {
         else
             eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
         fi
+    fi
+}
+
+##############################################################################
+#
+# Call performDailyCheckin operation
+#
+##############################################################################
+call_performDailyCheckin() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(device_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/devices/{device_id}/action/dailycheckin" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     fi
 }
 
@@ -9230,6 +9336,9 @@ case $key in
     lockDevice)
     operation="lockDevice"
     ;;
+    performDailyCheckin)
+    operation="performDailyCheckin"
+    ;;
     reinstallAgent)
     operation="reinstallAgent"
     ;;
@@ -9577,6 +9686,9 @@ case $operation in
     ;;
     lockDevice)
     call_lockDevice
+    ;;
+    performDailyCheckin)
+    call_performDailyCheckin
     ;;
     reinstallAgent)
     call_reinstallAgent

@@ -57,7 +57,8 @@ Name | Type | Description  | Notes
 
 Get Device
 
-This request returns the high-level information for a specified Device ID.
+<p>This request returns the high-level information for a specified Device ID.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, additional fields will be returned in the response. All visible fields based on platform enablement status will be present for all device types, but values will be blank for non-applicable devices. For example, <code>lost_mode_status</code> only applies to iOS and iPadOS devices and will be blank for other platforms.</p>
 
 ### Example
 
@@ -92,7 +93,8 @@ Name | Type | Description  | Notes
 
 Get Device Activity
 
-This request returns the device activity for a specified Device ID.
+<p>This request returns the device activity for a specified Device ID.</p>
+<p>If Windows or Android management is turned on, additonal keys may be present in activity entries.</p>
 
 ### Example
 
@@ -131,6 +133,7 @@ Get Device Apps
 
 <p>This request returns a list of all installed apps for a specified Device ID.</p>
 <p>For iPhone and iPad, the preinstalled Apple apps are not reported.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, the response will be tailored to the specific device family.</p>
 
 ### Example
 
@@ -165,7 +168,8 @@ Name | Type | Description  | Notes
 
 Get Device Details
 
-This request returns the device details for a specified Device ID.
+<p>This request returns the device details for a specified Device ID.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, the response will be tailored to the specific device family.</p>
 
 ### Example
 
@@ -349,8 +353,7 @@ Name | Type | Description  | Notes
 
 Get Device Parameters
 
-<p>This request returns the parameters and their statuses for a specified Device ID</p>
-<p>This endpoint is only applicable to macOS clients.</p>
+<p>This request returns the parameters and their statuses for a specified Device ID, and is only applicable to Mac.</p>
 <p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
 <p><strong>Possible parameter status values</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
@@ -566,8 +569,9 @@ Name | Type | Description  | Notes
 
 List Devices
 
-<p>This request returns a list of devices in a Kandji tenant. Optionally. query parameters can be used to filter results.</p>
-<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Kandji support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools/code-examples&quot;>GitHub</a>.</p>
+<p>This request returns a list of devices in an Iru Endpoint Management tenant. Optionally, query parameters can be used to filter results.</p>
+<p>There is a hard upper limit of 300 results per request. To return addtional results pagination must be used. Pagination examples can be found in the Iru support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools/code-examples&quot;>GitHub</a>.</p>
+<p>This is a <strong>polymorphic</strong> endpoint. If Windows or Android management is turned on, additional fields will be returned in the response. All visible fields based on platform enablement status will be present for all device types, but values will be blank for non-applicable devices. For example, <code>lost_mode_status</code> only applies to iOS and iPadOS devices and will be blank for other platforms.</p>
 
 ### Example
 
@@ -607,7 +611,7 @@ Name | Type | Description  | Notes
 <p>Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.</p>
 <p><code>?ordering=serial_number,platform</code></p> | [optional] [default to null]
  **osVersion** | **string** | Return all device records containing the specified OS version | [optional] [default to null]
- **platform** | **string** | Return all records matching a specific platform. Possible values:<code>Mac</code>, <code>iPad</code>, <code>iPhone</code>, <code>AppleTV</code> | [optional] [default to null]
+ **platform** | **string** | Return all records matching a specific platform. Possible values:<code>Mac</code>, <code>iPad</code>, <code>iPhone</code>, <code>AppleTV</code>, <code>Android</code>, <code>Windows</code> | [optional] [default to null]
  **serialNumber** | **string** | Search for a specific device by Serial Number. If partial serial number is provided in the query, all device containing the partial string will be returned. | [optional] [default to null]
  **tagName** | **string** | Return results for given tag name. Case sensitive. | [optional] [default to null]
  **tagNameIn** | **string** | Return results for given tag names separate by commas. Case sensitive. | [optional] [default to null]
@@ -616,7 +620,7 @@ Name | Type | Description  | Notes
  **user** | **string** | Return results &quot;containing&quot; the user name | [optional] [default to null]
  **userEmail** | **string** | Return results &quot;containing&quot; search on email address | [optional] [default to null]
  **userEmailExact** | **string** | Return results &quot;matching&quot; the specified email address | [optional] [default to null]
- **userId** | **string** | &quot;exact&quot; match on kandji user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a) | [optional] [default to null]
+ **userId** | **string** | &quot;exact&quot; match on user ID (example: 5344c996-8823-4b37-8d6e-8515fc7c3a0a) | [optional] [default to null]
  **userName** | **string** | Return results &quot;containing&quot; the assigned user Display Name | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
 

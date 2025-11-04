@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 List audit events
 
-<p>List audit log events from the Kandji Activity module.</p>
+<p>List audit log events from the Activity module.</p>
 <p>Returns events related to</p>
 <ul>
 <li><p>Blueprint and Library Item creation, updates, and deletions (Create, Update, Delete)</p>

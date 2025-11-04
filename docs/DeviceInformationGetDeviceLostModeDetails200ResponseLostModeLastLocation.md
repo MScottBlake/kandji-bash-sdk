@@ -1,10 +1,10 @@
-# deviceInformation_getDeviceDetails_200_response_cellular
+# deviceInformation_getDeviceLostModeDetails_200_response_lost_mode_last_location
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**imei** | **string** |  | [optional] [default to null]
-**meid** | **string** |  | [optional] [default to null]
+**latitude** | **string** |  | [optional] [default to null]
+**longitude** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

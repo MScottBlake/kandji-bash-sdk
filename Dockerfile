@@ -23,8 +23,8 @@ source /etc/bash-completion.d/kandji\n\
 #
 # Setup prompt
 #
-RUN echo 'export PS1="[Kandji API] \$ "' >> ~/.bashrc
-RUN echo 'export PROMPT="[Kandji API] \$ "' >> ~/.zshrc
+RUN echo 'export PS1="[Iru Endpoint Management API] \$ "' >> ~/.bashrc
+RUN echo 'export PROMPT="[Iru Endpoint Management API] \$ "' >> ~/.zshrc
 
 #
 # Setup a welcome message with basic instruction
@@ -32,7 +32,7 @@ RUN echo 'export PROMPT="[Kandji API] \$ "' >> ~/.zshrc
 RUN echo -e 'echo "\
 \n\
 This Docker provides preconfigured environment for running the command\n\
-line REST client for $(tput setaf 6)Kandji API$(tput sgr0).\n\
+line REST client for $(tput setaf 6)Iru Endpoint Management API$(tput sgr0).\n\
 \n\
 For convenience, you can export the following environment variables:\n\
 \n\

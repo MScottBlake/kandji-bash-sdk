@@ -1,8 +1,8 @@
-# Kandji API Bash client
+# Iru Endpoint Management API Bash client
 
 ## Overview
 
-This is a Bash client script for accessing Kandji API service.
+This is a Bash client script for accessing Iru Endpoint Management API service.
 
 The script uses cURL underneath for making all REST calls.
 
@@ -130,6 +130,7 @@ Class | Method | HTTP request | Description
 *DeviceActionsApi* | [**eraseDevice**](docs/DeviceActionsApi.md#erasedevice) | **POST** /api/v1/devices/{device_id}/action/erase | Erase Device
 *DeviceActionsApi* | [**getDeviceCommands**](docs/DeviceActionsApi.md#getdevicecommands) | **GET** /api/v1/devices/{device_id}/commands | Get Device Commands
 *DeviceActionsApi* | [**lockDevice**](docs/DeviceActionsApi.md#lockdevice) | **POST** /api/v1/devices/{device_id}/action/lock | Lock Device
+*DeviceActionsApi* | [**performDailyCheckin**](docs/DeviceActionsApi.md#performdailycheckin) | **POST** /api/v1/devices/{device_id}/action/dailycheckin | Perform Daily Check-in
 *DeviceActionsApi* | [**reinstallAgent**](docs/DeviceActionsApi.md#reinstallagent) | **POST** /api/v1/devices/{device_id}/action/reinstallagent | Reinstall Agent
 *DeviceActionsApi* | [**remoteDesktop**](docs/DeviceActionsApi.md#remotedesktop) | **POST** /api/v1/devices/{device_id}/action/remotedesktop | Remote Desktop
 *DeviceActionsApi* | [**renewMdmProfile**](docs/DeviceActionsApi.md#renewmdmprofile) | **POST** /api/v1/devices/{device_id}/action/renewmdmprofile | Renew MDM Profile
@@ -216,22 +217,15 @@ Class | Method | HTTP request | Description
  - [DeviceInformationGetDeviceActivity200Response](docs/DeviceInformationGetDeviceActivity200Response.md)
  - [DeviceInformationGetDeviceApps200Response](docs/DeviceInformationGetDeviceApps200Response.md)
  - [DeviceInformationGetDeviceDetails200Response](docs/DeviceInformationGetDeviceDetails200Response.md)
- - [DeviceInformationGetDeviceDetails200ResponseActivationLock](docs/DeviceInformationGetDeviceDetails200ResponseActivationLock.md)
- - [DeviceInformationGetDeviceDetails200ResponseAppleBusinessManager](docs/DeviceInformationGetDeviceDetails200ResponseAppleBusinessManager.md)
- - [DeviceInformationGetDeviceDetails200ResponseAutomatedDeviceEnrollment](docs/DeviceInformationGetDeviceDetails200ResponseAutomatedDeviceEnrollment.md)
  - [DeviceInformationGetDeviceDetails200ResponseCellular](docs/DeviceInformationGetDeviceDetails200ResponseCellular.md)
- - [DeviceInformationGetDeviceDetails200ResponseFilevault](docs/DeviceInformationGetDeviceDetails200ResponseFilevault.md)
  - [DeviceInformationGetDeviceDetails200ResponseGeneral](docs/DeviceInformationGetDeviceDetails200ResponseGeneral.md)
- - [DeviceInformationGetDeviceDetails200ResponseHardwareOverview](docs/DeviceInformationGetDeviceDetails200ResponseHardwareOverview.md)
- - [DeviceInformationGetDeviceDetails200ResponseKandjiAgent](docs/DeviceInformationGetDeviceDetails200ResponseKandjiAgent.md)
- - [DeviceInformationGetDeviceDetails200ResponseLostMode](docs/DeviceInformationGetDeviceDetails200ResponseLostMode.md)
- - [DeviceInformationGetDeviceDetails200ResponseLostModeLastLocation](docs/DeviceInformationGetDeviceDetails200ResponseLostModeLastLocation.md)
- - [DeviceInformationGetDeviceDetails200ResponseMdm](docs/DeviceInformationGetDeviceDetails200ResponseMdm.md)
- - [DeviceInformationGetDeviceDetails200ResponseRecoveryInformation](docs/DeviceInformationGetDeviceDetails200ResponseRecoveryInformation.md)
- - [DeviceInformationGetDeviceDetails200ResponseSecurityInformation](docs/DeviceInformationGetDeviceDetails200ResponseSecurityInformation.md)
- - [DeviceInformationGetDeviceDetails200ResponseUsers](docs/DeviceInformationGetDeviceDetails200ResponseUsers.md)
+ - [DeviceInformationGetDeviceDetails200ResponseHardware](docs/DeviceInformationGetDeviceDetails200ResponseHardware.md)
+ - [DeviceInformationGetDeviceDetails200ResponseManagement](docs/DeviceInformationGetDeviceDetails200ResponseManagement.md)
+ - [DeviceInformationGetDeviceDetails200ResponseSecurity](docs/DeviceInformationGetDeviceDetails200ResponseSecurity.md)
  - [DeviceInformationGetDeviceLibraryItems200Response](docs/DeviceInformationGetDeviceLibraryItems200Response.md)
  - [DeviceInformationGetDeviceLostModeDetails200Response](docs/DeviceInformationGetDeviceLostModeDetails200Response.md)
+ - [DeviceInformationGetDeviceLostModeDetails200ResponseLostMode](docs/DeviceInformationGetDeviceLostModeDetails200ResponseLostMode.md)
+ - [DeviceInformationGetDeviceLostModeDetails200ResponseLostModeLastLocation](docs/DeviceInformationGetDeviceLostModeDetails200ResponseLostModeLastLocation.md)
  - [DeviceInformationGetDeviceParameters200Response](docs/DeviceInformationGetDeviceParameters200Response.md)
  - [DeviceInformationGetDeviceStatus200Response](docs/DeviceInformationGetDeviceStatus200Response.md)
  - [DeviceInformationUpdateDevice200Response](docs/DeviceInformationUpdateDevice200Response.md)

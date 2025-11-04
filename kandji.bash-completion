@@ -96,6 +96,7 @@ _kandji()
     operations["eraseDevice"]=1
     operations["getDeviceCommands"]=1
     operations["lockDevice"]=1
+    operations["performDailyCheckin"]=1
     operations["reinstallAgent"]=1
     operations["remoteDesktop"]=1
     operations["renewMdmProfile"]=1
@@ -187,6 +188,7 @@ _kandji()
     operation_parameters["eraseDevice"]="device_id= "
     operation_parameters["getDeviceCommands"]="device_id= limit= offset= "
     operation_parameters["lockDevice"]="device_id= "
+    operation_parameters["performDailyCheckin"]="device_id= "
     operation_parameters["reinstallAgent"]="device_id= "
     operation_parameters["remoteDesktop"]="device_id= "
     operation_parameters["renewMdmProfile"]="device_id= "
